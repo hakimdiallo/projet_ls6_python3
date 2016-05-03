@@ -18,3 +18,4 @@ def extraire_pays(rep,n):
         print(k[0])
 
 if __name__ == '__main__':
+    
