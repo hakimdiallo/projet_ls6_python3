@@ -1,0 +1,275 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id LLmmGUgYzFbmCgEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:22 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id AF86C61FA3;
+	Tue, 23 Feb 2016 09:31:22 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 17.284
+X-Spam-Level: *****************
+X-Spam-Status: Yes, score=17.284 tagged_above=-10000 required=5
+	tests=[BAYES_60=1.5, DATE_IN_PAST_06_12=1.543,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_FONT_LOW_CONTRAST=0.001,
+	HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	RAZOR2_CF_RANGE_51_100=0.5, RAZOR2_CF_RANGE_E8_51_100=1.886,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_SBL_CSS=3.335,
+	URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5,
+	URIBL_SBL_A=0.1, URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (2048-bit key) reason="fail (message has been altered)"
+	header.d=calsema.com; domainkeys=fail (2048-bit key)
+	reason="fail (message has been altered)"
+	header.from=support@calsema.com header.d=calsema.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id WDGQns8pfC-b; Tue, 23 Feb 2016 09:31:19 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 0193661FA2;
+	Tue, 23 Feb 2016 09:31:19 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1N8VIEJ007821;
+	Tue, 23 Feb 2016 09:31:18 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id DB1EED40F1; Tue, 23 Feb 2016 09:31:18 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id 08920D40CA
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:18 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id CE9989F737
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:17 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (2048-bit key) header.d=calsema.com;
+	domainkeys=fail (2048-bit key)
+	reason="fail (message has been altered)"
+	header.from=support@calsema.com header.d=calsema.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id jntvBifCAtgl
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Tue, 23 Feb 2016 09:31:13 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id B8678A0B84
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:13 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1N8VDFk007800
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:13 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id AD16D61F9D
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:13 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id oq2i1oUAcVyF
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Tue, 23 Feb 2016 09:31:09 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id E984861FA1
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:09 +0100 (CET)
+Received: from cal3.calsema.com (cal3.calsema.com [23.227.97.43])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1N8V9MH007773
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Tue, 23 Feb 2016 09:31:09 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=default; d=calsema.com;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:List-Unsubscribe:Content-Type:Content-Transfer-Encoding; i=support@calsema.com;
+ bh=ydNtoKDurdd0kRglug6B3OBCe5A=;
+ b=bV/qO2i7/jYcKZ+3GtXn6+REFvisN4mB96NF8addLLBMKQ4flsVPLMo0G+DANq69FRse2KwJ6zl+
+   6VTOvymLKqtCW3aaB7M7mqypJdh6f688haPsOZq1ew9D94ydnL5MebU4DeSl3UE7KAH+N13zFiAK
+   897jn0YTSiwCQZzid36TitELFhRUxr8lQxd83K5JUPmFqizyKnymcOdL9HV5oBuaZlPbQT6wu9eS
+   Q66ZcrI4T5AxznpRQkAG1MlaWltJmp8lk2oxvvbvWUC66gVU0FPt/Poyodg5bUWLM5pkdQzw26iT
+   xSj/JD2Mj0P3kH6q5oBJWmaVPT0mZD2e9qUeSQ==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=calsema.com;
+ b=zTZQzOkiKemSJOZiqcUWWvNGACKwv6oT0HF1qztPGcEZhS0Vncloz5AcsdXJengOQxNoAHXfeJmB
+   ka4pRTk/cSL2rY7vBF1nAhZ4Vg3vGTDt/X2bx6tUkhluNWb3aCUmwPaKRwjmr3oKuoq9LIfZ9o0H
+   Z+7Rrg2VBU+S2eWdm6V4BvDQ8OR2TOF8LBSlHUOMBJnje1ErOGEQRR1CROwHTP59qJqgRNHiLRDD
+   OlNoIac2iBrHTiHQ5kFKUarXcHKTt5GjUhcjhsfuCkTyFOKSRLfTHlP/ZQvM0S2WzNQxsHqRUs2Y
+   XaodutKu5DX2uFuMW5d96bUdMn9+G64Ts6pryQ==;
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Message-ID: <46daaa407d437c4b96f6c6f4f4f0d3a5@calsema.com>
+Date: Mon, 22 Feb 2016 19:11:08 -0600
+From: "Support" <support@calsema.com>
+Reply-To: support@calsema.com
+MIME-Version: 1.0
+X-Mailer-LID: 192,193,194,195
+List-Unsubscribe: <http://calsema.com/lists/unsubscribe.php?M=14358810&C=f28287d892f4868fcbb41dd058f7ef1a&L=192&N=28>
+X-Mailer-RecptId: 14358810
+X-Mailer-SID: 28
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_5a87173284a0f82c726252445614c7d6"
+Content-Transfer-Encoding: 8bit
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 23 Feb 2016 09:31:18 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 23 Feb 2016 09:31:13 +0100 (CET)
+X-Greylist: Delayed for 00:10:30 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 23 Feb 2016 09:31:09 +0100 (CET)
+X-Miltered: at potemkin with ID 56CC18D6.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56CC18D1.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56CC18CD.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56CC18D6.002 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56CC18D1.001 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<support@calsema.com>
+X-j-chkmail-Enveloppe: 56CC18CD.000 from cal3.calsema.com/cal3.calsema.com/null/cal3.calsema.com/<support@calsema.com>
+X-j-chkmail-Score: MSGID : 56CC18D6.002 on potemkin.univ-paris7.fr : j-chkmail score : X : R=## U=. O=. B=0.000 -> S=0.200
+X-j-chkmail-Score: MSGID : 56CC18D1.001 on potemkin.univ-paris7.fr : j-chkmail score : X : R=## U=. O=. B=0.000 -> S=0.200
+X-j-chkmail-Score: MSGID : 56CC18CD.000 on potemkin.univ-paris7.fr : j-chkmail score : X : R=## U=. O=. B=0.000 -> S=0.200
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] =?UTF-8?Q?ClubPlayerCasino_-_Obtenez_?=
+ =?UTF-8?Q?=E2=82=AC65Bonus_gratuit_sur_ClubPlayer?=
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1456
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+--b1_5a87173284a0f82c726252445614c7d6
+Content-Type: text/plain; format="flowed"; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+WW91ciBlbWFpbCBjbGllbnQgY2Fubm90IHJlYWQgdGhpcyBlbWFpbC4KVG8gdmlldyBpdCBvbmxp
+bmUsIHBsZWFzZSBnbyBoZXJlOgpodHRwOi8vY2Fsc2VtYS5jb20vbGlzdHMvZGlzcGxheS5waHA/
+TT0xNDM1ODgxMCZDPWYyODI4N2Q4OTJmNDg2OGZjYmI0MWRkMDU4ZjdlZjFhJlM9MjgmTD0xOTIm
+Tj0xNwpDbHViUGxheWVyQ2FzaW5vIC0gT2J0ZW5leiDigqw2NUJvbnVzIGdyYXR1aXQgc3VyIENs
+dWJQbGF5ZXIKaHR0cDovL2NhbHNlbWEuY29tL2xpc3RzL2xpbmsucGhwP009MTQzNTg4MTAmTj0y
+OCZMPTQxJkY9VApUbyBzdG9wIHJlY2VpdmluZyB0aGVzZQplbWFpbHM6aHR0cDovL2NhbHNlbWEu
+Y29tL2xpc3RzL3Vuc3Vic2NyaWJlLnBocD9NPTE0MzU4ODEwJkM9ZjI4Mjg3ZDg5MmY0ODY4ZmNi
+YjQxZGQwNThmN2VmMWEmTD0xOTImTj0yOAo=
+
+--b1_5a87173284a0f82c726252445614c7d6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+</head>
+
+<body>
+<a
+href="http://calsema.com/lists/unsubscribe.php?M=14358810&C=f28287d892f4868fcbb41dd058f7ef1a&L=192&N=28">Unsubscribe
+me from this list</a><br /><br />
+<table border="0" align="center" cellpadding="0" cellspacing="0"
+style="width: 500px;">
+<tbody>
+<tr>
+<td width="500" height="266" colspan="3" valign="top"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/top-club-player.jpg"
+alt="&euro;65 bonus gratuit" width="500" height="266" border="0" /></td>
+</tr>
+<tr>
+<td width="19" valign="top"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/img-left-cpc.gif"
+alt="" width="19" height="33" border="0" /></td>
+<td width="312" align="left" valign="middle" bgcolor="#fcf3d0"><font
+face="Arial, Helvetica, sans-serif" size="5" color="#810101">sur <a
+href="http://calsema.com/lists/link.php?M=14358810&N=28&L=42&F=H">Club
+Player</a> aujourd'hui!</font></td>
+<td width="169" valign="top"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/img-right-cpc.gif"
+alt="" width="169" height="33" border="0" /></td>
+</tr>
+<tr>
+<td height="11" colspan="3" valign="top"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/line-promo.jpg"
+alt="" width="500" height="11" border="0" /></td>
+</tr>
+<tr>
+<td colspan="3" align="center" valign="top" bgcolor="#222222">
+<table border="0" cellspacing="0" cellpadding="0" style="width: 492px;">
+<tbody>
+<tr>
+<td width="492" align="center" valign="top" bgcolor="#fde172">
+<table border="0" cellspacing="0" cellpadding="0" style="width: 463px;">
+<tbody>
+<tr>
+<td width="265" height="89" align="left" valign="middle"><font face="Arial,
+Helvetica, sans-serif" size="5" color="#594040">&euro;65 Bonus Sans
+D&eacute;p&ocirc;t</font><br /><font face="Arial, Helvetica, sans-serif"
+size="2" color="#594040">*Nouveaux joueurs<br />*Uniquement pour Machines
+&agrave; sous et Keno</font></td>
+<td width="198" height="89" align="center" valign="middle"><a
+href="http://calsema.com/lists/link.php?M=14358810&N=28&L=42&F=H"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/cliquez-ici-bot.gif"
+alt="Cliquez Ici!" width="198" height="89" border="0" /></a></td>
+</tr>
+<tr>
+<td height="8" colspan="2" align="left" valign="middle"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/line-div-cpc.gif"
+alt="" width="463" height="8" border="0" /></td>
+</tr>
+<tr>
+<td colspan="2" align="left" valign="top"><font face="Arial, Helvetica,
+sans-serif" size="2" color="#594040">Aller &agrave; <a
+href="http://calsema.com/lists/link.php?M=14358810&N=28&L=42&F=H"
+style="text-decoration: underline; color:
+#810101;">www.clubplayerfrance.com</a> ou cliquez ici pour commencer
+&agrave; gagner aujourd'hui!</font></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="22" colspan="3" valign="top"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/line-2promo.gif"
+alt="" width="500" height="22" border="0" /></td>
+</tr>
+<tr>
+<td height="26" colspan="3" valign="top"><a
+href="http://calsema.com/lists/link.php?M=14358810&N=28&L=42&F=H"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/title-online-help.gif"
+alt="" width="500" height="26" border="0" /></a></td>
+</tr>
+<tr>
+<td colspan="3" align="center" valign="top" bgcolor="#0A0002">
+<table border="0" cellspacing="0" cellpadding="0" style="width: 463px;">
+<tbody>
+<tr>
+<td width="119" height="38" align="left" valign="middle"><a
+href="http://calsema.com/lists/link.php?M=14358810&N=28&L=42&F=H"
+target="_new"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/live-chat-cpc.gif"
+alt="" width="119" height="38" border="0" /></a></td>
+<td width="344" align="right"><font face="Arial, Helvetica, sans-serif"
+size="2" color="#ffffff">France:</font><br /> <font face="Arial, Helvetica,
+sans-serif" size="3" color="#ffffff"><strong>0800 912
+151</strong></font></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="8" colspan="3" valign="top"><img
+src="http://www.clubplayercampaign.com/mail/cpc-65french-mail/images/line-footer.gif"
+alt="" width="500" height="8" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="http://calsema.com/lists/unsubscribe.php?M=14358810&C=f28287d892f4868fcbb41dd058f7ef1a&L=192&N=28">Unsubscribe
+me from this list</a></p>
+<img
+src="http://calsema.com/lists/open.php?M=14358810&L=192&N=28&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+--b1_5a87173284a0f82c726252445614c7d6--
+

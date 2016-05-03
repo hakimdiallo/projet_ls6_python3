@@ -1,0 +1,80 @@
+Return-Path: <nicolas.lopez@imelbosque.cl>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id kDsVIFF3n1ZjvgAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 20 Jan 2016 13:02:35 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 17C5F61FA5;
+	Wed, 20 Jan 2016 13:02:35 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 4.621
+X-Spam-Level: ****
+X-Spam-Status: No, score=4.621 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, MISSING_HEADERS=1.021,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=imelbosque.cl
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 4ce8OffkW5j0; Wed, 20 Jan 2016 13:02:33 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 33D3761FA1;
+	Wed, 20 Jan 2016 13:02:33 +0100 (CET)
+Received: from correo.imelbosque.cl (correo.imelbosque.cl [190.153.227.116])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0KC2VRI028527
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO);
+	Wed, 20 Jan 2016 13:02:32 +0100
+Received: from localhost (localhost [127.0.0.1])
+	by correo.imelbosque.cl (Postfix) with ESMTP id 1FAEC2F860A;
+	Wed, 20 Jan 2016 07:48:54 -0300 (CLT)
+Received: from correo.imelbosque.cl ([127.0.0.1])
+	by localhost (correo.imelbosque.cl [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id lYQfTo5hCGKo; Wed, 20 Jan 2016 07:48:53 -0300 (CLT)
+Received: from localhost (localhost [127.0.0.1])
+	by correo.imelbosque.cl (Postfix) with ESMTP id 64ABB2F8869;
+	Wed, 20 Jan 2016 07:48:21 -0300 (CLT)
+DKIM-Filter: OpenDKIM Filter v2.9.2 correo.imelbosque.cl 64ABB2F8869
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=imelbosque.cl;
+	s=0B24E466-736C-11E5-809A-2059D955791F; t=1453286901;
+	bh=XkkAyW6UVM3HU9HQAK/+OvVC3Z0vnkhqJ7WYNjJFzuM=;
+	h=Date:From:Message-ID:Subject:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=g1mkNZenTrCHCeilYIQ5byM0L5DcbLyI1cThL8ky2+1j0c4SEcBG+OU3IRhHPupVq
+	 CzgLv2Ft5lANQa8HnCjBlxXv/sQEZXLEWzZPlHjZShQUeJvGpt6yidoXY6vQPoXBc+
+	 F4/cgVhnBypcGCuznjdTKQnHDpgqQ8Ev3n5i9w74=
+X-Virus-Scanned: amavisd-new at correo.imelbosque.cl
+Received: from correo.imelbosque.cl ([127.0.0.1])
+	by localhost (correo.imelbosque.cl [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id FqnCnCq_C295; Wed, 20 Jan 2016 07:48:21 -0300 (CLT)
+Received: from correo.imelbosque.cl (correo.imelbosque.cl [10.200.0.15])
+	by correo.imelbosque.cl (Postfix) with ESMTP id 0ACCC2F88B2;
+	Wed, 20 Jan 2016 07:47:51 -0300 (CLT)
+Date: Wed, 20 Jan 2016 07:47:50 -0300 (CLST)
+From: Webmaster <nicolas.lopez@imelbosque.cl>
+Message-ID: <610196631.13454.1453286870626.JavaMail.zimbra@imelbosque.cl>
+Subject: AVERTISSEMENT!
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Originating-IP: [172.0.0.1]
+X-Mailer: Zimbra 8.6.0_GA_1153 (zclient/8.6.0_GA_1153)
+Thread-Topic: AVERTISSEMENT!
+Thread-Index: qOaMuPFMkSRdXmjqbmlouBhUyE+Cxg==
+X-Greylist: Delayed for 00:38:08 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 20 Jan 2016 13:02:33 +0100 (CET)
+X-Miltered: at potemkin with ID 569F7757.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 569F7757.000 from correo.imelbosque.cl/correo.imelbosque.cl/null/correo.imelbosque.cl/<nicolas.lopez@imelbosque.cl>
+X-j-chkmail-Score: MSGID : 569F7757.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+Votre limite compte de stockage de courrier a d=C3=A9pass=C3=A9 en raison d=
+u taux =C3=A9lev=C3=A9 de spams / courrier ind=C3=A9sirable, tous les messa=
+ges entrants sont rejet=C3=A9s. Pour re-valider votre compte de messagerie.=
+ Cliquez sur le lien ci-dessous et soumettre le formulaire de re-valider vo=
+tre e-mail.
+
+CLIQUEZ ICI: http://teeturrtee.tripod.com/courrier
+
+=C2=A92016 courrier =C3=A9quipe de support technique.

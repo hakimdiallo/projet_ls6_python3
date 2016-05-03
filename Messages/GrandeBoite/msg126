@@ -1,0 +1,408 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id iVgoAkH4vlYCfwAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:49 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id EB19761FA5;
+	Sat, 13 Feb 2016 10:32:48 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: -1.897
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.897 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	HTML_FONT_LOW_CONTRAST=0.001, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=unavailable autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=linkedin.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id LBwYJlTBsbdI; Sat, 13 Feb 2016 10:32:47 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 2FE7561FA2;
+	Sat, 13 Feb 2016 10:32:47 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1D9Wlgs023801;
+	Sat, 13 Feb 2016 10:32:47 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 19631D405F; Sat, 13 Feb 2016 10:32:47 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id C5327D405F
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:45 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id BA5F99FDEB
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:45 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=linkedin.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id uaCzlVdnfirc
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sat, 13 Feb 2016 10:32:45 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id F187F9FC15
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:44 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1D9WibT020255
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:44 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id E536261F9D
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:44 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id l2sXxzJqw-hC
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sat, 13 Feb 2016 10:32:43 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 1EBC561FA3
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:43 +0100 (CET)
+Received: from maile-ce.linkedin.com (maile-ce.linkedin.com [108.174.6.197])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1D9Wf7Z020239
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=FAIL)
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 10:32:42 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linkedin.com;
+	s=proddkim1024; t=1455355055;
+	bh=VtjqQBiX/ZnsgUB4Gz0juagi1szYw6qnc+1qwYeV2Ys=;
+	h=From:Subject:MIME-Version:Content-Type:To:Date:X-LinkedIn-Class:
+	 X-LinkedIn-Template:X-LinkedIn-fbl;
+	b=D6BUdZlCmHYbRYIDqM68x40zO3xNNL7PAsMEDL7xvyJWi21FUlJjLny3HMK49QZfv
+	 qm1pfBq5lAJpTO+8ySTFrgnins2EjdE5RgLHXoLdcOy+rGJYvgMTbIMN0refDsKx74
+	 oM6uGI4WKjJpO6/59cgfuiE6w7SrkTraodbE+X9k=
+From: JOURNALS of Humanities and Cultural Studies <messages-noreply@linkedin.com>
+Message-ID: <1227568684.596392.1455355055667.JavaMail.app@ltx1-app10549.prod.linkedin.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_596390_1027284115.1455355055663"
+To: <algocomp-apply@liafa.univ-paris-diderot.fr>
+Date: Sat, 13 Feb 2016 09:17:35 +0000 (UTC)
+X-LinkedIn-Class: INVITE-GUEST
+X-LinkedIn-Template: invite_guest
+X-LinkedIn-fbl: m2-clvfofs7mwfq6h8oonuw5jgu990diobdv2gwe09mvhnxiwingw7e05swnrxipbg2gw4owtfgoxaexumk78ivnr813oe2ewbzm42q0jq5yt0n7fp8ax3ugz1q8sgryw5vmr1yqyc4
+X-LinkedIn-Id: 0-ikkwtm0q-hb
+List-Unsubscribe: <mailto:list-unsubscribe@linkedin.com?subject=unsubscribe/AQHj-nLb_4vUwgAAAVLZ684z2esxzPmQHDZX1egcYY441t14zBJEvX0DWntKkTQJ6Duf_HqSGFdKJCn-TSxmd6_RjMIlNGxW735kU_S44LWKhw/0-ikkwtm0q-hb/m2-clvfofs7mwfq6h8oonuw5jgu990diobdv2gwe09mvhnxiwingw7e05swnrxipbg2gw4owtfgoxaexumk78ivnr813oe2ewbzm42q0jq5yt0n7fp8ax3ugz1q8sgryw5vmr1yqyc4>
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sat, 13 Feb 2016 10:32:47 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sat, 13 Feb 2016 10:32:44 +0100 (CET)
+X-Greylist: Delayed for 00:15:05 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sat, 13 Feb 2016 10:32:43 +0100 (CET)
+X-Miltered: at korolev with ID 56BEF83F.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56BEF83C.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56BEF839.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56BEF83F.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56BEF83C.000 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<s-2f4x85pek4h13s16ovlbusyjkpqo5bq45lv1f3j2xp43g8mtkpkvizp5@bounce.linkedin.com>
+X-j-chkmail-Enveloppe: 56BEF839.001 from maile-ce.linkedin.com/maile-ce.linkedin.com/null/maile-ce.linkedin.com/<s-2f4x85pek4h13s16ovlbusyjkpqo5bq45lv1f3j2xp43g8mtkpkvizp5@bounce.linkedin.com>
+X-j-chkmail-Score: MSGID : 56BEF83F.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56BEF83C.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56BEF839.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] JOURNALS of Humanities and Cultural Studies
+ souhaiterait se connecter avec vous sur LinkedIn
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1442
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+------=_Part_596390_1027284115.1455355055663
+Content-Type: text/plain;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: text-body
+
+Bonjour,
+
+J=E2=80=99aimerais vous inviter =C3=A0 rejoindre mon r=C3=A9seau profession=
+nel sur LinkedIn.
+
+JOURNALS
+
+Veuillez confirmer que vous connaissez JOURNALS: https://www.linkedin.com/e=
+/v2?e=3D0-ikkwtm0q-hb&t=3Dssuw&tracking=3Deml-guest-invite-cta&ek=3Dinvite_=
+guest&sharedKey=3DHaChvl5A&invitationId=3D6092986049657659393
+
+
+
+
+
+
+
+
+Vous avez re=C3=A7u une invitation =C3=A0 rejoindre un r=C3=A9seau. LinkedI=
+n utilise votre adresse e-mail pour faire des suggestions =C3=A0 ses utilis=
+ateurs dans des fonctionnalit=C3=A9s telles que Les connaissez-vous=C2=A0? =
+Se d=C3=A9sabonner ici=C2=A0: https://www.linkedin.com/e/v2?e=3D0-ikkwtm0q-=
+hb&t=3Dlun&midToken=3DAQFmrFVhGEd36Q&ek=3Dinvite_guest&loid=3DAQFiMOt9dfNO0=
+AAAAVLZ683GPZCrG0yLLSdq07pwMnJAfthbz8hSpfLd-L0p9smNA_wHWsgErCjWOM9MhpH4agI-=
+f8ZXepAtYwR3_SrMR963Ig&eid=3D0-ikkwtm0q-hb
+
+
+Cet e-mail est destin=C3=A9 =C3=A0 algocomp-apply@liafa.univ-paris-diderot.=
+fr.
+
+If you need assistance or have questions, please contact LinkedIn Customer =
+Service: https://www.linkedin.com/e/v2?e=3D0-ikkwtm0q-hb&a=3DcustomerServic=
+eUrl&ek=3Dinvite_guest
+
+&copy; 2016 LinkedIn Corporation, 2029 Stierlin Court, Mountain View CA 940=
+43. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.
+------=_Part_596390_1027284115.1455355055663
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: html-body
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3=
+.org/1999/xhtml" style=3D"-webkit-text-size-adjust:none;"> <head> <meta htt=
+p-equiv=3D"Content-Type" content=3D"text/html;charset=3Dutf-8"/> <meta name=
+=3D"HandheldFriendly" content=3D"true"/> <meta name=3D"viewport" content=3D=
+"width=3Ddevice-width; initial-scale=3D0.666667; maximum-scale=3D0.666667; =
+user-scalable=3D0"/> <meta name=3D"viewport" content=3D"width=3Ddevice-widt=
+h"/> <title></title> <style type=3D"text/css">@media all and (max-width:590=
+px) { *[class].responsive { width:290px !important; } *[id]#center { width:=
+50%; margin:0 auto; display:table; } *[class].responsive-spacer table { wid=
+th:20px !important; } *[class].vspacer { margin-top:10px !important; margin=
+-bottom:15px !important; margin-left:0 !important; } *[class].res-font14 { =
+font-size:14px !important; } *[class].res-font16 { font-size:16px !importan=
+t; } *[class].res-font13 { font-size:13px !important; } *[class].res-font12=
+ { font-size:12px !important; } *[class].res-font10 { font-size:10px !impor=
+tant; } *[class].res-font18 { font-size:18px !important; } *[class].res-fon=
+t18 span { font-size:18px !important; } *[class].responsive-50per { width:1=
+00% !important; } *[class].responsive-spacer70 { width:70px !important; } *=
+[class].hideIMG { height:0px !important; width:0px !important; } *[class].r=
+es-height30 { height:30px !important; } *[class].res-height20 { height:20px=
+ !important; } *[class].res-height20 div { height:20px !important; } *[clas=
+s].res-height10 { height:10px !important; } *[class].res-height10 div { hei=
+ght:10px !important; } *[class].res-height10.email-spacer div { height:10px=
+ !important; min-height:10px !important; line-height:10px !important; font-=
+size:10px !important; } *[class].res-height0 { height:0px !important; } *[c=
+lass].res-height0 div { height:0px !important; } *[class].res-width280 { wi=
+dth:280px !important; } *[class].res-width25 { width:25px !important; } *[c=
+lass].res-width10 { width:10px !important; } *[class].res-width10 table { w=
+idth:10px !important; } *[class].res-width120 { width:120px !important; } *=
+[class].res-padding { width:0 !important; } *[class].res-padding table { wi=
+dth:0 !important; } *[class].cellpadding-none { width:0px !important; } *[c=
+lass].cellpadding-none table { border:collapse !important; } *[class].cellp=
+adding-none table td { padding:0 !important; } *[class].display-none { disp=
+lay:none !important; } *[class].display-block { display:block !important; }=
+ *[class].remove-margin { margin:0 !important; } *[class].remove-border { b=
+order:none !important; } *[class].res-img60 { width:60px !important; height=
+:60px !important; } *[class].res-img75 { width:75px !important; height:75px=
+ !important; } *[class].res-img100 { width:100px !important; height:100px !=
+important; } *[class].res-img320 { width:320px !important; height:auto !imp=
+ortant; position:relative; } *[class].res-img90x63 { width:90px !important;=
+ height:63px !important; } *[class].res-border { border-top:1px solid #E1E1=
+E1 !important; } *[class].responsive2col { width:100% !important; } *[class=
+].center-content { text-align:center !important; } *[class].hide-for-mobile=
+ { display:none !important; } *[class].show-for-mobile { width:100% !import=
+ant; max-height:none !important; visibility:visible !important; overflow:vi=
+sible !important; float:none !important; height:auto !important; display:bl=
+ock !important; } *[class].responsive-table { display:table !important; } *=
+[class].responsive-row { display:table-row !important; } *[class].responsiv=
+e-cell { display:table-cell !important; } *[class].fix-table-content { tabl=
+e-layout:fixed; } *[class].res-padding08 { padding-top:8px; } *[class].head=
+er-spacer { table-layout:auto !important; width:250px !important; } *[class=
+].header-spacer td, *[class].header-spacer div { width:250px !important; } =
+} @media all and (-webkit-min-device-pixel-ratio:1.5) { *[id]#base-header-l=
+ogo { background-image:url(https://static.licdn.com/scds/common/u/images/em=
+ail/logos/logo_linkedin_tm_email_197x48_v1.png) !important; background-size=
+:95px; background-repeat:no-repeat; width:95px !important; height:21px !imp=
+ortant; } *[id]#base-header-logo img { opacity:0; } *[id]#base-header-logo =
+a { height:21px !important; } *[id]#base-header-logo-china { background-ima=
+ge:url(https://static.licdn.com/scds/common/u/images/email/logos/logo_linke=
+din_tm_china_email_266x42_v1.png) !important; background-size:133px; backgr=
+ound-repeat:no-repeat; width:133px !important; height:21px !important; } *[=
+id]#base-header-logo-china img { display:none; } *[id]#base-header-logo-chi=
+na a { height:21px !important; } } </style> </head> <body style=3D"backgrou=
+nd-color:#DFDFDF;padding:0;margin:0 auto;width:100%;"> <span style=3D"displ=
+ay: none !important;font-size: 1px;visibility: hidden;opacity: 0;color: tra=
+nsparent;height: 0;width: 0;mso-hide: all;"></span> <table border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-=
+serif; border-collapse:collapse; width:100% !important; font-family:Helveti=
+ca,Arial,sans-serif; margin:0; padding:0;" width=3D"100%" bgcolor=3D"#DFDFD=
+F"> <tbody> <tr> <td colspan=3D"3"> <table border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=
+=3D"1"> <tbody> <tr> <td> <div style=3D"height:5px;font-size:5px;line-heigh=
+t:5px;"> &nbsp; </div></td> </tr> </tbody> </table></td> </tr> <tr> <td> <t=
+able cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" widt=
+h=3D"100%" style=3D"table-layout: fixed;"> <tbody> <tr> <td align=3D"center=
+"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-fa=
+mily:Helvetica,Arial,sans-serif; min-width:290px;" width=3D"600" class=3D"r=
+esponsive"> <tbody> <tr> <td style=3D"font-family:Helvetica,Arial,sans-seri=
+f;"> <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" cl=
+ass=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:8px;font-size:=
+8px;line-height:8px"> &nbsp; </div></td> </tr> </tbody> </table> <table bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-family:Helvetic=
+a,Arial,sans-serif;" width=3D"100%" bgcolor=3D"#DDDDDD"> <tbody> <tr> <td a=
+lign=3D"left" valign=3D"middle" width=3D"95" height=3D"21" id=3D"base-heade=
+r-logo"><a style=3D"text-decoration:none;cursor:pointer;border:none;display=
+:block;height:21px;width:100%;" href=3D"https://www.linkedin.com/comm/nhome=
+/?trk=3Deml-guest-invite-logo&amp;trkEmail=3Deml-invite_guest-null-45-null-=
+null-0%7Eikkwtm0q%7Ehb"><img src=3D"https://static.licdn.com/scds/common/u/=
+images/email/logos/logo_linkedin_tm_email_95x21_v1.png" width=3D"95" height=
+=3D"21" alt=3D"LinkedIn" style=3D"border:none;text-decoration:none;"/></a><=
+/td> </tr> </tbody> </table> <table width=3D"1" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div style=
+=3D"height:8px;font-size:8px;line-height:8px"> &nbsp; </div></td> </tr> </t=
+body> </table> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"font-family:Helvetica,Arial,sans-serif;" width=3D"100%" bgcolor=3D"#33=
+3333"> <tbody> <tr> <td width=3D"20" class=3D"responsive-spacer"> <table wi=
+dth=3D"20" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" class=3D"email-=
+spacer"> <tbody> <tr> <td> <div style=3D"height:0px;font-size:0px;line-heig=
+ht:0px"> &nbsp; </div></td> </tr> </tbody> </table></td> <td width=3D"100%"=
+><span style=3D"color:#FFF;"> <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div sty=
+le=3D"height:18px;font-size:18px;line-height:18px"> &nbsp; </div></td> </tr=
+> </tbody> </table>JOURNALS of Humanities and Cultural Studies souhaite res=
+ter en contact sur LinkedIn. <table width=3D"1" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div style=
+=3D"height:18px;font-size:18px;line-height:18px"> &nbsp; </div></td> </tr> =
+</tbody> </table></span></td> <td width=3D"20" class=3D"responsive-spacer">=
+ <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" class=
+=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:0px;font-size:0px=
+;line-height:0px"> &nbsp; </div></td> </tr> </tbody> </table></td> </tr> </=
+tbody> </table> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%" bgcolor=3D"#=
+FFFFFF"> <tbody> <tr> <td width=3D"20" class=3D"res-width10"> <table width=
+=3D"20px" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" class=3D"email-s=
+pacer res-width10"> <tbody> <tr> <td> <div style=3D"height:0px;font-size:0p=
+x;line-height:0px"> &nbsp; </div></td> </tr> </tbody> </table></td> <td sty=
+le=3D"color: #333333; font-family: Helvetica,Arial,sans-serif; font-size: 1=
+5px; line-height: 18px;" align=3D"left"> <table width=3D"1" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"1" class=3D"email-spacer res-height10"> <tbo=
+dy> <tr> <td> <div style=3D"height:20px;font-size:20px;line-height:20px"> &=
+nbsp; </div></td> </tr> </tbody> </table> <table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; "=
+ width=3D"100%"> <tbody> <tr> <td> <table border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D=
+"100%"> <tbody> <tr> <td width=3D"120" valign=3D"top" style=3D"vertical-ali=
+gn: top;"><img alt=3D"JOURNALS of Humanities and Cultural Studies" src=3D"h=
+ttps://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAUuAAAAJGM4NWM=
+4NDI5LTJmNDAtNDliZS1hNjQ0LTNjNWNlNzVlYmJhMQ.jpg" width=3D"60" height=3D"60"=
+ border=3D"0" style=3D"border:none;outline:hidden;"/></td> <td width=3D"20"=
+> <table width=3D"20" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" clas=
+s=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:0px;font-size:0p=
+x;line-height:0px"> &nbsp; </div></td> </tr> </tbody> </table></td> <td sty=
+le=3D"vertical-align: top; font-family: Helvetica,Arial,sans-serif;" width=
+=3D"100%"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D=
+"font-family:Helvetica,Arial,sans-serif; " width=3D"100%"> <tbody> <tr> <td=
+ style=3D"font-size: 20px; font-weight: bold; color:#333333;" valign=3D"top=
+">JOURNALS of Humanities and Cultural Studies</td> </tr> <tr> <td style=3D"=
+color:#333333;font-size:15px;" class=3D"res-font16">Journal of Forensics an=
+d Networks Investigations R&amp;D chez JOURNALS OF SCIENTIFCS R&amp;D</td> =
+</tr> <tr> <td style=3D"color:#B3B3B3;font-size:13px;" class=3D"res-font16"=
+>Tunisie</td> </tr> </tbody> </table></td> </tr> </tbody> </table></td> </t=
+r> <tr> <td> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%"> <tbody> <tr> =
+<td style=3D"border-bottom:1px solid #e5e5e5;"> <table width=3D"1" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> =
+<tr> <td> <div style=3D"height:20px;font-size:20px;line-height:20px"> &nbsp=
+; </div></td> </tr> </tbody> </table></td> </tr> </tbody> </table></td> </t=
+r> <tr> <td> <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:20px;=
+font-size:20px;line-height:20px"> &nbsp; </div></td> </tr> </tbody> </table=
+></td> </tr> <tr> <td> <table border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"100%"> <tbo=
+dy> <tr> <td style=3D"font-family:Helvetica,Arial,sans-serif;color:#333333;=
+font-size:15px;">Bonjour ,</td> </tr> <tr> <td> <table width=3D"1" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> =
+<tr> <td> <div style=3D"height:15px;font-size:15px;line-height:15px"> &nbsp=
+; </div></td> </tr> </tbody> </table></td> </tr> <tr> <td style=3D"font-fam=
+ily:Helvetica,Arial,sans-serif;color:#333333;font-size:15px;">J=E2=80=99aim=
+erais vous inviter &agrave; rejoindre mon r&eacute;seau professionnel sur L=
+inkedIn.</td> </tr> <tr> <td> <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div sty=
+le=3D"height:15px;font-size:15px;line-height:15px"> &nbsp; </div></td> </tr=
+> </tbody> </table></td> </tr> <tr> <td>JOURNALS</td> </tr> <tr> <td> <tabl=
+e width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" class=3D"ema=
+il-spacer"> <tbody> <tr> <td> <div style=3D"height:20px;font-size:20px;line=
+-height:20px"> &nbsp; </div></td> </tr> </tbody> </table></td> </tr> <tr> <=
+td> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left">=
+ <tbody> <tr> <td align=3D"center" height=3D"30" valign=3D"middle" bgcolor=
+=3D"#287BBC" background=3D"https://static.licdn.com/scds/common/u/img/email=
+/bg_btn_katy_blue_medium.png" style=3D"background:url(https://static.licdn.=
+com/scds/common/u/img/email/bg_btn_katy_blue_medium.png) repeat-x scroll bo=
+ttom #287BBC;background-color:#287BBC;border:1px solid #1B5480;-moz-border-=
+radius:3px;-webkit-border-radius:3px;border-radius:3px; cursor: pointer;"> =
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-famil=
+y:Helvetica,Arial,sans-serif; " width=3D"100%" bgcolor=3D"transparent"> <tb=
+ody> <tr> <td width=3D"13"> <table width=3D"13px" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div sty=
+le=3D"height:0px;font-size:0px;line-height:0px"> &nbsp; </div></td> </tr> <=
+/tbody> </table></td> <td><a href=3D"https://www.linkedin.com/e/v2?e=3D0-ik=
+kwtm0q-hb&amp;t=3Dssuw&amp;tracking=3Deml-guest-invite-cta&amp;ek=3Dinvite_=
+guest&amp;sharedKey=3DHaChvl5A&amp;invitationId=3D6092986049657659393" styl=
+e=3D"text-decoration:none; font-size: 13px;font-weight: bold;color: white;w=
+hite-space: nowrap;display: block;" target=3D"_blank"><span style=3D"font-s=
+ize: 13px;font-weight: bold;color: white;white-space: nowrap;display: block=
+;">Veuillez confirmer que vous connaissez JOURNALS</span></a></td> <td widt=
+h=3D"13"> <table width=3D"13px" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:0px;f=
+ont-size:0px;line-height:0px"> &nbsp; </div></td> </tr> </tbody> </table></=
+td> </tr> </tbody> </table></td> </tr> </tbody> </table></td> </tr> </tbody=
+> </table></td> </tr> <tr> <td> <table width=3D"1" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"1" class=3D"email-spacer"> <tbody> <tr> <td> <div sty=
+le=3D"height:20px;font-size:20px;line-height:20px"> &nbsp; </div></td> </tr=
+> </tbody> </table></td> </tr> <tr> <td></td> </tr> </tbody> </table></td> =
+<td width=3D"20" class=3D"res-width10"> <table width=3D"20px" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"1" class=3D"email-spacer res-width10"> <tb=
+ody> <tr> <td> <div style=3D"height:0px;font-size:0px;line-height:0px"> &nb=
+sp; </div></td> </tr> </tbody> </table></td> </tr> </tbody> </table></td> <=
+/tr> </tbody> </table> <table border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"font-family:Helvetica,Arial,sans-serif; " width=3D"600" class=
+=3D"responsive"> <tbody> <tr></tr> </tbody> </table> <table border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" style=3D"font-family:Helvetica,Arial,sans=
+-serif; " width=3D"600" class=3D"responsive"> <tbody> <tr> <td> <table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-family:Helvetica=
+,Arial,sans-serif; " width=3D"100%" class=3D"responsive"> <tbody> <tr> <td>=
+ <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:10px;font-size:10=
+px;line-height:10px"> &nbsp; </div></td> </tr> </tbody> </table></td> </tr>=
+ <tr> <td align=3D"left"> <table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"color:#999999;font-size:11px;font-family:Helvetica,Arial,sa=
+ns-serif;" width=3D"100%"> <tbody> <tr> <td>Vous avez re&ccedil;u une invit=
+ation &agrave; rejoindre un r&eacute;seau. LinkedIn utilise votre adresse e=
+-mail pour faire des suggestions &agrave; ses utilisateurs dans des fonctio=
+nnalit&eacute;s telles que Les connaissez-vous&nbsp;? <a style=3D"color:#00=
+77B5;text-decoration:none;" href=3D"https://www.linkedin.com/e/v2?e=3D0-ikk=
+wtm0q-hb&amp;t=3Dlun&amp;midToken=3DAQFmrFVhGEd36Q&amp;ek=3Dinvite_guest&am=
+p;loid=3DAQGCSX4hiEFjMAAAAVLZ683Q40r5o6XYg9pLfopjUvtwbeC3Ogsu7lcEpWOwnXhFnm=
+IQvBIKsqmJIgIe3KFsvavPM0ctDgoWQulBUOchKvfRIg&amp;eid=3D0-ikkwtm0q-hb">Se d&=
+eacute;sabonner</a></td> </tr> <tr> <td></td> </tr> <tr> <td>Cet e-mail est=
+ destin&eacute; &agrave; algocomp-apply@liafa.univ-paris-diderot.fr.</td> <=
+/tr> <tr> <td>Si vous avez des questions ou avez besoin d=E2=80=99aide, con=
+tactez l=E2=80=99<a target=3D"_blank" href=3D"https://www.linkedin.com/e/v2=
+?e=3D0-ikkwtm0q-hb&amp;a=3DcustomerServiceUrl&amp;ek=3Dinvite_guest" style=
+=3D"color:#0077B5;text-decoration:none;">assistance client&egrave;le</a>.</=
+td> </tr> <tr> <td> <table width=3D"1" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" class=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height=
+:10px;font-size:10px;line-height:10px"> &nbsp; </div></td> </tr> </tbody> <=
+/table></td> </tr> <tr> <td>&copy; 2016 LinkedIn Corporation, 2029 Stierlin=
+ Court, Mountain View CA 94043. LinkedIn and the LinkedIn logo are register=
+ed trademarks of LinkedIn.</td> </tr> <tr> <td> <table width=3D"1" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"email-spacer"> <tbody> =
+<tr> <td> <div style=3D"height:10px;font-size:10px;line-height:10px"> &nbsp=
+; </div></td> </tr> </tbody> </table></td> </tr> <tr> <td></td> </tr> <tr> =
+<td> <table width=3D"1" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cl=
+ass=3D"email-spacer"> <tbody> <tr> <td> <div style=3D"height:10px;font-size=
+:10px;line-height:10px"> &nbsp; </div></td> </tr> </tbody> </table></td> </=
+tr> </tbody> </table></td> </tr> <tr> <td> <table width=3D"1" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" class=3D"email-spacer"> <tbody> <tr> <t=
+d> <div style=3D"height:20px;font-size:20px;line-height:20px"> &nbsp; </div=
+></td> </tr> </tbody> </table></td> </tr> </tbody> </table></td> </tr> </tb=
+ody> </table></td> </tr> </tbody> </table></td> </tr> </tbody> </table> <im=
+g src=3D"http://www.linkedin.com/emimp/0-ikkwtm0q-hb.gif" style=3D"width:1p=
+x; height:1px;"/> </body> </html>
+------=_Part_596390_1027284115.1455355055663--

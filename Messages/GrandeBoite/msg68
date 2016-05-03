@@ -1,0 +1,197 @@
+Return-Path: <marketingbg@mail.ru>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id r4LuAkj91lZibwAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 02 Mar 2016 15:49:22 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 08CC761FA5
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed,  2 Mar 2016 15:49:22 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 21.666
+X-Spam-Level: *********************
+X-Spam-Status: Yes, score=21.666 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DATE_IN_PAST_06_12=1.543,
+	DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	FREEMAIL_FORGED_FROMDOMAIN=0.249, FREEMAIL_FROM=0.001,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	RAZOR2_CF_RANGE_51_100=0.5, RAZOR2_CF_RANGE_E8_51_100=1.886,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_SBL=0.141,
+	RCVD_IN_SBL_CSS=3.335, URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5,
+	URIBL_SBL=1.623, URIBL_SBL_A=0.1, URI_NO_WWW_INFO_CGI=2.071]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id YinJ3Hwl_zgQ for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed,  2 Mar 2016 15:49:20 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 27FC961FA3
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed,  2 Mar 2016 15:49:20 +0100 (CET)
+Received: from scientificevents.info (scientificevents.info [85.91.139.82])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u22EnJ6C018216
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed, 2 Mar 2016 15:49:19 +0100
+Received: from mail.scientificevents.info (unknown [192.168.1.106])
+	by scientificevents.info (Postfix) with ESMTPA id 06F7D36B960
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Sat, 27 Feb 2016 09:25:41 +0200 (EET)
+To: sophie.laplante@liafa.univ-paris-diderot.fr
+Subject: =?UTF-8?B?IEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSDigJxMYW5ndWFnZSwgSW5kaXZpZHVhbCBhbmQgU29jaWV0eeKAnQ==?=
+Message-ID: <b66778e5c0b941586bcdee06ccee526e@mail.scientificevents.info>
+Date: Fri, 26 Feb 2016 23:10:40 +0200
+From: "International Scientific Events" <marketing@scientificevents.info>
+Reply-To: sciencebg@gmail.com
+MIME-Version: 1.0
+X-Mailer-LID: 120
+List-Unsubscribe: <mailto:unsubscribe@mail.scientificevents.info?subject=Unsubscribe%20Me>, <http://mail.scientificevents.info/unsubscribe.php?M=6893386&C=189b2a4e70e8e35cd325132871e1d24f&L=120&N=112>
+X-Mailer-RecptId: 6893386
+X-Mailer-SID: 112
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_4bfa6e7a92d5c078f5dd212a91264845"
+Content-Transfer-Encoding: 8bit
+X-Greylist: Delayed for 33:03:49 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 02 Mar 2016 15:49:20 +0100 (CET)
+X-Miltered: at potemkin with ID 56D6FD6F.003 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D6FD6F.003 from scientificevents.info/scientificevents.info/null/scientificevents.info/<marketingbg@mail.ru>
+X-j-chkmail-Score: MSGID : 56D6FD6F.003 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--b1_4bfa6e7a92d5c078f5dd212a91264845
+Content-Type: text/plain; format="flowed"; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+Q29uZmVyZW5jZSBJbnZpdGF0aW9uCgpXZSBoYXZlIHRoZSBwbGVhc3VyZSBvZiBpbnZpdGluZyB5
+b3UgdG8gcGFydGljaXBhdGUgaW4gdGhlIDEwdGgKSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlIOKA
+nExhbmd1YWdlLCBJbmRpdmlkdWFsIGFuZCBTb2NpZXR54oCdLCB3aGljaCB3aWxsCnRha2UgcGxh
+Y2Ugb24gNy0xMSBTZXB0ZW1iZXIgMjAxNiBpbiBIb3RlbCDigJxSb3lhbCBDYXN0bGXigJ0sIEVs
+ZXZhdGUKSG9saWRheSBWaWxsYWdlLCBCdWxnYXJpYSAoRVUpLgoKRm9yIG1vcmUgaW5mb3JtYXRp
+b24gYW5kIHJlZ2lzdHJhdGlvbiwgcGxlYXNlIHZpc2l0OgpodHRwOi8vbWFpbC5zY2llbnRpZmlj
+ZXZlbnRzLmluZm8vbGluay5waHA/TT02ODkzMzg2Jk49MTEyJkw9ODgmRj1UCgpSdXNzaWFuCmh0
+dHA6Ly9tYWlsLnNjaWVudGlmaWNldmVudHMuaW5mby9saW5rLnBocD9NPTY4OTMzODYmTj0xMTIm
+TD05NSZGPVQKCkJ1bGdhcmlhbgpodHRwOi8vbWFpbC5zY2llbnRpZmljZXZlbnRzLmluZm8vbGlu
+ay5waHA/TT02ODkzMzg2Jk49MTEyJkw9OTYmRj1UCgpBbGwgdGhlIHBhcGVycyBwcmVzZW50ZWQg
+d2lsbCBiZSBwdWJsaXNoZWQgaW4gb3BlbiBhY2Nlc3Mgb25saW5lIGpvdXJuYWxzLApwYXJ0IG9m
+IEludGVybmF0aW9uYWwgU2NpZW50aWZpYyBQdWJsaWNhdGlvbnM6CgpodHRwOi8vbWFpbC5zY2ll
+bnRpZmljZXZlbnRzLmluZm8vbGluay5waHA/TT02ODkzMzg2Jk49MTEyJkw9NSZGPVQKCkFsdGVy
+bmF0aXZlbHksIHdlIGFyZSBhbHNvIGhvc3RpbmcgYSBmZXcgb3RoZXIgY29uZmVyZW5jZXMgaW4g
+MjAxNiB0aGF0IG1heQpiZSBvZiBpbnRlcmVzdCB0byB5b3UuIEZvciBtb3JlIGluZm9ybWF0aW9u
+IGFuZCByZWdpc3RyYXRpb24sIHBsZWFzZSB2aXNpdApJbnRlcm5hdGlvbmFsIFNjaWVudGlmaWMg
+RXZlbnRzOgoKaHR0cDovL21haWwuc2NpZW50aWZpY2V2ZW50cy5pbmZvL2xpbmsucGhwP009Njg5
+MzM4NiZOPTExMiZMPTImRj1UCgpXZSB3b3VsZCBsaWtlIHRvIGFzayB5b3UgdG8gZW5jb3VyYWdl
+IHlvdXIgY29sbGVhZ3VlcyB0byBwcmVwYXJlIHRoZWlyCnBhcGVycyBhbmQgdGFrZSBwYXJ0IGlu
+IHRoZSBDb25mZXJlbmNlLCBhcyB3ZWxsLgoKCkxldCdzIGJlIGdsYWQgdG8gc2VlIHlvdSBhbW9u
+ZyBwYXJ0aWNpcGFudHMhCkludGVybmF0aW9uYWwgU2NpZW50aWZpYyBFdmVudHMgdGVhbQoKCkNv
+cHlyaWdodCDCqSAyMDE2IFNjaWVuY2UgRXZlbnRzLCBCdWxnYXJpYS4gQWxsIFJpZ2h0cyBSZXNl
+cnZlZC4KClRoaXMgaXMgYSBjb21tZXJjaWFsIG1lc3NhZ2UuIFlvdSBjYW4gc3RvcCByZWNlaXZp
+bmcgZW1haWxzIGZyb20gdXMgYXQgYW55CnRpbWUuCmh0dHA6Ly9tYWlsLnNjaWVudGlmaWNldmVu
+dHMuaW5mby91bnN1YnNjcmliZS5waHA/TT02ODkzMzg2JkM9MTg5YjJhNGU3MGU4ZTM1Y2QzMjUx
+MzI4NzFlMWQyNGYmTD0xMjAmTj0xMTIKCklmIHlvdSBoYXZlIHF1ZXN0aW9ucyBvciBuZWVkIGFz
+c2lzdGFuY2UsIGFzayB1cyBoZXJlCmh0dHA6Ly9tYWlsLnNjaWVudGlmaWNldmVudHMuaW5mby9s
+aW5rLnBocD9NPTY4OTMzODYmTj0xMTImTD05JkY9VAo=
+
+--b1_4bfa6e7a92d5c078f5dd212a91264845
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html contenteditable="true"><head></head><body>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 12px;"><b>25 years International
+Science Events, Bulgaria</b></span></font></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 11px;"><br /> </span></font></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 11px;"><br /></span></font></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 12px;">Conference Invitation</span><br
+/> </font></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 11px;"><br /></span></font></div>
+<div style="margin: 0px; line-height: normal;"><font face="Arial"><span
+lang="BG" style="font-size: 11px; font-variant: normal; widows: 1;">We have
+the pleasure of inviting you to participate in the 10th International
+Conference&nbsp;</span><span style="widows: 1;"><b><span style="font-size:
+11px;">&ldquo;Language, Individual and
+Society</span></b></span></font><font face="Arial"><span lang="BG"
+style="widows: 1;"><span style="font-size: 11px;"><b>&rdquo;</b>, which
+will take place on 7</span><strong style="font-size: 11px; font-variant:
+normal;"><span style="font-weight: normal;">-11 September
+2016</span></strong><b style="font-size: 11px; font-variant:
+normal;">&nbsp;</b><span style="font-size:
+11px;">in&nbsp;</span><span><span style="font-size: 11px;">Hotel
+&ldquo;Royal Castle&rdquo;,&nbsp;</span></span></span><span lang="BG"
+style="widows: 1;"><span><span style="font-size: 11px;">Elevate</span><span
+style="font-size: 11px;"><font color="rgba(0, 0, 0,
+0)">&nbsp;</font>Holiday Village</span></span></span><span lang="BG"
+style="font-size: 11px; font-variant: normal; widows: 1;">, Bulgaria
+(EU).</span></font></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><span
+lang="BG" style="widows: 1; font-size: 11px;"><font face="Arial"><br
+/></font></span></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 11px;"><span lang="BG" style="widows:
+1;"><span style="widows: auto; -webkit-text-stroke-color: #000000;">For
+more information and registration, please visit: <a
+href="http://mail.scientificevents.info/link.php?M=6893386&N=112&L=88&F=H">English</a>
+&nbsp; &nbsp;</span></span><a
+href="http://mail.scientificevents.info/link.php?M=6893386&N=112&L=95&F=H">Russian</a>
+&nbsp; &nbsp; <a
+href="http://mail.scientificevents.info/link.php?M=6893386&N=112&L=96&F=H">Bulgarian</a></span></font></div>
+<div style="margin: 0px; font-variant: normal; line-height:
+normal;"></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;"><font
+face="Arial"><span style="font-size: 11px;"><br /> </span></font></div>
+<div style="margin: 0px; font-variant: normal; line-height: normal;">
+<p style="margin: 0px 0px 20px; -webkit-text-stroke-color: #000000;
+-webkit-text-stroke-width: initial;"><font face="Arial"><span
+style="font-size: 11px;"><span style="-webkit-text-stroke-width:
+initial;">All the papers presented will be published in open access online
+journals, part of International Scientific Publications (</span><span
+style="color: #042eee; -webkit-text-stroke-color:
+#042eee;">www.scientific-publications.net</span><span
+style="-webkit-text-stroke-width: initial;">).</span></span></font></p>
+<p style="widows: 1; margin: 6pt 0cm 0.0001pt;"><font face="Arial"><span
+style="font-size: 11px;"><span>Alternatively, we are also hosting a few
+other conferences in 2016 that may be of interest to you. For more
+information and registration, please
+visit&nbsp;</span><span><span><span><span><a
+href="http://mail.scientificevents.info/link.php?M=6893386&N=112&L=2&F=H">International
+Scientific Events</a></span></span></span><span style="color:
+#ff9900;">.</span></span></span></font></p>
+<p class="MsoNormal" style="widows: 1; margin: 6pt 0cm 0.0001pt;"><span
+style="font-size: 11px;"><font face="Arial"><br /></font></span></p>
+<p class="MsoNormal" style="widows: 1; margin: 6pt 0cm 0.0001pt;"><span
+style="font-size: 11px;"><font face="Arial">We would like to ask you to
+encourage your colleagues to prepare their papers and take part in the
+Conference, as well.</font></span></p>
+<p class="MsoNormal" style="widows: 1; margin: 6pt 0cm 0.0001pt;"><span
+style="font-size: 11px;"><font face="Arial"><br /></font></span></p>
+<p class="MsoNormal" style="widows: 1; margin: 6pt 0cm 0.0001pt;"><span
+style="font-size: 11px;"><font face="Arial">Let's be glad to see you among
+participants!</font></span></p>
+<p class="MsoNormal" style="widows: 1; margin: 6pt 0cm 0.0001pt;"><b><span
+style="color: #1a1a1a; font-size: 11px;"><font face="Arial">International
+Scientific Events team</font></span></b></p>
+<p style="margin: 0px 0px 20px; -webkit-text-stroke-color: #000000;
+-webkit-text-stroke-width: initial;"><b style="-webkit-text-stroke-width:
+initial; text-align: justify; font-size: 9px; widows: 1; font-family:
+Arial;"><br /></b></p>
+<p style="margin: 0px 0px 20px; -webkit-text-stroke-color: #000000;
+-webkit-text-stroke-width: initial;"><b style="color: #454545; font-size:
+9px;"><font face="Arial">Copyright &copy; 2016 Science Events, Bulgaria.
+All Rights Reserved.<br /><br /></font></b><font face="Arial" style="color:
+#454545;"><span style="font-size: 9px;">This is a commercial message. You
+can stop receiving emails from us at any time.&nbsp;</span></font><span
+style="color: #454545; font-family: Arial; font-size: 9px; text-align:
+justify;"><a
+href="http://mail.scientificevents.info/unsubscribe.php?M=6893386&C=189b2a4e70e8e35cd325132871e1d24f&L=120&N=112">Unsubscribe
+me from this list</a><br /></span><span style="color: #454545; text-align:
+justify; font-size: 9px; font-family: Arial;">If you have questions or need
+assistance,&nbsp;</span><span style="text-align: justify; font-size: 9px;
+font-family: Arial; color: #e4af09;"><a
+href="http://mail.scientificevents.info/link.php?M=6893386&N=112&L=9&F=H"
+style="text-align: justify; font-size: 9px; font-family: Arial;">ask us
+here.</a></span></p>
+</div>
+<img
+src="http://mail.scientificevents.info/open.php?M=6893386&L=120&N=112&F=H&image=.jpg"
+height="1" width="10"></body></html>
+
+--b1_4bfa6e7a92d5c078f5dd212a91264845--
+

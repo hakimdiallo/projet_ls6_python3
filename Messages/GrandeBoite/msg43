@@ -1,0 +1,105 @@
+Return-Path: <barasik@coolcat.be>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id BpbAKyZg4VZlWAAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:55:21 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 0A98361F9D
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:55:21 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: -0.37
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.37 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, DCC_CHECK=1.1, HTML_MESSAGE=0.001,
+	MIME_HTML_MOSTLY=0.428, RCVD_IN_DNSWL_NONE=-0.0001,
+	UNPARSEABLE_RELAY=0.001] autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id MoPjP042yxbt for <laplante@liafa.univ-paris-diderot.fr>;
+	Thu, 10 Mar 2016 12:55:19 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 4CCB761FA5
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:55:19 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2ABtJiF006077
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:55:19 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 706A730336B
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id 5C6593022D3
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 5497740296
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id jcDZq2oIjtzz for <laplante@liafa.univ-paris-diderot.fr>;
+	Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 3F7814014C
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id 3CF4BE02AC; Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id 3B33CE02AA
+	for <laplante@lri.fr>; Thu, 10 Mar 2016 12:49:09 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id 1E282E00E5
+	for <laplante@lri.fr>; Thu, 10 Mar 2016 12:49:10 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id 19E245FFEC
+	for <laplante@lri.fr>; Thu, 10 Mar 2016 05:49:08 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (mx.cs.uchicago.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id CVmAx_saLaUU for <laplante@lri.fr>;
+	Thu, 10 Mar 2016 05:49:04 -0600 (CST)
+X-Greylist: Delayed for 00:06:10 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 10 Mar 2016 12:55:19 +0100 (CET)
+X-Greylist: delayed 1532 seconds by postgrey-1.34 at mx; Thu, 10 Mar 2016 05:49:02 CST
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id A178D5FE5A
+	for <sophie@cs.uchicago.edu>; Thu, 10 Mar 2016 05:49:02 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+ (10.0.1.11) with Microsoft SMTP Server (TLS) id 15.0.1044.25; Thu, 10 Mar
+ 2016 13:22:08 +0200
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+ (10.0.1.1) with Microsoft SMTP Server (TLS) id 15.0.1044.25; Thu, 10 Mar 2016
+ 13:22:07 +0200
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+ Microsoft SMTP Server id 15.0.1044.25 via Frontend Transport; Thu, 10 Mar
+ 2016 13:19:33 +0200
+Message-ID: <5451E7B4BF6B4437EBEEA719DD9F5AFE@coolcat.be>
+From: =?windows-1251?B?1fD/+bjiIMPl7eDk6Ok=?= <barasik@coolcat.be>
+To: =?windows-1251?B?zuvl4yDC6+Dk6Ozo8O7i6Pc=?= <souztex@pompa.ru>
+Subject: =?windows-1251?B?zeXyIOHl5yDi+/Xu5O379SDx6PLz4Pbo6Swg?=
+	=?windows-1251?B?4vv17uQg/fLuIOvo6uLo5OD26P8=?=
+Date: Thu, 10 Mar 2016 14:16:34 +0300
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="96014e9efa410d194000f5de4813"
+X-Miltered: at potemkin with ID 56E160A7.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E160A7.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<barasik@coolcat.be>
+X-j-chkmail-Score: MSGID : 56E160A7.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--96014e9efa410d194000f5de4813
+Content-Type: text/plain; charset="windows-1251"
+Content-Transfer-Encoding: quoted-printable
+
+
+--96014e9efa410d194000f5de4813
+Content-Type: text/html; charset="windows-1251"
+Content-Transfer-Encoding: quoted-printable
+
+<HTML><HEAD>
+<META http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows=
+-1251">
+</HEAD>
+<BODY>
+<DIV>&nbsp;</DIV></BODY></HTML>
+
+--96014e9efa410d194000f5de4813--

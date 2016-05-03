@@ -1,0 +1,304 @@
+Return-Path: <wcitca.2015@gmail.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 710pFriA1laSAgAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 02 Mar 2016 06:57:12 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 54ABF61FA3
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed,  2 Mar 2016 06:57:12 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 9.524
+X-Spam-Level: *********
+X-Spam-Status: Yes, score=9.524 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	FREEMAIL_ENVFROM_END_DIGIT=0.25, FREEMAIL_FROM=0.001,
+	FREEMAIL_REPLYTO=1, FREEMAIL_REPLYTO_END_DIGIT=0.25,
+	HTML_MESSAGE=0.001, MIME_HTML_ONLY=0.723, RCVD_IN_DNSWL_NONE=-0.0001,
+	SPOOFED_FREEM_REPTO=2.499] autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id BqhN6PdPJaes for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed,  2 Mar 2016 06:57:08 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id C3EEF61F9D
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed,  2 Mar 2016 06:57:08 +0100 (CET)
+Received: from perl.echhar.biz (perl.echhar.biz [213.246.45.37])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u225v8aY003522
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed, 2 Mar 2016 06:57:08 +0100
+Received: from WIN-K928GLAI2JL (unknown [41.230.40.128])
+	by perl.echhar.biz (Postfix) with ESMTPSA id 96034B115DA
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed,  2 Mar 2016 06:48:56 +0100 (CET)
+MIME-Version: 1.0
+From: IJNNGT Editor in Chief  <wcitca.2015@gmail.com>
+Reply-To: wcitca.2015@gmail.com
+To: sophie.laplante@liafa.univ-paris-diderot.fr
+Subject: IJNNGT'2016: Call For Paper Submission Deadline: March 25, 2016 
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: AtMail PHP 5.61
+Date: Wed, 2 Mar 2016 05:49:14 +0100
+Message-ID: <2968374271842077722431@WIN-K928GLAI2JL>
+Disposition-Notification-To: wcitca.2015@gmail.com
+X-Greylist: Delayed for 00:08:11 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 02 Mar 2016 06:57:08 +0100 (CET)
+X-Miltered: at potemkin with ID 56D680B4.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D680B4.000 from perl.echhar.biz/perl.echhar.biz/null/perl.echhar.biz/<wcitca.2015@gmail.com>
+X-j-chkmail-Score: MSGID : 56D680B4.000 on potemkin.univ-paris7.fr : j-chkmail score : X : R=## U=. O=. B=0.000 -> S=0.200
+X-j-chkmail-Status: Ham
+
+<style type=3D"text/css">
+<!--
+.style84 {	color: #000000;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+}
+.style86 {color: #000000; font-weight: bold; font-family: "Times New Roman"=
+, Times, serif; font-size: 12px; }
+.style149 {	color: #FF0000;
+	font-size: 24px;
+}
+.style59 {	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+}
+.style61 {	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	margin: 0px;
+	padding-right: 0px;
+	font-family: "Times New Roman", Times, serif;
+}
+.style100 {font-family: "Times New Roman", Times, serif}
+.style112 {color: #000000; font-size: 17px; }
+.style115 {font-size: 14px;
+	font-weight: bold;
+}
+.style129 {	font-size: 14px;
+	color: #000000;
+}
+.style15 {color: #FF0000; font-weight: bold; }
+.style150 {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "Times New Roman", Times, serif;
+}
+.style18 {color: #333399; font-size: 14px; font-weight: bold; }
+.style82 {	color: #000000;
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+}
+.style90 {color: #FF0000}
+.style96 {font-size: 14px; font-family: "Times New Roman", Times, serif; co=
+lor: #000000;}
+.style167 {font-size: 14px; font-family: "Times New Roman", Times, serif; c=
+olor: #000000; font-weight: bold; }
+.style168 {
+	color: #FF0000;
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+.style174 {font-weight: bold}
+.style178 {font-size: 14px}
+.style179 {font-family: "Times New Roman", Times, serif; font-weight: bold;}
+-->
+</style>
+<table height=3D"600" cellpadding=3D"10" width=3D"651" style=3D"height:100%=
+;width:100%;padding-bottom:10px;padding-top:10px;padding-left:10px;padding-=
+right:10px;background-color:#00CC33">
+<tbody>
+<tr>
+<td height=3D"1604" valign=3D"top" style=3D"text-align:center">
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"651" border=3D"0" style=
+=3D"font-size:10px;font-family:Tahoma;font-weight:normal;color:#4c4c4c;padd=
+ing-bottom:0px;text-align:left;padding-top:0px;padding-left:0px;margin:0px =
+auto;padding-right:0px;background-color:#ffffff">
+<tbody>
+
+
+<tr valign=3D"top">
+<td height=3D"1352" style=3D"padding-bottom:15px;padding-top:15px;padding-l=
+eft:15px;padding-right:15px"><table width=3D"618" cellspacing=3D"0" bgcolor=
+=3D"#FFFF33" >
+<tbody>
+<tr>
+<td width=3D"651" style=3D"border-bottom:#FFFFFF 4px solid;background-color=
+:#FFFFFF"><span class=3D"style84">&nbsp;Please accept our apologies if you =
+receive  multiple copies of this CFP</span><span class=3D"style86"><br />
+--------------------------------------------------------------------- <br />
+</span><span class=3D"style84">&nbsp;We would be very grateful if you could=
+  distribute this CFP <br> </span>
+<p class=3D"style84">&nbsp;To any of your colleagues, students and networks=
+ that might  be interested<br><br>
+  <img alt=3D"ABC Widgets" width=3D"653" height=3D"90" src=3D"https://encry=
+pted-tbn2.gstatic.com/images=3Fq=3Dtbn:ANd9GcShP62fP-foLvGqy6UiKTW3HFr5QAvA=
+P128W3MiRfE_rvJ9Mz21xA" class=3D"CToWUd"></p></td>
+</tr>
+<tr bgcolor=3D"#FFFFFF">
+<td style=3D"font-size:12px;font-family:Tahoma;font-weight:normal;color:#00=
+0000;padding-bottom:5px;padding-top:5px;padding-left:15px;margin:0px;paddin=
+g-right:15px">
+<p style=3D"padding-bottom:5px;padding-top:5px;padding-left:5px;padding-rig=
+ht:5px;background-color:#eeeeee">Monday 29th February  2016</p></td>
+</tr
+><tr>
+<td width=3D"590" height=3D"90" bgcolor=3D"#FFFF33" style=3D"font-size:18px=
+;font-family:Tahoma;font-weight:bold;color:#ffffff;padding-bottom:5px;paddi=
+ng-top:5px;padding-left:5px;margin:0px;padding-right:5px">
+<div align=3D"center" style=3D"font-size:18px;font-weight:bold;padding-bott=
+om:0px;padding-top:0px;padding-left:0px;margin:0px;padding-right:0px">
+  <div align=3D"center" class=3D"style61"><span class=3D"style79 style88 st=
+yle131"><strong> Call For Paper Submission Deadline</strong>: <span class=
+=3D"style90"> March 25, 2016 </span></span></div>
+  <div align=3D"center" style=3D"font-size:18px;font-weight:bold;padding-bo=
+ttom:0px;padding-top:0px;padding-left:0px;margin:0px;padding-right:0px">
+    <p class=3D"MsoNormal style59 style149" style=3D"margin:0in 0in 10pt"><=
+a href=3D"http://ijnngt.org/"><font color=3D"#FF0000">www.ijnngt.org</font>=
+</a></p>
+  </div>
+</div>
+<div align=3D"center" style=3D"font-size:18px;font-weight:bold;padding-bott=
+om:0px;padding-top:0px;padding-left:0px;margin:0px;padding-right:0px"><span=
+ style=3D"font-size:12pt;font-family:'Times New Roman','serif';line-height:=
+115%"><font color=3D"#000000"><span style=3D"font-size:12pt;font-family:'Ti=
+mes New Roman','serif';line-height:115%"></span></font></span></div></td>
+</tr>
+</tbody>
+</table>
+
+<p class=3D"MsoNormal style90" style=3D"margin:0in 0in 10pt"><span class=3D=
+"style150"><br />Home:</span></p>
+<p class=3D"style96" style=3D"margin:0in 0in 10pt">The<strong> I</strong>nt=
+ernational <strong>J</strong>ournals of <strong>N&amp;N</strong> <strong>G<=
+/strong>lobal <strong>T</strong>echnology (<strong>IJNNGT</strong>) are pee=
+r-reviewed journals that publish original research articles as well as revi=
+ew articles in all areas of computing sciences and technology. The editors =
+of the journal will be pleased to receive original papers, which are not co=
+nsidered for publication elsewhere, on subjects covered by the journal. All=
+ submissions undergo a rapid but thorough reviewing process to ensure timel=
+y publications.</p>
+<span class=3D"style96"><span class=3D"style90"><strong>Important Dates:</s=
+trong></span><br />
+      </span> =20
+<div class=3D"style96"  style=3D"float:left;  background-color:#FFFF99"  ><=
+span class=3D"style178"><strong>Paper  Submission Due: &nbsp;</strong><br/>
+	   <strong>Notification of  Acceptance : </strong><br/>
+	      <strong>Submission  of Revised Manuscript:</strong><br/>
+	      <strong>Publication  Date: </strong></span></div>
+			<div class=3D"style96" style=3D" background-color:#FFFF99"><span class=
+=3D"style178 style174"><span class=3D"style178"><font color=3D"#FF0000"></f=
+ont> <font color=3D"#FF0000">March 25, 2016</font></span></span><span class=
+=3D"style178"><br/>
+	                  <strong><font color=3D"#FF0000">April 10, 2016</font></s=
+trong><br/>
+	                  <strong><font color=3D"#FF0000">June 30, 2016</font></st=
+rong><br/>
+                </span></span><span class=3D"style179"><font color=3D"#FF00=
+00">July 15, 2016 </font></span>  </span> </div>
+			<br>
+<p class=3D"style96" style=3D"margin:0in 0in 10pt"><span class=3D"style15">=
+Paper Submission:</span><br />
+  Dear Colleagues,&nbsp;due to numerous requests,  the international journa=
+ls submission deadline is extended to the <strong>25 </strong>of <strong>Ma=
+rch 2016</strong>, you are invited to submit your paper by clicking on the =
+following links:<br>
+</p>
+<p class=3D"style96"><strong>International Journal of</strong> <strong>Info=
+rmation Security (IJIS)</strong></span></span><span class=3D"style112"><str=
+ong>:<br />
+</strong></span><strong class=3D"style18 style84"><span class=3D"style90"><=
+a href=3D"http://edas.info/N17413"><font color=3D"#FF0000">http://edas.info=
+/N17413</font></a></span></strong></p>
+<p class=3D"style96"><strong>International Journal of Networking and Commun=
+ication (IJNC): </strong><br />
+    <strong class=3D"style115"><a href=3D"http://edas.info/N17415"><font co=
+lor=3D"#FF0000">http://edas.info/N17415</font></a><a href=3D"https://edas.i=
+nfo/N17415=3Fc=3D17415" target=3D"_blank"></a></strong></p>
+<p class=3D"style96"><strong>International Journal of</strong> <strong>Inte=
+rnet and Web Applications</strong> (<strong>IJIWA</strong>): <br />
+  <a href=3D"http://edas.info/N17417"><strong><font color=3D"#FF0000">http:=
+//edas.info/N17417</font></strong></a></p>
+<p class=3D"style96"><strong>International Journal on</strong> <strong>E-Le=
+arning and Education ( IJEE)</strong>: <br />
+    <strong><a href=3D"http://edas.info/N17419"><font color=3D"#FF0000">htt=
+p://edas.info/N17419</font></a></strong></p>
+<p class=3D"style96"><strong>International Journal of</strong> <strong>Arti=
+ficial Intelligence ( IJAI): <br />
+</strong><a href=3D"http://edas.info/N17421"><strong><font color=3D"#FF0000=
+">http://edas.info/N17421</font></strong></a></p>
+<p class=3D"style96"> <strong>International Journal of Information Systems =
+(IJ-IS): <br />
+    <a href=3D"http://edas.info/N17423"><font color=3D"#FF0000">http://edas=
+.info/N17423</font></a></strong></p>
+<p class=3D"style96"><strong>International  Journal of Signal Processing an=
+d Imaging Engineering (IJSPIE):<a href=3D"http://edas.info/N17425"><br />
+        <font color=3D"#FF0000">http://edas.info/N17425</font></a></strong>=
+</p>
+<p class=3D"style96"><strong>International Journal of</strong> <strong>Soft=
+ware Engineering (IJSE)</strong>: <br />
+    <strong><a href=3D"http://edas.info/N17427"><font color=3D"#FF0000">htt=
+p://edas.info/N17427</font></a></strong></p>
+<p class=3D"style96"><strong>International Journa</strong>l <strong>of</str=
+ong> <strong>Embedded Systems (IJES): <br />
+    <a href=3D"http://edas.info/N17895"><font color=3D"#FF0000">http://edas=
+.info/N17895</font></a></strong></p>
+<p align=3D"left" class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.25in">=
+<img src=3D"http://www.wswan.org/images/journals.png" alt=3D"a" width=3D"17=
+0" height=3D"189" s style=3D"border:3px solid #ccc;" /></p>
+<p align=3D"left" class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.25in">=
+&nbsp;</p>
+<p align=3D"center" class=3D"MsoNormal style100 style129" style=3D"margin:0=
+in 0in 10pt 0.25in"><strong>NNGT Journals</strong> are <strong>indexed</str=
+ong> with prestigious academic indexes including <strong>Google Scholar</st=
+rong>, <strong>International Institute of Organized Research</strong>,<stro=
+ng> Directory of Research Journals Indexing</strong>, <strong>Scientific In=
+dexing Services</strong>, <strong>Open Access Library</strong>, <strong>Pre=
+rna Society of Technical Education
+and Research</strong> and <strong>CiteFactor</strong>&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.25in">&nbsp;</p>
+<p align=3D"left" class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.25in">=
+<span class=3D"style82">We are looking forward to your contributions.<br />
+  Sincerely Yours,<br />
+  <strong>IJNNGT Editor in Chief </strong></span></p>
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt 0.25in"><span class=3D"=
+style167">Contact us : </span><span class=3D"style168">editor014@gmail.com<=
+/strong></span></p>
+
+<span style=3D"font-size:12pt;font-family:'Times New Roman','serif'"></span=
+><span style=3D"font-family:'Times New Roman','serif'">
+</span>
+<p class=3D"style86" >If you no longer wish to receive email from us, you m=
+ay send a blank email with subject line [Unsubscribe]</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<html>
+<body>
+<div align=3D"center">
+<p>
+&nbsp;
+<br>
+&nbsp;
+<br>
+<img border=3D"0" src=3D"http://www.mail-tracking.com/mailtracking/images/i=
+conmailtrack.gif" width=3D"40" height=3D"40">
+<br>
+<font face=3D"Arial" size=3D"2"><font color=3D"#FFFFFF">
+<span style=3D"background-color: #FF0000">&nbsp;Envoy=E9 avec la version gr=
+atuite de ( <b><a target=3D"_blank" href=3D"http://www.mail-tracking.com/ma=
+iltracking/index.html">Mail Tracking</a></b> ) =AE </span></font>
+<br>
+<b><font color=3D"#FF0000">::</font></b>&nbsp; Solution pertinente pour le =
+suivi comportemental en temps r=E9el&nbsp; <font color=3D"#FF0000"><b>::</b=
+></font></font>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id BOZjMDwToFYiRgEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:40 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id AC92161FA1;
+	Thu, 21 Jan 2016 00:07:40 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 9.513
+X-Spam-Level: *********
+X-Spam-Status: Yes, score=9.513 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	FREEMAIL_FORGED_FROMDOMAIN=0.25, FREEMAIL_FROM=0.001,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_HK_NAME_FM_DR=0.01, URIBL_DBL_SPAM=2.5,
+	URIBL_JP_SURBL=1.25] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=mail180-6.suw31.mandrillapp.com header.b=Q/XILmbR;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.sender=m.breberina@mail180-6.suw31.mandrillapp.com
+	header.d=mail180-6.suw31.mandrillapp.com; dkim=fail (1024-bit key)
+	reason="fail (message has been altered)" header.d=mandrillapp.com
+	header.b=Ho4azqZN
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id O0JgS3WWdLRL; Thu, 21 Jan 2016 00:07:38 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id C906361FA5;
+	Thu, 21 Jan 2016 00:07:38 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0KN7cLA005606;
+	Thu, 21 Jan 2016 00:07:38 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id B243D19A5FE; Thu, 21 Jan 2016 00:07:38 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id C51FE19A5FE
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:35 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id C0021A27EF
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:35 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=mail180-6.suw31.mandrillapp.com
+	header.b=Q/XILmbR; domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.sender=m.breberina@mail180-6.suw31.mandrillapp.com
+	header.d=mail180-6.suw31.mandrillapp.com; dkim=pass (1024-bit key)
+	header.d=mandrillapp.com header.b=Ho4azqZN
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id UbPXcL71izAm
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Thu, 21 Jan 2016 00:07:35 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 311E4A1CB8
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:35 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0KN7ZbZ005583
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:35 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 19CF861FA1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:35 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id L46adInfVwcb
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Thu, 21 Jan 2016 00:07:33 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 3F83C61FA2
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:33 +0100 (CET)
+Received: from mail180-6.suw31.mandrillapp.com (mail180-6.suw31.mandrillapp.com [198.2.180.6])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0KN7WX9005575
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 00:07:32 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail180-6.suw31.mandrillapp.com;
+ h=From:Sender:Subject:Reply-To:To:Message-Id:Date:MIME-Version:Content-Type:Content-Transfer-Encoding; i=m.breberina@mail180-6.suw31.mandrillapp.com;
+ bh=akRToxeuKeR4gTQfF/lpToI4Qg0=;
+ b=Q/XILmbRoJhpACqmfIYmDS5uXl16qo3s8dR7r6ROQWwA1ZEWox+Qc8iChIZG75/9QVrW5DnDx7VC
+   ntuHN7Sjkq0fe/u7tmTDH+oVx2SfF0w6nqEnNAgKX3JXSaqIUVwf83gghpk0Merozk7TsVSootCz
+   S5ZWrIpZu3NLAYlAS5Y=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail180-6.suw31.mandrillapp.com;
+ b=pSG9YzLIblFaWcQrDpIZK/jrRg00dmZGGOckBRilClrwStIHehG8vNNs1vaIIgEzr/JEhvf1vdqY
+   iNHlXGdnjwbxTLEgdVNkieq3hCrrE6p6YqzW6nfsi4kyZhYtv4mu0QaDTfh2EnS8R0e05a81FWnQ
+   87v9yesfaUjTzMra2es=;
+Received: from pmta03.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail180-6.suw31.mandrillapp.com id hk09ja22sc05 for <algocomp-apply@liafa.univ-paris-diderot.fr>; Wed, 20 Jan 2016 22:52:10 +0000 (envelope-from <bounce-md_12627151.56a00f9a.v1-71824fa825164a10b5381ae0c7c851bc@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com;
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1453330330; h=From :
+ Sender : Subject : Reply-To : To : Message-Id : Date : MIME-Version :
+ Content-Type : Content-Transfer-Encoding : From : Subject : Date :
+ X-Mandrill-User : List-Unsubscribe;
+ bh=OAztjQ623TDFoQp3uDkNM+BYxDEGzuGNXAH4FP1iQS8=;
+ b=Ho4azqZNG4extwrnOkAsTHegm1erSPa4RG488lBq6fblnON1nlTtg/IfXa52Q+BRV1Zs/5
+ f3GOrhpC1Ia9Ro/LxFMHII+zXe1BvFroipf+E2RC1gQIO9Mn/g8MEeEji4tJH2180nGS9ExA
+ R2lY8yn9KnsAGFqcHBX3dzTsCA9sQ=
+From: "Dr. Pearson" <m.breberina@gmail.com>
+Sender: "Dr. Pearson" <m.breberina@mail180-6.suw31.mandrillapp.com>
+Received: from [49.151.110.56] by mandrillapp.com id 71824fa825164a10b5381ae0c7c851bc; Wed, 20 Jan 2016 22:52:10 +0000
+Reply-To: algocomp-apply <algocomp-apply@liafa.univ-paris-diderot.fr>
+To: <algocomp-apply@liafa.univ-paris-diderot.fr>
+Message-Id: <20160121065203.2D24033B290085D7@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=12627151.71824fa825164a10b5381ae0c7c851bc
+X-Mandrill-User: md_12627151
+Date: Wed, 20 Jan 2016 22:52:10 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 21 Jan 2016 00:07:38 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 21 Jan 2016 00:07:35 +0100 (CET)
+X-Greylist: Delayed for 00:15:21 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 21 Jan 2016 00:07:33 +0100 (CET)
+X-Miltered: at potemkin with ID 56A0133A.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56A01337.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56A01334.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A0133A.001 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56A01337.000 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<bounce-md_12627151.56a00f9a.v1-71824fa825164a10b5381ae0c7c851bc@mandrillapp.com>
+X-j-chkmail-Enveloppe: 56A01334.002 from mail180-6.suw31.mandrillapp.com/mail180-6.suw31.mandrillapp.com/null/mail180-6.suw31.mandrillapp.com/<bounce-md_12627151.56a00f9a.v1-71824fa825164a10b5381ae0c7c851bc@mandrillapp.com>
+X-j-chkmail-Score: MSGID : 56A0133A.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56A01337.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56A01334.002 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] This Miracle Shake Treats Diabetes, FAST
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1389
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+Dr. Pearsons has a very important message for you today.
+  
+At the link below he will reveal to you a shockingly simple to
+make "Miracle Shake" which is proven to treat diabetes in
+14 days.
+  
+This exact drink has helped over 21,832 people.
+  
+And it is something you make right now from your own home.
+  
+HINT: It doesn't involve diet, exercise or ANYTHING
+you've ever been told.
+  
+>> "Miracle Shake" Treats Diabetes (Drink THIS)
+   
+>>  
+http://itsgettinghothere.com/r/drpearsons121/algocomp-apply@liafa.univ-paris-diderot.fr
+
+  
+
+  
+
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+Reverse Your Diabetes Today | 1 Place Marie, 8th Floor 
+Montreal,  Quebec H5b4m8, Canada
+
+Email Marketing by iContact - Click Unsubscribe

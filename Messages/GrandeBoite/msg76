@@ -1,0 +1,167 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id QPJyLaUj01apSQEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:17 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id A693F61FA3;
+	Sun, 28 Feb 2016 17:43:17 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 3.851
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.851 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, FREEMAIL_FORGED_FROMDOMAIN=0.249,
+	FREEMAIL_FROM=0.001, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=securedurl.org
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id n3Q879UR3dSu; Sun, 28 Feb 2016 17:43:13 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 45EEB61FA2;
+	Sun, 28 Feb 2016 17:43:13 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1SGhDuu026210;
+	Sun, 28 Feb 2016 17:43:13 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 28DDDD40A1; Sun, 28 Feb 2016 17:43:13 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id 50492D4017
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:09 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 4A1139F624
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:09 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=securedurl.org
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id q_2ldDo8FWdJ
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sun, 28 Feb 2016 17:43:08 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 791F0A1C51
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:08 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1SGh8as030370
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:08 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 6D65161FA1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:08 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id GJTAd7NGiPJp
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sun, 28 Feb 2016 17:43:03 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id B162961F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:03 +0100 (CET)
+Received: from securedurl.org (ssxx63.securedurl.org [68.171.105.83])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1SGh3HW026180
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 17:43:03 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=securedurl.org;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding; i=postmaster@securedurl.org;
+ bh=j6vULKFZ8h9uPK0fh0KqsS3+9Qc=;
+ b=byR7m9Oq/QGYaSXqdsqx3EnLNS0QYNl70QfY5Tz4kAav5VyhRoXErxx/CnpmZke+ejO0zm0v5E2N
+   MDJqywZv9O5Bh321J2uuxgd8jAtJDYIVDUEsqoKfKNAUE3OUmJfR/X8oraQZ5mI/7tQLjJEZeuSv
+   CbXwsEoY5AI6MeUrI78=
+Received: from gmail.com (88.150.241.73) by securedurl.org id hqauh40001gr for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 11:18:43 +0300 (envelope-from <algocomp-apply@gmail.com>)
+From: Notifications <algocomp-apply@gmail.com>
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Date: 28 Feb 2016 15:36:06 +0000
+Message-ID: <20160228153606.D38972D7ACAF07C3@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sun, 28 Feb 2016 17:43:13 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sun, 28 Feb 2016 17:43:08 +0100 (CET)
+X-Greylist: Delayed for 01:00:22 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sun, 28 Feb 2016 17:43:03 +0100 (CET)
+X-Miltered: at potemkin with ID 56D323A1.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56D3239C.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56D32397.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D323A1.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56D3239C.001 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@gmail.com>
+X-j-chkmail-Enveloppe: 56D32397.000 from ssxx63.securedurl.org/ssxx63.securedurl.org/null/securedurl.org/<algocomp-apply@gmail.com>
+X-j-chkmail-Score: MSGID : 56D323A1.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56D3239C.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56D32397.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] [ Revealed ] Free Electricity Forever - Easy
+ Setup
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1466
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+Hey algocomp-apply,
+
+Have you heard about this?
+
+Check my video, I actually generated an electricity using this.
+
+http://migre.me/t6Lhf   <<=3D Copy and paste this to your browser
+
+I hope you can too! :)
+
+Engr. Nikola
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please accept my deepest apology if you receive this in error,
+To stop for further mailings pls go here:
+
+
+http://migre.me/t6Lk8
+
+=20

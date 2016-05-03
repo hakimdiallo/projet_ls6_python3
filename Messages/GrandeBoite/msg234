@@ -1,0 +1,458 @@
+Return-Path: <bounces_@email-promo.ovh>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id DH1UKXYeqFYFXQEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 27 Jan 2016 02:33:42 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 5592161FFD;
+	Wed, 27 Jan 2016 02:33:39 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 14.024
+X-Spam-Level: **************
+X-Spam-Status: Yes, score=14.024 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	HTML_FONT_LOW_CONTRAST=0.001, HTML_IMAGE_RATIO_02=0.437,
+	HTML_MESSAGE=0.001, RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_SBL_CSS=3.335,
+	URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5, URIBL_JP_SURBL=1.25]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=email-promo.ovh header.b=Sb/Tn2Ih;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=contact@email-promo.ovh header.d=email-promo.ovh;
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=email-promo.ovh header.b=CiHawFUM
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id z0Uj3SYHo0QA; Wed, 27 Jan 2016 02:33:35 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 04D1A61FFC
+	for <auliafa@liafa.univ-paris-diderot.fr>; Wed, 27 Jan 2016 02:33:35 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0R1XY2U005766
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <auliafa@liafa.univ-paris-diderot.fr>; Wed, 27 Jan 2016 02:33:34 +0100
+Received: from mail1fr11.email-promo.ovh (mail1fr11.email-promo.ovh [51.255.55.36])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0R1WwCq006581
+          for <auliafa@liafa.jussieu.fr>; Wed, 27 Jan 2016 02:33:15 +0100 (CET)
+X-Ids: 165
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=email-promo.ovh;
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id; i=contact@email-promo.ovh;
+ bh=olXF2zAicebsNvk/FUKtr8aKGEk=;
+ b=Sb/Tn2IhBUXpMgJDHuPuHb9VfSCtNzMZQO2HU5kSN7HoxdKO6dlCr1U9weuNlh+mK8wFsznHTXUO
+   UdkTGJBadR9jsJfJ3K9GamjxPZ498X1tIi9GZp18knzr53hiZmargHIPUGqftqGJuBM6ZEs3i99Y
+   PVmvB0YIyicTszJCebE=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=email-promo.ovh;
+ b=UkyVCCywOfUyqCs7Yen4L10rly/0m0jO2SI9QHsrT5udeCjKVXfWnkNx3GxR0GvDxNVEOn3WgbT/
+   UUgrg3NNh8EcqcLQ0zq5+p4lcppxWXhccj34xPZAgpy3fPmjmY7D+BIKGR04lVyCf0Syxpinj0d/
+   3uVOMUXogruvYKtfU+Y=;
+DKIM-Signature: v=1; a=rsa-sha1; bh=ClNkMJfHinKSES/izhwbQztSv/Q=;
+ d=email-promo.ovh; h=Message-ID: Date: Subject: From: Reply-To: To:
+ MIME-Version: Content-Type: X-Mw-Customer-Uid: X-Receiver: X-Mw-Tracking-Did:
+ X-Mw-Campaign-Uid: List-Unsubscribe: X-Mw-Customer-Gid: List-Id:
+ X-Mw-Subscriber-Uid: X-Report-Abuse: X-Sender: Feedback-ID: X-Mw-Mailer:
+ X-Mw-Delivery-Sid; i=@email-promo.ovh; s=mailer; t=1453858375;
+ b=CiHawFUM8J4i95BXuE8mGgXvJnVCE3I2m4OTQZecGS771ZpwpCjTE+0NMi3NX4KGYcQTse0Uk
+ Y+cdY4GZK1p/MlneEYtcDLOtZ1Bu7lvpo/1c+EUyC1uUY5RnGIQCjCZoFIVeiDz4I7BlOadVL
+ CYzxqDBGbAgTd5xzi1NYbxAt8=
+Message-ID: <5d5ffa87fc2e94a5576beaebb1a5fe95@email-promo.ovh>
+Date: Wed, 27 Jan 2016 01:32:55 +0000
+Subject: 0 Euro la livraison sur vos cartouches d'encre
+From: Toner Services <contact@email-promo.ovh>
+Reply-To: Toner Services <contact@email-promo.ovh>
+To: "auliafa@liafa.jussieu.fr" <auliafa@liafa.jussieu.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1453858375_1b9f1effa5c90c4e5a66c233b85b583d_=_"
+X-Mw-Campaign-Uid: hn28652nh7fc5
+List-Unsubscribe: <http://track.email-promo.ovh/index.php/lists/tr202s188n55a/unsubscribe/mg498r3tsb29a/hn28652nh7fc5>,
+ <mailto:aslmedias@gmail.com?subject=Unsubscribe&body=Please unsubscribe me
+ from Newlisd list.>
+X-Mw-Customer-Gid: 17
+List-Id: tr202s188n55a <Newlisd>
+X-Receiver: auliafa@liafa.jussieu.fr
+X-Report-Abuse: Please report abuse for this campaign here:
+ http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/report-abuse/tr202s188n55a/mg498r3tsb29a
+X-Mw-Subscriber-Uid: mg498r3tsb29a
+Feedback-ID: hn28652nh7fc5:mg498r3tsb29a:tr202s188n55a:ml685x2wefecd
+X-Sender: bounces_@email-promo.ovh
+X-Mw-Customer-Uid: ml685x2wefecd
+X-Mw-Mailer: SwiftMailer
+X-Mw-Delivery-Sid: 73
+X-Mw-Tracking-Did: 5
+X-Miltered: at potemkin with ID 56A81E6E.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56A81E4A.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A81E6E.002 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounces_@email-promo.ovh>
+X-j-chkmail-Enveloppe: 56A81E4A.000 from mail1fr11.email-promo.ovh/mail1fr11.email-promo.ovh/51.255.55.36/mail1fr11.email-promo.ovh/<bounces_@email-promo.ovh>
+X-Scores-Stats: 56A81E4A.000 B=0.50000 L=0.83207 G=0.83207 Agree    
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 56A81E6E.002 on potemkin.univ-paris7.fr : j-chkmail score : X : R=## U=. O=. B=0.000 -> S=0.200
+X-j-chkmail-Score: MSGID : 56A81E4A.000 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=# U=. O=# B=0.832 -> S=0.891
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 27 Jan 2016 02:33:34 +0100 (CET)
+
+
+--_=_swift_v4_1453858375_1b9f1effa5c90c4e5a66c233b85b583d_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ METTRE CET EMAIL EN IND=C3=89SIRABLE
+http://track.email-promo.ovh/index.=
+php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/a24933649af75d76f6d791d=
+7fad8da7fdd246cca
+
+
+Si ce message ne s'affiche pas correctement, cons=
+ultez la version en
+ligne
+http://track.email-promo.ovh/index.php/campai=
+gns/hn28652nh7fc5/track-url/mg498r3tsb29a/cb583a50e53cf4dc1ea8c44102432e2d7=
+272dcb4
+
+
+=09=09
+http://track.email-promo.ovh/index.php/campaigns/h=
+n28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afd=
+fc
+ =09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh7f=
+c5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+
+=
+=09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/tra=
+ck-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+h=
+ttp://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg4=
+98r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://trac=
+k.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a=
+/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+
+=09=09
+http://track.email-=
+promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31=
+b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.email-promo.ovh/=
+index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a6=
+9d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.email-promo.ovh/index.php/=
+campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/f81d1da36e46a5535f6d75ed907=
+927786a886bbd
+
+=09=09
+http://track.email-promo.ovh/index.php/campaign=
+s/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7=
+afdfc
+ =09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28652n=
+h7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =
+=09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/tra=
+ck-url/mg498r3tsb29a/4ec418a879412810ede76f318897b3d0cd5a1f9b
+
+=09=09=
+
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url=
+/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://=
+track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3ts=
+b29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.emai=
+l-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/c9c3c=
+1f236bb6b52f3cfd85a390018db2ca3180d
+
+=09=09
+http://track.email-promo.=
+ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280ca=
+e6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.email-promo.ovh/index.=
+php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d=
+3c3ac93fe9f7afdfc
+ =09=09
+http://track.email-promo.ovh/index.php/campai=
+gns/hn28652nh7fc5/track-url/mg498r3tsb29a/fa1869ed0af1efaf19e268b3dd097ba86=
+e4b48f5
+
+=09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28=
+652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc=
+
+ =09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5=
+/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09=
+
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url=
+/mg498r3tsb29a/d1e51dfc5a5e46fce4a8586685401eefd419369c
+
+=09=09
+http:=
+//track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3=
+tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.em=
+ail-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5df=
+de31b280cae6a69d2b7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.email-promo.=
+ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/dd1880fab5d59=
+9dd2587dabd6ad0d14c0064bd95
+
+=09=09
+http://track.email-promo.ovh/inde=
+x.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b=
+7d3c3ac93fe9f7afdfc
+ =09=09
+http://track.email-promo.ovh/index.php/camp=
+aigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93f=
+e9f7afdfc
+ =09=09
+http://track.email-promo.ovh/index.php/campaigns/hn28=
+652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc=
+
+
+Offre non cumulable et valable jusqu'au 31/01/2016.
+ Les frais de p=
+ort sont offerts pour toute commande pass=C3=A9e via ce
+message publicita=
+ire
+ quelque soit le montant de la commande.
+ Toner Services 10/14 av. =
+du g=C3=A9n=C3=A9ral Leclerc 78230 Le Pecqet=20
+
+Pour vous d=C3=A9sabonne=
+r, acc=C3=A9dez =C3=A0 cette page.
+http://track.email-promo.ovh/index.php=
+/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/a2f97ddff285e2dae3bce40f14=
+0ea205521ee25c
+http://track.email-promo.ovh/index.php/campaigns/hn28652nh=
+7fc5/track-url/mg498r3tsb29a/dbf11b3bed52db299622d0c6a8f96cd22520270e
+
+
+--_=_swift_v4_1453858375_1b9f1effa5c90c4e5a66c233b85b583d_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html><head><meta name="charset" content="utf-8"><title>Cartouches 
+d&acirc;&#128;&#153;imprimantes &Atilde;&nbsp; prix 
+discount</title></head><body bgcolor="#FFFFFF" leftmargin="0" 
+marginheight="0" marginwidth="0" topmargin="0">
+
+            <center><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/a24933649af75d76f6d791d7fad8da7fdd246cca" 
+style="font-family:Arial;font-size:12px;color:#000;text-decoration:none;" 
+target="_blank"><b>Mettre cet email en ind&eacute;sirable</b></a></center>
+
+<center>
+<center>
+<p style="font-family:Arial;font-size:12px;">Si ce message ne s'affiche pas 
+correctement, <a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/cb583a50e53cf4dc1ea8c44102432e2d7272dcb4" 
+style="font-family:Arial;font-size:12px;color:#666;text-decoration:none;" 
+target="_blank"> consultez la version en ligne</a></p>
+</center>
+<img height="1" 
+src="http://pclesinfos.fr/openNaoshoot.php?i=4839&amp;c=3130&amp;email=auliafa@liafa.jussieu.fr&amp;e=0&amp;sm=0&amp;ip=" 
+style="display:none;" width="1" 
+alt="openNaoshoot.php?i=4839&amp;c=3130&amp;email=[EM"><img border="0" 
+height="1" hspace="0" 
+src="http://pclesinfos.fr/axciom.php?email=auliafa@liafa.jussieu.fr" 
+style="display:none;" vspace="0" width="1" 
+alt="axciom.php?email=auliafa@liafa.jussieu.fr"><img height="1" 
+src="http://a3c.toner-service.fr/Toner/mailing.asp?news=1519&amp;tit=&amp;src=2" 
+width="1" alt="mailing.asp?news=1519&amp;tit=&amp;src=2"><table 
+align="center" border="0" cellpadding="0" cellspacing="0" 
+width="700"><tbody><tr><td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank" title="TONER SERVICES"><img alt="TONER SERVICES" border="0" 
+height="131" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_01.jpg" 
+style="display:block;" width="263"></a></td>
+			<td colspan="4" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img alt="Cartouches d&rsquo;imprimantes  &agrave; prix 
+discount" border="0" height="131" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_02.jpg" 
+style="display:block;" width="437"></a></td>
+		</tr><tr><td valign="top" width="184"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="85" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_03.jpg" 
+style="display:block;" width="184" alt="toner_03.jpg"></a></td>
+			<td colspan="4" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img alt="LIVRAISON" border="0" height="85" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_04.jpg" 
+style="display:block;" width="420"></a></td>
+			<td valign="top" width="96"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img alt="CLIQUEZ SUR LA MARQUE DE COTRE IMPRIMANTE" 
+border="0" height="85" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_05.jpg" 
+style="display:block;" width="96"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="90" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_06.jpg" 
+style="display:block;" width="184" alt="toner_06.jpg"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="90" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_07.jpg" 
+style="display:block;" width="384" alt="toner_07.jpg"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/f81d1da36e46a5535f6d75ed907927786a886bbd" 
+target="_blank" title="hp"><img alt="hp" border="0" height="90" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_08.jpg" 
+style="display:block;" width="132"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="70" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_09.jpg" 
+style="display:block;" width="184" alt="toner_09.jpg"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img alt="0&euro;" border="0" height="70" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_10.jpg" 
+style="display:block;" width="384"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/4ec418a879412810ede76f318897b3d0cd5a1f9b" 
+target="_blank" title="EPSON"><img alt="EPSON" border="0" height="70" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_11.jpg" 
+style="display:block;" width="132"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="64" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_12.jpg" 
+style="display:block;" width="184" alt="toner_12.jpg"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="64" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_13.jpg" 
+style="display:block;" width="384" alt="toner_13.jpg"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/c9c3c1f236bb6b52f3cfd85a390018db2ca3180d" 
+target="_blank" title="Canon"><img alt="Canon" border="0" height="64" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_14.jpg" 
+style="display:block;" width="132"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="67" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_15.jpg" 
+style="display:block;" width="184" alt="toner_15.jpg"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="67" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_16.jpg" 
+style="display:block;" width="384" alt="toner_16.jpg"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/fa1869ed0af1efaf19e268b3dd097ba86e4b48f5" 
+target="_blank" title="brother"><img alt="brother" border="0" height="67" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_17.jpg" 
+style="display:block;" width="132"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="67" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_18.jpg" 
+style="display:block;" width="184" alt="toner_18.jpg"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img alt="sur votre commande" border="0" height="67" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_19.jpg" 
+style="display:block;" width="384"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/d1e51dfc5a5e46fce4a8586685401eefd419369c" 
+target="_blank" title="Lexmark"><img alt="Lexmark" border="0" height="67" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_20.jpg" 
+style="display:block;" width="132"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="76" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_21.jpg" 
+style="display:block;" width="184" alt="toner_21.jpg"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img alt="Pour b&eacute;n&eacute;ficier de cette offre" 
+border="0" height="76" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_22.jpg" 
+style="display:block;" width="384"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/dd1880fab5d599dd2587dabd6ad0d14c0064bd95" 
+target="_blank" title="SAMSUNG"><img alt="SAMSUNG" border="0" height="76" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_23.jpg" 
+style="display:block;" width="132"></a></td>
+		</tr><tr><td valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="64" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_24.jpg" 
+style="display:block;" width="184" alt="toner_24.jpg"></a></td>
+			<td colspan="2" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank" title="Cliquez ic"><img alt="Cliquez ic" border="0" 
+height="64" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_25.jpg" 
+style="display:block;" width="318"></a></td>
+			<td colspan="3" valign="top"><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/5dfde31b280cae6a69d2b7d3c3ac93fe9f7afdfc" 
+target="_blank"><img border="0" height="64" 
+src="http://visuels.toner.fr/img/newsletter/15101520/toner_26.jpg" 
+style="display:block;" width="198" alt="toner_26.jpg"></a></td>
+		</tr><tr><td align="center" bgcolor="#FF0204" colspan="6" height="86"><font 
+color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="1" 
+style="font-size:11px;">Offre non cumulable et valable jusqu&rsquo;au 
+31/01/2016.<br>
+			Les frais de port sont offerts pour toute commande pass&eacute;e via ce 
+message publicitaire<br>
+			quelque soit le montant de la commande.<br>
+			Toner Services 10/14 av. du g&eacute;n&eacute;ral Leclerc 78230 Le Pecqet 
+</font></td>
+		</tr><tr><td valign="top"><img border="0" height="1" 
+src="http://visuels.toner.fr/img/newsletter/15101520/spacer.gif" width="184" 
+alt="spacer.gif"></td>
+			<td valign="top" width="79"><img border="0" height="1" 
+src="http://visuels.toner.fr/img/newsletter/15101520/spacer.gif" width="79" 
+alt="spacer.gif"></td>
+			<td valign="top" width="239"><img border="0" height="1" 
+src="http://visuels.toner.fr/img/newsletter/15101520/spacer.gif" width="239" 
+alt="spacer.gif"></td>
+			<td valign="top" width="66"><img border="0" height="1" 
+src="http://visuels.toner.fr/img/newsletter/15101520/spacer.gif" width="66" 
+alt="spacer.gif"></td>
+			<td valign="top" width="36"><img border="0" height="1" 
+src="http://visuels.toner.fr/img/newsletter/15101520/spacer.gif" width="36" 
+alt="spacer.gif"></td>
+			<td valign="top"><img border="0" height="1" 
+src="http://visuels.toner.fr/img/newsletter/15101520/spacer.gif" width="96" 
+alt="spacer.gif"></td>
+		</tr></tbody></table><img alt="" height="1" 
+src="http://impfr.tradedoubler.com/imp?type(inv)g(22531398)a(2287561)" 
+width="1"><img alt="" border="0" height="1" 
+src="http://www.capaffiliation.com/tracking/cpm.php?ids=15&amp;idv=205&amp;sid=" 
+width="1"><center><a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/a2f97ddff285e2dae3bce40f140ea205521ee25c" 
+style="font-family:Arial;font-size:12px;color:#666;text-decoration:none;" 
+target="_blank">Pour vous d&eacute;sabonner, acc&eacute;dez &agrave; cette 
+page.</a></center>
+<a 
+href="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-url/mg498r3tsb29a/dbf11b3bed52db299622d0c6a8f96cd22520270e"><img 
+height="1" src="http://pclesinfos.fr/img/imagePix.jpg" 
+style="display:none;width:1px;height:1px;" width="1" 
+alt="imagePix.jpg"></a></center><img width="1" height="1" 
+src="http://track.email-promo.ovh/index.php/campaigns/hn28652nh7fc5/track-opening/mg498r3tsb29a" 
+alt="" />
+</body></html>
+
+
+--_=_swift_v4_1453858375_1b9f1effa5c90c4e5a66c233b85b583d_=_--

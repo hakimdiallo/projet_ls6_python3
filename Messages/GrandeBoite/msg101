@@ -1,0 +1,237 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id ijxmJimAyFbM0AAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:03:05 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 851A161FA3;
+	Sat, 20 Feb 2016 16:03:05 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 12.166
+X-Spam-Level: ************
+X-Spam-Status: Yes, score=12.166 tagged_above=-10000 required=5
+	tests=[BAYES_60=1.5, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_IMAGE_ONLY_28=1.404,
+	HTML_MESSAGE=0.001, LOTS_OF_MONEY=0.001, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=datasitepro.com; domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=info@datasitepro.com header.d=datasitepro.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id OPxGlMB7ogkT; Sat, 20 Feb 2016 16:03:03 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id CD68261F9D;
+	Sat, 20 Feb 2016 16:03:03 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1KF33QJ003323;
+	Sat, 20 Feb 2016 16:03:03 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id AD9A5D4076; Sat, 20 Feb 2016 16:03:03 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id 7593DD4076
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:03:02 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 67E3DA1946
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:03:02 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=datasitepro.com;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=info@datasitepro.com header.d=datasitepro.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id rvNjlf7KMIZ2
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sat, 20 Feb 2016 16:03:00 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id E4348A0B75
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:03:00 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1KF304G009286
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:03:00 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id D0A2B61FA2
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:03:00 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 7oIyO-AnKDPH
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sat, 20 Feb 2016 16:02:59 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 1CAEE61FA1
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:02:59 +0100 (CET)
+Received: from data3.datasitepro.com (data3.datasitepro.com [155.94.158.34])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1KF2wAQ003299
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sat, 20 Feb 2016 16:02:58 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=datasitepro.com;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:List-Unsubscribe:Content-Type:Content-Transfer-Encoding; i=info@datasitepro.com;
+ bh=lOZS9WDYUp9ZKCj5fsV0p9VFGTU=;
+ b=wTCh6qgohe3a3oe+ZcOmurYVW69Kdk8BgXjf3GfrMwhJZTHXzxMMv1pe9KX6zrckSXo0NgXKQDVM
+   eo2PBQsYprYJYSZgwqjmToJP52yVx4dLOgWopQKYF5tNVDJg7SNQsmQwiECB5IaO5a7neEnOzAob
+   C4QJ4oEMtssCdF9vZ7g=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=datasitepro.com;
+ b=tHU2FETjIjlVt1d/1xbDvtKfMnY2iniWlNW8bTEfQgZ7UN4lexONWvGJQLpC8a3g8uik89caGRmX
+   O0W54Ozp/G/4ViCZBgPJCU8KEw7dv1oiIQTiS31kFY9sbFbhlktLEqq4SkhBfPD31uEMb0uGrHla
+   q6BTqUUT0f7KjeA4z3M=;
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Message-ID: <c919210a96ead25d540ebdc58b47a1c2@datasitepro.com>
+Date: Sat, 20 Feb 2016 14:52:37 +0000
+From: "Mike" <info@datasitepro.com>
+Reply-To: info@datasitepro.com
+MIME-Version: 1.0
+X-Mailer-LID: 1,28,26
+List-Unsubscribe: <http://datasitepro.com/unsubscribe.php?M=4997337&C=b04da65782313670032abbd3143ea6fd&L=26&N=258>
+X-Mailer-RecptId: 4997337
+X-Mailer-SID: 258
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_99f4ef8e02eb35a84570f20778c5523e"
+Content-Transfer-Encoding: 8bit
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sat, 20 Feb 2016 16:03:03 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sat, 20 Feb 2016 16:03:00 +0100 (CET)
+X-Greylist: Delayed for 00:10:22 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sat, 20 Feb 2016 16:02:59 +0100 (CET)
+X-Miltered: at korolev with ID 56C88027.004 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56C88024.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56C88022.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56C88027.004 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56C88024.001 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<bounce@datasitepro.com>
+X-j-chkmail-Enveloppe: 56C88022.002 from data3.datasitepro.com/data3.datasitepro.com/null/data3.datasitepro.com/<bounce@datasitepro.com>
+X-j-chkmail-Score: MSGID : 56C88027.004 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C88024.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C88022.002 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] What Facebook doesn't want you to see!
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1451
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+--b1_99f4ef8e02eb35a84570f20778c5523e
+Content-Type: text/plain; format="flowed"; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+VEhBTksgWU9VIGZvciBiZWluZyBvbmUgb2Ygb3VyIG1vc3QgdmFsdWVkIG1lbWJlcnMuCgogV2Ug
+YXJlIG9mZmVyaW5nIHlvdSBhbiBGUkVFIHVwZ3JhZGUgdG8gdGhlIHVucmVsZWFzZWQgMi4wIHZl
+cnNpb24gb2Ygb3VyClBNQSBTeXN0ZW0uCgogPj4gR28gSGVyZSBbaHR0cDovL2RhdGFzaXRlcHJv
+LmNvbS9saW5rLnBocD9NPTQ5OTczMzcmTj0yNTgmTD0zNDcmRj1UXSA8PAoKIFZlcnNpb24gMi4w
+IHdpbGwgaGVscCB5b3UgZWFzaWx5IGRvIGF0IGxlYXN0IDY1SyBwZXIgbW9udGguICg2NUsgaXMg
+dGhlCm1pbmltdW0gc28gZmFy4oCmaGlnaGVzdCBoYXMgYmVlbiBvdmVyIDExMEspCgogPj4gQ2xh
+aW0geW91ciBwcml2YXRlIGxpbmsgaGVyZQpbaHR0cDovL2RhdGFzaXRlcHJvLmNvbS9saW5rLnBo
+cD9NPTQ5OTczMzcmTj0yNTgmTD0zNDcmRj1UXSA8PAoKCgoKT3IganVzdCBjb3B5IHRoaXMgbGlu
+azogc2hvcnRjb3B5LmxpbmsvUE1BMjAKClRoYW5rIHlvdSwKU3RlZmFuaWUKCgoKQ29weXJpZ2h0
+IMKpIDIwMTYsIEFsbCByaWdodHMgcmVzZXJ2ZWQuVXBkYXRlIHN1YnNjcmlwdGlvbiBwcmVmZXJl
+bmNlcwpbaHR0cDovL2RhdGFzaXRlcHJvLmNvbS91bnN1YnNjcmliZS5waHA/TT00OTk3MzM3JkM9
+YjA0ZGE2NTc4MjMxMzY3MDAzMmFiYmQzMTQzZWE2ZmQmTD0yNiZOPTI1OF0KCg==
+
+--b1_99f4ef8e02eb35a84570f20778c5523e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+</head>
+<body>
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td align="center" bgcolor="#DEE0E2">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0"
+cellspacing="0">
+<tbody>
+<tr>
+<td align="center" bgcolor="#dfdfdf">
+<table style="border: 1px solid #bbbbbb; width: 639px;" border="0"
+cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-family: Helvetica; color: #505050;" align="center"
+valign="top">
+<table style="border-top-width: 1px; border-top-style: solid;
+border-top-color: #ffffff; border-bottom-width: 1px; border-bottom-style:
+solid; border-bottom-color: #cccccc; width: 100%; background-color:
+#f4f4f4;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-size: 14px; line-height: 150%; padding: 10px 20px 10px
+20px;" valign="top">
+<p>Hi,</p>
+<p>Ever wonder how a couple of broke college students funded Facebook?</p>
+<p>Eduardo Saverin and Mark Zuckerberg started Facebook using the $300,000
+they made using this exact software - TradeFusion.</p>
+<p>It has finally been released to the public and is available here</p>
+<p><a
+href="http://datasitepro.com/link.php?M=4997337&N=258&L=378&F=H">Click Here
+for your Own Free Copy of the TradeFusion Software</a></p>
+<br />
+<p>Thank me later<br />Mike.</p>
+<p></p>
+<span style="font-size: medium;"><strong style="font-size:
+medium;"></strong></span></td>
+</tr>
+<tr>
+<td style="padding: 10px 20px;" valign="top"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #f4f4f4;" align="center" valign="top">
+<table style="border-top-width: 1px; border-top-style: solid;
+border-top-color: #ffffff; border-bottom-width: 1px; border-bottom-style:
+solid; border-bottom-color: #cccccc; font-family: Helvetica; width: 100%;
+background-color: #f4f4f4;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="padding: 10px 20px; font-size: 10px; color: #606060;
+line-height: 150%;" valign="top"><strong>Copyright &copy; 2016, All rights
+reserved.</strong></td>
+</tr>
+<tr>
+<td style="padding: 10px 20px; font-size: 10px; line-height: 100%;"
+valign="top"><a style="color: #606060;"
+href="http://datasitepro.com/unsubscribe.php?M=4997337&C=b04da65782313670032abbd3143ea6fd&L=26&N=258">Update
+subscription preferences</a><br /><br /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<img
+src="http://datasitepro.com/open.php?M=4997337&L=26&N=258&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+
+--b1_99f4ef8e02eb35a84570f20778c5523e--
+

@@ -1,0 +1,64 @@
+Return-Path: <ms15200@iisermohali.ac.in>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id nm0xBvIBy1Z5dQEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 22 Feb 2016 13:41:22 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 00B6261FA5;
+	Mon, 22 Feb 2016 13:41:21 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 3.498
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.498 tagged_above=-10000 required=5
+	tests=[BAYES_20=-0.001, RCVD_IN_DNSWL_NONE=-0.0001, XPRIO=3.499]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 4AwCOT0nQmXu; Mon, 22 Feb 2016 13:41:20 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 57CD461FA1;
+	Mon, 22 Feb 2016 13:41:20 +0100 (CET)
+Received: from iisermohali.ac.in (iisermohali.ac.in [210.212.36.65])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1MCfJAb002843;
+	Mon, 22 Feb 2016 13:41:19 +0100
+Received: from iisermohali.ac.in (localhost [IPv6:::1])
+	by iisermohali.ac.in (Postfix) with ESMTPA id 7CED5F42732;
+	Mon, 22 Feb 2016 18:02:42 +0530 (IST)
+Received: from 81-171-52-3.ipvanish.com ([81.171.52.3])
+        by iisermohali.ac.in with HTTP;
+        Mon, 22 Feb 2016 18:02:42 +0530
+Message-ID: <0378285b024cc1be83c1cfcf00ba003d.squirrel@iisermohali.ac.in>
+Date: Mon, 22 Feb 2016 18:02:42 +0530
+Subject: Support technique
+From: "WEB ADMIN" <ms15200@iisermohali.ac.in>
+User-Agent: SquirrelMail/1.4.22
+MIME-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+Importance: Normal
+To: undisclosed-recipients:;
+X-Greylist: Delayed for 00:08:32 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 22 Feb 2016 13:41:20 +0100 (CET)
+X-Miltered: at korolev with ID 56CB01EF.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56CB01EF.001 from iisermohali.ac.in/iisermohali.ac.in/null/iisermohali.ac.in/<ms15200@iisermohali.ac.in>
+X-j-chkmail-Score: MSGID : 56CB01EF.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+
+
+
+Cher utilisateur de bo=EEte aux lettres
+
+Votre bo=EEte aux lettres a d=E9pass=E9 son quota / limite allou=E9e .
+=E9tat de quota: 242.10MB / 302.73MB ( 89,97 % )
+Vous ne pouvez pas =EAtre en mesure de recevoir ou d'envoyer de nouveaux
+messages jusqu'=E0 ce que vous revalider
+et augmenter votre bo=EEte aux lettres de la prime .
+S'il vous pla=EEt , cliquez sur le lien web ci-dessous pour v=E9rifier ,
+am=E9liorer et restaurer votre compte
+
+http://hkgan.cba.pl/
+
+=A9 =E9quipe de gestion Webmail .
+

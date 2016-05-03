@@ -1,0 +1,516 @@
+Return-Path: <bounce+sophie=cs.uchicago.edu@mx1.in.ua>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id K579ANuC5lbcFgAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:25:21 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id EA12061FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:25:21 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 2.803
+X-Spam-Level: **
+X-Spam-Status: No, score=2.803 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	RAZOR2_CF_RANGE_51_100=0.5, RAZOR2_CF_RANGE_E8_51_100=1.886,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=mx1.in.ua
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id EkTkAb-9ysk3 for <laplante@liafa.univ-paris-diderot.fr>;
+	Mon, 14 Mar 2016 10:25:19 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 28CA261F9D
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:25:19 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2E9PJ23027939
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:25:19 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 1EA27302DC0
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:15:47 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id DDA9B30335B
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:15:46 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id D0D14403A0
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:15:46 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id cZ-Qmrr-pjcs for <laplante@liafa.univ-paris-diderot.fr>;
+	Mon, 14 Mar 2016 10:15:36 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id B616140321
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 10:15:36 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id B4AC3E17A0; Mon, 14 Mar 2016 10:15:36 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id B2E3FE0024
+	for <laplante@lri.fr>; Mon, 14 Mar 2016 10:15:36 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id 6374FE0064
+	for <laplante@lri.fr>; Mon, 14 Mar 2016 10:15:37 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id 039AE60084
+	for <laplante@lri.fr>; Mon, 14 Mar 2016 04:15:34 -0500 (CDT)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (mx.cs.uchicago.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id vGFC4sfNsEGE for <laplante@lri.fr>;
+	Mon, 14 Mar 2016 04:15:32 -0500 (CDT)
+X-Greylist: Delayed for 00:09:32 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Mon, 14 Mar 2016 10:25:19 +0100 (CET)
+X-Greylist: delayed 413 seconds by postgrey-1.34 at mx; Mon, 14 Mar 2016 04:15:32 CDT
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.cs.uchicago.edu (Postfix) with ESMTPS id 3B8E55FEB9
+	for <sophie@cs.uchicago.edu>; Mon, 14 Mar 2016 04:15:32 -0500 (CDT)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mail.mx1.in.ua (Postfix) with SMTP id 641DFAEE2A
+	for <sophie@cs.uchicago.edu>; Mon, 14 Mar 2016 11:08:36 +0200 (EET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mx1.in.ua; s=default;
+	t=1457946516; bh=1FhbbIh8LEh3Td+n++r6CMAObTlcW++f6YRyfDbd3qs=;
+	h=From:Reply-To:To:Subject:List-Unsubscribe:Date:List-id;
+	b=xBs2U9K+n2OaZ6xmvdjaD+jyE50qxRiVVejGLULz4pwzyO/PrQb17DqPY+gWzhzab
+	 9BKUgOlnIaj2pLQtP69Tdu4DUIcZkIA9f8c05Y3ElMv3Rt+1TdXxHcD00WUGRKlYqe
+	 cQ7Y8ECGNRxFN7884xd6BCwIkaL5m8CmZfSNKpVw=
+From: <office@ssosm.ru>
+Reply-To: <office@ssosm.ru>
+X-Priority: 3 (Normal)
+Message-ID: <20160314110825.200080255356e67f946d5cc5.15236986@mx1.in.ua>
+To: <sophie@cs.uchicago.edu>
+Subject: =?UTF-8?Q?19_=D0=9C=D0=B5=D0=B6=D0=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=D0=B0=D1=8F_=D0=BD=D0=B0=D1=83=D1=87=D0=BD=D0=BE-=D0=BF=D1=80=D0=B0=D0=BA=D1=82=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B0=D1=8F_=D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D1=8F:_=C2=AB=D0=90=D0=BA=D1=82=D1=83=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B5_=D0=B2=D0=BE=D0=BF=D1=80=D0=BE=D1=81=D1=8B_=D0=BD=D0=B0=D1=83=D0=BA=D0=B8_=D0=B8_=D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=D1=82=D0=B2=D0=B0:=D0=BD=D0=BE=D0=B2=D1=8B=D0=B5_=D0=B2=D1=8B=D0=B7=D0=BE=D0=B2=D1=8B_=D0=B8_=D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D1=8F=C2=BB_19.03_=D0=B3.=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=D1=80=D0=B3?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_mult123"
+Precedence: bulk
+List-Unsubscribe: <http://mx1.in.ua/unsub.php?do=unsubscribe&id=186&email=sophie@cs.uchicago.edu>
+Sender: bounce+sophie=cs.uchicago.edu@mx1.in.ua
+X-Complaints-To: abuse@mx1.in.ua
+Date: Mon, 14 Mar 2016 11:08:25 +0200
+List-id: <186>
+X-Postmaster-Msgtype: 186
+X-Campaign-Id: 186
+X-Miltered: at potemkin with ID 56E6837F.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E6837F.001 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<bounce+sophie=cs.uchicago.edu@mx1.in.ua>
+X-j-chkmail-Score: MSGID : 56E6837F.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--_mult123
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+=0A=0A =D0=9E=D0=B1=D1=89=D0=B5=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=B0=
+=D1=8F =D0=BD=D0=B0=D1=83=D1=87=D0=BD=D0=B0=D1=8F =D0=BE=D1=80=D0=B3=D0=B0=
+=D0=BD=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D1=8F=0A"=D0=9D=D0=B0=D1=83=D0=BA=D0=
+=B0 =D0=B8 =D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=D1=82=D0=B2=D0=BE" [1] =0A=
+=0A =D0=9D=D0=BE=D0=BF=D0=BE=D0=BC=D0=B8=D0=BD=D0=B0=D0=B5=D0=BC, =D1=87=
+=D1=82=D0=BE =0A=0A 19 =D0=BC=D0=B0=D1=80=D1=82=D0=B0 2016 =D0=B3=D0=BE=D0=
+=B4=D0=B0 =D0=B7=D0=B0=D0=BA=D0=B0=D0=BD=D1=87=D0=B8=D0=B2=D0=B0=D0=B5=D1=
+=82=D1=81=D1=8F =D0=BF=D1=80=D0=B8=D0=B5=D0=BC=0A=D0=BC=D0=B0=D1=82=D0=B5=
+=D1=80=D0=B8=D0=B0=D0=BB=D0=BE=D0=B2 =D0=B8 =D0=B7=D0=B0=D1=8F=D0=B2=D0=BE=
+=D0=BA =D0=BD=D0=B0 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D0=B5 =D0=B2 =0A=
+=0A 19 =D0=9C=D0=B5=D0=B6=D0=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=
+=D0=BE=D0=B9 =D0=BD=D0=B0=D1=83=D1=87=D0=BD=D0=BE-=D0=BF=D1=80=D0=B0=D0=BA=
+=D1=82=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=BE=D0=B9=0A=D0=BA=D0=BE=D0=BD=D1=
+=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8: =0A=0A =D0=90=D0=BA=D1=82=
+=D1=83=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B5 =D0=B2=D0=BE=D0=BF=D1=80=D0=BE=
+=D1=81=D1=8B =D0=BD=D0=B0=D1=83=D0=BA=D0=B8 =D0=B8 =D1=85=D0=BE=D0=B7=D1=
+=8F=D0=B9=D1=81=D1=82=D0=B2=D0=B0:=0A=D0=BD=D0=BE=D0=B2=D1=8B=D0=B5 =D0=B2=
+=D1=8B=D0=B7=D0=BE=D0=B2=D1=8B =D0=B8 =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=
+=D1=8F [2] =0A=0A (=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=
+=D1=80=D0=B1=D1=83=D1=80=D0=B3, =D0=A0=D0=A4) =0A=0A----------------------=
+---=0A=0A =D0=A3=D1=87=D0=B0=D1=81=D1=82=D0=BD=D0=B8=D0=BA=D0=B8 =D0=BC=D0=
+=BE=D0=B3=D1=83=D1=82 =D0=BE=D0=B7=D0=BD=D0=B0=D0=BA=D0=BE=D0=BC=D0=B8=D1=
+=82=D1=8C=D1=81=D1=8F =D1=81=0A=D0=BF=D1=80=D0=B0=D0=B2=D0=B8=D0=BB=D0=B0=
+=D0=BC=D0=B8 =D0=BE=D1=84=D0=BE=D1=80=D0=BC=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F =
+=D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8 [3]=0A =D0=91=D0=BE=D0=BB=D0=B5=D0=B5=
+ =D0=B4=D0=B5=D1=82=D0=B0=D0=BB=D1=8C=D0=BD=D0=B0=D1=8F =D0=B8=D0=BD=D1=84=
+=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=8F =D0=BD=D0=B0=D1=85=D0=BE=D0=B4=
+=D0=B8=D1=82=D1=81=D1=8F=0A=D0=B2 =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=
+=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=BC =D0=BF=D0=B8=D1=81=D1=8C=D0=
+=BC=D0=B5, [4] =D0=B0 =D1=82=D0=B0=D0=BA=D0=B6=D0=B5 =D0=BD=D0=B0=0A=D1=81=
+=D0=B0=D0=B9=D1=82=D0=B5 =D0=BE=D1=80=D0=B3=D0=B0=D0=BD=D0=B8=D0=B7=D0=B0=
+=D1=86=D0=B8=D0=B8 [5]. =0A=0A-------------------------=0A=0A =D0=9A=D0=B0=
+=D0=B6=D0=B4=D0=BE=D0=BC=D1=83 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=BD=D0=B8=
+=D0=BA=D1=83 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=
+=D0=B8=0A=D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =D0=
+=B7=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=82=D1=8C =D0=B7=D0=B0=D1=8F=D0=
+=B2=D0=BA=D1=83 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D1=8F=0A[6] =D0=B2 =
+=D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 =D0=BD=
+=D0=B0 =D0=BD=D0=B0=D1=88=D0=B5=D0=BC =D1=81=D0=B0=D0=B9=D1=82=D0=B5. =0A=
+=0A-------------------------=0A=0A [7]=0A=0A =09* =D0=A4=D0=BE=D1=80=D0=BC=
+=D0=B0 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D1=8F: =D0=B7=D0=B0=D0=BE=D1=
+=87=D0=BD=D0=B0=D1=8F.=0A =09* =D0=9F=D1=80=D0=B8=D0=B5=D0=BC =D0=B7=D0=B0=
+=D1=8F=D0=B2=D0=BE=D0=BA, =D1=82=D0=B5=D0=BA=D1=81=D1=82=D0=BE=D0=B2 =D1=
+=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B4=D0=BE=0A18.03.2016 (=D0=B2=D0=BA=
+=D0=BB=D1=8E=D1=87=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE)=0A =09* =D0=
+=9F=D1=80=D0=B5=D0=B4=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=
+=B8=D0=B5 =D0=B4=D0=BE=D0=BA=D1=83=D0=BC=D0=B5=D0=BD=D1=82=D0=BE=D0=B2 =D0=
+=BE=D0=B1=0A=D0=BE=D0=BF=D0=BB=D0=B0=D1=82=D0=B5 =D0=B4=D0=BE 19.03.2016.=
+=0A =09* =D0=9F=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F =D0=
+=BF=D1=80=D0=B8=D0=BD=D1=8F=D1=82=D0=BE=D0=B9 =D1=81=D1=82=D0=B0=D1=82=D1=
+=8C=D0=B8 =D0=BD=D0=B0 =D1=81=D0=B0=D0=B9=D1=82=D0=B5=0A=D0=9A=D0=BE=D0=BD=
+=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 =D0=B4=D0=BE 22.04.2016=
+=0A =09* =D0=A0=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =D1=
+=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B2 =D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=
+=BC=D0=B5 =D0=A0=D0=98=D0=9D=D0=A6 =D0=B2=0A=D1=82=D0=B5=D1=87=D0=B5=D0=BD=
+=D0=B8=D0=B5 3 =D0=BC=D0=B5=D1=81=D1=8F=D1=86=D0=B5=D0=B2 =D0=BF=D0=BE=D1=
+=81=D0=BB=D0=B5 =D0=BF=D0=BE=D0=B4=D0=B0=D1=87=D0=B8=0A=D0=BC=D0=B0=D1=82=
+=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D0=BE=D0=B2=0A =09* =D0=A0=D0=B0=D1=81=D1=
+=81=D1=8B=D0=BB=D0=BA=D0=B0 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=BE=D0=
+=B2 =D0=B8 =D1=81=D0=B5=D1=80=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=82=D0=
+=BE=D0=B2=0A22.04.2016=0A =09* =D0=90=D1=80=D1=85=D0=B8=D0=B2=D1=8B =D0=BD=
+=D0=B0=D1=88=D0=B8=D1=85 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=
+=D1=86=D0=B8=D0=B9 [8] =D0=92=D1=8B=0A=D0=BC=D0=BE=D0=B6=D0=B5=D1=82=D0=B5=
+ =D0=BF=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=D1=82=D1=8C, =D0=BD=D0=
+=B0 =D0=BD=D0=B0=D1=88=D0=B5=D0=BC =D1=81=D0=B0=D0=B9=D1=82=D0=B5=0A=0A---=
+----------------------=0A=0A =D0=97=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=
+=82=D1=8C =D0=B0=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=D1=
+=80=D0=B0 [9] =0A=0A  =D0=A1=D0=B0=D0=B9=D1=82 =D0=BA=D0=BE=D0=BD=D1=84=D0=
+=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 [10] =D0=98=D0=BD=D1=84=D0=BE=D1=
+=80=D0=BC=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=B5=0A=D0=BF=D0=B8=
+=D1=81=D1=8C=D0=BC=D0=BE [11] =0A=0A-------------------------=0A=0A =D0=9F=
+=D0=BE=D1=81=D0=BB=D0=B5 =D0=BE=D0=BA=D0=BE=D0=BD=D1=87=D0=B0=D0=BD=D0=B8=
+=D1=8F =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 =
+=D0=B2=D1=81=D0=B5=D0=BC=0A=D1=83=D1=87=D0=B0=D1=81=D1=82=D0=BD=D0=B8=D0=
+=BA=D0=B0=D0=BC =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=B0=D0=B5=D1=82=D1=
+=81=D1=8F =D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=BD=D1=8B=D0=B9=0A=D0=B2=D0=B0=
+=D1=80=D0=B8=D0=B0=D0=BD=D1=82 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =
+=D0=B8 =D1=81=D0=B5=D1=80=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=82. =0A=
+=0A-------------------------=0A=0A =D0=9E=D0=B1=D1=89=D0=B5=D1=81=D1=82=D0=
+=B2=D0=B5=D0=BD=D0=BD=D0=B0=D1=8F =D0=BD=D0=B0=D1=83=D1=87=D0=BD=D0=B0=D1=
+=8F =D0=BE=D1=80=D0=B3=D0=B0=D0=BD=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D1=8F=0A"=
+=D0=9D=D0=B0=D1=83=D0=BA=D0=B0 =D0=B8 =D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=
+=D1=82=D0=B2=D0=BE" [12]=0A =D0=90=D0=B4=D1=80=D0=B5=D1=81: =D1=83=D0=BB=
+=D0=B8=D1=86=D0=B0 =D0=A2=D0=B0=D0=BC=D0=B1=D0=BE=D0=B2=D1=81=D0=BA=D0=B0=
+=D1=8F, 17, =D0=BE=D1=84.17, 3-=D0=B8=D0=B9=0A=D1=8D=D1=82=D0=B0=D0=B6, =
+=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=
+=D1=80=D0=B3, =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F 192007=0A =D0=90=D0=B4=
+=D1=80=D0=B5=D1=81 =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=
+=D0=BE=D0=B9 =D0=BF=D0=BE=D1=87=D1=82=D1=8B: office@ssosm.ru=0A =D0=90=D0=
+=B4=D1=80=D0=B5=D1=81 =D0=B2=D0=B5=D0=B1=D1=81=D0=B0=D0=B9=D1=82=D0=B0: ss=
+osm.ru [13] =0A=0A =D0=93=D0=BB=D0=B0=D0=B2=D0=BD=D1=8B=D0=B9 =D1=80=D0=B5=
+=D0=B4=D0=B0=D0=BA=D1=82=D0=BE=D1=80: =D0=B4. =D1=81.-=D1=85. =D0=BD., =D0=
+=90=D0=BD=D0=BD=D0=B5=D0=BD=D0=BA=D0=BE=D0=B2=0A=D0=90=D0=BB=D0=B5=D0=BA=
+=D1=81=D0=B0=D0=BD=D0=B4=D1=80 =D0=9F=D0=B5=D1=82=D1=80=D0=BE=D0=B2=D0=B8=
+=D1=87 =0A=0A=D0=AD=D1=82=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=
+=D0=B8=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=
+=D0=BB=D0=B5=D0=BD=D0=BE =D0=BD=D0=B0=0ASOPHIE@CS.UCHICAGO.EDU =D0=BF=D0=
+=BE=D1=82=D0=BE=D0=BC=D1=83, =D1=87=D1=82=D0=BE: =0A =D0=92=D1=8B =D0=BF=
+=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D1=8B =D0=BD=D0=B0 =D1=80=D0=B0=
+=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=83 =D0=BD=D0=BE=D0=B2=D0=BE=D1=81=D1=82=
+=D0=B5=D0=B9 =D0=BE=D1=82=0A=D0=9E=D0=9D=D0=9E =D0=9D=D0=B0=D1=83=D0=BA=D0=
+=B0 =D0=B8 =D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=D1=82=D0=B2=D0=BE=0A=0A =
+=D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D0=BD=D0=B5 =D1=85=D0=BE=D1=82=D0=
+=B8=D1=82=D0=B5 =D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B5 =D0=BF=D0=BE=D0=BB=D1=
+=83=D1=87=D0=B0=D1=82=D1=8C=0A=D0=BD=D0=B0=D1=88=D0=B8 =D0=BF=D0=B8=D1=81=
+=D1=8C=D0=BC=D0=B0, =D0=BF=D1=80=D0=BE=D1=81=D1=82=D0=BE =D0=BF=D0=B5=D1=
+=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=0A=D1=81=D1=81=D1=8B=
+=D0=BB=D0=BA=D0=B5 =D0=BE=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=
+=D1=8F =D0=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8 [14]=
+=0A=0A2016 =C2=A9 =D1=83=D0=BB=D0=B8=D1=86=D0=B0 =D0=A2=D0=B0=D0=BC=D0=B1=
+=D0=BE=D0=B2=D1=81=D0=BA=D0=B0=D1=8F, 17, =D0=BE=D1=84.17, 3-=D0=B8=D0=B9=
+=0A=D1=8D=D1=82=D0=B0=D0=B6,=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=
+=82=D0=B5=D1=80=D0=B1=D1=83=D1=80=D0=B3, =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=
+=8F 192007 | =D0=9E=D0=9D=D0=9E=0A=D0=9D=D0=B0=D1=83=D0=BA=D0=B0 =D0=B8 =
+=D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=D1=82=D0=B2=D0=BE=0A=0A =D0=A7=D1=82=
+=D0=BE=D0=B1=D1=8B =D0=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=82=D0=B8=D1=80=D0=BE=
+=D0=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=
+=D0=B5 =D0=BF=D0=B8=D1=81=D0=B5=D0=BC=0A=D0=BE=D1=82 =D0=BD=D0=B0=D1=81 - =
+=D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D1=8C=D1=82=D0=B5 =D0=BD=D0=B0=D1=88 =D0=B0=
+=D0=B4=D1=80=D0=B5=D1=81 =D0=B2 =D0=B0=D0=B4=D1=80=D0=B5=D1=81=D0=BD=D1=83=
+=D1=8E=0A=D0=BA=D0=BD=D0=B8=D0=B3=D1=83.=0A=0A=0A=0ALinks:=0A------=0A[1] =
+http://ssosm.ru/=0A[2] http://mx1.in.ua/HTTP://SSOSM.RU/KONFERENTSII=0A[3]=
+ http://ssosm.ru/pravila-dlya-avtorov=0A[4] http://ssosm.ru/files/Inform_s=
+cienceagro.ru_18-19.03.16.pdf=0A[5] http://mx1.in.ua/HTTP://SSOSM.RU/KONFE=
+RENTSII=0A[6] http://ssosm.ru/registratsiya=0A[7] http://ssosm.ru/konferen=
+tsii=0A[8] http://ssosm.ru/nomera-zhurnalov=0A[9] http://ssosm.ru/registra=
+tsiya=0A[10] http://mx1.in.ua/HTTP://SSOSM.RU/KONFERENTSII=0A[11]=0Ahttp:/=
+/mx1.in.ua/HTTP://SSOSM.RU/FILES/INFORM_SCIENCEAGRO.RU_18-19.03.16.PDF=0A[=
+12] http://ssosm.ru/=0A[13] http://ssosm.ru/=0A[14]=0Ahttp://mx1.in.ua/uns=
+ub.php?do=3Dunsubscribe&id=3D186&email=3Dsophie@cs.uchicago.edu=0A
+--_mult123
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<table cellpadding=3D"0" class=3D"preview" cellspacing=3D"0" width=3D"100%=
+" border=3D"0" bgcolor=3D"#d9d5be" style=3D"min-width:600px;"><tr><td vali=
+gn=3D"top" align=3D"center"><table width=3D"560" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"campaign"><tr><td width=3D"560" height=
+=3D"10" class=3D"campaign"></td></tr><tr><td class=3D"campaign" width=3D"5=
+60" height=3D"10"></td></tr></table><table cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"560" border=3D"0" style=3D"border-width:0px;border-color:#=
+cccccc;border-style:solid;" class=3D"campaign"><tr  bgcolor=3D"#ffffff"><t=
+d align=3D"center" width=3D"560"><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" width=3D"560"  style=3D"background-color:#005184"><tr><td a=
+lign=3D"center" width=3D"560" class=3D"headerimage"><img style=3D"display:=
+block; height: 174px; width: 400px;" height=3D"174" alt=3D" " src=3D"http:=
+//man-server.in.ua/upload/img/194-a0c886eadada92070a771e93807c5159.jpg" wi=
+dth=3D"400" border=3D"0" class=3D"" /></td></tr></table><table width=3D"56=
+0" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table" style=
+=3D""><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" clas=
+s=3D"spacer"></td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td=
+ width=3D"520" align=3D"left" valign=3D"top" style=3D"color:#000000;font-f=
+amily:Arial, Helvetica, sans-serif;font-size:13px;" class=3D"cell"><p styl=
+e=3D"text-align: center;">=0A=09<span style=3D"font-size:14px;line-height:=
+normal;"><span style=3D"font-family:georgia,serif;"><a class=3D"text_link"=
+ style=3D"color:#005184;" href=3D"http://ssosm.ru/">=D0=9E=D0=B1=D1=89=D0=
+=B5=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=B0=D1=8F =D0=BD=D0=B0=D1=83=D1=
+=87=D0=BD=D0=B0=D1=8F =D0=BE=D1=80=D0=B3=D0=B0=D0=BD=D0=B8=D0=B7=D0=B0=D1=
+=86=D0=B8=D1=8F &quot;=D0=9D=D0=B0=D1=83=D0=BA=D0=B0 =D0=B8 =D1=85=D0=BE=
+=D0=B7=D1=8F=D0=B9=D1=81=D1=82=D0=B2=D0=BE&quot;</a></span></span></p>=0A<=
+p style=3D"text-align: center;">=0A=09<span style=3D"font-size:14px;line-h=
+eight:normal;"><span style=3D"font-family:georgia,serif;">=D0=9D=D0=BE=D0=
+=BF=D0=BE=D0=BC=D0=B8=D0=BD=D0=B0=D0=B5=D0=BC, =D1=87=D1=82=D0=BE</span></=
+span></p>=0A<p style=3D"text-align: center;">=0A=09<span style=3D"font-siz=
+e:14px;line-height:normal;"><span style=3D"font-family:georgia,serif;"><b>=
+19 =D0=BC=D0=B0=D1=80=D1=82=D0=B0 2016 =D0=B3=D0=BE=D0=B4=D0=B0 =D0=B7=D0=
+=B0=D0=BA=D0=B0=D0=BD=D1=87=D0=B8=D0=B2=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D0=
+=BF=D1=80=D0=B8=D0=B5=D0=BC =D0=BC=D0=B0=D1=82=D0=B5=D1=80=D0=B8=D0=B0=D0=
+=BB=D0=BE=D0=B2 =D0=B8 =D0=B7=D0=B0=D1=8F=D0=B2=D0=BE=D0=BA =D0=BD=D0=B0 =
+=D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D0=B5 =D0=B2</b></span></span></p>=0A=
+<p style=3D"text-align: center;">=0A=09<span style=3D"font-size:14px;line-=
+height:normal;"><span style=3D"font-family:georgia,serif;">19 =D0=9C=D0=B5=
+=D0=B6=D0=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=D0=BE=D0=B9 =D0=BD=
+=D0=B0=D1=83=D1=87=D0=BD=D0=BE-=D0=BF=D1=80=D0=B0=D0=BA=D1=82=D0=B8=D1=87=
+=D0=B5=D1=81=D0=BA=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=
+=D0=BD=D1=86=D0=B8=D0=B8:</span></span></p>=0A<p style=3D"text-align: cent=
+er;">=0A=09<span style=3D"font-size:14px;line-height:normal;"><span style=
+=3D"font-family:georgia,serif;"><b><a class=3D"text_link" style=3D"color:#=
+005184;" href=3D"http://ssosm.ru/konferentsii">&laquo;=D0=90=D0=BA=D1=82=
+=D1=83=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B5 =D0=B2=D0=BE=D0=BF=D1=80=D0=BE=
+=D1=81=D1=8B =D0=BD=D0=B0=D1=83=D0=BA=D0=B8 =D0=B8 =D1=85=D0=BE=D0=B7=D1=
+=8F=D0=B9=D1=81=D1=82=D0=B2=D0=B0: =D0=BD=D0=BE=D0=B2=D1=8B=D0=B5 =D0=B2=
+=D1=8B=D0=B7=D0=BE=D0=B2=D1=8B =D0=B8 =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=
+=D1=8F&raquo;</a></b></span></span></p>=0A<p style=3D"text-align: center;"=
+>=0A=09<span style=3D"font-size:14px;line-height:normal;"><span style=3D"f=
+ont-family:georgia,serif;">(=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=
+=82=D0=B5=D1=80=D0=B1=D1=83=D1=80=D0=B3, =D0=A0=D0=A4)</span></span></p>=
+=0A</td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"=
+520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr></tbody=
+></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table" style=3D""><tbody><tr><td width=3D"20"></td><td wid=
+th=3D"520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr><=
+tr><td width=3D"20"></td><td width=3D"520" align=3D"left" valign=3D"top" s=
+tyle=3D"color:#000000;font-family:Arial, Helvetica, sans-serif;font-size:1=
+3px;" class=3D"cell"><p style=3D"text-align: center;">=0A=09<span style=3D=
+"font-size:14px;line-height:normal;"><span style=3D"font-family:georgia,se=
+rif;">=D0=A3=D1=87=D0=B0=D1=81=D1=82=D0=BD=D0=B8=D0=BA=D0=B8 =D0=BC=D0=BE=
+=D0=B3=D1=83=D1=82 =D0=BE=D0=B7=D0=BD=D0=B0=D0=BA=D0=BE=D0=BC=D0=B8=D1=82=
+=D1=8C=D1=81=D1=8F =D1=81 <a class=3D"text_link" style=3D"color:#005184;" =
+href=3D"http://ssosm.ru/pravila-dlya-avtorov"><b>=D0=BF=D1=80=D0=B0=D0=B2=
+=D0=B8=D0=BB=D0=B0=D0=BC=D0=B8 =D0=BE=D1=84=D0=BE=D1=80=D0=BC=D0=BB=D0=B5=
+=D0=BD=D0=B8=D1=8F =D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8</b></a><br />=0A=
+=09=D0=91=D0=BE=D0=BB=D0=B5=D0=B5 =D0=B4=D0=B5=D1=82=D0=B0=D0=BB=D1=8C=D0=
+=BD=D0=B0=D1=8F =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=
+=8F =D0=BD=D0=B0=D1=85=D0=BE=D0=B4=D0=B8=D1=82=D1=81=D1=8F =D0=B2 <a class=
+=3D"text_link" style=3D"color:#005184;" href=3D"http://ssosm.ru/files/Info=
+rm_scienceagro.ru_18-19.03.16.pdf"><b>=D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=
+=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=BC =D0=BF=D0=B8=D1=81=D1=8C=
+=D0=BC=D0=B5,</b></a> =D0=B0 =D1=82=D0=B0=D0=BA=D0=B6=D0=B5 =D0=BD=D0=B0 <=
+b><a class=3D"text_link" style=3D"color:#005184;" href=3D"http://ssosm.ru/=
+konferentsii">=D1=81=D0=B0=D0=B9=D1=82=D0=B5 =D0=BE=D1=80=D0=B3=D0=B0=D0=
+=BD=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8</a>.</b></span></span></p>=0A</td>=
+<td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"520" hei=
+ght=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr></tbody></table=
+><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cla=
+ss=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"=
+7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody></table=
+><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cla=
+ss=3D"table" style=3D""><tbody><tr><td width=3D"20"></td><td width=3D"520"=
+ height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr><tr><td wid=
+th=3D"20"></td><td width=3D"520" align=3D"left" valign=3D"top" style=3D"co=
+lor:#000000;font-family:Arial, Helvetica, sans-serif;font-size:13px;" clas=
+s=3D"cell"><p style=3D"text-align: center;">=0A=09<span style=3D"font-size=
+:14px;line-height:normal;"><span style=3D"font-family:georgia,serif;">=D0=
+=9A=D0=B0=D0=B6=D0=B4=D0=BE=D0=BC=D1=83 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=
+=BD=D0=B8=D0=BA=D1=83 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=
+=86=D0=B8=D0=B8 =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=
+=BE <a class=3D"text_link" style=3D"color:#005184;" href=3D"http://ssosm.r=
+u/registratsiya"><b><span style=3D"font-size: 16px;">=D0=B7=D0=B0=D0=BF=D0=
+=BE=D0=BB=D0=BD=D0=B8=D1=82=D1=8C =D0=B7=D0=B0=D1=8F=D0=B2=D0=BA=D1=83 =D1=
+=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D1=8F</span></b></a> =D0=B2 =D0=BA=D0=BE=
+=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 =D0=BD=D0=B0 =D0=BD=
+=D0=B0=D1=88=D0=B5=D0=BC =D1=81=D0=B0=D0=B9=D1=82=D0=B5.</span></span></p>=
+=0A</td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"=
+520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr></tbody=
+></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"></td><td width=3D"20"></td></tr><tr><td width=
+=3D"20"></td><td align=3D"left" valign=3D"top" class=3D"text2311" style=3D=
+"color:#000000;font-family:Arial, Helvetica, sans-serif;font-size:13px;"><=
+table align=3D"right" style=3D"margin-right:5px;"><tbody><tr><td style=3D"=
+padding-bottom: 10px; padding-top: 5px; padding-right: 20px;"><a href=3D"h=
+ttp://ssosm.ru/konferentsii"><img style=3D"width: 206px; height: 206px;" b=
+order=3D"0" height=3D"206" width=3D"206" alt=3D" " src=3D"http://man-serve=
+r.in.ua/upload/img/660-e536811e427f136db6315d65129cb765.jpg" class=3D"imag=
+e2311"></a></td></tr></tbody></table><ul>=0A=09<li>=0A=09=09<span style=3D=
+"font-size:14px;line-height:normal;"><span style=3D"font-family:georgia,se=
+rif;">=D0=A4=D0=BE=D1=80=D0=BC=D0=B0 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=
+=D1=8F: <b>=D0=B7=D0=B0=D0=BE=D1=87=D0=BD=D0=B0=D1=8F.</b></span></span></=
+li>=0A=09<li>=0A=09=09<span style=3D"font-size:14px;line-height:normal;"><=
+span style=3D"font-family:georgia,serif;">=D0=9F=D1=80=D0=B8=D0=B5=D0=BC =
+=D0=B7=D0=B0=D1=8F=D0=B2=D0=BE=D0=BA, =D1=82=D0=B5=D0=BA=D1=81=D1=82=D0=BE=
+=D0=B2 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 <b>=D0=B4=D0=BE 18.03.2016 (=
+=D0=B2=D0=BA=D0=BB=D1=8E=D1=87=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE)<=
+/b></span></span></li>=0A=09<li>=0A=09=09<span style=3D"font-size:14px;lin=
+e-height:normal;"><span style=3D"font-family:georgia,serif;">=D0=9F=D1=80=
+=D0=B5=D0=B4=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=B4=D0=BE=D0=BA=D1=83=D0=BC=D0=B5=D0=BD=D1=82=D0=BE=D0=B2 =D0=BE=D0=B1 =
+=D0=BE=D0=BF=D0=BB=D0=B0=D1=82=D0=B5 <b>=D0=B4=D0=BE 19.03.2016.</b></span=
+></span></li>=0A=09<li>=0A=09=09<span style=3D"font-size:14px;line-height:=
+normal;"><span style=3D"font-family:georgia,serif;">=D0=9F=D1=83=D0=B1=D0=
+=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F =D0=BF=D1=80=D0=B8=D0=BD=D1=8F=D1=
+=82=D0=BE=D0=B9 =D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D0=BD=D0=B0 =D1=81=
+=D0=B0=D0=B9=D1=82=D0=B5 =D0=9A=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=
+=D1=86=D0=B8=D0=B8<b> =D0=B4=D0=BE 22.04.2016</b></span></span></li>=0A=09=
+<li>=0A=09=09<b><span style=3D"font-size:14px;line-height:normal;"><span s=
+tyle=3D"font-family:georgia,serif;">=D0=A0=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=
+=D0=B5=D0=BD=D0=B8=D0=B5 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B2 =D1=
+=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=B5 =D0=A0=D0=98=D0=9D=D0=A6 =D0=B2 =
+=D1=82=D0=B5=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 3 =D0=BC=D0=B5=D1=81=D1=8F=D1=
+=86=D0=B5=D0=B2 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D0=BF=D0=BE=D0=B4=D0=B0=D1=
+=87=D0=B8 =D0=BC=D0=B0=D1=82=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D0=BE=D0=B2</sp=
+an></span></b></li>=0A=09<li>=0A=09=09<span style=3D"font-size:14px;line-h=
+eight:normal;"><span style=3D"font-family:georgia,serif;">=D0=A0=D0=B0=D1=
+=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B0 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=
+=BE=D0=B2 =D0=B8 =D1=81=D0=B5=D1=80=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=
+=82=D0=BE=D0=B2 <b>22.04.2016</b></span></span></li>=0A=09<li>=0A=09=09<sp=
+an style=3D"font-size:14px;line-height:normal;"><span style=3D"font-family=
+:georgia,serif;"><a class=3D"text_link" css=3D"[text_link]" href=3D"http:/=
+/ssosm.ru/nomera-zhurnalov"><b>=D0=90=D1=80=D1=85=D0=B8=D0=B2=D1=8B =D0=BD=
+=D0=B0=D1=88=D0=B8=D1=85 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=
+=D1=86=D0=B8=D0=B9</b></a> =D0=92=D1=8B =D0=BC=D0=BE=D0=B6=D0=B5=D1=82=D0=
+=B5 =D0=BF=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=D1=82=D1=8C, =D0=BD=
+=D0=B0 =D0=BD=D0=B0=D1=88=D0=B5=D0=BC =D1=81=D0=B0=D0=B9=D1=82=D0=B5</span=
+></span></li>=0A</ul>=0A</td><td width=3D"20"></td></tr></tbody></table><t=
+able width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7"=
+ class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody></table><=
+table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"table" style=3D""><tbody><tr><td width=3D"20"></td><td width=3D"520" h=
+eight=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr><tr><td width=
+=3D"20"></td><td width=3D"520" align=3D"left" valign=3D"top" style=3D"colo=
+r:#000000;font-family:Arial, Helvetica, sans-serif;font-size:13px;" class=
+=3D"cell"><p style=3D"text-align: center;">=0A=09<a class=3D"text_link" st=
+yle=3D"color:#005184;" href=3D"http://ssosm.ru/registratsiya"><b><span sty=
+le=3D"font-size:16px;line-height:normal;"><span style=3D"font-family:georg=
+ia,serif;">=D0=97=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=82=D1=8C =D0=B0=
+=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B0</span>=
+</span></b></a></p>=0A<p style=3D"text-align: center;">=0A=09<b><span styl=
+e=3D"font-size:16px;line-height:normal;"><span style=3D"font-family:georgi=
+a,serif;">&nbsp;&nbsp;&nbsp;&nbsp; <a class=3D"text_link" style=3D"color:#=
+005184;" href=3D"http://ssosm.ru/konferentsii">=D0=A1=D0=B0=D0=B9=D1=82 =
+=D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8</a>&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a clas=
+s=3D"text_link" style=3D"color:#005184;" href=3D"http://ssosm.ru/files/Inf=
+orm_scienceagro.ru_18-19.03.16.pdf">=D0=98=D0=BD=D1=84=D0=BE=D1=80=D0=BC=
+=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=
+=D0=BC=D0=BE</a></span></span></b></p>=0A</td><td width=3D"20"></td></tr><=
+tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"spacer"><=
+/td><td width=3D"20"></td></tr></tbody></table><table width=3D"560" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table"><tbody><tr><td =
+width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"cell"><hr></hr><=
+/td><td width=3D"20"></td></tr></tbody></table><table width=3D"560" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table" style=3D""><tbo=
+dy><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"space=
+r"></td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"=
+520" align=3D"left" valign=3D"top" style=3D"color:#000000;font-family:Aria=
+l, Helvetica, sans-serif;font-size:13px;" class=3D"cell"><p style=3D"text-=
+align: center;">=0A=09<span style=3D"font-size:14px;line-height:normal;"><=
+span style=3D"font-family:georgia,serif;"><u><b>=D0=9F=D0=BE=D1=81=D0=BB=
+=D0=B5 =D0=BE=D0=BA=D0=BE=D0=BD=D1=87=D0=B0=D0=BD=D0=B8=D1=8F =D0=BA=D0=BE=
+=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 =D0=B2=D1=81=D0=B5=
+=D0=BC =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=BD=D0=B8=D0=BA=D0=B0=D0=BC =D1=80=
+=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D0=BF=D0=B5=
+=D1=87=D0=B0=D1=82=D0=BD=D1=8B=D0=B9 =D0=B2=D0=B0=D1=80=D0=B8=D0=B0=D0=BD=
+=D1=82 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =D0=B8 =D1=81=D0=B5=D1=
+=80=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=82.</b></u></span></span></p>=
+=0A</td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"=
+520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr></tbody=
+></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table" style=3D""><tbody><tr><td width=3D"20"></td><td wid=
+th=3D"520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr><=
+tr><td width=3D"20"></td><td width=3D"520" align=3D"left" valign=3D"top" s=
+tyle=3D"color:#000000;font-family:Arial, Helvetica, sans-serif;font-size:1=
+3px;" class=3D"cell"><p>=0A=09<span style=3D"font-size:10px;line-height:no=
+rmal;"><span style=3D"font-family:georgia,serif;"><a class=3D"text_link" s=
+tyle=3D"color:#005184;" href=3D"http://ssosm.ru/">=D0=9E=D0=B1=D1=89=D0=B5=
+=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=B0=D1=8F =D0=BD=D0=B0=D1=83=D1=87=
+=D0=BD=D0=B0=D1=8F =D0=BE=D1=80=D0=B3=D0=B0=D0=BD=D0=B8=D0=B7=D0=B0=D1=86=
+=D0=B8=D1=8F &quot;=D0=9D=D0=B0=D1=83=D0=BA=D0=B0 =D0=B8 =D1=85=D0=BE=D0=
+=B7=D1=8F=D0=B9=D1=81=D1=82=D0=B2=D0=BE&quot;</a><br />=0A=09<b>=D0=90=D0=
+=B4=D1=80=D0=B5=D1=81: </b>=D1=83=D0=BB=D0=B8=D1=86=D0=B0 =D0=A2=D0=B0=D0=
+=BC=D0=B1=D0=BE=D0=B2=D1=81=D0=BA=D0=B0=D1=8F, 17, =D0=BE=D1=84.17, 3-=D0=
+=B8=D0=B9 =D1=8D=D1=82=D0=B0=D0=B6, =D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=
+=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=D1=80=D0=B3, =D0=A0=D0=BE=D1=81=D1=81=
+=D0=B8=D1=8F 192007<br />=0A=09<b>=D0=90=D0=B4=D1=80=D0=B5=D1=81 =D1=8D=D0=
+=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BF=D0=BE=D1=
+=87=D1=82=D1=8B:</b> office@ssosm.ru<br />=0A=09=D0=90=D0=B4=D1=80=D0=B5=
+=D1=81 =D0=B2=D0=B5=D0=B1=D1=81=D0=B0=D0=B9=D1=82=D0=B0: <a class=3D"text_=
+link" style=3D"color:#005184;" href=3D"http://ssosm.ru/">ssosm.ru</a></spa=
+n></span></p>=0A<p>=0A=09<span style=3D"font-size:10px;line-height:normal;=
+"><span style=3D"font-family:georgia,serif;"><b>=D0=93=D0=BB=D0=B0=D0=B2=
+=D0=BD=D1=8B=D0=B9 =D1=80=D0=B5=D0=B4=D0=B0=D0=BA=D1=82=D0=BE=D1=80</b>: =
+=D0=B4. =D1=81.-=D1=85. =D0=BD., =D0=90=D0=BD=D0=BD=D0=B5=D0=BD=D0=BA=D0=
+=BE=D0=B2 =D0=90=D0=BB=D0=B5=D0=BA=D1=81=D0=B0=D0=BD=D0=B4=D1=80 =D0=9F=D0=
+=B5=D1=82=D1=80=D0=BE=D0=B2=D0=B8=D1=87</span></span></p>=0A</td><td width=
+=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"520" height=3D"7"=
+ class=3D"spacer"></td><td width=3D"20"></td></tr></tbody></table></td></t=
+r></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"pfooter"><tr><td height=3D"15" width=3D"560" class=3D"pfoo=
+ter"></td></tr><tr><td class=3D"pfooter" style=3D"color:#696656;font-famil=
+y:Arial, Helvetica, sans-serif;font-size:11px;" width=3D"560" align=3D"cen=
+ter">=D0=AD=D1=82=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=
+=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=
+=D0=B5=D0=BD=D0=BE =D0=BD=D0=B0  <b>sophie@cs.uchicago.edu</b> =D0=BF=D0=
+=BE=D1=82=D0=BE=D0=BC=D1=83, =D1=87=D1=82=D0=BE: <br /> <span id=3D"reason=
+">=D0=92=D1=8B =D0=BF=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D1=8B =D0=
+=BD=D0=B0 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=83 =D0=BD=D0=BE=D0=
+=B2=D0=BE=D1=81=D1=82=D0=B5=D0=B9 =D0=BE=D1=82 =D0=9E=D0=9D=D0=9E =D0=9D=
+=D0=B0=D1=83=D0=BA=D0=B0 =D0=B8 =D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=D1=82=
+=D0=B2=D0=BE</span><br /><br /> =D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D0=
+=BD=D0=B5 =D1=85=D0=BE=D1=82=D0=B8=D1=82=D0=B5 =D0=B1=D0=BE=D0=BB=D1=8C=D1=
+=88=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=BD=D0=B0=D1=
+=88=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BF=D1=80=D0=BE=D1=81=
+=D1=82=D0=BE =D0=BF=D0=B5=D1=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=
+=D0=BE =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B5 <a href=3D"http://mx1.in.ua/un=
+sub.php?do=3Dunsubscribe&id=3D186&email=3Dsophie@cs.uchicago.edu">=D0=BE=
+=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BE=D1=82 =D1=80=
+=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a><br /><br /></td></tr><tr><t=
+d class=3D"pfooter" height=3D"3" width=3D"560"></td></tr><tr><td width=3D"=
+560" align=3D"center" style=3D"color:#696656;font-family:Arial, Helvetica,=
+ sans-serif;font-size:11px;" class=3D"pfooter">2016 =C2=A9 =D1=83=D0=BB=D0=
+=B8=D1=86=D0=B0 =D0=A2=D0=B0=D0=BC=D0=B1=D0=BE=D0=B2=D1=81=D0=BA=D0=B0=D1=
+=8F, 17, =D0=BE=D1=84.17, 3-=D0=B8=D0=B9 =D1=8D=D1=82=D0=B0=D0=B6,=D0=A1=
+=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=D1=80=
+=D0=B3, =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F 192007 | =D0=9E=D0=9D=D0=9E =
+=D0=9D=D0=B0=D1=83=D0=BA=D0=B0 =D0=B8 =D1=85=D0=BE=D0=B7=D1=8F=D0=B9=D1=81=
+=D1=82=D0=B2=D0=BE</td></tr><tr><td height=3D"10" width=3D"560" class=3D"p=
+footer"></td></tr><tr><td align=3D"center" width=3D"560" style=3D"color:#6=
+96656;font-family:Arial, Helvetica, sans-serif;font-size:11px;" class=3D"p=
+footer"> =D0=A7=D1=82=D0=BE=D0=B1=D1=8B =D0=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=
+=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=
+=87=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D0=B8=D1=81=D0=B5=D0=BC =D0=BE=D1=82 =
+=D0=BD=D0=B0=D1=81 - =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D1=8C=D1=82=D0=B5 =D0=
+=BD=D0=B0=D1=88 =D0=B0=D0=B4=D1=80=D0=B5=D1=81 =D0=B2 =D0=B0=D0=B4=D1=80=
+=D0=B5=D1=81=D0=BD=D1=83=D1=8E =D0=BA=D0=BD=D0=B8=D0=B3=D1=83.</td></tr><t=
+r><td height=3D"10" class=3D"pfooter" width=3D"560"></td></tr></table></td=
+></tr></table>
+--_mult123--

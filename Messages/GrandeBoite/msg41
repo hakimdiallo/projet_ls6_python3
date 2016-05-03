@@ -1,0 +1,342 @@
+Return-Path: <service-client@newsletter.elu41.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id d4xtJjeX4Va9igAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 16:48:07 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 515DF61FA9;
+	Thu, 10 Mar 2016 16:48:05 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 14.934
+X-Spam-Level: **************
+X-Spam-Status: Yes, score=14.934 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_FONT_LOW_CONTRAST=0.001,
+	HTML_MESSAGE=0.001, MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5,
+	URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (body has been altered)"
+	header.d=newsletter.elu41.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id JgWZFGqtTEgv; Thu, 10 Mar 2016 16:48:01 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id AC02861FA2
+	for <liafa@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 16:48:00 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2AFm0pJ014892
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Thu, 10 Mar 2016 16:48:00 +0100
+Received: from zinc-foei.emv4.net (zinc-foei.emv4.net [81.92.124.48])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u2AFhWKJ024638
+          for <liafa@liafa.jussieu.fr>; Thu, 10 Mar 2016 16:44:09 +0100 (CET)
+X-Ids: 168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=emv; d=newsletter.elu41.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:List-Id; i=service-client@newsletter.elu41.com;
+ bh=FumIMos4Pq+Uhh++8UKX2PcOl1g=;
+ b=nRAD0H4IAbdYIEq/3CNHNmycFC+fwBpad5ztoCxSd/zF1P16aZFepPCfTehnuaw8cJDKu76S6p1Q
+   LafBcgjXgJK79EwvsL6M6mALsDD1ZXxrPuHjb7NevDBfdlXfnvDz+zmjkt85g/RZcm9dYzl5j+ud
+   EcBC1tMSH1/C5JPl0NE=
+Received: by zinc-foei.emv4.net id hs6b4c167585 for <liafa@liafa.jussieu.fr>; Thu, 10 Mar 2016 16:43:27 +0100 (envelope-from <service-client@newsletter.elu41.com>)
+Date: Thu, 10 Mar 2016 16:43:30 +0100 (CET)
+From: Petit Journal <service-client@newsletter.elu41.com>
+Reply-To: Petit Journal <service-client@elu41.com>
+To: <liafa@liafa.jussieu.fr>
+Message-ID: <2.1.74.1101061264.1698983.7690747069@newsletter.elu41.com>
+Subject: =?iso-8859-15?Q?Jeune_femme_insult=E9e_qui_entra=EEne_un_?=
+ =?iso-8859-15?Q?KO,_sublime_timelapse_de_Paris,_naissa?=
+ =?iso-8859-15?Q?nce_d'un_b=E9b=E9_dans_son_sac_amniotique,?=
+ =?iso-8859-15?Q?_un_taureau_lui_encorne_les_testicules?=
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+X-EMV-Platform: p9cce.campaigncommander.com$
+X-EMV-CampagneId: 1698983$
+X-EMV-MemberId: 7690747069$
+List-Unsubscribe: <http://newsletter.elu41.com/HD?b=kB1itFjKN3SWbQCXCyLx7TckOeDVZmdClE5uFixheWXoz1MYRBMVbBgPlAsQa-Z7&c=J1ZAswZpFFRnGN76gn-27Q>, <mailto:unsubscribe@newsletter.elu41.com?subject=unsubscribe-74-kB1itFjKN3SWbQCXCyLx7TckOeDVZmdClE5uFixheWXoz1MYRBMVbBgPlAsQa-Z7/J1ZAswZpFFRnGN76gn-27Q>
+List-Id: <1101061264.74.1.1.list-id.newsletter.elu41.com>
+X-Miltered: at potemkin with ID 56E19730.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56E19624.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E19730.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<service-client@newsletter.elu41.com>
+X-j-chkmail-Enveloppe: 56E19624.000 from zinc-foei.emv4.net/zinc-foei.emv4.net/81.92.124.48/zinc-foei.emv4.net/<service-client@newsletter.elu41.com>
+X-Scores-Stats: 56E19624.000 B=0.50000 L=0.88682 G=0.88682 Agree    
+X-j-chkmail-Score: MSGID : 56E19730.000 on potemkin.univ-paris7.fr : j-chkmail score : XXX : R=##### U=. O=. B=0.000 -> S=0.500
+X-j-chkmail-Score: MSGID : 56E19624.000 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=#### U=. O=. B=0.887 -> S=0.991
+X-j-chkmail-Status: Unsure
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 10 Mar 2016 16:48:00 +0100 (CET)
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<HEAD>
+<STYLE type="text/css">
+<!--
+.cd_form_text2 {
+color:#000;
+font:8pt Verdana, Arial, Helvetica, sans-serif;
+}
+.cd_form_text {
+color:#000;
+font-size:10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.cd_form_textarea {
+font-family:Tahoma, Arial, sans-serif;
+font-size:10px;
+color:#000;
+}
+.cd_form_button {
+width:auto;
+border:3px double #004CB2;
+border-top-color:#9CF;
+border-left-color:#9CF;
+background-color:#336;
+background-repeat:repeat-x;
+color:#FFF;
+font-size:90%;
+font-weight:700;
+font-family:Verdana, Helvetica, Arial, sans-serif;
+padding:0.25em;
+}
+.cd_form_input {
+color:#C00;
+background-color:#FFF;
+font-size:11px;
+font-family:arial;
+}
+.cd_form_select {
+color:#C00;
+background-color:#FFF;
+font-size:10px;
+font-family:arial;
+width:150px;
+}
+a:hover {
+text-decoration:none;
+}
+A:hover {
+color:#C03;
+}
+.txtannoncegauche {
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#336;
+text-indent:3pt;
+}
+.mentionslegales {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:9px;
+color:#666;
+}
+.formulairetxt {
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#336;
+font-weight:400;
+background-color:#EEE;
+}
+.formulaireselect {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:9px;
+color:#336;
+width:110px;
+}
+.formulairetxtred {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#C00;
+font-weight:400;
+}
+.formulaire02 {
+background-color:#F5F5F5;
+}
+.formulairecomments {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#336;
+width:600px;
+}
+.formulaire03 {
+background-color:#336;
+}
+.titre {
+font-family:Arial, Helvetica, sans-serif;
+font-size:16px;
+color:#333;
+font-weight:400;
+}
+.formulairetxt2 {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#336;
+font-weight:400;
+}
+.formulairetxtdroite {
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#336;
+font-weight:400;
+background-color:#F5F5F5;
+}
+.formulaire,.formulaire01 {
+background-color:#EEE;
+}
+.formulaireinput,.formulairebouton {
+color:#336;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+}
+-->
+</STYLE>
+<TITLE>Petit Journal -- Jeune femme insult&eacute;e qui entra&icirc;ne un KO, sublime timelapse de Paris, naissance d'un b&eacute;b&eacute; dans son sac amniotique, un taureau lui encorne les testicules</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<!--[if gte mso 9]><xml> <o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></HEAD>
+<body text="#666666" link="#333366">
+<BR>
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+<TD width="200" align="center" bgcolor="#D7D4D4" style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px">&nbsp;&nbsp;&nbsp;<A style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px" HREF="http://newsletter.elu41.com/HP?b=sVJFp1YsRUUYc60HmZ9bYxJZg9nJZYuY49YqtW7176nQJJxOc1cRA64joAXkEFoS&c=DZl4vT_JwOmwpTSlIM5bQA">Signaler comme ind&eacute;sirable</A>&nbsp;&nbsp;&nbsp;</TD>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<CENTER>
+<CENTER><FONT style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000">Si ce message ne s'affiche pas correctement, merci de suivre <A href='http://newsletter.elu41.com/HM?b=DkcWOnCtp8zdP5Q5J7WXLxSflRsIpS_nJRYPEt5AWNHyZRAXugo34W_Zeyv4f6T2&c=JYlmhmsHMNUqZu-8jfNgiw'>ce lien</A></FONT></CENTER>
+</CENTER>
+<DIV align="center">
+<TABLE width="750" border="0" cellspacing="0" cellpadding="2">
+<TR>
+<TD width="750" valign="top">
+<TABLE id="" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="600">
+<TBODY>
+<TR>
+<TD align="left"><A HREF="http://newsletter.elu41.com/HP?b=igk7g8ypGymvpOBwMDd_OLyaZpcq5xk4PvHoi5nO5XmNi2URrZkNI2xUyrIMO3bh&c=k_jJO7ZbfSSnSu4ALlTNdw" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/petitjournal.png" alt="logo petit journal" class="logoWidth" style="margin-left:205px;" height="107" border="0" width="190"></A></TD>
+</TR>
+<TR>
+<TD>
+<TABLE class="deviceWidth" border="0" cellpadding="0" cellspacing="0" width="100%">
+<TBODY>
+<TR>
+<TD height="25" align="center" bgcolor="#2D2D2D"><FONT face="Tahoma, Geneva, sans-serif" color="#FFFFFF" size="2"><A HREF="http://newsletter.elu41.com/HP?b=0KyvAY9PyRDSM95c96VhadqmyH-M6SpoXjfR_WvmuEdFZ_1Uv6GrrUKjYgb4lFmU&c=NMjLfSba2M_PmQexnMihRg" target="_blank" style="text-decoration:none; color:#FFF;">Actu</A> | <A HREF="http://newsletter.elu41.com/HP?b=mMfNwdyqLY9TuWa3eo7gGGw-LRBQ7gtj28a0-vKuV6wSeFpkalKk7RO5nnR4Zo3G&c=mEb11LlgRIjQsRRKoJL7Ig" target="_blank" style="text-decoration:none; color:#FFF;">Buzz</A> | <A HREF="http://newsletter.elu41.com/HP?b=cTH871xk1cUuKFuD3q9CJKqhePM_WCwnuGco8WXd_22388x1TRD5ynV5ylwBhdwZ&c=sziRAtAI3UfJiJPkwMiUNA" target="_blank" style="text-decoration:none; color:#FFF;">Divers</A> | <A HREF="http://newsletter.elu41.com/HP?b=cpXFHPk_-2O2pZtER3JDompj1uFJfz7vLu6pKjRMGV8J6hloXExT92P1p95VNp7Z&c=oTMUW4PZ67H-kJCecPVcYA" target="_blank" style="text-decoration:none; color:#FFF;">Geek</A> | <A HREF="http://newsletter.elu41.com/HP?b=WE_o0Cgf5Z2AP1MDztPPGq9!
+ 3hDiCToNng0TrICrPePW4k4l4nX5-jQmmFMLW_QAu&c=FefOhr7tJ_KLOI3I488cNQ" target="_blank" style="text-decoration:none; color:#FFF;">Insolite</A> | <A HREF="http://newsletter.elu41.com/HP?b=SPTHyXFQOJBxUs28R9MjB_z1wj_CQBi27RY1zwNHNuESTo8Ah3KQb9PeeT4yFETS&c=1xYA5DqKzvZ0K5iUjIPKJA" target="_blank" style="text-decoration:none; color:#FFF;">M&eacute;dia</A> | <A HREF="http://newsletter.elu41.com/HP?b=tZm2nHjO3YNNaD_EsBHEODPhZkVVdBdAZgh8xYogNAUKo2IlUvZt2Wo9hsDyGM3U&c=sRbtKnxVtLGJrYWDLrQpoA" target="_blank" style="text-decoration:none; color:#FFF;">People</A> | <A HREF="http://newsletter.elu41.com/HP?b=5Bmmihg8z0x2MKzEFM-8DSvfm5z0vc5ieAcOxvI0BQ8lCPgr0yfMZAiig-hlFv6b&c=g3kDJ3rzQrZdOFK4UGAzlQ" target="_blank" style="text-decoration:none; color:#FFF;">Sexy</A> | <A HREF="http://newsletter.elu41.com/HP?b=kfQbiCpR6Q3zLslb93OFozbAyjjEOeJEV6lcRg9cMo8QHyzZHKijYWEgRgMlmhTH&c=ut3K0k5i0vlbjMJmaamiBQ" target="_blank" style="text-decoration:none; color:#FFF;">Trash</A> | <A HREF="http://newsletter.e!
+ lu41.com/HP?b=GlmiwOEyP3ePDki47_q8WXw-P4xUwz2j1Dg6fprZVTXYrpF0JItxtXJL6bjual3U&c=1VPF2eIKLTSA4fbwoP6Y3A" target="_blank" style="text-decoration:none; color:#FFF;">Vid&eacute;o</A> | <A HREF="http://newsletter.elu41.com/HP?b=y5LdYflp8UvhRfFWEdioszrnZu28UzRY_CCU3WHIMxUa9OI1AELT-VpGnORj5Zhk&c=z5qDeVqQPFKrCv_nb2cDSw" target="_blank" style="text-decoration:none; color:#FFF;">Web</A></FONT></TD>
+</TR>
+<TR>
+<TD height="3" bgcolor="#FF0000"></TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE class="deviceWidth" border="0" cellpadding="0" cellspacing="0" width="100%">
+<TBODY>
+<TR>
+<TD align="center"><A HREF="http://newsletter.elu41.com/HP?b=E1ePRh5cVdU0f6ltboqQ2Tp9NBOff6pgw8IxvEhp3dUTzY88YXjxiK5ahDu6QiNH&c=QW77Yr3vLg2hbMCeJOWcow" style="text-decoration: none; color:#09F; font-family:Tahoma, Geneva, sans-serif; font-size:16px;" target="_blank"><BR>
+&laquo; You fucked my wife ? &raquo; : ils insultent une jeune femme et finissent &agrave; terre KO</A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=FJqmPMsVhZ0EiN3s7MexjPSK4Vbqi5_1LrG4l5SRc8i4BVw5YoDtN3KfWMhpB4V8&c=vCcldW_hAbMI8WtbBNj48w" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/PJ-19876-visuel1.jpg" width="100%" border="0"></A></TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE class="deviceWidth" border="0" cellpadding="0" cellspacing="0" width="600">
+<TBODY>
+<TR>
+<TD align="center"><A HREF="http://newsletter.elu41.com/HP?b=SogW9OKl9lGMdLkvMzGF8mZU1lqDOQ_1JgSYxfp7iG53apqS8RFEeWBxkPacSB-4&c=ZpMj7SlVlSSQoVkZfKXXpQ" style="text-decoration: none; color:#09F; font-family:Tahoma, Geneva, sans-serif; font-size:16px;" target="_blank"><BR>
+Bonjour Paris : un sublime time lapse de la capitale</A><A HREF="http://newsletter.elu41.com/HP?b=c8lNhQCFsDjkQTZs-n0j5ygBgTzVQHwBAeD3EW2_-JsFJf4kV6IPNqCNCjsArJTk&c=zD64YTbnhPSd42pUGS-3uQ" style="text-decoration: none; color:#09F; font-family:Tahoma, Geneva, sans-serif; font-size:16px;" target="_blank"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=bHinXAysDlqMGqf4qWcVvwQn6_-EFmG-BUZXIkOaDuNrHkLsP1xMfwv65N_dRHGo&c=zrR4alaurj5FKOxH_q0kDw" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/PJ-19876-visuel2.jpg" width="100%" border="0"></A></TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE class="deviceWidth" border="0" cellpadding="0" cellspacing="0" width="600">
+<TBODY>
+<TR>
+<TD align="center"><A HREF="http://newsletter.elu41.com/HP?b=bt2XnPd2Hepb8L-Fj20ZltQDc3XNe-bQ8AK6AZp94BrIQhpqgZpZTr8qZwlJBKTB&c=yKsSesaSGH8r1-X0RlWSgg" style="text-decoration: none; color:#09F; font-family:Tahoma, Geneva, sans-serif; font-size:16px;" target="_blank"><BR>
+S&eacute;quence &eacute;motion : un b&eacute;b&eacute; na&icirc;t dans son sac amniotique</A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=Xsb_qv9udLc0hJIxPCnKT73FDIM0iwFmwdowXVX3xvsB1L6If1uAUFH6JhmvDxl0&c=-vj3Mc_tYD1bFKr4Zzc7Zw" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/PJ-19876-visuel3.jpg" width="100%" border="0"></A></TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE class="deviceWidth" border="0" cellpadding="0" cellspacing="0" width="600">
+<TBODY>
+<TR>
+<TD align="center"><A HREF="http://newsletter.elu41.com/HP?b=fhlAXfeadX3MuxX3FkbLakHbCJgwCWsefyAD_Dbvf-jq77xuCNw3R8rb4XOLvtCf&c=iKXFYm-3Zzc78ByVkdWq4w" style="text-decoration: none; color:#09F; font-family:Tahoma, Geneva, sans-serif; font-size:16px;" target="_blank"><BR>
+Images choc : un taureau lui encorne les testicules</A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=zCMkfiEey1pbktBiZBuQ9cgIfIyCAyo6ecHfxjetJt3N8VeGFFF4uk5IqEKSAutG&c=V3UpB4JLTrDWio-1nkJMMg" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/PJ-19876-visuel4.jpg" width="100%" border="0"></A></TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE class="deviceWidth" border="0" cellpadding="0" cellspacing="0" width="600">
+<TBODY>
+<TR>
+<TD height="25" align="center" bgcolor="#2D2D2D"><FONT face="Tahoma, Geneva, sans-serif" color="#FFFFFF" size="2"><A HREF="http://newsletter.elu41.com/HP?b=8-KXmWljYAsokh-WVgt8DyU2WGbxEaTyWfLH-aEo3PXUpE9qIurMEBP-nd-sLV9w&c=TtCyQFhn5ALoBLHKIRUzYw" target="_blank" style="text-decoration:none; color:#FFF;">Actu</A> | <A HREF="http://newsletter.elu41.com/HP?b=Ododqi02C3RmDjHvUMby-mLUM2BbBGwrRcA6dn1u0lKnQ22bpiLgocXy7GUVrJLm&c=YZGM7PrRY8PJIfQaxojiAg" target="_blank" style="text-decoration:none; color:#FFF;">Buzz</A> | <A HREF="http://newsletter.elu41.com/HP?b=UVXQpuiiU8HiGNl8yEAuoLYnH3ONwlmfLUf2OxIty1MyIJYJ1hfK6rX59JpQ3XJO&c=Ta5_0Ycq78vJJ6ATZRWL8w" target="_blank" style="text-decoration:none; color:#FFF;">Divers</A> | <A HREF="http://newsletter.elu41.com/HP?b=Jvdsx2VN_tc3Ckv2aUQZSqHsw8UdPo7hW7Fw2FnQQ3xI5rCuJb7hP5rh8c27YRoS&c=dG00oaCEyxoOcl5YFlnZ2A" target="_blank" style="text-decoration:none; color:#FFF;">Geek</A> | <A HREF="http://newsletter.elu41.com/HP?b=7YFKVew1y2_YzT3gdcpLDvZ!
+ BOc148LvW5B60wd4KoF7EGU0bhajc1EawEaI1P04y&c=N5gvCID0jWVRnTfJn36YBg" target="_blank" style="text-decoration:none; color:#FFF;">Insolite</A> | <A HREF="http://newsletter.elu41.com/HP?b=KgEJIigQ3Fn-MxAgih_PCDcFwtkriIaAemkpsMsyHGm7O4IbUPXjX0LhczzyNQNo&c=1pTPpMlSd_LDmxwGZj7QQQ" target="_blank" style="text-decoration:none; color:#FFF;">M&eacute;dia</A> | <A HREF="http://newsletter.elu41.com/HP?b=dYtfZLjxglAQ3pJrRAgvAXAWLURBPzpg-cUu1Lo1VdrmQKnXyrmdmyqLYyfoT6y8&c=yfbZ0_n8XtZBEQ-gR8PJkw" target="_blank" style="text-decoration:none; color:#FFF;">People</A> | <A HREF="http://newsletter.elu41.com/HP?b=h0qsRfuWS9FamgDTEqsskmxnizI8wLaINSHTctqEC6VsWyWsq9HDCeI6J1cBj-4S&c=4oAE7KddDWCymFnny6wmvg" target="_blank" style="text-decoration:none; color:#FFF;">Sexy</A> | <A HREF="http://newsletter.elu41.com/HP?b=TAZ6SrhWsTJiusVhGPRcQbzlBR7qdocbqRXZysKLTTdKpApFoll1js-jRKgU4-OE&c=P-feHjMz4movVFKEoTwkyA" target="_blank" style="text-decoration:none; color:#FFF;">Trash</A> | <A HREF="http://newsletter.e!
+ lu41.com/HP?b=xbTpSF2kf-S227lxSSO9WZqEQBGufn7MDaHAF-MYMLsN8YzqErGF9CePwq8TD38S&c=E_1PxbDuLZbhuqdvJTdy_Q" target="_blank" style="text-decoration:none; color:#FFF;">Vid&eacute;o</A> | <A HREF="http://newsletter.elu41.com/HP?b=jMb1V9rWBvwBCHMT8qGT2cUc7n7_v7aZXVYr6MnzYIY9nld_ZQTsYeU4e3u-ujev&c=8xwd-PlzblKw24mYfdB6xQ" target="_blank" style="text-decoration:none; color:#FFF;">Web</A></FONT></TD>
+</TR>
+<TR>
+<TD height="3" bgcolor="#FF0000"></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD colspan="3">
+<DIV align="center">
+<P class="formulairecomments">
+Conform&eacute;ment &agrave; l'article 34 de la loi Informatique et Libert&eacute;<BR>
+du 6 janvier 1978, vous disposez d'un droit d'acc&egrave;s, de modification, de rectification et de suppression<BR>
+des donn&eacute;es vous concernant.&nbsp;&nbsp;&nbsp; D&eacute;claration CNIL n&deg;1181416</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<TABLE width="100%" border="0">
+<TR>
+<TD>
+<DIV align="center"><FONT size="1" face="Arial, Helvetica, sans-serif">Vous recevez cet e-mail car vous &ecirc;tes r&eacute;f&eacute;renc&eacute; sur la base de donn&eacute;es de notre partenaire.<BR>
+Si vous souhaitez vous desinscrire, merci d'utiliser <A href="http://newsletter.elu41.com/HD?b=84D4GKfYLJDFeq-ef70TEefDnskGo4MGIx8VEIdJocP2Q88jHHnMoaSmqi-fHLc8&c=0ZhFkF4LgUhtbtOFNVMblQ">le lien suivant.</A></FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<IMG src="http://adtrack.adleadevent.com/adtckrtg.php?ids=1240&email=liafa@liafa.jussieu.fr" width="1" height="1" border="0">
+<img border="0" width="1" height="1" src="http://trcd.elu41.com/trcd/trcdo.php?cid=81787&em=liafa@liafa.jussieu.fr&do=elu41.com&rout=emvi&ts=1457620686" />
+<img border="0" hspace="0" vspace="0" width="1" height="1" src="http://p-eu.acxiom-online.com/pixel/ema?eml=3dec99fbfb952733d5ffefaea30fa26b&ha=md5&pid=6346&t=634603&sc=cdec&ot=pixel" />
+<img src="http://www.audienceinsights.net/p?f=gif&idp=8583f4fa574d2af8&xi.e.md5=3dec99fbfb952733d5ffefaea30fa26b&n.v.e=1" alt="" width="1" height="1" style="display: none;" />
+<img src="http://dm.elu41.com/44?_cid=capdec&md5_opp=1&support=email&uinfo=1&md5=3dec99fbfb952733d5ffefaea30fa26b" alt="" width="1" height="1" style="display: none;" />
+<img src="http://newsletter.elu41.com/HO?2-NbOyGcRGY6MSzkaQDBjHHVkN9eIVSzepCckoMBng3h0-c7aS8bKtWwATplqwTK/Q00OJfy7_22j_WwWfLS12Q.gif" border="0" alt="" width="1" height="1" /></body>
+</HTML>

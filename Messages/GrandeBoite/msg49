@@ -1,0 +1,203 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id RwkKG+Ju31b+8AAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 09 Mar 2016 01:31:30 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 56D3D61FA3;
+	Wed,  9 Mar 2016 01:31:30 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 23.975
+X-Spam-Level: ***********************
+X-Spam-Status: Yes, score=23.975 tagged_above=-10000 required=5
+	tests=[ADVANCE_FEE_5_NEW_MONEY=3.45,
+	AXB_XMAILER_MIMEOLE_OL_1ECD5=0.696, BAYES_50=0.8, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, FORGED_MUA_OUTLOOK=1.927,
+	FROM_MISSP_MSFT=0.001, FROM_MISSP_TO_UNDISC=3.999,
+	FROM_MISSP_USER=0.001, FROM_MISSP_XPRIO=1.498,
+	FSL_CTYPE_WIN1251=0.001, FSL_NEW_HELO_USER=1.399,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HK_NAME_MR_MRS=1,
+	LOTS_OF_MONEY=0.001, MONEY_FROM_MISSP=0.001,
+	MSOE_MID_WRONG_CASE=2.584, NSL_RCVD_FROM_USER=1.098,
+	PYZOR_CHECK=1.392, RCVD_IN_DNSWL_NONE=-0.0001, TVD_PH_BODY_META=2.722,
+	T_MONEY_PERCENT=0.01, UNPARSEABLE_RELAY=0.001]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HBl8Wc7-_lKO; Wed,  9 Mar 2016 01:31:28 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 3287061F9D;
+	Wed,  9 Mar 2016 01:31:28 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u290VScS032742;
+	Wed, 9 Mar 2016 01:31:28 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 128AED405A; Wed,  9 Mar 2016 01:31:28 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id B6C86D4049
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed,  9 Mar 2016 01:31:24 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id A70C6A1C51
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed,  9 Mar 2016 01:31:24 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id RScEBTo0QolQ
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Wed,  9 Mar 2016 01:31:20 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 71963A00D5
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed,  9 Mar 2016 01:31:20 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u290VKxE032686
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed, 9 Mar 2016 01:31:20 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 658AB61F9D
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed,  9 Mar 2016 01:31:20 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id g3DB38exDUhI
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Wed,  9 Mar 2016 01:31:18 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 4520361FA2
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Wed,  9 Mar 2016 01:31:18 +0100 (CET)
+Received: from mail.cisecuador.com (mail.cisecuador.com [181.112.216.114])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u290VGtP032665
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Wed, 9 Mar 2016 01:31:17 +0100
+Received: from User (static.kpn.net [188.207.107.111] (may be forged))(authenticated)bymail.cisecuador.com (MYOB) with ESMTP id u28L5D9S005044; Tue, 8 Mar 2016 16:05:29 -0500
+Message-Id: <201603082105.u28L5D9S005044@mail.cisecuador.com>
+Reply-To: <Paul.p.wilson@mail.com>
+From: "Mr. Paul Wilson"<Paul@cisecuador.com>
+Date: Tue, 8 Mar 2016 22:14:55 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset="windows-1251"
+Content-Transfer-Encoding: base64
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1081
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1081
+X-KypusServerAppliance-Kypus-MailProtection-Information: please contact your Internet E-Mail Service Provider for details
+X-KypusServerAppliance-Kypus-MailProtection: Not scanned: please contact your Internet E-Mail Service Provider for details
+X-Kypus-MailProtection-MCPCheck: 
+X-Kypus-MailProtection-From: paul@cisecuador.com
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Wed, 09 Mar 2016 01:31:28 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Wed, 09 Mar 2016 01:31:20 +0100 (CET)
+X-Greylist: Delayed for 04:03:32 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Wed, 09 Mar 2016 01:31:18 +0100 (CET)
+X-Miltered: at korolev with ID 56DF6EE0.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56DF6ED8.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56DF6ED4.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56DF6EE0.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56DF6ED8.000 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<Paul@cisecuador.com>
+X-j-chkmail-Enveloppe: 56DF6ED4.000 from mail.cisecuador.com/mail.cisecuador.com/null/mail.cisecuador.com/<Paul@cisecuador.com>
+X-j-chkmail-Score: MSGID : 56DF6EE0.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56DF6ED8.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56DF6ED4.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+To: undisclosed-recipients:;
+Subject: [algocomp-permanents] Von Mr.Wilson
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1482
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+Vm9uIE1yLiBQYXVsIFdpbHNvbgpFLU1haWw6IFBhdWwucC53aWxzb25AZ214LmNvbQqgCgpNZWlu
+IE5hbWUgaXN0IEhlcnIgUGF1bCBXaWxzb24sIE5hdFdlc3QsIExlaXRlciBkZXMgQ29tbWVyY2lh
+bCBCYW5raW5nLCBDaGVsbXNmb3JkICYgUm9tZm9yZC4gVmVyZWluaWd0ZXMgS/ZuaWdyZWljaC4g
+QWxzIFRvcC1NYW5hZ2VyIGJlaSBOQVRXRVNULCBlbnRkZWNrdGUgaWNoIGVpbiBOdW1tZXJua29u
+dG8gbWl0IGVpbmVtIEd1dGhhYmVuIHZvbiCjIDE4LjMwMC4wMDAgMCwwMCBCcml0aXNjaGUgUGZ1
+bmQgenV6/GdsaWNoIGF1ZmdlbGF1ZmVuZXIgWmluc2VuLCBkaWUgYW4gZWluZW4gYW1lcmlrYW5p
+c2NoZW4gTXVsdGltaWxsaW9u5HIgUm9o9mwgSORuZGxlciBNci4gRGF2aWQgV2F0a2lucywgZGll
+IGVpbiBPcGZlciBkZXMgSHVycmlrYW5zIEthdHJpbmEgd2FyIGFuZ2Vo9nJ0IGltIEF1Z3VzdCAy
+MDA1LiBCaXMgaGV1dGUgd2Vp3yBuaWVtYW5kIPxiZXIgc2VpbiBCYW5ra29udG8gbWl0IE5hdFdl
+c3QgQmFuayB1bmQgZGllIG1laW5lbiB3ZWl0ZXJlbiBVbnRlcnN1Y2h1bmdlbiBiZXdpZXNlbiwg
+ZGFzcyBkZXIgVmVyc3RvcmJlbmUgdW5taXR0ZWxiYXJlbiBGYW1pbGllIGluIGRlciBUcmFn9mRp
+ZSBzdGFyYiBhdWNoLgqgCgpNaXQgbWVpbmVyIFBvc2l0aW9uIGluIGRlciBCYW5rLCBpY2ggaGFi
+ZSBhbGxlIFp1Z2FuZywgZ2VoZWltZSBEZXRhaWxzIHVuZCBub3R3ZW5kaWdlbiBLb250YWt0ZSBm
+/HIgZGllIEFuc3By/GNoZSBkZXIgRm9uZHMgb2huZSBIYWtlbi4gQWJlciB3ZWdlbiBkZXIgc2Vu
+c2libGVuIE5hdHVyIGRlciBtZWluZW4gSm9iLCBpY2ggYnJhdWNoZSBlaW5lbiBBdXNs5G5kZXIg
+enUgSEVMRkVOIGJlaGF1cHRlbiBkaWUgTWl0dGVsLCBtZWluZSBQb3NpdGlvbiBhbHMgQmVhbXRl
+ciB1bmQgYWxzIE1pdGFyYmVpdGVyIGRlciBCYW5rIGhhdCBtaWNoIG9kZXIgbWVpbmUgVmVyd2Fu
+ZHRlbiBuaWNodCB6dWxhc3NlbiwgdW0gZGllc2UgTWl0dGVsIHp1IGVycmVpY2hlbi4gCkRhaGVy
+IGljaCBTaWUgYWxzIEF1c2zkbmRlciwgZGllINxiZXJ0cmFndW5nIHZvbiBkaWVzZW4gRm9uZHMg
+YXVzIGRpZXNlbSBLb250byB2b3IgdW5zZXJlbSBu5GNoc3RlbiBSZXZpc2lvbiB6dSBhcnJhbmdp
+ZXJlbiwgZGVubiB3ZW5uIHVuc2VyIEJhbmt2ZXJ3YWx0dW5nIGZlc3RzdGVsbGVuLCBkYXNzIGRp
+ZXNlcyBLb250byB3dXJkZSBsYXRlbnQgZvxyIGRpZXNlIGxhbmdlLCBlcyB3aXJkIGVpbmdlZnJv
+cmVuIHVuZCBkYXMgR2VsZCB3aXJkIGF1ZiBkYXMgenVy/GNrZ2Vm/GhydCB3ZXJkZW4gQmFua2th
+c3RlbiwgZGEgbmljaHQgYmVhbnNwcnVjaHRlbiD2ZmZlbnRsaWNoZW4gTWl0dGVsbi4gRGVzaGFs
+YiBt9mNodGUgaWNoIFNpZSwgCndpZSBkYXMgQXVzd+RydGlnZSBCZWf8bnN0aWd0ZXIgInN0ZWhl
+biwgdW5kIGljaCB2ZXJzaWNoZXJlIElobmVuLCB2b24gZWluZW0gcGVyZmVrdGVuIFRyYW5zZmVy
+LVN0cmF0ZWdpZSwgZGllIGluIElocmVtIE5hbWVuIHJlY2h0bGljaCBwbGF0emllcnQgd2VyZGVu
+IHdpcmQsIHNvIGRhc3MgbmllbWFuZCBJaHJlIEFuc3By/GNoZSB6dSB2ZXJtdXRlbi4KoAoKRvxy
+IElociBFbmdhZ2VtZW50IGluIGRpZXNlbSBHZXNjaORmdCwgaGFiZW4gU2llIEFuc3BydWNoIGF1
+ZiA0MCUgZGVzIEdlc2FtdGJldHJhZ2VzIGF1ZiBJaHIgQmFua2tvbnRvIPxiZXJ3aWVzZW4gbWl0
+IGRlbSBUaXRlbCwgdW5kIGljaCB3ZXJkZSBhdWYgZGVtIEdlZvxobCBkZXIgR2VoZWltaGFsdHVu
+ZywgdW0gcmlza2FudGUgUmlzaWtvIGRpZXNlcyBEZWFsIHp1IHZlcm1laWRlbiB65GhsZW4uClVu
+dGVyIEJlcvxja3NpY2h0aWd1bmcgZGVzIEFuZ2Vib3RzLCBiaXR0ZSBnZWJlbiBtaXIgSWhyZW4g
+CgpWb2xsc3TkbmRpZ2VuIE5hbWVuLCAKCktvbnRha3QgQWRyZXNzZSAKCnVuZCBJaHIgZGlyZWt0
+ZXIgVGVsZWZvbi0gLyBGYXhudW1tZXIsIApha3RpdmllcmVuIFNpZSBtaXIgd2llZGVyIFByb2Zp
+bCBEZXIgRm9uZHMsIElocmVuIE5hbWVuIGFscyBFcmJlIEJlZ/xuc3RpZ3RlbiB1bmQgZvxocmVu
+IFNpZSBJaHJlIEtvbW11bmlrYXRpb24gbWl0IGRlciBCYW5rIGb8ciBkZW4gV2VpdGVyIEZyZWlz
+ZXR6dW5nIHVuZCDcYmVydHJhZ3VuZyBkZXMgU29uZGVydmVybfZnZW5zIGF1ZiBJaHIgQmFua2tv
+bnRvLgpBbmdlc2ljaHRzIGRlciBFbXBmaW5kbGljaGtlaXQgQXJ0IHVuZCBVbWZhbmcgZGVzIFBy
+b2pla3RzLCBmcmFnZSBpY2ggSWhyZXIgQW50d29ydCBhdWYgbWVpbmUgcHJpdmF0ZSBFLU1haWw6
+IFBhdWwucC53aWxzb25AZ214LmNvbQpEYW5rZSBJaG5lbiBpbSBWb3JhdXMgZvxyIElocmUgcHJv
+bXB0ZSBBbnR3b3J0LgqgCgpGcmV1bmRsaWNoZSBHcvzfZSwKSGVyciBQYXVsIFdpbHNvbiwKTmF0
+V2VzdCBCYW5rIFBsYy4KRGlyZWN0b3IgQ29tbWVyY2lhbCBCYW5raW5nLApDaGVsbXNmb3JkICYg
+Um9tZm9yZC4KCkVOR0xJU0ggIEJFTExPVwoKPkZyb20gTXIuIFBhdWwgV2lsc29uIApFbWFpbDog
+UGF1bC5wLndpbHNvbkBnbXguY29tIAogCgpNeSBuYW1lIGlzIE1yLiBQYXVsIFdpbHNvbiwgTmF0
+V2VzdCwgRGlyZWN0b3Igb2YgQ29tbWVyY2lhbCBCYW5raW5nLCBDaGVsbXNmb3JkICYgUm9tZm9y
+ZC4gVW5pdGVkIEtpbmdkb20uIEJlaW5nIGEgdG9wIGV4ZWN1dGl2ZSBhdCBOQVRXRVNULCBJIGRp
+c2NvdmVyZWQgYSBOdW1iZXJlZCBhY2NvdW50IHdpdGggYSBjcmVkaXQgYmFsYW5jZSBvZiCjMTgs
+MzAwLDAwMCAuMDAgQnJpdGlzaCBQb3VuZHMgcGx1cyBhY2N1bXVsYXRlZCBpbnRlcmVzdCwgd2hp
+Y2ggYmVsb25ncyB0byBhbiBBbWVyaWNhbiBtdWx0aS1taWxsaW9uYWlyZSBDcnVkZSBvaWwgTWVy
+Y2hhbnQgTXIuIERhdmlkIFdhdGtpbnMsIHdobyB3YXMgYSB2aWN0aW0gb2YgSHVycmljYW5lIEth
+dHJpbmEgaW4gQXVndXN0IDIwMDUuIFVudGlsIG5vdywgbm9ib2R5IGtub3dzIGFib3V0IGhpcyBi
+YW5rIGFjY291bnQgd2l0aCBOYXRXZXN0IEJhbmsgYW5kIG15IGZ1cnRoZXIgaW52ZXN0aWdhdGlv
+biBwcm92ZWQgdGhhdCB0aGUgZGVjZWFzZWQgaW1tZWRpYXRlIGZhbWlseSBhbHNvIGRpZWQgaW4g
+dGhlIHRyYWdlZHkuCiAKCldpdGggbXkgcG9zaXRpb24gYXQgdGhlIGJhbmssIEkgaGF2ZSBhbGwg
+YWNjZXNzLCBzZWNyZXQgZGV0YWlscyBhbmQgbmVjZXNzYXJ5IGNvbnRhY3RzIGZvciBjbGFpbSBv
+ZiB0aGUgZnVuZHMgd2l0aG91dCBhbnkgaGl0Y2guIEJ1dCBkdWUgdG8gdGhlIHNlbnNpdGl2ZSBu
+YXR1cmUgb2YgbXkgam9iLCBJIG5lZWQgYSBmb3JlaWduZXIgdG8gSEVMUCBjbGFpbSB0aGUgZnVu
+ZHMsIG15IHBvc2l0aW9uIGFzIGEgY2l2aWwgc2VydmFudCBhbmQgYXMgYSBzdGFmZiBvZiB0aGUg
+YmFuayBkb2VzIG5vdCBwZXJtaXQgbWUgb3IgbXkgcmVsYXRpdmVzIHRvIGNsYWltIHRoaXMgZnVu
+ZHMuIFRoZXJlZm9yZSBJIGNvbnRhY3QgeW91IGFzIGEgZm9yZWlnbmVyIHRvIGFycmFuZ2UgdGhl
+IHRyYW5zZmVyIG9mIHRoaXMgZnVuZCBvdXQgb2YgdGhpcyBhY2NvdW50IGJlZm9yZSBvdXIgbmV4
+dCBhdWRpdGluZyBiZWNhdXNlIElmIG91ciBiYW5rIG1hbmFnZW1lbnQgZGlzY292ZXIgdGhhdCB0
+aGlzIGFjY291bnQgaGFzIGJlZW4gbGF0ZW50IGZvciB0aGVzZSBsb25nLCAKaXQgd2lsbCBiZSBm
+cm96ZW4gYW5kIHRoZSBtb25leSB3aWxsIGJlIHJldHVybmVkIHRvIHRoZSBiYW5rIHRyZWFzdXJ5
+LCBhcyB1bmNsYWltZWQgcHVibGljIGZ1bmRzLiAKVGhlcmVmb3JlLCBJIHdhbnQgeW91IHRvIHN0
+YW5kIGFzIHRoZSBGb3JlaWduIEJlbmVmaWNpYXJ5IiwgYW5kIEkgYXNzdXJlIHlvdSBvZiBhIHBl
+cmZlY3QgdHJhbnNmZXIgc3RyYXRlZ3kgdGhhdCB3aWxsIGJlIHBsYWNlZCBpbiB5b3VyIG5hbWUg
+bGVnYWxseSwgc28gdGhhdCBub2JvZHkgd2lsbCBzdXNwZWN0IHlvdXIgY2xhaW1zLgogCgpGb3Ig
+eW91ciBpbnZvbHZlbWVudCBpbiB0aGlzIGRlYWwsIHlvdSBhcmUgZW50aXRsZWQgdG8gNDAlIG9m
+IHRoZSB0b3RhbCBhbW91bnQgdHJhbnNmZXJyZWQgdG8geW91ciBiYW5rIGFjY291bnQgYW5kIEkg
+d2lsbCBjb3VudCBvbiB5b3VyIHNlbnNlIG9mIHNlY3JlY3kgaW4gb3JkZXIgdG8gYXZvaWQgcmlz
+a3kgZXhwb3N1cmUgb2YgdGhpcyBkZWFsLiAKVXBvbiBjb25zaWRlcmF0aW9uIG9mIHRoZSBvZmZl
+ciwgS2luZGx5IHByb3ZpZGUgbWUgd2l0aCB5b3VyIAoKRnVsbCBOYW1lLCAKCkNvbnRhY3QgQWRk
+cmVzcyBhbmQgeW91ciAKCkRpcmVjdCBUZWxlcGhvbmUvRmF4IE51bWJlciwgCnRvIGVuYWJsZSBt
+ZSByZS1wcm9maWxlIHRoZSBmdW5kIHRvIHlvdXIgbmFtZSBhcyB0aGUgaGVpciBiZW5lZmljaWFy
+eSBhbmQgZ3VpZGUgeW91ciBjb21tdW5pY2F0aW9uIHdpdGggdGhlIGJhbmsgZm9yIG9ud2FyZCBy
+ZWxlYXNlIGFuZCB0cmFuc2ZlciBvZiB0aGUgZnVuZCB0byB5b3VyIGJhbmsgYWNjb3VudC4gCkNv
+bnNpZGVyaW5nIHRoZSBzZW5zaXRpdml0eSBuYXR1cmUgYW5kIG1hZ25pdHVkZSBvZiB0aGlzIHBy
+b2plY3QsaSBhc2sgeW91ciByZXBseSB0byBteSBwcml2YXRlIEVtYWlsOiBQYXVsLnAud2lsc29u
+QGdteC5jb20gIApUaGFua2luZyB5b3UgaW4gYW50aWNpcGF0aW9uIGZvciB5b3VyIHByb21wdCBy
+ZXNwb25zZS4KIAoKQmVzdCBSZWdhcmRzLApNci4gUGF1bCBXaWxzb24sIApOYXRXZXN0IEJhbmsg
+UGxjLgpEaXJlY3RvciBDb21tZXJjaWFsIEJhbmtpbmcsCkNoZWxtc2ZvcmQgJiBSb21mb3JkLiAK
+IAo=

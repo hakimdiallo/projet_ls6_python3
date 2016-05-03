@@ -1,0 +1,88 @@
+Return-Path: <magniez@gmail.com>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id a/KpEwa0r1aYTAEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 01 Feb 2016 20:37:59 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7113E61FEB
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon,  1 Feb 2016 20:37:59 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: -1.648
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.648 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, FREEMAIL_FORGED_FROMDOMAIN=0.25,
+	FREEMAIL_FROM=0.001, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (2048-bit key) header.d=gmail.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ej9NqZ6x-FBD; Mon,  1 Feb 2016 20:37:58 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id DABBD61FE9;
+	Mon,  1 Feb 2016 20:37:57 +0100 (CET)
+Received: from mail-wm0-x232.google.com (mail-wm0-x232.google.com [IPv6:2a00:1450:400c:c09::232])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u11JbvTO012861
+	(version=TLSv1/SSLv3 cipher=AES128-GCM-SHA256 bits=128 verify=FAIL);
+	Mon, 1 Feb 2016 20:37:57 +0100
+Received: by mail-wm0-x232.google.com with SMTP id l66so86032286wml.0;
+        Mon, 01 Feb 2016 11:37:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=sender:from:content-type:content-transfer-encoding:subject:date
+         :message-id:cc:to:mime-version;
+        bh=0D94Ub5O/rYCkyyuM0l/borR52aXU3qX7FtTaFjdwbM=;
+        b=u2CRWb/PubyqXD/YJ0tomx8tBha7w3h59Aj/+aZoapXTNr9It4CCqjxyHqVTocyba2
+         YgNgLcaX+6set/xQThpCUsFfWaUulPcYlgwzU8wW8kOoHBoBcwtUjUQO7NKg4eFUdPcX
+         uQBmI/I+GjYyR/cTc6lhSMlto7P89Vn5d3nfEXfYBeb+gNXBGMY70QjhdMBCwqhVKCPx
+         bsWLQDgerhMGtV5a8KUQ7GljNbKku8Z086xiu2GwDLYRJ3i6q6itqZUyxd3XbUiMF7/B
+         g9ZoPPWHz/ITVm7SJAGHfiRgZBLCrHPb6q7G9hbtWsLpNupZKaZpPUHriJqoEPwxSrs6
+         9mfg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:sender:from:content-type
+         :content-transfer-encoding:subject:date:message-id:cc:to
+         :mime-version;
+        bh=0D94Ub5O/rYCkyyuM0l/borR52aXU3qX7FtTaFjdwbM=;
+        b=XVzQxAuv4mxEdXNm2dFXNCg8GJ3TDGGLdGm2Ws2IPDURR5nY5pfC8lsfoi2igPPuPW
+         jWtMeYGU/x5hw2Gs5VDUYzI3tHsQRIo3Ue+qX6Lz25mY06L65+OoOIZ6i6iNk26wLl/a
+         nImtMLpNo6tj4ZtYYWHoyVEzDpD0PWhFwGdSQSl5vIY5eHnU0O67RMIDmzLF1fS8PNAc
+         gw2ryKm7M8MuDY9EoUMSdcr0MHxlhNgBSQX512vLKCv6yzmMZU1W47jhYxUotXIzSYyw
+         D5fQVCtPat9v30Iu8zwfCIqm3O5qaDl01T3EzkbpfPRTjqgDbMXHdDZn2sUJ841abSoW
+         v4oA==
+X-Gm-Message-State: AG10YOR5CMAqbOgRmTiafUZUVPE5jVV5+mcG+cwePXbd8eqJWxU7hp1h34zUvoUspcR/0g==
+X-Received: by 10.28.96.198 with SMTP id u189mr11241091wmb.55.1454355477509;
+        Mon, 01 Feb 2016 11:37:57 -0800 (PST)
+Received: from [192.168.0.6] (ram94-2-82-66-69-195.fbx.proxad.net. [82.66.69.195])
+        by smtp.gmail.com with ESMTPSA id w62sm12942120wmg.21.2016.02.01.11.37.56
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 01 Feb 2016 11:37:56 -0800 (PST)
+Sender: Frederic Magniez <magniez@gmail.com>
+From: Frederic Magniez <magniez@cnrs.fr>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Subject: Japan
+Date: Mon, 1 Feb 2016 20:37:55 +0100
+Message-Id: <D2A64630-217B-4DFD-9367-86EF130F1237@cnrs.fr>
+Cc: Sophie Laplante <laplante@liafa.univ-paris-diderot.fr>
+To: Iordanis Kerenidis <jkeren@liafa.univ-paris-diderot.fr>
+Mime-Version: 1.0 (Mac OS X Mail 9.2 \(3112\))
+X-Mailer: Apple Mail (2.3112)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2]); Mon, 01 Feb 2016 20:37:57 +0100 (CET)
+X-Miltered: at korolev with ID 56AFB415.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56AFB415.000 from mail-wm0-x232.google.com/mail-wm0-x232.google.com/null/mail-wm0-x232.google.com/<magniez@gmail.com>
+X-j-chkmail-Score: MSGID : 56AFB415.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+Hi
+
+I will not able to come with family for eastern break, so most probably =
+will not come alone too (after a 3 weeks of CNRS interview, I cannot ask =
+another week for traveling right after).
+
+However, winter break is free, from Feb 20 to March 6.
+
+More later in the year, "All saints" break is good.
+
+Fred=

@@ -1,0 +1,195 @@
+Return-Path: <360383104.6262.2001656@t.contactlab.it>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id FI5NFgeusVbYSAEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 03 Feb 2016 08:36:40 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7EF4062020;
+	Wed,  3 Feb 2016 08:36:37 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 5.782
+X-Spam-Level: *****
+X-Spam-Status: Yes, score=5.782 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_IMAGE_RATIO_04=0.556,
+	HTML_MESSAGE=0.001, RCVD_IN_DNSWL_NONE=-0.0001, URIBL_GREY=0.424]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=contactlab.it
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id qp-kmZvPX0vX; Wed,  3 Feb 2016 08:36:34 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 5720862018
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 08:36:34 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u137aYQF029396
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed, 3 Feb 2016 08:36:34 +0100
+Received: from mail2.carrefourvoyages.clab.contactlab.it (mail2.carrefourvoyages.clab.contactlab.it [93.94.34.46])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u137ZApN023958
+          for <liafa@liafa.jussieu.fr>; Wed, 3 Feb 2016 08:35:37 +0100 (CET)
+X-Ids: 168
+DKIM-Signature: v=1; a=rsa-sha256; d=contactlab.it; s=clab1; c=relaxed/relaxed;
+	q=dns/txt; i=@contactlab.it; t=1454483030;
+	h=From:Subject:Date:To:MIME-Version:Content-Type;
+	bh=q8qkDB1hJ/pciDvhnPENSXpjO2lpzhENHBfMAlngiF8=;
+	b=Gk7Z/ODpkePARBwdPe+LpPsBJgnfWzSXqdfUcUQGLoK+keZtRYtbyf/7ILnRr+lW
+	wifVlftKqWayWkWXEo78spWm6/wII8NZGF+5G+qWpReLopWLcKe2gjPdn8Zqww8M
+	acaijO9zKXLgIEjxjIt5B5J9IPklNyGlFfKllnKcvhQ=;
+X-CSA-Complaints: whitelistcomplaints@eco.de
+Received: from [172.16.6.114] ([172.16.6.114:40172])
+	by t.contactlab.it (envelope-from <360383104.6262.2001656@t.contactlab.it>)
+	(ecelerity 3.5.9.42398 r(Platform:3.5.9.0)) with ECSTREAM
+	id 4A/EC-20306-656A1B65; Wed, 03 Feb 2016 08:03:50 +0100
+Message-ID: <4A.EC.20306.656A1B65@t.contactlab.it>
+From: Carrefour Voyages <noreply@voyages.carrefour.fr>
+Reply-To: noreply@voyages.carrefour.fr
+Subject: Carrefour Voyages vous souhaite la bienvenue
+To: liafa@liafa.jussieu.fr
+Date: Wed, 03 Feb 2016 08:03:50 +0100
+MIME-Version: 1.0
+X-campaignid: clab.2001656.6262
+List-Unsubscribe: <mailto:360383104.6262.2001656.d499ad13fc960bc89759ae65ac9e7dbb@mlu.contactlab.it>, <http://lm.voyages.carrefour.fr/rlu/index.php?c=2001656&did=6262&id=360383104&cc=d499ad13fc960bc89759ae65ac9e7dbb>
+X-Mailer: ContactLab
+X-Binding: 2001656.2
+X-Clab-Family: 2001656
+List-Id: <2001656.2.6e356992bc75d7c34717e9763de7fa78.v1.mlu.contactlab.it>
+X-Abuse: Please report abuse for this campaign here: http://lm.voyages.carrefour.fr/abuse/index.php?c=2001656&id=360383104&cc=aede9ff333816a71d0cb37c4bc13175ba68193dc
+Content-Type: multipart/alternative; boundary="=-afce97e301d08d6a_mm1"
+X-Miltered: at potemkin with ID 56B1AE02.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56B1ADAE.004 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56B1AE02.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<360383104.6262.2001656@t.contactlab.it>
+X-j-chkmail-Enveloppe: 56B1ADAE.004 from mail2.carrefourvoyages.clab.contactlab.it/mail2.carrefourvoyages.clab.contactlab.it/93.94.34.46/mail2.carrefourvoyages.clab.contactlab.it/<360383104.6262.2001656@t.contactlab.it>
+X-Scores-Stats: 56B1ADAE.004 B=0.50000 L=0.90954 G=0.90954 Agree    
+X-j-chkmail-Score: MSGID : 56B1AE02.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56B1ADAE.004 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.910 -> S=0.927
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 03 Feb 2016 08:36:34 +0100 (CET)
+
+--=-afce97e301d08d6a_mm1
+Content-Type: text/plain; charset="ISO-8859-15"
+
+Ce message est en format html. Si vous ne le visualisez pas correctement, cliquez ici:
+http://cs.voyages.carrefour.fr/ov/2001656/6262/xQ2HR0haqOa%2FswLlIOAz6eu00xJ6z7b%2Bjjl7AXujv6N2ViOAZcgmsfW1K9PUSJTT
+
+--=-afce97e301d08d6a_mm1
+Content-Type: text/html; charset="ISO-8859-15"
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+  <title>Carrefour Voyage</title>
+
+	<style type="text/css">
+	<!--
+	img{display: block;  margin: 0px; padding:0px;}
+a img{display: block; margin: 0px; padding:0px;}
+.ReadMsgBody { width: 100%;}
+.ExternalClass {width: 100%;}
+ html{-webkit-text-size-adjust: none;}
+	-->
+	</style>
+
+</head>
+
+<body style="font-size:0;">
+
+<table align="center" width="600" cellspacing="0" cellpadding="0" border="0">
+ <tr>
+    <td width="9"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="9" height="2" border="0" style="display: block; margin: 0; padding: 0;"></td>
+	<td colspan="2" width="591" align="center" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:11px; color:#5c6a71; line-height:15px;">
+      <!-- init:ecovu -->
+		Si ce message ne s'affiche pas correctement, consultez sa <a href="http://cs.voyages.carrefour.fr/ov/2001656/6262/xQ2HR0haqOa%2FswLlIOAz6eu00xJ6z7b%2Bjjl7AXujv6N2ViOAZcgmsfW1K9PUSJTT" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:11px; color:#5c6a71; text-decoration:underline;">version en ligne</a><br>
+      <!-- end:ecovu -->
+</td>
+ </tr>
+ <tr>
+   <td width="600" colspan="3"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="1" height="26" border="0" style="display: block; margin: 0; padding: 0;"></td>
+ </tr>
+ <tr>
+   <td width="9"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="9" height="2" border="0" style="display: block; margin: 0; padding: 0;"></td>
+   <td width="591" colspan="2" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:15px; color:#515c9a; line-height:17px; font-weight: bold;">Bonjour    et bienvenue</td>
+ </tr>
+ <tr>
+   <td width="600" colspan="3"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="1" height="12" border="0" style="display: block; margin: 0; padding: 0;"></td>
+ </tr>
+ <tr>
+   <td width="9"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="9" height="2" border="0" style="display: block; margin: 0; padding: 0;"></td>
+   <td width="287" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:12px; color:#515c9a; line-height:16px;" valign="top">
+      Votre inscription &agrave; notre newsletter est confirm&eacute;e<br>
+      et nous vous en remercions.<br>
+      Retrouvez chaque semaine, nos offres<br>
+      s&eacute;lectionn&eacute;es  uniquement pour vous !<br>
+     <span style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold;">A tr&egrave;s bient&ocirc;t sur www.carrefourvoyages.fr</span>
+
+   </td>
+   <td width="304"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/logo_carrefour.gif" width="304" height="82" border="0" style="display: block; margin: 0; padding: 0;" alt="Carrefour Voyages"></a></td>
+ </tr>
+ <tr>
+   <td width="600" colspan="3"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/carrefour.jpg" width="600" height="91" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+ </tr>
+ <tr>
+   <td width="600" colspan="3"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/carrefour-02.jpg" width="600" height="91" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/carrefour-03.jpg" width="600" height="91" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/carrefour-04.jpg" width="600" height="91" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/carrefour-05.jpg" width="600" height="91" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/carrefour-06.jpg" width="600" height="91" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3">
+
+    <table align="center" width="600" cellspacing="0" cellpadding="0" border="0">
+     <tr>
+      <td width="35"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95316"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/facebook.jpg" width="35" height="34" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+      <td width="164" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold;" bgcolor="#fff5e4"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95316" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold; text-decoration: none;">Devenir fan sur Facebook</a></td>
+      <td width="37"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/site.jpg" width="37" height="34" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+      <td width="137" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold;" bgcolor="#fff5e4"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold; text-decoration: none;">Carrefourvoyages.fr</a></td>
+      <td width="34"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/home.jpg" width="34" height="34" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+      <td width="80" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold;" bgcolor="#fff5e4"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold; text-decoration: none;">102 agences</a></td>
+      <td width="26"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/tel.jpg" width="26" height="34" border="0" style="display: block; margin: 0; padding: 0;"></a></td>
+      <td width="87" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold;" bgcolor="#fff5e4"><a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95315" style="font-family:Palatino Linotype,Book Antiqua,Palatino,serif; font-size:13px; color:#515c9a; line-height:16px; font-weight: bold; text-decoration: none;">0826 822 822</a></td>
+     </tr>
+    </table>
+
+   </td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3" bgcolor="#fff5e4"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="600" height="38" border="0" style="display: block; margin: 0; padding: 0;"></td>
+ </tr>
+  <tr>
+   <td width="9" bgcolor="#fff5e4"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="9" height="2" border="0" style="display: block; margin: 0; padding: 0;"></td>
+   <td width="591" colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:9px; color:#515c9a; line-height:12px;" bgcolor="#fff5e4">
+   Si vous ne souhaitez plus recevoir d'information de Carrefour Voyages, suivez <a href="http://t.voyages.carrefour.fr/c/2001656/6262/360383104/95317" style="font-family:Arial, Helvetica, sans-serif; font-size:9px; color:#515c9a; line-height:12px;">ce lien</a>. Si vous souhaitez modifier vos coordonn&eacute;es,<br>
+   vous pouvez modifier vos donn&eacute;es personnelles sur la rubrique "Mon compte" du site Carrefour Voyages, ou bien demander la modification<br>
+   de vos donn&eacute;es &agrave; un agent de voyages Carrefour, directement en agence ou par t&eacute;l&eacute;phone au 0826 822 822 **.<br><br>
+Droit d'acc&egrave;s aux donn&eacute;es personnelles : Conform&eacute;ment &agrave; la Loi Informatique et Libert&eacute;s du 6 janvier 1978, vous disposez d'un droit<br>
+d'acc&egrave;s et de rectification des donn&eacute;es vous concernant. Pour exercer ce droit, adressez un mail &agrave; carrefour_voyages_vad@carrefour.fr<br>
+ (pour en savoir plus, consultez les mentions l&eacute;gales sur le site de carrefourvoyages.fr).
+   </td>
+ </tr>
+  <tr>
+   <td width="600" colspan="3" bgcolor="#fff5e4"><img src="http://static.contactlab.it/carrefourvoyages/2011/20110704/images/spacer.gif" width="600" height="24" border="0" style="display: block; margin: 0; padding: 0;"></td>
+ </tr>
+</table>
+
+
+
+</body>
+
+<img src="http://t.voyages.carrefour.fr/v/2001656/6262/360383104" width="1" height="1" alt="-"></html>
+
+--=-afce97e301d08d6a_mm1--

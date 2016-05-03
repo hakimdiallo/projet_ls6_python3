@@ -1,0 +1,206 @@
+Return-Path: <service-clients@newsletter.alabs46.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 7wGkK6HVsVaGawEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 03 Feb 2016 11:25:38 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id EF83862023;
+	Wed,  3 Feb 2016 11:25:35 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 15.523
+X-Spam-Level: ***************
+X-Spam-Status: Yes, score=15.523 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_FONT_SIZE_HUGE=0.001,
+	HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001, MIME_HTML_ONLY=0.723,
+	PYZOR_CHECK=1.392, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_KAM_HTML_FONT_INVALID=0.01,
+	URIBL_BLACK=1.7, URIBL_JP_SURBL=1.25, URIBL_WS_SURBL=1.608]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (body has been altered)"
+	header.d=newsletter.alabs46.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 3LdluCL75Ll4; Wed,  3 Feb 2016 11:25:33 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id CA0F96201F
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 11:25:32 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u13APWMA006982
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed, 3 Feb 2016 11:25:32 +0100
+Received: from soleil.uvsq.fr (soleil.uvsq.fr [193.51.24.1])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u13ANHp0051337
+          for <liafa@liafa.jussieu.fr>; Wed, 3 Feb 2016 11:23:35 +0100 (CET)
+X-Ids: 165
+Received: from cesium-twtwse.emv9.net (cesium-twtwse.emv9.net [81.92.126.227])
+          by soleil.uvsq.fr (8.14.9/jtpda-5.4) with ESMTP id u13ANAhM036222
+          for <liafa@liafa.jussieu.fr>; Wed, 3 Feb 2016 11:23:15 +0100 (CET)
+X-Virus-Status: Clean
+X-Virus-Scanned: clamav-milter 0.98.7 at soleil.uvsq.fr
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=emv; d=newsletter.alabs46.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:List-Id; i=service-clients@newsletter.alabs46.com;
+ bh=uMBSBWhyZpYNkV4Y4oZC8x3Jdg0=;
+ b=rA9i5q53VI0DU2jQlAZBVO7BIoa51+gpPO5KtBoiwO21oaE/A/U17laqjUd8lLR0k95h+6jJuGej
+   HZSaIdwiX31JO7ytzYRSztcTye80KzFJtEfsdoexuWqzgXhli5+yeURddU81H0w+tITkCAiMgwGn
+   jpEpeBvkKI86mvecKxo=
+Received: by cesium-twtwse.emv9.net id hm7ah616758g for <liafa@liafa.jussieu.fr>; Wed, 3 Feb 2016 11:22:09 +0100 (envelope-from <service-clients@newsletter.alabs46.com>)
+Date: Wed, 3 Feb 2016 11:22:09 +0100 (CET)
+From: Cap Epargne <service-clients@newsletter.alabs46.com>
+Reply-To: Cap Epargne <service-clients@alabs46.com>
+To: <liafa@liafa.jussieu.fr>
+Message-ID: <2.1.74.1101060961.1540352.5189782908@newsletter.alabs46.com>
+Subject: =?iso-8859-15?Q?4,95_pour_cent_garantis_sur_votre_livret_d'=E9pargne?=
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+X-EMV-Platform: p9cce.campaigncommander.com$
+X-EMV-CampagneId: 1540352$
+X-EMV-MemberId: 5189782908$
+List-Unsubscribe: <http://newsletter.alabs46.com/HD?b=ZTfBsTo5Rb7C31IszGyDDihNdYhezsokRqPMFPPf6AuGlBKiEGWBX0LIqcDn51n9&c=C7u3SRMaZisN1zq5SeiDfw>, <mailto:unsubscribe@newsletter.alabs46.com?subject=unsubscribe-74-ZTfBsTo5Rb7C31IszGyDDihNdYhezsokRqPMFPPf6AuGlBKiEGWBX0LIqcDn51n9/C7u3SRMaZisN1zq5SeiDfw>
+X-CSA-Complaints: whitelist-complaints@eco.de
+List-Id: <1101060961.74.1.1.list-id.newsletter.alabs46.com>
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Wed, 03 Feb 2016 11:25:32 +0100 (CET)
+X-Greylist: Delayed for 96:08:01 by milter-greylist-4.4.3 (soleil.uvsq.fr [193.51.24.1]); Wed, 03 Feb 2016 11:23:15 +0100 (CET)
+X-Miltered: at korolev with ID 56B1D59C.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56B1D515.004 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56B1D59C.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<service-clients@newsletter.alabs46.com>
+X-j-chkmail-Enveloppe: 56B1D515.004 from soleil.uvsq.fr/soleil.uvsq.fr/193.51.24.1/soleil.uvsq.fr/<service-clients@newsletter.alabs46.com>
+X-Scores-Stats: 56B1D515.004 B=0.50000 L=0.94268 G=0.94268 Agree    
+X-j-chkmail-Score: MSGID : 56B1D59C.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56B1D515.004 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=. B=0.943 -> S=0.953
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<META name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+<TITLE>Cap Epargne -- 4,95 pour cent garantis sur votre livret d'&eacute;pargne</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+</HEAD>
+<body text="#003366" link="#333366">
+<BR />
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+<TD width="200" align="center" bgcolor="#D7D4D4" style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px">&nbsp;&nbsp;&nbsp;<A style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px" HREF="http://newsletter.alabs46.com/HP?b=niFRWcpR9v2yOE-XHzevd5DN0uJXO4a21yzeA1IOkROc5eYVJ6wjuBdUtO4JT8RD&c=9TO2Nxmt2ohuM_3CyHRgFg">Signaler comme ind&eacute;sirable</A>&nbsp;&nbsp;&nbsp;</TD>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<CENTER>
+<CENTER><FONT style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000">Si ce message ne s'affiche pas correctement, merci de suivre <A href='http://newsletter.alabs46.com/HM?b=R_-ltWagbrsaT9XV4Wd7lESVTX6hf0AHKvNGEa94Pe3I722W3DEm9hiuQBiuAcPn&c=EjyEz5pno-U0KEqrePd6Tg'>ce lien</A></FONT></CENTER>
+</CENTER>
+<DIV align="center">
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD width="100%" valign="top">
+<CENTER>
+<TABLE width="auto" cellpadding="0" cellspacing="0" border="1" dir="ltr" data-width="600" style="background-color: rgb(255, 255, 255); font-size: 16px;">
+<TBODY>
+<TR>
+<TD align="left" valign="top" style="margin:0;padding:0;">
+<TABLE align="center" border="0" cellspacing="0" cellpadding="0" width="600" bgcolor="#FFFFFF" class="wrapper" style="width: 600px;">
+<TBODY>
+<TR>
+<TD>
+<TABLE cellpadding="0" cellspacing="0" align="center" data-editable="image" data-mobile-width="0" style="max-width: 600px;">
+<TBODY>
+<TR>
+<TD valign="top" align="center" style="margin: 0px; padding: 0px;"><A HREF="http://newsletter.alabs46.com/HP?b=yEGh-4LLa_I5CLYKk81oQmOvv2ITyFnXGNkS1mUrr9N4CvZY1CX9c-cekyBFmxDv&c=6fYYKhw_ja1fJBDRXZQvSQ" title="CLIQUEZ ICI" target="_blank"><IMG src="https://furiousagency.cluster1.easy-hebergement.net/00032/capbanner.png" width="601" data-src="*" height="857" data-origsrc="https://furiousagency.cluster1.easy-hebergement.net/acamp/00028/ecbanner.png" style="border: 0px none transparent; display: block;" /></A></TD>
+</TR>
+</TBODY>
+<TR>
+<TD>
+<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" align="center" data-editable="text">
+<TBODY>
+<TR>
+<TD valign="top" align="left" style="padding: 0px 10px 5px; margin: 0px; font-family: Arial, Helvetica, sans-serif; color: rgb(74, 111, 141);">
+<TABLE border="0" cellpadding="0" cellspacing="0" align="right" data-editable="image" style="margin: 0px; padding: 0px;" data-mobile-width="1" id="edi00p9z" width="233">
+<TBODY>
+<TR>
+<TD valign="top" align="left" style="margin: 0px; padding: 0px;"><A HREF="http://newsletter.alabs46.com/HP?b=kCN1X_haH-gHp1Za3gq0LmWWzQFlcoN9FlKEmronBpQ1B0NQUyLn43kmrtcZ5Qkg&c=cdnIZ8gpN-KGdkvK9TKb0w" title="CLIQUEZ ICI" target="_blank"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+<DIV style="text-align: center;">
+<DIV style="text-align: center;"></DIV>
+<BR />
+<DIV style="text-align: center;"><SPAN style="font-size: 16px; background-color: transparent;">&nbsp;Nos conseillers financiers sont &agrave; votre &eacute;coute</SPAN></DIV>
+du lundi au jeudi de 8h30 &agrave; 17h00 au 09.77.55.35.55<BR />
+<BR />
+<TABLE>
+<TR>
+<TD>
+<TABLE border="0" cellpadding="0" cellspacing="0" align="center" data-editable="button" style="margin-top: 0px; margin-bottom: 0px;">
+<TBODY>
+<TR>
+<TD valign="top" align="center" style="padding: 13px 25px; margin: 0px; background-color: rgb(146, 48, 48); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;"><A HREF="http://newsletter.alabs46.com/HP?b=i1mVoEZOpauc9xA4qRinybGjAQ5DRzEzAubj5AgCj5Jl1KAaniwpOmuA01ijrEVd&c=9_nAXwrNzscHTYgeW09fHQ" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; color: rgb(255, 255, 255); font-size: 18px; text-decoration: none; font-weight: bold;" target="_blank">Cliquez ici pour b&eacute;n&eacute;ficier de nos offres &rsaquo;</A></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>
+<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" align="center" data-editable="text">
+<TBODY>
+<TR>
+<TD align="left" valign="top" style="padding: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(242, 137, 52); line-height: 1.25; background-color: transparent;"><FONT style="font-weight: regular;"><FONT size="10" style="font-size: 10px;"><A style="color: rgb(0, 0, 0); text-decoration: none;"></A></FONT></FONT></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD colspan="3">
+<DIV align="center">
+<P class="formulairecomments"><FONT size="1" face="Arial, Helvetica, sans-serif">&copy; CAPD&Eacute;CISION, Tous droits r&eacute;serv&eacute;s<BR />
+Conform&eacute;ment &agrave; l'article 34 de la loi Informatique et Libert&eacute;<BR />
+du 6 janvier 1978, vous disposez d'un droit d'acc&egrave;s, de modification, de rectification et de suppression<BR />
+des donn&eacute;es vous concernant.&nbsp;&nbsp;&nbsp; </FONT></P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<TABLE width="100%" border="0">
+<TR>
+<TD>
+<DIV align="center"><FONT size="1" face="Arial, Helvetica, sans-serif">Vous recevez cet e-mail car vous &ecirc;tes r&eacute;f&eacute;renc&eacute; sur la base de donn&eacute;es de notre partenaire.<BR />
+Si vous souhaitez vous desinscrire, merci d'utiliser <A href="http://newsletter.alabs46.com/HD?b=dz5hZ0FLZqZqoHqnv1ga1NsAOlgPHyb3lnJ1DBGEjCCrKpeGm0G1XFokmFegYy5V&c=CMLFHiwIUv8sVadVeKwsCQ">le lien suivant.</A></FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<IMG src="http://adtrack.adleadevent.com/adtckrtg.php?ids=1240&email=liafa@liafa.jussieu.fr" width="1" height="1" border="0" /></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</CENTER>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<img border="0" width="1" height="1" src="http://trcd.alabs46.com/trcd/trcdo.php?cid=79353&em=liafa@liafa.jussieu.fr&do=alabs46.com&rout=emvi&ts=1454082543" />
+<img src="http://newsletter.alabs46.com/HO?QXPWP5yN8WSp96ze597cJLAfy9B0y9Bgf-KTe8nnBPmLSfWTc8Dzlo7b21pbf3Jx/c6r7x3Br0DA4IX8ifVmusw.gif" border="0" alt="" width="1" height="1" /></body>
+</HTML>

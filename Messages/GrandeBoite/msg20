@@ -1,0 +1,493 @@
+Return-Path: <v-jmagle_nkolgmdk_cmcmkgcj_cmcmkgcj_a-1@bounce.mkt3768.com>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id nbRYL+gc6Fb2dAAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 15:32:08 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id BDEAA61FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 15:32:08 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: -1.887
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.887 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	HTML_FONT_LOW_CONTRAST=0.001, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_REMOTE_IMAGE=0.01]
+	autolearn=ham autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=mailer.etoro.com;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=info@mailer.etoro.com header.d=mailer.etoro.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id LEG5MeWkZy5U for <laplante@liafa.univ-paris-diderot.fr>;
+	Tue, 15 Mar 2016 15:32:01 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 12A6161FA6
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 15:32:01 +0100 (CET)
+Received: from mail6351.etoro.mkt6950.com (mail6351.etoro.mkt6950.com [208.95.133.153])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2FEVYqn022740
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 15:31:59 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=spop1024; d=mailer.etoro.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe; i=info@mailer.etoro.com;
+ bh=mTv5nD//LTrqmXPy9uLw+iPk6Jc=;
+ b=vlUjjnZ8z1un11fC0dz74fLV0dR6+vnz56Zt8EP7HYGpLYqLh28UfHq1Iou94rXlkDucFGZKIZCo
+   aVYEc9ij3YB48kYH8q5e/Y3Yatb4GJ10f8BqS3DtjvX7MPdbbycTGt6P2dciCWawjgpbrNc8LTQq
+   /UxLB7PmbqBDzQGQ6ig=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=spop1024; d=mailer.etoro.com;
+ b=1gyTgJpvkK7jX1WZkJaYHN0M6MuBrDNyVN20ozinUCLSvtLeH7pF3mKzaFKJ/qozv2ffPsU+m5d3
+   4hCA4SpOTpOJFweXPvxhH6x9Mjp6f66jqTnezaoMLQ8OxHEfFRrAf7l28GcVIq0ot24hxDdsAMyB
+   tLa1G1yEBwvkgAO78Tk=;
+Received: by mail6351.etoro.mkt6950.com id ht0ee019if4t for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 14:19:36 +0000 (envelope-from <v-jmagle_nkolgmdk_cmcmkgcj_cmcmkgcj_a-1@bounce.mkt3768.com>)
+Date: Tue, 15 Mar 2016 14:19:36 +0000 (GMT)
+From: krak2010 via eToro <info@mailer.etoro.com>
+Reply-To: reply@mailer.etoro.com
+To: sophie.laplante@liafa.univ-paris-diderot.fr
+Message-ID: <255428362.71003061458051576432.JavaMail.app@rapp52.atlis1>
+Subject: =?utf-8?Q?Rejoignez_votre_ami(e)_krak2010_sur_eToro?=
+ =?utf-8?Q?_et_profitez_d'un_bonus_de_d=C3=A9p=C3=B4t_de_200$_!?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_3549754_902086874.1458051576431"
+x-mid: 10225332
+x-job: 10225332
+Feedback-ID: pod5_14986_10225332_741123625:pod5_14986:ibmsilverpop
+x-rpcampaign: sp10225332
+x-orgId: 14986
+List-Unsubscribe: <mailto:v-jmagle_nkolgmdk_cmcmkgcj_cmcmkgcj_a-1@bounce.mkt3768.com?subject=Unsubscribe>
+X-Greylist: Delayed for 00:06:38 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 15 Mar 2016 15:32:01 +0100 (CET)
+X-Miltered: at potemkin with ID 56E81CC6.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E81CC6.000 from mail6351.etoro.mkt6950.com/mail6351.etoro.mkt6950.com/null/mail6351.etoro.mkt6950.com/<v-jmagle_nkolgmdk_cmcmkgcj_cmcmkgcj_a-1@bounce.mkt3768.com>
+X-j-chkmail-Score: MSGID : 56E81CC6.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+------=_Part_3549754_902086874.1458051576431
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Rejoignez votre ami(e) krak2010 sur eToro et profitez d'un bonus de d=C3=A9=
+p=C3=B4t de 200$ !
+Rejoignez votre ami(e) krak2010 sur eToro et profitez d'un bonus de d=C3=A9=
+p=C3=B4t de 200$ !
+Pour vous d&eacute;sinscrire, cliquez ici
+Afin de pouvoir &eacute;diter les notifications ,veuillez acc&eacute;der au=
+x &quot;Settings&quot; sur votre page de profil eToro Openbook
+Connexion Nous contacter
+<table width=3D"580" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"center" class=3D"w580">
+ <tr class=3D"w640">
+   <td class=3D"w640"><table width=3D"620" cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" align=3D"center" class=3D"w640">
+     <tbody>
+       <tr>
+         <td width=3D"580" height=3D"30" class=3D"w580"></td>
+       </tr>
+       <tr>
+         <td width=3D"620" align=3D"center" class=3D"w580" style=3D"color: =
+#3e3c3c;font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif=
+; font-size: 28px; text-align: center;margin-top:0px;margin-bottom:20px;"><=
+div align=3D"center" id=3D"headline4">
+           <p style=3D"color: #3e3c3c;font-family: 'Helvetica Neue', Arial,=
+ Helvetica, Geneva, sans-serif; font-size: 30px; text-align: center; margin=
+-top:0px;margin-bottom:10px;">
+            <singleline label=3D"Title">Rejoignez votre ami(e) krak2010 sur=
+ eToro<br /> et profitez d'un bonus de d=C3=A9p=C3=B4t de 200$ !</singlelin=
+e>
+            </p>
+         </div></td>
+       </tr>
+     </tbody>
+   </table>
+     <repeater>
+       <table width=3D"580" border=3D"0" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"w640">
+         <tbody>
+           <tr>
+             <td width=3D"580" height=3D"10" align=3D"center" class=3D"w640=
+">&nbsp;</td>
+           </tr>
+           <tr>
+             <td height=3D"10" align=3D"center" class=3D"w640"><a name=3D"R=
+AF-1-EN1" id=3D"RAF-1-EN1" href=3D"http://etoro.tw/1SAojkG" target=3D"_blan=
+k"><img src=3D"http://growth.etoro.com/raf/emails/images/RAFstock.jpg" alt=
+=3D"actions" name=3D"RAFen" width=3D"385" height=3D"177" border=3D"0" class=
+=3D"w640" title=3D"action" label=3D"Image" editable=3D"true" align=3D"cente=
+r" /></a></td>
+           </tr>
+           <tr>
+             <td width=3D"580" height=3D"10" class=3D"w640"></td>
+           </tr>
+         </tbody>
+       </table>
+=09=09<table>
+=09=09</table>
+=09=09<table>
+=09=09   <tr>
+=09=09=09 <p style=3D"color: #3e3c3c;font-family: 'Helvetica Neue', Arial, =
+Helvetica, Geneva, sans-serif; font-size: 14px; font-weight:bold; text-alig=
+n: center; margin-top:20px;margin-bottom:20px;">
+=09=09=09 krak2010 adore eToro, notre r=C3=A9seau d'investissement social p=
+rim=C3=A9, et il/elle voudrait que vous l'essayiez GRATUITEMENT.</p>
+=09=09   </tr>
+=09=09   <tr>
+          =09=09<p style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:16px; line-height:18px; text-align: left;"><strong>Avec=
+ eToro vous pouvez :</strong></p>
+=09=09=09=09=09<li style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:14px;  text-align: left; line-height:25px;">Copier auto=
+matiquement les meilleurs traders, et leur poser des questions sur leurs d=
+=C3=A9cisions d'investissement.</li>
+=09=09=09=09=09<li style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:14px;  text-align: left; line-height:25px;">Investir fa=
+cilement sur les indices, les actions et les mati=C3=A8res premi=C3=A8res</=
+li>
+=09=09=09=09=09<li style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:14px;  text-align: left; line-height:25px;">Discuter de=
+s march=C3=A9s avec d'autres investisseurs et profiter d'un contenu de qual=
+it=C3=A9 gratuit de votre choix</li>
+
+=09=09  </tr>
+=09=09  <tr>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:16px; line-height:18px; text-align: left; padding-bottom:5px=
+; padding-top:20px;"><strong>C'est facile !</strong></p>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:14px; line-height:18px; text-align: left; padding-bottom:0px=
+;">1. Rejoignez nous maintenant et enregistrez vous GRATUITEMENT</p>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:14px; line-height:18px; text-align: left; padding-bottom:0px=
+;">2. Appuyez sur le bouton "faire un d=C3=A9p=C3=B4t sur votre compte"</p>
+=09=09=09  <a style=3D"color:rgb(255,255,255); font-family: Arial; font-siz=
+e: 13px; text-decoration: none;" id=3D"RAF-1-EN4" name=3D"RAF-1-EN4" href=
+=3D"http://etoro.tw/1SAojkG"><p style=3D"font-family:Arial, Helvetica, sans=
+-serif; color:#ffffff; background-color:#1383c3; width:155px; font-size:13p=
+x; height:25px; padding-bottom:0px; margin-left:20px; padding-left:10px; pa=
+dding-top:6px;"><strong>Financez votre compte</strong></p></a>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:14px; line-height:18px; text-align: left;">3. Faites un d=C3=
+=A9p=C3=B4t de 500$ et profitez d'un d=C3=A9p=C3=B4t de bonus extraordinair=
+e <strong>de 200$ !</p>
+=09=09  </tr>
+=09=09</table>
+       <layout label=3D"Text with full-width image">
+         <table width=3D"580" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" align=3D"center" class=3D"w580">
+           <tbody>
+             <tr>
+               <td height=3D"20" class=3D"w580"></td>
+             </tr>
+             <tr>
+               <td class=3D"w580"><a style=3D"color: rgb(255, 255, 255); fo=
+nt-family: Arial; font-size: 18px; text-decoration: none;" id=3D"RAF-1-EN3"=
+ target=3D"_blank" name=3D"RAF-1-EN3" href=3D"http://etoro.tw/1SAojkG"><tab=
+le width=3D"240" height=3D"25" cellspacing=3D"0" cellpadding=3D"5" border=
+=3D"0" bgcolor=3D"#5aa000" align=3D"center">
+                 <tbody>
+                   <tr>
+                     <td height=3D"25" align=3D"center" style=3D"height: 25=
+px;color: rgb(255, 255, 255); font-family: Arial;"><strong>Rejoignez le suc=
+c=C3=A8s <span style=3D"font-size: 18px;color: rgb(255, 255, 255); font-fam=
+ily: Arial;">=C2=BB</span></strong></td>
+                   </tr>
+                 </tbody>
+               </table></a></td>
+             </tr>
+             <tr>
+               <td width=3D"580" height=3D"30" class=3D"w580"></td>
+             </tr>
+             <tr>
+               <td width=3D"580" height=3D"30" class=3D"w580"><p style=3D"f=
+ont-family:Arial, Helvetica, sans-serif; color:#3e3c3c; font-size:14px; lin=
+e-height:18px; text-align: left;">* Ce courriel a =C3=A9t=C3=A9 envoy=C3=A9=
+ =C3=A0 sophie.laplante@liafa.univ-paris-diderot.fr par votre ami(e) krak20=
+10</p></td>
+             </tr>
+             <tr>
+               <td width=3D"580" height=3D"10" class=3D"w580"></td>
+             </tr>
+           </tbody>
+         </table>
+       </layout>
+     </repeater></td>
+ </tr>
+</table>
+<br /> <br />
+Nous offrons 20$ pour vos amis=20
+et 100$ pour vous
+souscrire
+Suivez-nous
+Like us
+Rencontrez notre &eacute;quipe                                             =
+                     =20
+
+
+------=_Part_3549754_902086874.1458051576431
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html dir=3D"ltr"><head>         <title></title>     </head>     <body><tab=
+le width=3D"620" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacin=
+g=3D"0">                              <tr>                     <td><p style=
+=3D"text-align:center; font-size:12px; font-family:Arial; color:#3c3c3c; pa=
+dding-bottom:5px"><span style=3D"font-family:Arial;color:#3c3c3c;font-size:=
+12px"> Rejoignez votre ami(e) krak2010 sur eToro et profitez d'un bonus de =
+d=C3=A9p=C3=B4t de 200$ !</span></p></td>                 </tr>            =
+          </table>         <table border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" width=3D"100%" bgcolor=3D"#fafafa">                              <t=
+r>                     <td height=3D"30"><table border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" width=3D"600" align=3D"center">                      =
+                                <tr>                                 <td><t=
+able width=3D"640" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=
+=3D"#fafafa" style=3D"border-top: #5aa000 solid 3px;">                     =
+                                                         <tr>              =
+                               <td align=3D"center" height=3D"57"><table wi=
+dth=3D"600" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"padding-left:5px; padding-right:5px;">                         =
+                                                                           =
+  <tr>                                                         <td width=3D=
+"294" align=3D"left" style=3D" text-align:left;"><img  src=3D"http://pages.=
+etoro.com/newsletter/headers/images/etoro_logo.png" alt=3D"eToro" width=3D"=
+85" height=3D"27" border=3D"0" /></td>                                     =
+                </tr>                                                      =
+                                        </table></td>                      =
+                   </tr>                                                   =
+                   </table>                                 <table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"600" bgcolor=3D"#ffffff=
+" align=3D"center">                                                        =
+                      <tr>                                             <td =
+valign=3D"top"><table border=3D"0" cellspacing=3D"20" cellpadding=3D"0" wid=
+th=3D"100%" style=3D"border-bottom: #e8e8e8 1px solid; border-left: #e8e8e8=
+ 1px solid; border-top: #e8e8e8 1px solid; border-right: #e8e8e8 1px solid"=
+>                                                                          =
+                            <tr>                                           =
+              <td><!--CONTENT HERE--><table width=3D"580" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" align=3D"center" class=3D"w580">
+  <tr class=3D"w640">
+    <td class=3D"w640"><table width=3D"620" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" align=3D"center" class=3D"w640">
+      <tbody>
+        <tr>
+          <td width=3D"580" height=3D"30" class=3D"w580"></td>
+        </tr>
+        <tr>
+          <td width=3D"620" align=3D"center" class=3D"w580" style=3D"color:=
+ #3e3c3c;font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-seri=
+f; font-size: 28px; text-align: center;margin-top:0px;margin-bottom:20px;">=
+<div align=3D"center" id=3D"headline4">
+            <p style=3D"color: #3e3c3c;font-family: 'Helvetica Neue', Arial=
+, Helvetica, Geneva, sans-serif; font-size: 30px; text-align: center; margi=
+n-top:0px;margin-bottom:10px;">
+             <singleline label=3D"Title">Rejoignez votre ami(e) krak2010 su=
+r eToro<br /> et profitez d'un bonus de d=C3=A9p=C3=B4t de 200$ !</singleli=
+ne>
+             </p>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+      <repeater>
+        <table width=3D"580" border=3D"0" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"w640">
+          <tbody>
+            <tr>
+              <td width=3D"580" height=3D"10" align=3D"center" class=3D"w64=
+0">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height=3D"10" align=3D"center" class=3D"w640"><a name=3D"=
+RAF-1-EN1" id=3D"RAF-1-EN1" href=3D"http://etoro.tw/1SAojkG" target=3D"_bla=
+nk"><img src=3D"http://growth.etoro.com/raf/emails/images/RAFstock.jpg" alt=
+=3D"actions" name=3D"RAFen" width=3D"385" height=3D"177" border=3D"0" class=
+=3D"w640" title=3D"action" label=3D"Image" editable=3D"true" align=3D"cente=
+r" /></a></td>
+            </tr>
+            <tr>
+              <td width=3D"580" height=3D"10" class=3D"w640"></td>
+            </tr>
+          </tbody>
+        </table>
+=09=09<table>
+=09=09</table>
+=09=09<table>
+=09=09   <tr>
+=09=09=09 <p style=3D"color: #3e3c3c;font-family: 'Helvetica Neue', Arial, =
+Helvetica, Geneva, sans-serif; font-size: 14px; font-weight:bold; text-alig=
+n: center; margin-top:20px;margin-bottom:20px;">
+=09=09=09 krak2010 adore eToro, notre r=C3=A9seau d'investissement social p=
+rim=C3=A9, et il/elle voudrait que vous l'essayiez GRATUITEMENT.</p>
+=09=09   </tr>
+=09=09   <tr>
+           =09=09<p style=3D"font-family:Arial, Helvetica, sans-serif; colo=
+r:#3e3c3c; font-size:16px; line-height:18px; text-align: left;"><strong>Ave=
+c eToro vous pouvez :</strong></p>
+=09=09=09=09=09<li style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:14px;  text-align: left; line-height:25px;">Copier auto=
+matiquement les meilleurs traders, et leur poser des questions sur leurs d=
+=C3=A9cisions d'investissement.</li>
+=09=09=09=09=09<li style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:14px;  text-align: left; line-height:25px;">Investir fa=
+cilement sur les indices, les actions et les mati=C3=A8res premi=C3=A8res</=
+li>
+=09=09=09=09=09<li style=3D"font-family:Arial, Helvetica, sans-serif; color=
+:#3e3c3c; font-size:14px;  text-align: left; line-height:25px;">Discuter de=
+s march=C3=A9s avec d'autres investisseurs et profiter d'un contenu de qual=
+it=C3=A9 gratuit de votre choix</li>
+
+=09=09  </tr>
+=09=09  <tr>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:16px; line-height:18px; text-align: left; padding-bottom:5px=
+; padding-top:20px;"><strong>C'est facile !</strong></p>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:14px; line-height:18px; text-align: left; padding-bottom:0px=
+;">1. Rejoignez nous maintenant et enregistrez vous GRATUITEMENT</p>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:14px; line-height:18px; text-align: left; padding-bottom:0px=
+;">2. Appuyez sur le bouton "faire un d=C3=A9p=C3=B4t sur votre compte"</p>
+=09=09=09  <a style=3D"color:rgb(255,255,255); font-family: Arial; font-siz=
+e: 13px; text-decoration: none;" id=3D"RAF-1-EN4" name=3D"RAF-1-EN4" href=
+=3D"http://etoro.tw/1SAojkG"><p style=3D"font-family:Arial, Helvetica, sans=
+-serif; color:#ffffff; background-color:#1383c3; width:155px; font-size:13p=
+x; height:25px; padding-bottom:0px; margin-left:20px; padding-left:10px; pa=
+dding-top:6px;"><strong>Financez votre compte</strong></p></a>
+=09=09=09  <p style=3D"font-family:Arial, Helvetica, sans-serif; color:#3e3=
+c3c; font-size:14px; line-height:18px; text-align: left;">3. Faites un d=C3=
+=A9p=C3=B4t de 500$ et profitez d'un d=C3=A9p=C3=B4t de bonus extraordinair=
+e <strong>de 200$ !</p>
+=09=09  </tr>
+=09=09</table>
+        <layout label=3D"Text with full-width image">
+          <table width=3D"580" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"center" class=3D"w580">
+            <tbody>
+              <tr>
+                <td height=3D"20" class=3D"w580"></td>
+              </tr>
+              <tr>
+                <td class=3D"w580"><a style=3D"color: rgb(255, 255, 255); f=
+ont-family: Arial; font-size: 18px; text-decoration: none;" id=3D"RAF-1-EN3=
+" target=3D"_blank" name=3D"RAF-1-EN3" href=3D"http://etoro.tw/1SAojkG"><ta=
+ble width=3D"240" height=3D"25" cellspacing=3D"0" cellpadding=3D"5" border=
+=3D"0" bgcolor=3D"#5aa000" align=3D"center">
+                  <tbody>
+                    <tr>
+                      <td height=3D"25" align=3D"center" style=3D"height: 2=
+5px;color: rgb(255, 255, 255); font-family: Arial;"><strong>Rejoignez le su=
+cc=C3=A8s <span style=3D"font-size: 18px;color: rgb(255, 255, 255); font-fa=
+mily: Arial;">=C2=BB</span></strong></td>
+                    </tr>
+                  </tbody>
+                </table></a></td>
+              </tr>
+              <tr>
+                <td width=3D"580" height=3D"30" class=3D"w580"></td>
+              </tr>
+              <tr>
+                <td width=3D"580" height=3D"30" class=3D"w580"><p style=3D"=
+font-family:Arial, Helvetica, sans-serif; color:#3e3c3c; font-size:14px; li=
+ne-height:18px; text-align: left;">* Ce courriel a =C3=A9t=C3=A9 envoy=C3=
+=A9 =C3=A0 sophie.laplante@liafa.univ-paris-diderot.fr par votre ami(e) kra=
+k2010</p></td>
+              </tr>
+              <tr>
+                <td width=3D"580" height=3D"10" class=3D"w580"></td>
+              </tr>
+            </tbody>
+          </table>
+        </layout>
+      </repeater></td>
+  </tr>
+</table>
+<br /> <br /><!--CONTENT HERE--></td>                                      =
+               </tr>                                                       =
+                                       </table></td>                       =
+                  </tr>                                         <tr>       =
+                                      <td bgcolor=3D"#eeeeee"><table width=
+=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ bgcolor=3D"#fafafa" class=3D"w650" id=3D"footer">                         =
+                                                                           =
+  <tr>                                                         <td width=3D=
+"30" class=3D"w30"></td>                                                   =
+      <td class=3D"w580" width=3D"580" height=3D"0"></td>                  =
+                                       <td width=3D"30" class=3D"w30"></td>=
+                                                     </tr>                 =
+                                    <tr>                                   =
+                      <td width=3D"30" class=3D"w30"></td>                 =
+                                        <td width=3D"580" height=3D"20" val=
+ign=3D"top" class=3D"w580"></td>                                           =
+              <td width=3D"30" class=3D"w30"></td>                         =
+                            </tr>                                          =
+           <tr>                                                         <td=
+ width=3D"30" class=3D"w30"></td>                                          =
+               <td height=3D"20" width=3D"580" class=3D"w580 h0" style=3D"f=
+ont-size: 13px; line-height: 20px; font-family:Arial,Tahoma, Helvetica, san=
+s-serif; color:#858585; font-weight:300; text-align:center;"><span style=3D=
+"font-family:Arial,Tahoma, Helvetica, sans-serif;"><strong>eToro (Europe) L=
+td.</strong>, une Soci&eacute;t&eacute; de Services Financiers autoris&eacu=
+te;e et r&eacute;glement&eacute;e par la Cyprus Securities and Exchange Com=
+mission (CySEC) sous la licence #109/10 et <strong>eToro (UK) Ltd.</strong>=
+ est autoris&eacute;e et r&eacute;glement&eacute;e par la Financial Conduct=
+ Authority, FRN 583263.<br />                                              =
+           <br />                                                         L=
+es performances pass&eacute;es ne garanties pas des r&eacute;sultats futurs=
+. En outre, les produits &agrave; effet de levier comportent un degr&eacute=
+; de risque &eacute;lev&eacute;. eToro offre des mesures de protection pour=
+ g&eacute;rer efficacement les risques, mais en de rares occasions, il est =
+possible de perdre plus d'argent qu&rsquo;investi. Ce contenu ne doit pas &=
+ecirc;tre consid&eacute;r&eacute; comme un conseil d&rsquo;investissement.<=
+br />                                                         <br />       =
+                                                  eToro Europe Ltd. 7 Omiro=
+u St., 2nd Floor, 3095 Limassol, Cyprus            <br />                  =
+                                       eToro (UK) Ltd. Level39, One Canada =
+Square, Canary Wharf E14 5AB, London, UK<br />                             =
+                            <br />                                         =
+                Copyright: &copy; 2006-2014 eToro. Tous droits r&eacute;ser=
+v&eacute;s.</span></td>                                                    =
+     <td width=3D"30" class=3D"w30"></td>                                  =
+                   </tr>                                                   =
+  <tr>                                                         <td width=3D=
+"30" class=3D"w30"></td>                                                   =
+      <td width=3D"580" align=3D"center" valign=3D"top" class=3D"w580"></td=
+>                                                         <td width=3D"30" =
+class=3D"w30"></td>                                                     </t=
+r>                                                     <tr>                =
+                                         <td width=3D"30" class=3D"w30"></t=
+d>                                                         <td width=3D"30"=
+ class=3D"w30"></td>                                                     </=
+tr>                                                     <tr>               =
+                                          <td width=3D"30" class=3D"w30"></=
+td>                                                         <td height=3D"1=
+0" width=3D"580" class=3D"w580 h0"></td>                                   =
+                      <td width=3D"30" class=3D"w30"></td>                 =
+                                    </tr>                                  =
+                   <tr>                                                    =
+     <td width=3D"30" class=3D"w30"></td>                                  =
+                       <td width=3D"580" align=3D"center" valign=3D"top" cl=
+ass=3D"w580"><span class=3D"hide"> </span>                                 =
+                        <p style=3D"font-size: 13px; line-height: 20px; fon=
+t-family:Arial,Tahoma, Helvetica, sans-serif; color:#858585; font-weight:30=
+0; text-align:center;"><span style=3D"font-family:Arial,Tahoma, Helvetica, =
+sans-serif;"><a  name=3D"openbook_etoro_com_utm_source_" href=3D"http://lin=
+ks.mkt3768.com/ctt?kn=3D2&ms=3DMTAyMjUzMzIS1&r=3DLTM2NzI4NjE3NTQS1&b=3D0&j=
+=3DNzQxMTIzNjI1S0&mt=3D1&rt=3D0" style=3D"color:#1383c3; text-decoration:no=
+ne;"> Mettre vos pr&eacute;f&eacute;rences &agrave; jour</a> &amp; <a name=
+=3D"OptOutFR_1"  href=3D"http://links.mkt3768.com/servlet/OneClickOptOutSer=
+vlet?m=3D10225332&r=3DLTM2NzI4NjE3NTQS1&b=3D0&j=3DNzQxMTIzNjI1S0&mt=3D1&rt=
+=3D0" target=3D"_blank" style=3D"color:#1383c3; text-decoration:none;">Se d=
+&eacute;sinscrire </a></span></p></td>                                     =
+                    <td width=3D"30" class=3D"w30"></td>                   =
+                                  </tr>                                    =
+                                                          </table></td>    =
+                                     </tr>                                 =
+                                     </table></td>                         =
+    </tr>                                              </table></td>       =
+          </tr>                 <tr>                     <td>&nbsp;</td>   =
+              </tr>                      </table><IMG src=3D"http://open.mk=
+t3768.com/open/log/10225332/LTM2NzI4NjE3NTQS1/0/NzQxMTIzNjI1S0/1/0"></body>=
+</html>
+
+
+------=_Part_3549754_902086874.1458051576431--

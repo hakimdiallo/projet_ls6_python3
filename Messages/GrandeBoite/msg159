@@ -1,0 +1,133 @@
+Return-Path: <bounce@airekafilt.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id EGP9ONYOtVZbfQEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Fri, 05 Feb 2016 22:07:19 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 3F07E61FFF
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Fri,  5 Feb 2016 22:07:19 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 11.511
+X-Spam-Level: ***********
+X-Spam-Status: Yes, score=11.511 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DATE_IN_PAST_12_24=1.049,
+	DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_IMAGE_ONLY_12=2.059,
+	HTML_MESSAGE=0.001, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bPN7p6Sjd1HI for <laplante@liafa.univ-paris-diderot.fr>;
+	Fri,  5 Feb 2016 22:07:17 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 5321A62064
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Fri,  5 Feb 2016 22:07:17 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u15L7HA3006022
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Fri, 5 Feb 2016 22:07:17 +0100
+Received: from server.airekascience.com (server.airekascience.com [162.144.196.5])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u15L5ULv012788
+          for <sophie.laplante@liafa.univ-paris-diderot.fr>; Fri, 5 Feb 2016 22:06:09 +0100 (CET)
+X-Ids: 165
+Received: from airekas1 by server.airekascience.com with local (Exim 4.86)
+	(envelope-from <bounce@airekafilt.com>)
+	id 1aRYoV-0007Sl-ON
+	for sophie.laplante@liafa.univ-paris-diderot.fr; Fri, 05 Feb 2016 05:20:11 +0000
+To: Sophie <sophie.laplante@liafa.univ-paris-diderot.fr>
+Subject: syringe filter with universal luer lock
+X-PHP-Script: filt.airekascience.com/index.php for 85.17.89.41
+Date: Thu, 4 Feb 2016 22:20:11 -0700
+From: Ginna Xu <ginna.xu@airekacells.com>
+Reply-To: Ginna Xu <ginna.xu@airekacells.com>
+Message-ID: <MTE0MTA3MAAC72392Y37BAMTQ1NDY0OTYxMTg3ODUy@filt.airekascience.com>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.6 (https://github.com/PHPMailer/PHPMailer/)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_8fd6c298b488944df69fb907d555590f"
+Content-Transfer-Encoding: 8bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.airekascience.com
+X-AntiAbuse: Original Domain - liafa.univ-paris-diderot.fr
+X-AntiAbuse: Originator/Caller UID/GID - [500 500] / [47 12]
+X-AntiAbuse: Sender Address Domain - airekafilt.com
+X-Get-Message-Sender-Via: server.airekascience.com: authenticated_id: airekas1/only user confirmed/virtual account not confirmed
+X-Authenticated-Sender: server.airekascience.com: airekas1
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Miltered: at korolev with ID 56B50F05.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56B50E9A.003 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56B50F05.001 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounce@airekafilt.com>
+X-j-chkmail-Enveloppe: 56B50E9A.003 from server.airekascience.com/server.airekascience.com/162.144.196.5/server.airekascience.com/<bounce@airekafilt.com>
+X-Scores-Stats: 56B50E9A.003 B=0.50000 L=0.92827 G=0.92827 Agree    
+X-j-chkmail-Score: MSGID : 56B50F05.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56B50E9A.003 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.928 -> S=0.943
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Fri, 05 Feb 2016 22:07:17 +0100 (CET)
+
+--b1_8fd6c298b488944df69fb907d555590f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Sophie, 
+
+Will you or your colleagues be using syringe filters? 
+
+Aireka Cells filters have universal luer lock design for versatility and maximum operational safety. Our filters are tested and validated to ensure
+absolute consistency from lot to lot for perfect results. 
+
+>From $21/100pcs now. 
+
+Please check: http://airekacells.com/syringe-filter
+
+Have a good day!
+
+Best regards, 
+
+Ginna
+Aireka Scientific Co., Ltd
+Tel: +86 186 6704 3072
+Email: ginna.xu@airekacells.com
+Web: http://www.airekacells.com 
+ 
+Unsubscribe ( http://filt.airekascience.com/index.php?subid=72392&option=com_acymailing&ctrl=user&task=out&mailid=37&key=VWK8OijoEecpqK )
+
+
+--b1_8fd6c298b488944df69fb907d555590f
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Sophie,&nbsp;<br />
+<br />
+Will you or your colleagues be using syringe filters?&nbsp;<br />
+<br />
+Aireka Cells filters have universal luer lock design for versatility and maximum operational safety. Our filters are tested and validated to ensure
+absolute consistency from lot to lot for perfect results.&nbsp;<br />
+<br />
+>From $21/100pcs now.&nbsp;<br />
+<br />
+Please check: http://airekacells.com/syringe-filter<br />
+<br />
+Have a good day!<br />
+<br />
+Best regards,&nbsp;<br />
+<br />
+Ginna<br />
+Aireka Scientific Co., Ltd<br />
+Tel: +86 186 6704 3072<br />
+Email: ginna.xu@airekacells.com<br />
+Web: http://www.airekacells.com&nbsp;<br />
+&nbsp;<br />
+<a style="text-decoration:none;" target="_blank"
+href="http://filt.airekascience.com/index.php?subid=72392&option=com_acymailing&ctrl=user&task=out&mailid=37&key=VWK8OijoEecpqK"><span
+class="acymailing_unsub">Unsubscribe</span></a><img class="spict" alt=""
+src="http://filt.airekascience.com/index.php?option=com_acymailing&ctrl=stats&mailid=37&subid=72392"  border="0"  height="1"  width="50" />
+
+
+
+--b1_8fd6c298b488944df69fb907d555590f--

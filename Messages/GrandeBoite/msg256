@@ -1,0 +1,210 @@
+Return-Path: <gdr-im-owner@gdr-im.fr>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id opMJApOtn1bk7wAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 20 Jan 2016 16:53:55 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 843CE61FB3;
+	Wed, 20 Jan 2016 16:53:54 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: -1.896
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.896 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	HTML_FONT_SIZE_LARGE=0.001, HTML_MESSAGE=0.001,
+	MIME_QP_LONG_LINE=0.001, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=unavailable autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id qkO5p4ZgOTYk; Wed, 20 Jan 2016 16:53:50 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 585D961FAA;
+	Wed, 20 Jan 2016 16:53:50 +0100 (CET)
+Received: from pneumatix.info.unicaen.fr (pneumatix.info.unicaen.fr [193.55.128.27])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0KFrnZE022035;
+	Wed, 20 Jan 2016 16:53:49 +0100
+Received: from oftalmologix.info.unicaen.fr (oftalmologix.info.unicaen.fr [::ffff:10.130.0.29])
+  by pneumatix with ESMTP; Wed, 20 Jan 2016 16:52:57 +0100
+  id 0000000000073C5C.00000000569FAD59.0000617A
+Received: by oftalmologix.info.unicaen.fr (Postfix, from userid 108)
+	id 14B52880829; Wed, 20 Jan 2016 12:41:24 +0100 (CET)
+X-Original-To: gdr-im@gdr-im.fr
+Delivered-To: gdr-im@gdr-im.fr
+Received: from pneumatix.info.unicaen.fr (pneumatix.info.unicaen.fr [10.130.0.27])
+	by oftalmologix.info.unicaen.fr (Postfix) with ESMTP id 167FB87583B
+	for <gdr-im@gdr-im.fr>; Wed, 20 Jan 2016 12:40:58 +0100 (CET)
+Received: from labbe.ens-lyon.fr (labbe.ens-lyon.fr [::ffff:140.77.167.222])
+  by pneumatix with ESMTP; Wed, 20 Jan 2016 12:40:57 +0100
+  id 000000000100B621.00000000569F7249.00004DAC
+Received: from localhost (localhost [127.0.0.1])
+	by labbe.ens-lyon.fr (Postfix) with ESMTP id 5DD11320D3C;
+	Wed, 20 Jan 2016 12:40:27 +0100 (CET)
+X-Virus-Scanned: by amavisd-new-2.10.1 (20141025) (Debian) at ens-lyon.fr
+Received: from labbe.ens-lyon.fr ([127.0.0.1])
+	by localhost (labbe.ens-lyon.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id RCLP-pgKO8tq; Wed, 20 Jan 2016 12:40:26 +0100 (CET)
+Received: from [100.121.11.208] (unknown [80.215.165.244])
+	(using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	by labbe.ens-lyon.fr (Postfix) with ESMTPSA id 9B94D320B3D;
+	Wed, 20 Jan 2016 12:40:26 +0100 (CET)
+Mime-Version: 1.0 (1.0)
+From: Jean-Michel Muller <Jean-Michel.Muller@ens-lyon.fr>
+Content-Type: multipart/alternative;
+	boundary=Apple-Mail-8325FD06-1133-44FE-8F17-0D23443CD64A
+X-Mailer: iPhone Mail (13C75)
+Message-Id: <56A20545-2CC8-41BE-AB09-98EDBC6F4F31@ens-lyon.fr>
+Date: Wed, 20 Jan 2016 12:40:25 +0100
+Cc: raphael.jungers@uclouvain.be
+Content-Transfer-Encoding: 7bit
+To: gdr-im@gdr-im.fr
+Subject: [gdr-im] EECI course on 'Cyber-Physical systems control: Algebraic
+ and Optimization techniques' L'Aquila, april 4-8 2016
+Reply-To: Jean-Michel Muller <Jean-Michel.Muller@ens-lyon.fr>
+X-Loop: gdr-im@gdr-im.fr
+X-Sequence: 798
+Errors-to: gdr-im-owner@gdr-im.fr
+Precedence: list
+Precedence: bulk
+Sender: gdr-im-request@gdr-im.fr
+X-no-archive: yes
+List-Id: <gdr-im.gdr-im.fr>
+List-Archive: <https://mail.gdr-im.fr/wws/arc/gdr-im>
+List-Help: <mailto:sympa@gdr-im.fr?subject=help>
+List-Owner: <mailto:gdr-im-request@gdr-im.fr>
+List-Post: <mailto:gdr-im@gdr-im.fr>
+List-Subscribe: <mailto:sympa@gdr-im.fr?subject=subscribe%20gdr-im>
+List-Unsubscribe: <mailto:sympa@gdr-im.fr?subject=unsubscribe%20gdr-im>
+X-Greylist: IP, sender and recipient auto-whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 20 Jan 2016 16:53:50 +0100 (CET)
+X-Miltered: at potemkin with ID 569FAD8D.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 569FAD8D.001 from pneumatix.info.unicaen.fr/pneumatix.info.unicaen.fr/null/pneumatix.info.unicaen.fr/<gdr-im-owner@gdr-im.fr>
+X-j-chkmail-Score: MSGID : 569FAD8D.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+
+--Apple-Mail-8325FD06-1133-44FE-8F17-0D23443CD64A
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+D=C3=A9but du message transf=C3=A9r=C3=A9 :
+
+>=20
+>=20
+> ---------------------------------------------------
+> EECI course on 'Cyber-Physical systems control: Algebraic and Optimization=
+ techniques' L'Aquila, april 4-8 2016
+> ----------------------------------------------------
+>=20
+> Contenu:
+>=20
+> -----------------------------------------------------
+> Dear Colleagues,
+>=20
+> In the context of the 2016 EECI International Graduate School on Control, I=
+ am teaching a 1-week module in l'Aquila (Abbruzo, Italy) from april 4th to a=
+pril 8th, on the topic:
+> Cyber-Physical systems control: Algebraic and Optimization techniques=20
+>=20
+> Please, do not hesitate to forward to any interested person.  *Registratio=
+n is free for Italian Master Students.*
+>=20
+> Best regards,
+>=20
+> Rapha=C3=ABl.
+>=20
+> http://eeciinstitute.web-events.net/m15/
+> ------------------------------------------------------
+> --=20
+> Rapha=C3=ABl
+>=20
+> Rapha=C3=ABl Jungers
+> UCL/ICTEAM
+> Avenue Georges Lema=C3=AEtre, 4-6
+> 1348 Louvain-la-Neuve (Belgium)
+> tel : +32 10 47 80 38.
+> Fax : +32 10 47 21 80.
+> website: http://perso.uclouvain.be/raphael.jungers/
+>=20
+>=20
+>=20
+
+--Apple-Mail-8325FD06-1133-44FE-8F17-0D23443CD64A
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto"><div><br><br><div><br></div></div><div><br>=
+D=C3=A9but du message transf=C3=A9r=C3=A9&nbsp;:<br><br></div><blockquote ty=
+pe=3D"cite"><div><br></div></blockquote><blockquote type=3D"cite"><div><br>
+    ---------------------------------------------------<br>
+    EECI course on 'Cyber-Physical systems control: Algebraic and
+    Optimization techniques' L'Aquila, april 4-8 2016<br>
+    ----------------------------------------------------<br>
+    <br>
+    Contenu:<br>
+    <br>
+    -----------------------------------------------------<br>
+    Dear Colleagues,<br>
+    <br>
+    In the context of the 2016 EECI International Graduate School on
+    Control, I am teaching a 1-week module in l'Aquila (Abbruzo, Italy)
+    from april 4th to april 8th, on the topic:<big><big><big><br>
+          <a href=3D"http://eeciinstitute.web-events.net/m15/"><b style=3D"m=
+so-bidi-font-weight:normal"><u><span style=3D"font-size:11.0pt;line-height:1=
+15%;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast=
+-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Time=
+s
+
+
+                  New Roman&quot;;
+                  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso=
+-fareast-language:
+
+
+                  EN-US;mso-bidi-language:AR-SA" lang=3D"EN-US">Cyber-Physic=
+al
+
+
+                  systems control: Algebraic and Optimization techniques</sp=
+an></u></b></a>
+        </big></big></big><br>
+    <br>
+    Please, do not hesitate to forward to any interested person.&nbsp;
+    *Registration is free for Italian Master Students.*<br>
+    <br>
+    Best regards,<br>
+    <br>
+    Rapha=C3=ABl.<br>
+    <br>
+    <a class=3D"moz-txt-link-freetext" href=3D"http://eeciinstitute.web-even=
+ts.net/m15/">http://eeciinstitute.web-events.net/m15/</a><br>
+    ------------------------------------------------------<br>
+    <pre class=3D"moz-signature" cols=3D"72">--=20
+Rapha=C3=ABl
+
+Rapha=C3=ABl Jungers
+UCL/ICTEAM
+Avenue Georges Lema=C3=AEtre, 4-6
+1348 Louvain-la-Neuve (Belgium)
+tel : +32 10 47 80 38.
+Fax : +32 10 47 21 80.
+website: <a class=3D"moz-txt-link-freetext" href=3D"http://perso.uclouvain.b=
+e/raphael.jungers/">http://perso.uclouvain.be/raphael.jungers/</a>
+
+
+
+</pre>
+ =20
+
+</div></blockquote></body></html>=
+
+--Apple-Mail-8325FD06-1133-44FE-8F17-0D23443CD64A--

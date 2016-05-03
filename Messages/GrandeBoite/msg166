@@ -1,0 +1,161 @@
+Return-Path: <derek.hughes2@outlook.com>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id OKDMAFfpslbjDgEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 04 Feb 2016 07:01:59 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id F144F62039
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu,  4 Feb 2016 07:01:58 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 2.907
+X-Spam-Level: **
+X-Spam-Status: No, score=2.907 tagged_above=-10000 required=5
+	tests=[BAYES_40=-0.001, DCC_CHECK=1.1,
+	FREEMAIL_ENVFROM_END_DIGIT=0.25, FREEMAIL_FROM=0.001,
+	HTML_IMAGE_ONLY_20=1.546, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_REMOTE_IMAGE=0.01]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bhFRmNbtMp45 for <laplante@liafa.univ-paris-diderot.fr>;
+	Thu,  4 Feb 2016 07:01:57 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 4094F61FFF
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu,  4 Feb 2016 07:01:57 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1461vqg014585
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 4 Feb 2016 07:01:57 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 5FF0E302D0C
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu,  4 Feb 2016 06:52:43 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id 2D91D3026B1
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu,  4 Feb 2016 06:52:43 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 215524047D
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu,  4 Feb 2016 06:52:43 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Z9ctE9WdRgyk for <laplante@liafa.univ-paris-diderot.fr>;
+	Thu,  4 Feb 2016 06:52:43 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 06B714043E
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu,  4 Feb 2016 06:52:43 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id F2CBCE058A; Thu,  4 Feb 2016 06:52:42 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id EF9BCE02B9
+	for <laplante@lri.fr>; Thu,  4 Feb 2016 06:52:42 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id 88058E0035
+	for <laplante@lri.fr>; Thu,  4 Feb 2016 06:52:43 +0100 (CET)
+Received: by openemm.net for <laplante@lri.fr>; Thu,  4 Feb 2016 05:39:24 GMT
+Message-ID: <20160204003853-1.1.1g.1rht.0.iwjybp2pcq@openemm.net>
+Date: Thu,  4 Feb 2016 05:39:24 GMT
+From: "Derek Hughes" <derek.hughes2@outlook.com>
+To: <laplante@lri.fr>
+Subject: ::App Development
+X-Mailer: OpenEMM V2015
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="-==AGNITASOUTER164240059B29000034=="
+X-Greylist: Delayed for 00:09:14 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Thu, 04 Feb 2016 07:01:57 +0100 (CET)
+X-Miltered: at korolev with ID 56B2E955.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56B2E955.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<derek.hughes2@outlook.com>
+X-j-chkmail-Score: MSGID : 56B2E955.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+This is a multi-part message in MIME format.
+
+---==AGNITASOUTER164240059B29000034==
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+If you are interested, we will take care of all your development needs
+related to and project management issues so that you can focus more on
+your business strategies for better peace of mind.
+
+As you know Mobile devices are set to take the center stage in the
+coming times, by having a mobile application your businesses obtain
+placed in the consumer=E2=80=99s pocket.
+
+Knowing the growing trend of mobile apps in the electronic world we
+emphasize on providing best mobile apps to our clients.
+
+We provide mobile app for different platforms:-
+
+=C2=B7 Android
+=C2=B7 IOS
+=C2=B7 Blackberry
+=C2=B7 Windows
+=C2=B7 IPhone
+
+We provide a comprehensive analysis of your needs and will tailor
+mobile apps solutions that will improve every aspect of your business.
+
+We also do improvement of your website: - Website Re-Designing & Mobile
+Responsive Website.
+
+If you are interested then please reply back to this email today, we
+would like to provide you with our portfolio, flat rate price and
+deadline to deliver what you require.
+
+I appreciate your time and consideration, should you wish that I take
+your name off my contact list, simply let me know in a reply email.
+
+Thanks,
+Derek Hughes
+(Business Consultant)
+---==AGNITASOUTER164240059B29000034==
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<img src=3D"http://localhost:8080/g.html?uid=3D1.1g.1rht.0.jns8g27q50" al=
+t=3D"" border=3D"0" height=3D"1" width=3D"1"/>Hello,<br />
+<br />
+<font color=3D"#222222" face=3D"Arial, Verdana, sans-serif">If you are in=
+terested, we will take care of all your development needs related to and =
+project management issues so that you can focus more on your business str=
+ategies for better peace of mind.</font><br />
+<br />
+As you know Mobile devices are set to take the center stage in the coming=
+ times, by having a mobile application your businesses obtain placed in t=
+he consumer&rsquo;s pocket.<br />
+<br />
+Knowing the growing trend of mobile apps in the electronic world we empha=
+size on providing best mobile apps to our clients.<br />
+<br />
+We provide mobile app for different platforms:-<br />
+&nbsp;<br />
+<strong>&middot; Android</strong><br />
+<strong>&middot; IOS</strong><br />
+<strong>&middot; Blackberry</strong><br />
+<strong>&middot; Windows</strong><br />
+<strong>&middot; IPhone</strong><br />
+<br />
+We provide a comprehensive analysis of your needs and will tailor mobile =
+apps solutions that will improve every aspect of your business.<br />
+<br />
+We also do&nbsp;improvement of your website: -&nbsp;<strong>Website Re-De=
+signing &amp; Mobile Responsive Website.</strong><br />
+<br />
+If you are interested then please reply back to this email today, we woul=
+d like to provide you with our portfolio, flat rate price and deadline to=
+ deliver what you require.<br />
+<br />
+I appreciate your time and consideration, should you wish that I take you=
+r name off my contact list, simply let me know in a reply email.<br />
+<br />
+Thanks,
+<div>
+	<b>Derek Hughes</b></div>
+<div>
+	(Business Consultant)</div>
+---==AGNITASOUTER164240059B29000034==--

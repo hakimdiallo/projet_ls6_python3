@@ -1,0 +1,1125 @@
+Return-Path: <algocomp-group-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id AIamAb2R0FZawgAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 26 Feb 2016 18:56:13 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id C502261FA3;
+	Fri, 26 Feb 2016 18:56:12 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 4.166
+X-Spam-Level: ****
+X-Spam-Status: No, score=4.166 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DATE_IN_PAST_03_06=1.592,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	MIME_QP_LONG_LINE=0.001, RCVD_IN_BL_SPAMCOP_NET=1.347,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_GREY=0.424]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=mail12.suw17.mcsv.net
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id kO9KlEddFwRX; Fri, 26 Feb 2016 18:56:09 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id B78DB61FA1;
+	Fri, 26 Feb 2016 18:56:09 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1QHu8Te008266;
+	Fri, 26 Feb 2016 18:56:08 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id D1A75D401A; Fri, 26 Feb 2016 18:56:08 +0100 (CET)
+X-Original-To: algocomp-group@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-group@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id BAA36D401A
+	for <algocomp-group@listes.sc.univ-paris-diderot.fr>; Fri, 26 Feb 2016 18:56:07 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id B31FD9F63E
+	for <algocomp-group@listes.sc.univ-paris-diderot.fr>; Fri, 26 Feb 2016 18:56:07 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=mail12.suw17.mcsv.net
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id 0lhUaswRk95U
+	for <algocomp-group@listes.sc.univ-paris-diderot.fr>;
+	Fri, 26 Feb 2016 18:56:02 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 681209F624
+	for <algocomp-group@listes.sc.univ-paris-diderot.fr>; Fri, 26 Feb 2016 18:56:02 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1QHu2cM003603
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <algocomp-group@listes.sc.univ-paris-diderot.fr>; Fri, 26 Feb 2016 18:56:02 +0100
+Received: from mail12.suw17.mcsv.net (mail12.suw17.mcsv.net [198.2.181.12])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u1QHricR057595
+          for <algocomp-group@listes.sc.univ-paris-diderot.fr>; Fri, 26 Feb 2016 18:54:04 +0100 (CET)
+X-Ids: 165
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=mail12.suw17.mcsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:Sender:Content-Type:MIME-Version; i=gabriel.hussy=3Depfl.ch@mail12.suw17.mcsv.net;
+ bh=LssVcRNd+ZwuSmAPcDPD17MVR6k=;
+ b=XIVj1QBSUU2VteDAz2BK/5GAuOTFegn6KZaqJgnLt22Tq0pmMzndi9+wv+YF1pexoDbO6PYTLPPv
+   fwFZEpnsY2vlyhGhP7is+P9Ph+7xxAicHoxthyuCMoHV/V893lMUiyrWNc3H1hl+rypQQfMQAG2S
+   TLB37JMxr49n8yRskUc=
+Received: from (127.0.0.1) by mail12.suw17.mcsv.net id hq28jo24b887 for <algocomp-group@listes.sc.univ-paris-diderot.fr>; Fri, 26 Feb 2016 13:27:58 +0000 (envelope-from <bounce-mc.us11_45871305.569169-algocomp-group=listes.sc.univ-paris-diderot.fr@mail12.suw17.mcsv.net>)
+From: =?utf-8?Q?Presses=20polytechniques=20et=20universitaires=20romandes?= <gabriel.hussy@epfl.ch>
+Reply-To: =?utf-8?Q?Presses=20polytechniques=20et=20universitaires=20romandes?= <gabriel.hussy@epfl.ch>
+To: <algocomp-group@listes.sc.univ-paris-diderot.fr>
+Date: Fri, 26 Feb 2016 13:27:58 +0000
+Message-ID: <a3c231dddbfd2231c40502bf1b2bf4ba951.20160226132740@mail12.suw17.mcsv.net>
+X-Mailer: MailChimp Mailer - **CIDfbc3429c9ab2bf4ba951**
+X-Campaign: mailchimpa3c231dddbfd2231c40502bf1.fbc3429c9a
+X-campaignid: mailchimpa3c231dddbfd2231c40502bf1.fbc3429c9a
+X-Report-Abuse: Please report abuse for this campaign here: http://www.mailchimp.com/abuse/abuse.phtml?u=a3c231dddbfd2231c40502bf1&id=fbc3429c9a&e=b2bf4ba951
+X-MC-User: a3c231dddbfd2231c40502bf1
+X-Feedback-ID: 45871305:45871305.569169:us11:mc
+X-Accounttype: pd
+List-Unsubscribe: <mailto:unsubscribe-mc.us11_a3c231dddbfd2231c40502bf1.fbc3429c9a-b2bf4ba951@mailin1.us2.mcsv.net?subject=unsubscribe>, <http://ppur.us11.list-manage1.com/unsubscribe?u=a3c231dddbfd2231c40502bf1&id=67fbbc008b&e=b2bf4ba951&c=fbc3429c9a>
+Sender: "Presses polytechniques et universitaires romandes" <gabriel.hussy=epfl.ch@mail12.suw17.mcsv.net>
+x-mcda: FALSE
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_436141532"
+MIME-Version: 1.0
+X-Miltered: at korolev with ID 56D091B8.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56D091B2.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56D09128.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D091B8.001 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-group-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56D091B2.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounce-mc.us11_45871305.569169-algocomp-group=listes.sc.univ-paris-diderot.fr@mail12.suw17.mcsv.net>
+X-j-chkmail-Enveloppe: 56D09128.002 from mail12.suw17.mcsv.net/mail12.suw17.mcsv.net/198.2.181.12/mail12.suw17.mcsv.net/<bounce-mc.us11_45871305.569169-algocomp-group=listes.sc.univ-paris-diderot.fr@mail12.suw17.mcsv.net>
+X-Scores-Stats: 56D09128.002 B=0.50000 L=0.70481 G=0.70481 Agree    
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 56D091B8.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56D091B2.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56D09128.002 on shiva.jussieu.fr : j-chkmail score : XXXX : R=. U=. O=. B=0.705 -> S=0.705
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam LO
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Fri, 26 Feb 2016 18:56:08 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Fri, 26 Feb 2016 18:56:02 +0100 (CET)
+Subject: [algocomp-group] =?UTF-8?Q?Une_chronique_de_l'hydrog=C3=A8ne?=
+X-Loop: algocomp-group@listes.sc.univ-paris-diderot.fr
+X-Sequence: 418
+Errors-to: algocomp-group-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-group.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-group>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-group>
+List-Post: <mailto:algocomp-group@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-group-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-group>
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_436141532
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+=C2=BB Lire dans un navigateur (http://www.ppur.info/ppur/hydrogene.html)
+https://www.facebook.com/pages/Presses-polytechniques-et-universitaires-ro=
+mandes-PPUR/167010289991169?ref=3Dhl https://www.youtube.com/user/Polytech=
+press/videos http://science.blog.lemonde.fr/ http://www.linkedin.com/compa=
+ny/presses-polytechniques-et-universitaires-romandes?trk=3Dtabs_biz_home h=
+ttps://twitter.com/PPUR_Tweets
+http://www.ppur.com/  mailto:?Subject=3DComposition=2C%20non-composition&B=
+ody=3Dhttp://www.ppur.info/ppur/composition.html
+http://www.ppur.org/produit/762/9782889151561/Une%20chronique%20de%20lhydr=
+ogene
+http://www.ppur.org/produit/173/9782880747893/Composition%20non-compositio=
+nhttp://www.ppur.org/produit/173/9782880747893/Composition%20non-compositi=
+onhttp://www.ppur.org/produit/645/9782889150182/Des%20maisons%20pas%20comm=
+e%20les%20autreshttp://www.ppur.org/produit/762/9782889151561/Une%20chroni=
+que%20de%20lhydrogene
+http://www.ppur.org/produit/645/9782889150182/Des%20maisons%20pas%20comme%=
+20les%20autres
+http://www.ppur.org/produit/762/9782889151561/Une%20chronique%20de%20lhydr=
+ogene
+http://www.ppur.org/livres/978-2-88074-891-3.html Une chronique de l'hydro=
+g=C3=A8ne
+Histoire des m=C3=A9thodes de production et des applications
+L=E2=80=99hydrog=C3=A8ne n=E2=80=99appara=C3=AEt que tr=C3=A8s rarement=
+ =C3=A0 l=E2=80=99=C3=A9tat libre. On le trouve essentiellement sous forme=
+ combin=C3=A9e=2C que ce soit dans l=E2=80=99eau=2C o=C3=B9 ses atomes son=
+t li=C3=A9s =C3=A0 ceux de l=E2=80=99oxyg=C3=A8ne=2C ou dans les substance=
+s organiques comme les hydrocarbures=2C dans lesquelles ses atomes sont li=
+=C3=A9s =C3=A0 ceux du carbone. Cet ouvrage montre comment l=E2=80=99hydro=
+g=C3=A8ne peut =C3=AAtre produit =C3=A0 partir de l=E2=80=99eau=2C du gaz=
+ naturel et du p=C3=A9trole=2C et d=C3=A9crit l=E2=80=99=C3=A9volution=2C=
+ au cours des si=C3=A8cles=2C de ces proc=C3=A9d=C3=A9s de production. Le=
+ choix du mode de production d=C3=A9pendant g=C3=A9n=C3=A9ralement des app=
+lications envisag=C3=A9es=2C celles-ci sont =C3=A9galement expos=C3=A9es e=
+n d=C3=A9tail...
+
+=C2=BB Pour en savoir plus (http://www.ppur.org/produit/762/9782889151561/=
+Une%20chronique%20de%20lhydrogene)
+
+
+** Exercices de chimie g=C3=A9n=C3=A9rale
+------------------------------------------------------------
+
+Le ph=C3=A9nom=C3=A8ne urbain a entam=C3=A9 une profonde mutation sous l=
+=E2=80=99effet des potentiels de vitesse rendus possibles par les syst=C3=
+=A8mes de transport et de communication =C3=A0 distance=2C et dont l=E2=80=
+=99impact sur la soci=C3=A9t=C3=A9 et ses territoires est consid=C3=A9rabl=
+e. Ces technologies ont =C3=A9t=C3=A9 pl=C3=A9biscit=C3=A9es par la popula=
+tion=2C qui les utilise aujourd=E2=80=99hui de fa=C3=A7on intensive. Cet o=
+uvrage se propose d=E2=80=99explorer ce qui fait la persistance de la vill=
+e contemporaine =C3=A0 partir de la mobilit=C3=A9...
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/445/97=
+82880748821/Exercices%20de%20chimie%20generale) http://www.ppur.org/produi=
+t/554/9782940222605/Composition%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/445/9782880748821/Exercices%20de%20chimie%20ge=
+nerale
+
+
+** Comprendre la RMN
+------------------------------------------------------------
+
+Comprendre la RMN s=E2=80=99est impos=C3=A9 comme la r=C3=A9f=C3=A9rence d=
+ans son domaine. Tout sp=C3=A9cifi quement con=C3=A7u pour les =C3=A9tudia=
+nts en sciences=2C en techniques de laboratoire et en analyses biom=C3=A9d=
+icales (Bachelor=2C HES=2C BTS=2C DUT)=2C cet ouvrage expose de fa=C3=A7on=
+ claire et progressive les principes essentiels de la r=C3=A9sonance magn=
+=C3=A9tique nucl=C3=A9aire (RMN)...
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/712/97=
+82889150724/Comprendre%20la%20RMN) http://www.ppur.org/produit/554/9782940=
+222605/Composition%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/712/9782889150724/Comprendre%20la%20RMN
+
+
+** Chimie organique
+------------------------------------------------------------
+
+L'objectif de cet ouvrage est l'enseignement des principes fondamentaux de=
+ la chimie organique moderne =C3=A0 partir d'un ensemble d'observations co=
+h=C3=A9rentes=2C ainsi que la d=C3=A9duction des r=C3=A8gles qui g=C3=A8re=
+nt le comportement de la mol=C3=A9cule organique et qui sont responsables=
+ de son architecture.Sa principale originalit=C3=A9 r=C3=A9side dans la pr=
+=C3=A9sentation de la chimie organique sur une base logique=2C en introdui=
+sant de mani=C3=A8re syst=C3=A9matique...
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/442/97=
+82880744779/Chimie%20organique) http://www.ppur.org/produit/554/9782940222=
+605/Composition%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/442/9782880744779/Chimie%20organique
+
+
+** Electrochimie physique et analytique
+------------------------------------------------------------
+
+L'=C3=A9lectrochimie s'applique =C3=A0 divers domaines tels que la bio=C3=
+=A9nerg=C3=A9tique=2C les sciences de l'environnement=2C les sciences de l=
+'ing=C3=A9nieur et joue un r=C3=B4le fondamental dans certaines applicatio=
+ns aussi diverses que la conversion et le stockage de l'=C3=A9nergie ou qu=
+e le s=C3=A9quen=C3=A7age de l'ADN.A la fois cours de base adapt=C3=A9 pou=
+r un enseignement de niveau Bachelor=2C de niveau Master et ouvrage de r=
+=C3=A9f=C3=A9rence pour doctorants et chercheurs...
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/444/97=
+82880746735/Electrochimie%20physique%20et%20analytique) http://www.ppur.or=
+g/produit/554/9782940222605/Composition%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/444/9782880746735/Electrochimie%20physique%20e=
+t%20analytique
+
+
+** Analytical and Physical Electrochemistry
+------------------------------------------------------------
+
+The study electrochemistry is pertinent to a wide variety of fields=2C inc=
+luding bioenergetics=2C environmental sciences=2C and engineering sciences=
+=2E In addition=2C electrochemistry plays a fundamental role in specific app=
+lications as diverse as the conversion and storage of energy and the seque=
+ncing of DNA.Intended both as a basic course for undergraduate students an=
+d as a reference work for graduates and researchers...
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/489/97=
+82940222032/Analytical%20and%20Physical%20Electrochemistry) http://www.ppu=
+r.org/produit/554/9782940222605/Composition%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/489/9782940222032/Analytical%20and%20Physical%=
+20Electrochemistry
+
+
+** Chimie avanc=C3=A9e
+------------------------------------------------------------
+
+Tout en couleur et richement illustr=C3=A9=2C ce manuel sp=C3=A9cifiquemen=
+t con=C3=A7u pour les lyc=C3=A9ens et gymnasiens des fili=C3=A8res scienti=
+fiques pr=C3=A9sente l'ensemble des connaissances indispensables en chimie=
+ organique (nomenclature=2C structures=2C substances naturelles=2C r=C3=A9=
+actions chimiques=2C polym=C3=A8res et analyses spectrales) et chimie inor=
+ganique (compos=C3=A9s de coordination=2C =C3=A9quilibres de solubilit=C3=
+=A9=2C redox=2C acide-base)...
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/450/97=
+82880749279/Chimie%20avancee) http://www.ppur.org/produit/554/978294022260=
+5/Composition%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/450/9782880749279/Chimie%20avancee
+
+
+** Chimie Pr=C3=A9paration au bac et =C3=A0 la maturit=C3=A9
+------------------------------------------------------------
+
+Con=C3=A7u et r=C3=A9dig=C3=A9 par deux enseignantes de chimie=2C cet ouvr=
+age pr=C3=A9sente aux lyc=C3=A9ens et aux gymnasiens les connaissances n=
+=C3=A9cessaires =C3=A0 l=E2=80=99obtention du bac ou de la maturit=C3=A9.=
+ Tr=C3=A8s p=C3=A9dagogique=2C il s=E2=80=99appuie sur un texte clair et c=
+oncis=2C illustr=C3=A9 de nombreux sch=C3=A9mas didactiques et d=E2=80=99e=
+xercices r=C3=A9solus. Les bases th=C3=A9oriques sont pr=C3=A9sent=C3=A9es=
+ de mani=C3=A8re logique et progressive au fil des chapitres=2C avec le so=
+uci permanent de les confronter =C3=A0 l=E2=80=99exp=C3=A9rience quotidien=
+ne et permettre ainsi une meilleure assimilation des concepts expos=C3=A9s=
+=2E..
+
+=C2=BB http://www.ppur.org/produit/554/9782940222605/Composition%20Non-Com=
+position%20%28En%29Pour en savoir plus (http://www.ppur.org/produit/446/97=
+82889151332/Chimie) http://www.ppur.org/produit/554/9782940222605/Composit=
+ion%20Non-Composition%20%28En%29
+http://www.ppur.org/produit/446/9782889151332/Chimie
+Rejoignez nous sur http://www.polytechpress.com/   Notre blog (http://www.=
+polytechpress.com/) http://fr-fr.connect.facebook.com/pages/Presses-polyte=
+chniques-et-universitaires-romandes-PPUR/167010289991169   facebook (http:=
+//fr-fr.connect.facebook.com/pages/Presses-polytechniques-et-universitaire=
+s-romandes-PPUR/167010289991169) http://www.youtube.com/user/Polytechpress=
+   Youtube (http://www.youtube.com/user/Polytechpress) http://twitter.com/=
+PPUR_Tweets   Twitter (http://twitter.com/PPUR_Tweets)
+
+Presses polytechniques et universitaires romandes (PPUR)
+EPFL =C2=B7 Rolex Learning Center
+CP 119 =C2=B7 1015 Lausanne
+T. +4121 693 21 30
+Contactez-nous (mailto:gabriel.hussy@epfl.ch)
+
+
+Bas=C3=A9es sur le site de l=E2=80=99Ecole polytechnique f=C3=A9d=C3=A9ral=
+e de Lausanne (EPFL)=2C dont elles valorisent les travaux d=E2=80=99enseig=
+nement et de recherche=2C les PPUR ont pour objectif principal de publier=
+ des ouvrages scientifiques fiables et p=C3=A9dagogiques.
+
+=C2=A9 2012 PPUR - Tous droits r=C3=A9serv=C3=A9s.
+
+This email was sent to algocomp-group@listes.sc.univ-paris-diderot.fr (mailto:algocomp-group@listes.sc.univ-paris-diderot.fr)
+why did I get this? (http://ppur.us11.list-manage1.com/about?u=3Da3c231ddd=
+bfd2231c40502bf1&id=3D67fbbc008b&e=3Db2bf4ba951&c=3Dfbc3429c9a)     unsubscr=
+ibe from this list (http://ppur.us11.list-manage1.com/unsubscribe?u=3Da3c2=
+31dddbfd2231c40502bf1&id=3D67fbbc008b&e=3Db2bf4ba951&c=3Dfbc3429c9a)     upd=
+ate subscription preferences (http://ppur.us11.list-manage.com/profile?u=
+=3Da3c231dddbfd2231c40502bf1&id=3D67fbbc008b&e=3Db2bf4ba951)
+PPUR - EPFL Press . EPFL Rolex Learning Center . CP 119 . Lausanne 1015 .=
+ Switzerland
+--_----------=_MCPart_436141532
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang=3D"en">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+>
+  <title>PPUR - Nouveaut&eacute;</title>
+  <style type=3D"text/css">
+/* NOTE: CSS should be inlined to avoid having it stripped in certain emai=
+l clients like GMail.
+Use online tools like http://premailer.dialect.ca/ to inline css easily */
+/* General styling */
+body { width:100%; margin:0; padding:0; }
+body=2C table=2C p=2C td=2C ul=2C ol{ color:#666666; font-family:Arial=2C=
+ sans-serif; font-size:12px; line-height:20px; }
+h1{ font-family:Arial=2C sans-serif; color:#000000; font-size:22px; }
+h1 span{ color:#000000; } /* Hotmail header color bug fix */
+h1 a{ text-decoration:none; color:#2A5DB0; }
+h2{ font-family:Arial=2C sans-serif; color:#000000; font-size:18px; }
+h2 span{ color:#000000; } /* Hotmail header color bug fix */
+h2 a{ text-decoration:none; color:#2A5DB0; }
+h3{ font-family:Arial=2C sans-serif; color:#000000; font-size:16px; font-w=
+eight:bold; }
+h3 span{ color:#000000; } /* Hotmail header color bug fix */
+h3 a{ text-decoration:none; color:#2A5DB0; }
+h4{ font-family:Arial=2C sans-serif; color:#000000; font-size:14px; font-w=
+eight:bold; }
+h4 span{ color:#000000; } /* Hotmail header color bug fix */
+h4 a{ text-decoration:none; color:#2A5DB0; }
+a{ color:#2A5DB0; }
+b{ color:#333333; }
+i{}
+ul{ list-style-type: disc; list-style-position:inside; margin-left:0; padd=
+ing-left:6px; }
+ol{ list-style-type: decimal; list-style-position:inside; margin-left:0; p=
+adding-left:6px; }
+/* Custom Classes */
+=2Ewrapper{ table-layout:fixed; } /* Hotmail centering bug fix */
+=2Eblock{ display:block; } /* Gmail and Hotmail space under images bug fix *=
+/
+=2Eshout{ color:#FF0000; }
+=2Esilence{ color:#666666; font-weight:400; }
+=2Etext-align-center{ text-align:center; }
+=2Etext-align-right{ text-align:right; }
+=2Eimg-left-aligned{ margin-right:20px; margin-top:5px; }
+=2Eimg-right-aligned{ margin-left:20px; margin-top:5px; }
+=2Ebordered-bottom{ border-bottom:1px solid #d6d6d6; }
+=2Ebordered-bottom-left{ border-bottom:1px solid #d6d6d6; border-left:1px so=
+lid #d6d6d6; }
+/* Layout */
+=2Eview-mobile-browser{ line-height:14px; font-size:11px; }
+=2Eview-mobile-browser a{ color:#3a3a3a; }
+=2Eourwebsite{ line-height:14px; font-size:11px; }
+=2Eourwebsite a{ font-weight:bold; }
+=2Elogo{}
+=2Emenu-or-slogan{}
+=2Emenu-or-slogan a{ color:#3a3a3a; text-decoration:underline; }
+=2Emain-content-wrap{ border-width: 1px 1px 1px 1px; border-spacing: 0px; bo=
+rder-style: solid solid solid solid; border-color: #d6d6d6 #d6d6d6 #d6d6d6=
+ #d6d6d6; border-collapse: collapse; background-color: #ffffff; }
+=2Ecompanyinfo{}
+=2Ecompanyinfo a{}
+=2Esubscription{}
+=2Esubscription a{}
+=2Esocial{ border-top:1px solid #D0D0D0; border-bottom:1px solid #D0D0D0; }
+=2Esocial a{ color:#3a3a3a; text-decoration:none; }
+=2Ecopyright{}
+=2Ecopyright a{ color:#565656; text-decoration:none; }
+  </style>
+</head>
+<body leftmargin=3D"0" topmargin=3D"0" offset=3D"0" style=3D"background-co=
+lor: rgb(227=2C 227=2C 227); background-image: url(http://www.ppur.info/pp=
+ur/images/bg.png);" marginheight=3D"0" marginwidth=3D"0">
+<!-- wrapper table - needed as some readers strip the <html>=2C <head> and=
+ <body> tags -->
+<table class=3D"wrapper" background=3D"http://www.ppur.info/ppur/images/bg=
+=2Epng" bgcolor=3D"#e3e3e3" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%">
+  <tbody>
+    <tr>
+      <td><!-- ///////////////////////////////////// Newsletter Content //=
+/////////////////////////////////// -->
+      <br>
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" rules=3D"none" width=3D"600">
+        <tbody>
+          <tr>
+            <td><!-- START HEADER CONTENT -->
+            <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"560">
+              <tbody>
+                <tr>
+                  <td class=3D"view-mobile-browser" valign=3D"top" width=
+=3D"352"><big></big><big><span style=3D"color: rgb(102=2C 0=2C 0); font-we=
+ight: bold;">&raquo;
+                  </span></big><a href=3D"http://ppur.us11.list-manage.com=
+/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D314e28d238&e=3Db2bf4ba951=
+" target=3D"_blank">Lire
+dans un navigateur</a> </td>
+                  <td class=3D"ourwebsite" align=3D"right" valign=3D"middl=
+e" width=3D"206"><span style=3D"font-style: italic; color: rgb(102=2C 0=2C=
+ 0);"></span>
+                  <table style=3D"text-align: left; width: 207px; height:=
+ 44px;" border=3D"0" cellpadding=3D"2" cellspacing=3D"2">
+                    <tbody>
+                      <tr>
+                        <td><a href=3D"http://ppur.us11.list-manage.com/tr=
+ack/click?u=3Da3c231dddbfd2231c40502bf1&id=3D50fe307bc5&e=3Db2bf4ba951"><=
+img src=3D"http://www.ppur.info/ppur/images/social/facebook.jpg" alt=3D""=
+ style=3D"border: 0px solid ; width: 32px; height: 32px;"></a></td>
+                        <td><a href=3D"http://ppur.us11.list-manage.com/tr=
+ack/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dd54479333f&e=3Db2bf4ba951"><=
+img style=3D"border: 0px solid ; width: 32px; height: 32px;" alt=3D"" src=
+=3D"http://www.ppur.info/ppur/images/social/youtube.jpg"></a></td>
+                        <td><a href=3D"http://ppur.us11.list-manage.com/tr=
+ack/click?u=3Da3c231dddbfd2231c40502bf1&id=3D48e3164af0&e=3Db2bf4ba951"><=
+img style=3D"border: 0px solid ; width: 32px; height: 32px;" alt=3D"" src=
+=3D"http://www.ppur.info/ppur/images/social/dribbble.jpg"></a></td>
+                        <td><a href=3D"http://ppur.us11.list-manage.com/tr=
+ack/click?u=3Da3c231dddbfd2231c40502bf1&id=3D57dc75580a&e=3Db2bf4ba951"><=
+img style=3D"border: 0px solid ; width: 32px; height: 32px;" alt=3D"" src=
+=3D"http://www.ppur.info/ppur/images/social/linkedin.jpg"></a></td>
+                        <td><a href=3D"http://ppur.us11.list-manage.com/tr=
+ack/click?u=3Da3c231dddbfd2231c40502bf1&id=3D86c4dccc63&e=3Db2bf4ba951"><=
+img style=3D"border: 0px solid ; width: 32px; height: 32px;" alt=3D"" src=
+=3D"http://www.ppur.info/ppur/images/social/twitter.jpg"></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"560">
+              <tbody>
+                <tr>
+                  <td class=3D"logo" valign=3D"top" width=3D"160"> <a href=
+=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c4050=
+2bf1&id=3D64ecff29d8&e=3Db2bf4ba951"><img style=3D"border: 0px solid ; wi=
+dth: 280px; height: 67px;" src=3D"http://www.ppur.info/ppur/images/logo_si=
+te.png" alt=3D""></a>
+                  </td>
+                  <td class=3D"menu-or-slogan" align=3D"right" valign=3D"m=
+iddle" width=3D"400">&nbsp;<a href=3D"mailto:?Subject=3DComposition=2C%20n=
+on-composition&Body=3Dhttp://www.ppur.info/ppur/composition.html"><br>
+                  </a> </td>
+                </tr>
+              </tbody>
+            </table>
+<!-- END HEADER CONTENT --> </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class=3D"main-content-wrap" frame=3D"border" align=3D"center"=
+ bgcolor=3D"#ffffff" border=3D"1" bordercolor=3D"#d6d6d6" cellpadding=3D"0=
+" cellspacing=3D"0" rules=3D"none" width=3D"600">
+        <tbody>
+          <tr>
+            <td> <img style=3D"width: 600px; height: 30px;" src=3D"http://=
+www.ppur.info/ppur/images/module-divider-3.gif" alt=3D"" class=3D"block"><=
+!-- START MAIN CONTENT. ADD MODULES BELOW -->
+            <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"540">
+              <tbody>
+                <tr>
+                  <td valign=3D"top"> <a href=3D"http://ppur.us11.list-man=
+age.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D651658b647&e=3D=
+b2bf4ba951"><img style=3D"border: 0px solid ; width: 560px; height: 250px;" s=
+rc=3D"http://www.ppur.info/ppur/images/hydrogene.jpg" alt=3D""></a><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <img style=3D"width: 600px; height: 61px;" src=3D"http://www.p=
+pur.info/ppur/images/module-divider.gif" alt=3D"" class=3D"block"><!-- Mod=
+ule #2 | 2 columns=2C 260px =2C 20px spacer=2C 260px -->
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top" width=3D"260">
+                  <div style=3D"text-align: right;"><big></big><big><span=
+ style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><big=
+></big><big><span style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;">=
+</span></big><big></big><big><span style=3D"color: rgb(102=2C 0=2C 0); fon=
+t-weight: bold;"></span></big><a href=3D"http://ppur.us11.list-manage.com/=
+track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D82b8331fa3&e=3Db2bf4ba951"=
+><small><span style=3D"font-weight: bold; color: rgb(102=2C 0=2C 0);"><big=
+></big><big></big></span></small><small><span style=3D"color: rgb(0=2C 0=
+=2C 0);"></span></small></a><big></big><big><span style=3D"color: rgb(102=
+=2C 0=2C 0); font-weight: bold;"></span></big><a href=3D"http://ppur.us11.=
+list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Def96ae4a2e&=
+e=3Db2bf4ba951"><span style=3D"text-decoration: underline;"></span></a><s=
+pan style=3D"font-style: italic; font-weight: bold;"></span><span style=3D=
+"font-style: italic; font-weight: bold;"></span><a href=3D"http://ppur.us1=
+1.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D9c20e1224=
+4&e=3Db2bf4ba951"><span style=3D"text-decoration: underline;"></span></a>=
+<a href=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddbfd22=
+31c40502bf1&id=3D2a31f9c826&e=3Db2bf4ba951"><span style=3D"text-decoratio=
+n: underline;"><img src=3D"http://www.ppur.info/ppur/images/hydrog.jpg" al=
+t=3D"" style=3D"border: 0px solid ; width: 268px; height: 350px;"></span><=
+/a><br>
+                  <a href=3D"http://ppur.us11.list-manage.com/track/click?=
+u=3Da3c231dddbfd2231c40502bf1&id=3D03e702a33f&e=3Db2bf4ba951"><span style=
+=3D"text-decoration: underline;"></span></a></div>
+                  <div style=3D"text-align: right;"> <a href=3D"http://ppu=
+r.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Ddd3a=
+c13b5f&e=3Db2bf4ba951"><img src=3D"http://www.ppur.info/ppur/images/comma=
+nder.jpg" alt=3D"" style=3D"border: 0px solid ; width: 161px; height: 34px=
+;"></a>&nbsp;
+&nbsp; &nbsp; </div>
+                  <a href=3D"http://ppur.us11.list-manage.com/track/click?=
+u=3Da3c231dddbfd2231c40502bf1&id=3D683ee898ec&e=3Db2bf4ba951"><span style=
+=3D"text-decoration: underline;"></span></a> <span style=3D"color: rgb(255=
+=2C 255=2C 255);"></span></td>
+<!-- spacer column --> <td style=3D"width: 265px; vertical-align: top;"> <=
+small><span style=3D"font-weight: bold; color: rgb(102=2C 0=2C 0);"><big>U=
+ne
+chronique de l'hydrog&egrave;ne</big><br>
+Histoire des m&eacute;thodes de production et des applications</span></sma=
+ll><br>
+                  <small><span style=3D"color: rgb(0=2C 0=2C 0);"></span><=
+/small><br>
+                  <span style=3D"font-weight: bold;"></span>L&rsquo;hydrog=
+&egrave;ne
+n&rsquo;appara&icirc;t que tr&egrave;s rarement
+&agrave; l&rsquo;&eacute;tat libre. On le trouve
+essentiellement sous forme combin&eacute;e=2C que ce soit dans
+l&rsquo;eau=2C o&ugrave; ses atomes sont li&eacute;s
+&agrave; ceux de l&rsquo;oxyg&egrave;ne=2C ou dans les
+substances organiques comme les hydrocarbures=2C dans lesquelles ses
+atomes sont li&eacute;s &agrave; ceux du carbone. Cet ouvrage
+montre comment l&rsquo;hydrog&egrave;ne peut &ecirc;tre
+produit &agrave; partir de l&rsquo;eau=2C du gaz naturel et du
+p&eacute;trole=2C et d&eacute;crit
+l&rsquo;&eacute;volution=2C au cours des si&egrave;cles=2C de
+ces proc&eacute;d&eacute;s de production. Le choix du mode de
+production d&eacute;pendant g&eacute;n&eacute;ralement des
+applications envisag&eacute;es=2C celles-ci sont &eacute;galement
+expos&eacute;es en d&eacute;tail...<span style=3D"color: rgb(255=2C 255=2C=
+ 255);"></span><br>
+                  <ul>
+                  </ul>
+                  <p style=3D"height: 40px;"><big></big><big><span style=
+=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nb=
+sp;<span style=3D"font-style: italic; font-weight: bold;"><a href=3D"http:=
+//ppur.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=
+=3D1372a0d936&e=3Db2bf4ba951" target=3D"_blank">Pour en savoir plus</a></=
+span><br>
+                  <big></big><big><span style=3D"color: rgb(102=2C 0=2C 0)=
+; font-weight: bold;"></span></big><big></big><big><span style=3D"color: r=
+gb(102=2C 0=2C 0); font-weight: bold;"></span></big></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+<!-- Module #1 --> <img style=3D"width: 600px; height: 61px;" src=3D"http:=
+//www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=3D"block">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Exercices
+de chimie g&eacute;n&eacute;rale&nbsp;</big>&nbsp;</span></span><small><sp=
+an><span style=3D"font-style: italic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>Le
+ph&eacute;nom&egrave;ne urbain a entam&eacute; une profonde
+mutation
+sous l&rsquo;effet des potentiels de vitesse rendus possibles par
+les
+syst&egrave;mes de transport et de communication &agrave;
+distance=2C et
+dont l&rsquo;impact sur la soci&eacute;t&eacute; et ses
+territoires est
+consid&eacute;rable. Ces technologies ont &eacute;t&eacute;
+pl&eacute;biscit&eacute;es par la population=2C qui les utilise
+aujourd&rsquo;hui de fa&ccedil;on intensive. Cet ouvrage se
+propose
+d&rsquo;explorer ce qui fait la persistance de la ville
+contemporaine
+&agrave; partir de la mobilit&eacute;...<span style=3D"font-weight: bold;"=
+><big></big><big><span style=3D"color: rgb(102=2C 0=2C 0); font-weight: bo=
+ld;"></span></big></span></p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddb=
+fd2231c40502bf1&id=3Daaa4677e6b&e=3Db2bf4ba951" target=3D"_blank"><span s=
+tyle=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"fon=
+t-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manage.=
+com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dffc28eb5bd&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us11.=
+list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dacdf29b492&=
+e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><spa=
+n style=3D"font-style: italic; font-weight: bold;"> </span></span></a><spa=
+n style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span sty=
+le=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage2.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D6c1=
+cd71c17&e=3Db2bf4ba951"><img class=3D"img-right-aligned" alt=3D"" src=3D"=
+http://www.ppur.info/ppur/images/exx.jpg" style=3D"border: 0px solid ; wid=
+th: 130px; height: 195px; float: right;"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 --> <img style=3D"width: 600px; height: 61px;" src=3D"h=
+ttp://www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=3D"bloc=
+k">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Comprendre
+la RMN&nbsp;</big></span></span><small><span><span style=3D"font-style: it=
+alic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>Comprendre
+la RMN s&rsquo;est impos&eacute; comme la
+r&eacute;f&eacute;rence dans
+son domaine. Tout sp&eacute;cifi quement con&ccedil;u pour les
+&eacute;tudiants en sciences=2C en techniques de laboratoire et en
+analyses biom&eacute;dicales (Bachelor=2C HES=2C BTS=2C DUT)=2C cet ouvrag=
+e
+expose de fa&ccedil;on claire et progressive les principes
+essentiels
+de la r&eacute;sonance magn&eacute;tique nucl&eacute;aire
+(RMN)...<span style=3D"font-weight: bold;"><big></big><big><span style=3D"=
+color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big></span></p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage1.com/track/click?u=3Da3c231ddd=
+bfd2231c40502bf1&id=3D50b2518f76&e=3Db2bf4ba951" target=3D"_blank"><span=
+ style=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"f=
+ont-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manag=
+e.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D08a8897f40&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us1=
+1.list-manage1.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Deef70f7a=
+22&e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><=
+span style=3D"font-style: italic; font-weight: bold;"> </span></span></a><=
+span style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span=
+ style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage2.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D8f9=
+610ebdc&e=3Db2bf4ba951"><img class=3D"img-right-aligned" alt=3D"" src=3D"=
+http://www.ppur.info/ppur/images/rmn1.jpg" style=3D"border: 0px solid ; wi=
+dth: 130px; height: 165px; float: right;"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 -->&nbsp; <img style=3D"width: 600px; height: 61px;" sr=
+c=3D"http://www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=
+=3D"block">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Chimie
+organique </big>&nbsp;</span></span><small><span><span style=3D"font-style=
+: italic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>L'objectif
+de cet ouvrage est l'enseignement des principes fondamentaux de la
+chimie organique moderne &agrave; partir d'un ensemble
+d'observations
+coh&eacute;rentes=2C ainsi que la d&eacute;duction des
+r&egrave;gles qui
+g&egrave;rent le comportement de la mol&eacute;cule organique
+et qui
+sont responsables de son architecture.Sa principale
+originalit&eacute;
+r&eacute;side dans la pr&eacute;sentation de la chimie
+organique sur
+une base logique=2C en introduisant de mani&egrave;re
+syst&eacute;matique...<span style=3D"font-weight: bold;"><big></big><big><=
+span style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big>=
+</span></p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddb=
+fd2231c40502bf1&id=3Dbb0cdc4e6e&e=3Db2bf4ba951" target=3D"_blank"><span s=
+tyle=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"fon=
+t-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manage2=
+=2Ecom/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D628e98044b&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us11=
+=2Elist-manage1.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Ddbb3f0dc4=
+e&e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><s=
+pan style=3D"font-style: italic; font-weight: bold;"> </span></span></a><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span s=
+tyle=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D7f39=
+1f929e&e=3Db2bf4ba951"><img class=3D"img-right-aligned" alt=3D"" src=3D"h=
+ttp://www.ppur.info/ppur/images/org1.jpg" style=3D"border: 0px solid ; wid=
+th: 130px; height: 192px; float: right;"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 --> <img style=3D"width: 600px; height: 61px;" src=3D"h=
+ttp://www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=3D"bloc=
+k">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Electrochimie
+physique et analytique </big>&nbsp;</span></span><small><span><span style=
+=3D"font-style: italic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>L'&eacute;lectrochimie
+s'applique &agrave; divers domaines tels que la
+bio&eacute;nerg&eacute;tique=2C les sciences de l'environnement=2C
+les
+sciences de l'ing&eacute;nieur et joue un r&ocirc;le
+fondamental dans
+certaines applications aussi diverses que la conversion et le stockage
+de l'&eacute;nergie ou que le s&eacute;quen&ccedil;age de
+l'ADN.A la
+fois cours de base adapt&eacute; pour un enseignement de niveau
+Bachelor=2C de niveau Master&nbsp;et ouvrage de
+r&eacute;f&eacute;rence
+pour doctorants et chercheurs...<span style=3D"font-weight: bold;"><big></=
+big><big><span style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></s=
+pan></big></span></p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddb=
+fd2231c40502bf1&id=3D4e2f022149&e=3Db2bf4ba951" target=3D"_blank"><span s=
+tyle=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"fon=
+t-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manage1=
+=2Ecom/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dcf27f70ace&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us11=
+=2Elist-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D2a99c932ae=
+&e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><sp=
+an style=3D"font-style: italic; font-weight: bold;"> </span></span></a><sp=
+an style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span st=
+yle=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D6164=
+f13dc5&e=3Db2bf4ba951"><img style=3D"border: 0px solid ; width: 130px; he=
+ight: 190px; float: right;" src=3D"http://www.ppur.info/ppur/images/electr=
+och.jpg" alt=3D"" class=3D"img-right-aligned"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 -->&nbsp; <img style=3D"width: 600px; height: 61px;" sr=
+c=3D"http://www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=
+=3D"block">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Analytical
+and Physical Electrochemistry </big>&nbsp;</span></span><small><span><span=
+ style=3D"font-style: italic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>The
+study electrochemistry is pertinent to a wide variety of fields=2C
+including bioenergetics=2C environmental sciences=2C and engineering
+sciences. In addition=2C electrochemistry plays a fundamental role in
+specific applications as diverse as the conversion and storage of
+energy and the sequencing of DNA.Intended both as a basic course for
+undergraduate students and as a reference work for graduates and
+researchers...<span style=3D"font-weight: bold;"><big></big><big><span sty=
+le=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big></span><=
+/p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddb=
+fd2231c40502bf1&id=3D692e20a85b&e=3Db2bf4ba951" target=3D"_blank"><span s=
+tyle=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"fon=
+t-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manage1=
+=2Ecom/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D0be60505d0&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us11=
+=2Elist-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dcdb3221c12=
+&e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><sp=
+an style=3D"font-style: italic; font-weight: bold;"> </span></span></a><sp=
+an style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span st=
+yle=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D30db=
+32ce9b&e=3Db2bf4ba951"><img class=3D"img-right-aligned" alt=3D"" src=3D"h=
+ttp://www.ppur.info/ppur/images/analit.jpg" style=3D"border: 0px solid ; w=
+idth: 130px; height: 194px; float: right;"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 --> <img style=3D"width: 600px; height: 61px;" src=3D"h=
+ttp://www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=3D"bloc=
+k">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Chimie
+avanc&eacute;e&nbsp;</big>&nbsp;</span></span><small><span><span style=3D"=
+font-style: italic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>Tout
+en couleur et richement illustr&eacute;=2C ce manuel
+sp&eacute;cifiquement con&ccedil;u pour les lyc&eacute;ens
+et
+gymnasiens des fili&egrave;res scientifiques pr&eacute;sente
+l'ensemble
+des connaissances indispensables en chimie organique (nomenclature=2C
+structures=2C substances naturelles=2C r&eacute;actions chimiques=2C
+polym&egrave;res et analyses spectrales) et chimie inorganique
+(compos&eacute;s de coordination=2C &eacute;quilibres de
+solubilit&eacute;=2C redox=2C acide-base)...<span style=3D"font-weight: bo=
+ld;"><big></big><big><span style=3D"color: rgb(102=2C 0=2C 0); font-weight=
+: bold;"></span></big></span></p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddb=
+fd2231c40502bf1&id=3D13d4f93a6a&e=3Db2bf4ba951" target=3D"_blank"><span s=
+tyle=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"fon=
+t-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manage.=
+com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dc7ac9d07ef&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us11.=
+list-manage1.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dbd27d8540d=
+&e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><sp=
+an style=3D"font-style: italic; font-weight: bold;"> </span></span></a><sp=
+an style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span st=
+yle=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3Dac3c=
+764e4d&e=3Db2bf4ba951"><img class=3D"img-right-aligned" alt=3D"" src=3D"h=
+ttp://www.ppur.info/ppur/images/avan.jpg" style=3D"border: 0px solid ; wid=
+th: 130px; height: 196px; float: right;"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 --> <img style=3D"width: 600px; height: 61px;" src=3D"h=
+ttp://www.ppur.info/ppur/images/module-divider.gif" alt=3D"" class=3D"bloc=
+k">
+            <table style=3D"width: 540px; text-align: left; margin-left: a=
+uto; margin-right: auto;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td valign=3D"top">
+                  <h4 style=3D"color: rgb(102=2C 0=2C 0);"><span style=3D"=
+font-weight: bold; color: rgb(102=2C 0=2C 0);"><span style=3D"font-style:=
+ italic; color: rgb(102=2C 0=2C 0);"><big>Chimie
+                  <small></small><small>Pr&eacute;paration au
+bac et &agrave; la maturit&eacute; </small></big>&nbsp;</span></span><smal=
+l><span><span style=3D"font-style: italic;"></span></span></small></h4>
+                  <p><span style=3D"font-weight: bold; color: rgb(102=2C 0=
+=2C 0);"></span>Con&ccedil;u
+et r&eacute;dig&eacute; par deux enseignantes de chimie=2C cet
+ouvrage pr&eacute;sente aux lyc&eacute;ens et aux gymnasiens
+les connaissances n&eacute;cessaires &agrave;
+l&rsquo;obtention du bac ou de la maturit&eacute;.
+Tr&egrave;s p&eacute;dagogique=2C il s&rsquo;appuie sur un
+texte clair et concis=2C illustr&eacute; de nombreux
+sch&eacute;mas didactiques et d&rsquo;exercices
+r&eacute;solus. Les bases th&eacute;oriques sont
+pr&eacute;sent&eacute;es de mani&egrave;re logique et
+progressive au fil des chapitres=2C avec le souci permanent de les
+confronter &agrave; l&rsquo;exp&eacute;rience quotidienne
+et permettre ainsi une meilleure assimilation des concepts
+expos&eacute;s...<span style=3D"font-weight: bold;"><big></big><big><span=
+ style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big></sp=
+an></p>
+                  <p><span style=3D"font-weight: bold;"><big></big><big><s=
+pan style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span></big><=
+/span><span style=3D"font-weight: bold;"><big></big><big><span style=3D"co=
+lor: rgb(102=2C 0=2C 0); font-weight: bold;">&raquo;</span></big>&nbsp;</s=
+pan><a href=3D"http://ppur.us11.list-manage1.com/track/click?u=3Da3c231ddd=
+bfd2231c40502bf1&id=3D54a296a7c2&e=3Db2bf4ba951" target=3D"_blank"><span=
+ style=3D"font-style: italic; font-weight: bold;"></span></a><a style=3D"f=
+ont-weight: bold; font-style: italic;" href=3D"http://ppur.us11.list-manag=
+e.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D32d17e8be6&e=3D=
+b2bf4ba951" target=3D"_blank">Pour en savoir plus</a><a href=3D"http://ppur.us1=
+1.list-manage2.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D6d8af53a=
+96&e=3Db2bf4ba951" target=3D"_blank"><span style=3D"font-weight: bold;"><=
+span style=3D"font-style: italic; font-weight: bold;"> </span></span></a><=
+span style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"></span><span=
+ style=3D"color: rgb(102=2C 0=2C 0); font-weight: bold;"> </span></p>
+                  </td>
+                  <td style=3D"vertical-align: top;"><a href=3D"http://ppu=
+r.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c40502bf1&id=3D5434=
+497951&e=3Db2bf4ba951"><img class=3D"img-right-aligned" alt=3D"" src=3D"h=
+ttp://www.ppur.info/ppur/images/prep.jpg" style=3D"border: 0px solid ; wid=
+th: 130px; height: 196px; float: right;"></a></td>
+                </tr>
+              </tbody>
+            </table>
+<!-- End Module #1 -->
+            <img style=3D"width: 600px; height: 40px;" src=3D"http://www.p=
+pur.info/ppur/images/module-divider-3.gif" alt=3D"" class=3D"block">
+            <table class=3D"social" bgcolor=3D"#efefef" cellpadding=3D"0"=
+ cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td height=3D"45" valign=3D"middle" width=3D"30">&nbsp;<=
+/td>
+                  <td height=3D"45" valign=3D"middle" width=3D"120"><b>Rej=
+oignez nous sur</b></td>
+                  <td height=3D"45" valign=3D"middle" width=3D"25"> <a hre=
+f=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c405=
+02bf1&id=3D6adea5c09b&e=3Db2bf4ba951" title=3D""><img style=3D"border: 0p=
+x solid ; width: 24px; height: 24px;" src=3D"http://www.ppur.info/ppur/ima=
+ges/social/feed.png" alt=3D""></a>
+                  </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"88"> &nbsp;=
+&nbsp;<a target=3D"_blank" href=3D"http://ppur.us11.list-manage.com/track/=
+click?u=3Da3c231dddbfd2231c40502bf1&id=3D355f748213&e=3Db2bf4ba951" title=
+=3D"">Notre
+blog</a> </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"25"> <a hre=
+f=3D"http://ppur.us11.list-manage1.com/track/click?u=3Da3c231dddbfd2231c40=
+502bf1&id=3D18449880a0&e=3Db2bf4ba951" title=3D""><img style=3D"border: 0=
+px solid ; width: 24px; height: 24px;" src=3D"http://www.ppur.info/ppur/im=
+ages/social/facebook.png" alt=3D""></a> </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"88"> &nbsp;=
+ <a target=3D"_blank" href=3D"http://ppur.us11.list-manage.com/track/click=
+?u=3Da3c231dddbfd2231c40502bf1&id=3Dc1248a8f28&e=3Db2bf4ba951" title=3D""=
+>facebook</a> </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"25"> <a hre=
+f=3D"http://ppur.us11.list-manage1.com/track/click?u=3Da3c231dddbfd2231c40=
+502bf1&id=3D0415f5030c&e=3Db2bf4ba951" title=3D""><img style=3D"border: 0=
+px solid ; width: 24px; height: 24px;" src=3D"http://www.ppur.info/ppur/im=
+ages/social/youtube.png" alt=3D""></a>
+                  </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"88"> &nbsp;=
+&nbsp;<a title=3D"" href=3D"http://ppur.us11.list-manage1.com/track/click?=
+u=3Da3c231dddbfd2231c40502bf1&id=3Da31fac9b95&e=3Db2bf4ba951" target=3D"_=
+blank">Youtube</a>
+                  </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"25"> <a hre=
+f=3D"http://ppur.us11.list-manage.com/track/click?u=3Da3c231dddbfd2231c405=
+02bf1&id=3Da0ff801ac9&e=3Db2bf4ba951" title=3D""><img style=3D"border: 0p=
+x solid ; width: 24px; height: 24px;" src=3D"http://www.ppur.info/ppur/ima=
+ges/social/twitter.png" alt=3D""></a>
+                  </td>
+                  <td height=3D"45" valign=3D"middle" width=3D"88"> &nbsp;=
+&nbsp;<a target=3D"_blank" href=3D"http://ppur.us11.list-manage.com/track/=
+click?u=3Da3c231dddbfd2231c40502bf1&id=3D6d15c600f5&e=3Db2bf4ba951" title=
+=3D"">Twitter</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <img style=3D"width: 600px; height: 25px;" src=3D"http://www.p=
+pur.info/ppur/images/module-divider-3.gif" alt=3D"" class=3D"block">
+            <table style=3D"text-align: left; margin-left: auto; margin-ri=
+ght: auto; width: 540px;" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td class=3D"companyinfo" style=3D"width: 265px; text-al=
+ign: left; vertical-align: top;">
+                  <p> <b>Presses polytechniques et
+universitaires romandes (PPUR)</b>&nbsp;<br>
+EPFL &middot; Rolex Learning
+Center<br>
+CP 119 &middot; 1015 Lausanne<br>
+T. +4121 693 21 30 &nbsp;<br>
+                  <a href=3D"mailto:gabriel.hussy@epfl.ch">Contactez-nous<=
+/a>
+                  </p>
+                  </td>
+                  <td width=3D"20">&nbsp;</td>
+<!-- spacer column --> <td class=3D"subscription" align=3D"left" valign=3D=
+"top" width=3D"255">
+                  <p> Bas&eacute;es sur le site de
+l&rsquo;Ecole
+polytechnique f&eacute;d&eacute;rale de Lausanne (EPFL)=2C dont
+elles
+valorisent
+les travaux d&rsquo;enseignement et de recherche=2C les&nbsp;PPUR
+ont
+pour objectif principal de publier des ouvrages scientifiques fiables
+et p&eacute;dagogiques. </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <img style=3D"width: 600px; height: 30px;" src=3D"http://www.p=
+pur.info/ppur/images/module-divider-3.gif" alt=3D"" class=3D"block"><!-- E=
+ND SOCIAL + COMPANY INFO + SUBSCRIPTION -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"560">
+        <tbody>
+          <tr>
+            <td class=3D"copyright" align=3D"center" valign=3D"top"><!-- S=
+TART FOOTER CONTENT -->
+            <p>&copy; 2012 <b>PPUR</b> - Tous
+droits r&eacute;serv&eacute;s.</p>
+<!-- END FOOTER CONTENT --> </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+<!-- ///////////////////////////////////// End Newsletter Content ////////=
+///////////////////////////// --></td>
+    </tr>
+  </tbody>
+</table>
+<!-- end wrapper table-->
+            <center>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%" id=3D"canspamBarWrapper" style=3D"background-color:#FFFFFF; b=
+order-top:1px solid #E5E5E5;">
+                    <tr>
+                        <td align=3D"center" valign=3D"top" style=3D"paddi=
+ng-top:20px; padding-bottom:20px;">
+                            <table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" id=3D"canspamBar">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" st=
+yle=3D"color:#606060; font-family:Helvetica=2C Arial=2C sans-serif; font-s=
+ize:11px; line-height:150%; padding-right:20px; padding-bottom:5px; paddin=
+g-left:20px; text-align:center;">
+                                        This email was sent to <a href=3D"=
+mailto:algocomp-group@listes.sc.univ-paris-diderot.fr" target=3D"_blank" style=3D"color:#404040 !importa=
+nt;">algocomp-group@listes.sc.univ-paris-diderot.fr</a>
+                                        <br />
+                                        <a href=3D"http://ppur.us11.list-m=
+anage1.com/about?u=3Da3c231dddbfd2231c40502bf1&id=3D67fbbc008b&e=3D=
+b2bf4ba951&c=3Dfbc3429c9a" target=3D"_blank" style=3D"color:#404040 !important;"><e=
+m>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=3D"http://pp=
+ur.us11.list-manage1.com/unsubscribe?u=3Da3c231dddbfd2231c40502bf1&id=3D67=
+fbbc008b&e=3Db2bf4ba951&c=3Dfbc3429c9a" style=3D"color:#404040 !important;">=
+unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=3D"http://pp=
+ur.us11.list-manage.com/profile?u=3Da3c231dddbfd2231c40502bf1&id=3D67fbbc0=
+08b&e=3Db2bf4ba951" style=3D"color:#404040 !important;">update subscription=
+ preferences</a>
+                                        <br />
+                                        PPUR - EPFL Press &middot; EPFL Ro=
+lex Learning Center &middot; CP 119 &middot; Lausanne 1015 &middot; Switze=
+rland
+                                        <br />
+                                        <br />
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <style type=3D"text/css">
+                    @media only screen and (max-width: 480px){
+                        table[id=3D"canspamBar"] td{font-size:14px !impor=
+tant;}
+                        table[id=3D"canspamBar"] td a{display:block !impo=
+rtant; margin-top:10px !important;}
+                    }
+                </style>
+            </center><img src=3D"http://ppur.us11.list-manage.com/track/op=
+en.php?u=3Da3c231dddbfd2231c40502bf1&id=3Dfbc3429c9a&e=3Db2bf4ba951" heig=
+ht=3D"1" width=3D"1"></body>
+</html>
+--_----------=_MCPart_436141532--

@@ -1,0 +1,1703 @@
+Return-Path: <g-13155484345-2797-1300936340-1454508752412@bounce.news.promovacances.com>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id jAYnAyALsla9HQAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 03 Feb 2016 15:13:53 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id BF0FD6202E;
+	Wed,  3 Feb 2016 15:13:50 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 1.526
+X-Spam-Level: *
+X-Spam-Status: No, score=1.526 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, HTML_FONT_LOW_CONTRAST=0.001, HTML_MESSAGE=0.001,
+	LOTS_OF_MONEY=0.001, MIME_HTML_ONLY=0.723, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=news.promovacances.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id VAiraAqfTXMl; Wed,  3 Feb 2016 15:13:47 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 97FE46202A
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 15:13:46 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u13EDkZ4003898
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed, 3 Feb 2016 15:13:46 +0100
+Received: from octonovem.iota.ecm-cluster.com (octonovem.iota.ecm-cluster.com [91.192.41.89])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u13ECXvl045474
+          for <liafa@liafa.jussieu.fr>; Wed, 3 Feb 2016 15:12:52 +0100 (CET)
+X-Ids: 168
+Received: from app89.muc.ec-messenger.com (app89.muc.domeus.com [172.16.9.69])
+	by mta37.muc.domeus.com (READY) with ESMTP id 652F93001C01E
+	for <liafa@liafa.jussieu.fr>; Wed,  3 Feb 2016 15:12:32 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=news.promovacances.com; s=ecm1; t=1454508752;
+	bh=OLQKG4uc9asKVCRxlGuK5YAdOHAnhqWdrgUyO4WQhQA=;
+	h=Date:From:Reply-To:To:Subject:List-Id:List-Unsubscribe:List-Help;
+	b=oIJimjIPgPiI+62RUQEzYCovmlqjrtcPz2+ofOlU+lyH1SeVHEYiwQa15E8Hv7fgu
+	 xKKDUwTLm7RrMiutXl3bAIFdwkqdPldIQ2SG7mq8OnEtP02W70h7URQXBSTCo/ya7+
+	 qjWSbvuW12Bch8eXhNHDIJEITA6sAAz5i1JRjT5k=
+Date: Wed, 3 Feb 2016 15:12:32 +0100 (CET)
+From: Promovacances <newsletter@news.promovacances.com>
+Reply-To: "newsletter-reply@news.promovacances.com" <newsletter-reply@news.promovacances.com>
+To: liafa@liafa.jussieu.fr
+Message-ID: <xt5qtl.ik6wyg4cgvpj3rt@news.promovacances.com>
+Subject: =?ISO-8859-1?Q?_Retrouvez_votre_s=E9jour_coup_de_coeur?=
+MIME-Version: 1.0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-eC-messenger-mid: 1300936340
+List-Id: <1300567715.news.promovacances.com>
+X-eC-messenger-cid: 2797
+X-eC-messenger-token: lijkwkI61kfoop
+X-Route-Id: SIqilTuFrPu3ETmTZ7Ih
+List-Unsubscribe: <http://news.promovacances.com/public/list_unsubscribe.jsp?action=listUnsubscribe&gid=1300567715&uid=13155484345&mid=1300936340&siglistunsub=CMDBEDHIFAAOBHHI&errorPage=/public/list_unsubscribe.jsp>, <mailto:listunsubscribe-1300567715-1300936340-13155484345@news.promovacances.com>
+X-eC-messenger-sender-domain: bounce.news.promovacances.com
+X-eC-messenger-sendouttypeid: 0
+X-eC-messenger-addresseeroleid: 1
+X-eC-messenger-recipienttypeid: 2
+List-Help: <mailto:complaint@intl.teradatadmc.com>
+X-CSA-Complaints: whitelist-complaints@eco.de
+X-Mailer: eC-Messenger Build 6.90.1877.4
+X-eC-messenger-email: liafa@liafa.jussieu.fr
+X-Miltered: at potemkin with ID 56B20B1A.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56B20AD1.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56B20B1A.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<g-13155484345-2797-1300936340-1454508752412@bounce.news.promovacances.com>
+X-j-chkmail-Enveloppe: 56B20AD1.000 from octonovem.iota.ecm-cluster.com/octonovem.iota.ecm-cluster.com/91.192.41.89/octonovem.iota.ecm-cluster.com/<g-13155484345-2797-1300936340-1454508752412@bounce.news.promovacances.com>
+X-Scores-Stats: 56B20AD1.000 B=0.50000 L=0.89099 G=0.89099 Agree    
+X-j-chkmail-Score: MSGID : 56B20B1A.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56B20AD1.000 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.891 -> S=0.925
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 03 Feb 2016 15:13:46 +0100 (CET)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />
+<title>Votre projet de voyage</title>
+<style type=3D"text/css" media=3D"all">
+body,form{margin:0;padding:0;}
+body,td,select,input,span{font-family:Trebuchet MS, Arial Sans Sherif; font=
+-size:10px; color:#000000;}
+a{text-decoration:none;margin:0px;
+padding:0px;cursor:pointer;}
+a:hover{text-decoration:none;}
+img {border:0; margin:0;padding:0; display:block;}
+</style>
+</head>
+<body><img src=3D"http://news.promovacances.com/tr/p.gif?uid=3D13155484345&=
+mid=3D1300936340&msd=3D1454508641282&st=3D0" width=3D"1" height=3D"1" alt=
+=3D"" />
+
+<!--Header-->
+<table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0">
+<tr>
+<td align=3D"center" ><span style=3D"font-family:Trebuchet MS, Arial Sans S=
+herif; font-size:18px; color:#0000ee; font-weight:bold;">Vous aviez l'air i=
+nt&eacute;ress&eacute; par nos offres  !<span style=3D"font-family:Trebuche=
+t MS, Arial Sans Sherif; font-size:20px; color:#0000ee; font-weight:bold; t=
+ext-decoration:underline; ">=20
+</span></span></td>
+</tr>
+</table>=20
+<div align=3D"center">
+<font face=3D"arial" size=3D"1" color=3D"#00000">
+<br/>Si vous ne visualisez pas ce message, <a href=3D"http://news.promovaca=
+nces.com/re?l=3DBD0IlijkwkI61kfoopIik6wwcr3I0&rt=3Dikgwzbf3&u=3Dhttp%3A%2F%=
+2Fnews.promovacances.com%2Fpublic%2Fread_message.jsp%3Ftsp%3D1454508657562%=
+26custid%3D2797%26uid%3D13155484345%26sig%3DCBCNHGPHBAANNIKP%26mid%3D130093=
+6340&s=3DAIFMHBBJDOPMCCJP" target=3D"_blank">consultez-le en ligne</a>
+<br/> Pour &ecirc;tre s&ucirc;r(e) de bien recevoir notre newsletter, ajout=
+ez <u>newsletter@news.promovacances.com</u> dans vos contacts.<br/>
+Pour ne plus recevoir la newsletter Promovacances,<a href=3D"http://news.pr=
+omovacances.com/public/unsubscribe.jsp?gid=3D1300567715&uid=3D13155484345&m=
+id=3D1300936340&sig=3DADGAFEOMIKEOHIOP&l=3DD0IlijkwkI61kfoopI&slt=3D4" styl=
+e=3D"color:#0064dc; text-decoration:none;" target=3D"_blank" title=3D"vous =
+pouvez vous d=E9sinscrire ici">vous pouvez vous d&eacute;sinscrire ici</a><=
+br/>
+Vous recevez cet email car vous &ecirc;tes abonn&eacute; aux newsletters du=
+ groupe Karavel.
+</font></div>
+<br/>
+<!--fin header-->
+<!-- logo + accroche -->
+<table style=3D"font-size: 2px; line-height:2px; font-family: Trebuchet MS,=
+Arial Sans Sherif;" summary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"700" align=3D"center">
+  <tr>
+    <td width=3D"9" height=3D"81" bgcolor=3D"#006BCD"><a href=3D"http://new=
+s.promovacances.com/re?l=3DD0IlijkwkI61kfoopI0&rt=3Dikgwysra&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26uid%3D3dec99fbfb952733d5ffefaea30fa26b" target=3D"_blank"><img src=3D"htt=
+p://newsletter.service-voyages.com/promovacances/refontecrm/V2/surf/top.jpg=
+" width=3D"700" height=3D"81" /></a></td>
+  </tr>
+</table>
+<!-- fin logo + accroche -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"700" align=3D"center" style=3D" font-size:2px; line-height:2px; font-fa=
+mily:Trebuchet MS">
+<tr>
+  <td width=3D"196" valign=3D"top"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" summary=3D"" width=3D"196" style=3D"font-family:Trebuchet M=
+S">
+    <tr>
+      <!--texte-->
+      <td bgcolor=3D"#D6D6D6" background=3D"http://newsletter.service-voyag=
+es.com/promovacances/Relance_SurfV2/back.jpg" style=3D"padding:15px 10px 0 =
+10px" valign=3D"top" width=3D"176"><span style=3D" font-size:11px; line-hei=
+ght:normal; color:#010101"><b>Cher abonn=E9,</b><br />
+            <br />
+       Vous avez visit&eacute; notre site  afin de d=E9nicher le s=E9jour d=
+e vos r=EAves<br /><br />
+                        Nous vous remercions de l&acute;int&eacute;r&ecirc;=
+t que vous nous portez et pour vous aider dans vos choix, nous avons pris s=
+oin de s&eacute;lectionner pour vous des offres qui devraient vous s&eacute=
+;duire. D&eacute;couvrez-les vite et n'oubliez pas, Promovacances vous gara=
+ntit le meilleur prix !
+</span></td>
+      <!--fin texte-->
+    </tr>
+    <tr>
+      <td bgcolor=3D"#D6D6D6"><img src=3D"http://newsletter.service-voyages=
+.com/promovacances/refontecrm/V2/surf/garabtie.jpg" width=3D"196" height=3D=
+"79" /></td>
+    </tr>
+    <tr>
+      <td height=3D"5"></td>
+    <!--Destination rep dom-->
+    </tr>
+    <!-- tr>
+      <td height=3D"35" bgcolor=3D"#ff5f47" align=3D"center"><span style=3D=
+"color:#FFFFFF; font-size:10px; line-height:normal">VOTRE DESTINATION<br />
+            <b style=3D"font-size:13px"> </b></span></td>
+    </tr -->
+    <tr>
+      <td height=3D"130" bgcolor=3D"#4c82be" align=3D"center"><a href=3D"ht=
+tp://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1&rt=3Dikgwysrb&req=3D=
+cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierprod=
+uit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"><img src=3D"http://newsle=
+tter.service-voyages.com/promovacances/refontecrm/V2/surf/reassurance-01.jp=
+g" width=3D"196" height=3D"131" /></a></td>
+    </tr>
+    <!--fin destination rep dom-->
+    <!--en bref-->
+    <tr><td bgcolor=3D"#FFEFE5"><img src=3D"http://newsletter.service-voyag=
+es.com/promovacances/refontecrm/V2/surf/reassurance-02.jpg" width=3D"196" h=
+eight=3D"120" /></td></tr>
+    <!--fin en bref-->=20
+    <!--Meteo-->      =20
+    <!-- <tr><td width=3D"196" height=3D"26" bgcolor=3D"#FACDA3" align=3D"c=
+enter"><span style=3D"color:#ff5f47; line-height:normal; font-size:15px;"><=
+b>METEO </b></span></td></tr> =20
+    <tr><td bgcolor=3D"#FACDA3"><table style=3D"font-family:Trebuchet MS" s=
+ummary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"196">
+              <tr>
+               <td width=3D"74" height=3D"65"><img src=3D"http://newsletter=
+.service-voyages.com/promovacances/Relance_SurfV2/bref_r7_c1.jpg" width=3D"=
+74" height=3D"65" border=3D"0" alt=3D"" style=3D"display:block;" /></td>
+               <td><table style=3D"font-family:Trebuchet MS" summary=3D"" a=
+lign=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"45"=
+>
+                  <tr>
+                   <td width=3D"45" height=3D"18"><span style=3D"color:#010=
+101; line-height:normal; font-size:11px;">Mois</span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"45" height=3D"16"><span style=3D"color:#010=
+101; line-height:normal; font-size:11px;">Mai</span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"45" height=3D"15"><span style=3D"color:#010=
+101; line-height:normal; font-size:11px;">Juin</span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"45" height=3D"16"><span style=3D"color:#010=
+101; line-height:normal; font-size:11px;">Juillet</span></td>
+                  </tr>
+                </table></td>
+               <td><table style=3D"font-size:2px; line-height:2px; font-fam=
+ily:Trebuchet MS, Arial;" summary=3D"" align=3D"left" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"35">
+                  <tr>
+                   <td width=3D"35" height=3D"18"><span style=3D"color:#010=
+101; line-height:normal; font-size:11px;">Min</span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"35" height=3D"16"><span style=3D"color:#000=
+0ff; line-height:normal; font-size:11px;">&deg;</span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"35" height=3D"15"><span style=3D"color:#000=
+0ff; line-height:normal; font-size:11px;">&deg; </span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"35" height=3D"16"><span style=3D"color:#000=
+0ff; line-height:normal; font-size:11px;">&deg; </span></td>
+                  </tr>
+                </table></td>
+               <td><table style=3D"font-size:2px; line-height:2px; font-fam=
+ily:Trebuchet MS, Arial;" summary=3D"" align=3D"left" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"42">
+                  <tr>
+                   <td width=3D"42" height=3D"18"><span style=3D"color:#010=
+101; line-height:normal; font-size:11px;">Max</span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"42" height=3D"16"><span style=3D"color:#ff5=
+f47; line-height:normal; font-size:11px;">&deg; </span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"42" height=3D"15"><span style=3D"color:#ff5=
+f47; line-height:normal; font-size:11px;">&deg; </span></td>
+                  </tr>
+                  <tr>
+                   <td width=3D"42" height=3D"16"><span style=3D"color:#ff5=
+f47; line-height:normal; font-size:11px;">&deg; </span></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td></tr> -->
+    <tr><td width=3D"200" height=3D"9"></td></tr>
+    <!--fin meteo--> =20
+    <!--on aime-->
+    <tr><td><img src=3D"http://newsletter.service-voyages.com/promovacances=
+/refontecrm/V2/surf/photo-plage.gif" width=3D"196" height=3D"315" /></td></=
+tr>
+    <!--fin on aime-->   =20
+  </table></td>
+  <td width=3D"1"></td>
+<td width=3D"5" bgcolor=3D"#EFEFF1"></td>
+<td width=3D"494" valign=3D"top">
+<!--encart produit-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"494">
+<tr>
+<td height=3D"30" bgcolor=3D"#ff5f47" align=3D"center"><img src=3D"http://n=
+ewsletter.service-voyages.com/promovacances/refontecrm/V2/surf/coup-de-coeu=
+r.jpg" width=3D"494" height=3D"30" /></td>
+</tr>
+<tr><td height=3D"5" bgcolor=3D"#ff5f47"><img src=3D"http://newsletter.serv=
+ice-voyages.com/promovacances/refontecrm/V2/surf/blanc.gif" width=3D"494" h=
+eight=3D"5" /></td>
+</tr>
+<tr>
+<td width=3D"492" bgcolor=3D"#FFEFE2" style=3D"border:1px solid #FF6702; bo=
+rder-top:none"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summ=
+ary=3D"" width=3D"492">
+<tr>
+<td width=3D"3"></td>
+<td width=3D"246"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+ummary=3D"" width=3D"246" style=3D"font-family:Trebuchet MS">
+<tr>
+<td align=3D"center" width=3D"246" height=3D"166" bgcolor=3D"#FFFFFF"><a hr=
+ef=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2&rt=3Dikgwysr=
+b&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualifiee=
+AVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" tit=
+le=3D"Votre dernier produit vu" target=3D"_blank" style=3D"text-decoration:=
+none"><img src=3D"http://static.promovacances.com/photos/vacances/voyage/se=
+jour_109644_pghd.jpg" width=3D"240" height=3D"160" style=3D"display:block; =
+line-height:normal; font-size:14px; font-weight:bold; color:#010101" border=
+=3D"0" /></a></td>
+</tr>
+<tr><td><img src=3D"http://newsletter.service-voyages.com/promovacances/Rel=
+ance_SurfV2/shadow.jpg" width=3D"246" height=3D"11" alt=3D"" border=3D"0" /=
+></td></tr>
+</table></td>
+<td width=3D"8"></td>
+<td width=3D"224" valign=3D"top"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" summary=3D"" width=3D"224" style=3D"font-family:Trebuchet MS"=
+>
+<tr><td><img src=3D"http://newsletter.service-voyages.com/promovacances/ref=
+ontecrm/V2/surf/blanc.gif" width=3D"224" height=3D"5" style=3D"display:bloc=
+k" /></td></tr>
+<tr><td height=3D"92" valign=3D"top"><a href=3D"http://news.promovacances.c=
+om/re?l=3DD0IlijkwkI61kfoopI3&rt=3Dikgwysrc&req=3Did%3D191409%26cid%3DEMAUT=
+O-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26u=
+id%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Votre dernier produit vu" t=
+arget=3D"_blank" style=3D"text-decoration:none"><b style=3D"line-height:nor=
+mal;font-size:13px; color:#ff5f47">Majorque (palma) en Demi Pension<br /><s=
+pan style=3D"font-size:12px; color:#010101">HOTEL ROC LINDA 3*<br /><span s=
+tyle=3D"font-size:11px; color:#010101">+ Situ=E9 dans la station anim=E9e d=
+e Can Pastilla <br />+ Proximit=E9 de la plage <br />+ Id=E9al pour partir =
+=E0 la d=E9couverte de l'=EEle  </span></span></b></a></td></tr>
+<tr><td height=3D"14"><a href=3D"http://news.promovacances.com/re?l=3DD0Ili=
+jkwkI61kfoopI4&rt=3Dikgwysrd&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentio=
+nniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb=
+952733d5ffefaea30fa26b" title=3D"Votre dernier produit vu" target=3D"_blank=
+" style=3D"text-decoration:none"><b style=3D"line-height:normal; color:#ff5=
+f47; font-size:12px">Avis client
+
+</b></a></td></tr>
+<tr>
+<td height=3D"23"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+ummary=3D"" width=3D"224" style=3D"font-family:Trebuchet MS">
+<tr>
+<!--5 soleils-->
+<td width=3D"18"><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI=
+61kfoopI5&rt=3Dikgwysrd&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionnist=
+e-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb95273=
+3d5ffefaea30fa26b" title=3D"Votre dernier produit vu" target=3D"_blank" sty=
+le=3D"text-decoration:none"><img src=3D"http://newsletter.service-voyages.c=
+om/promovacances/soleil/1.gif" width=3D"18" height=3D"23" alt=3D"" border=
+=3D"0" /></a></td>
+<td width=3D"18"><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI=
+61kfoopI6&rt=3Dikgwysre&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionnist=
+e-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb95273=
+3d5ffefaea30fa26b" title=3D"Votre dernier produit vu" target=3D"_blank" sty=
+le=3D"text-decoration:none"><img src=3D"http://newsletter.service-voyages.c=
+om/promovacances/soleil/1.gif" width=3D"18" height=3D"23" alt=3D"" border=
+=3D"0" /></a></td>
+<td width=3D"18"><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI=
+61kfoopI7&rt=3Dikgwysre&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionnist=
+e-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb95273=
+3d5ffefaea30fa26b" title=3D"Votre dernier produit vu" target=3D"_blank" sty=
+le=3D"text-decoration:none"><img src=3D"http://newsletter.service-voyages.c=
+om/promovacances/soleil/1.gif" width=3D"18" height=3D"23" alt=3D"" border=
+=3D"0" /></a></td>
+<td width=3D"18"><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI=
+61kfoopI8&rt=3Dikgwysrf&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionnist=
+e-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb95273=
+3d5ffefaea30fa26b" title=3D"Votre dernier produit vu" target=3D"_blank" sty=
+le=3D"text-decoration:none"><img src=3D"http://newsletter.service-voyages.c=
+om/promovacances/soleil/8.gif" width=3D"18" height=3D"23" alt=3D"" border=
+=3D"0" /></a></td>
+<td width=3D"18"><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI=
+61kfoopI9&rt=3Dikgwysrf&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionnist=
+e-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb95273=
+3d5ffefaea30fa26b" title=3D"Votre dernier produit vu" target=3D"_blank" sty=
+le=3D"text-decoration:none"><img src=3D"http://newsletter.service-voyages.c=
+om/promovacances/soleil/2.gif" width=3D"18" height=3D"23" alt=3D"" border=
+=3D"0" /></a></td>
+<td width=3D"134" valign=3D"top"><a href=3D"http://news.promovacances.com/r=
+e?l=3DD0IlijkwkI61kfoopIa&rt=3Dikgwysrf&req=3Did%3D191409%26cid%3DEMAUTO-PM=
+VC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3=
+D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Votre dernier produit vu" targe=
+t=3D"_blank" style=3D"text-decoration:none"><b style=3D"font-size:13px; fon=
+t-family:Trebuchet MS; line-height:normal; color:#ff5f47">&nbsp; BON</b></a=
+></td>
+<!--fin 5 soliel-->
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" wi=
+dth=3D"224" style=3D"font-family:Trebuchet MS">
+<tr>
+<td width=3D"154" height=3D"24" bgcolor=3D"#ff5f47" align=3D"center"><a hre=
+f=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIb&rt=3Dikgwysrg=
+&req=3Did%3D191409%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeA=
+VT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" titl=
+e=3D"Votre dernier produit vu" target=3D"_blank" style=3D"text-decoration:n=
+one"><span style=3D"line-height:normal; font-size:12px; color:#FFFFFF">D&eg=
+rave;s <b style=3D"font-size:16px">399 &euro;</b><b style=3D"font-size:12px=
+"></b></span></a></td>
+<td width=3D"16"></td>
+<td width=3D"54" align=3D"center" valign=3D"bottom"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopIc&rt=3Dikgwysrg&req=3Did%3D19140=
+9%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernier=
+produit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Votre dernie=
+r produit vu" target=3D"_blank" style=3D"text-decoration:none"><img src=3D"=
+http://newsletter.service-voyages.com/promovacances/Relance_SurfV2/button.j=
+pg" width=3D"54" height=3D"19" alt=3D"Voir" border=3D"0" style=3D"display:b=
+lock; line-height:normal; font-size:12px; color:#FFFFFF; background-color:#=
+ff5f47" /></a></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+<td width=3D"11"></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"494">
+<tr><td height=3D"13" bgcolor=3D"#EFEFF1"></td></tr>
+</table>
+<!--fin encart produit-->
+<!--Bloc produit-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"494" style=3D"font-family:Trebuchet MS">
+<tr><td bgcolor=3D"#EFEFF1"><b style=3D"line-height:normal; font-size:15px;=
+ color:#0055c2">Nos recommandations personnalis=E9e</b></td></tr>
+<!--produit2-->
+<tr>
+<td height=3D"147" bgcolor=3D"#FFFFFF"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" summary=3D"" width=3D"494">
+<tr>
+<td width=3D"174" style=3D"padding:4px 0 0 4px"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" summary=3D"" width=3D"174" style=3D"font-famil=
+y:Trebuchet MS">
+<tr><td height=3D"116" bgcolor=3D"#4c82be" align=3D"center"><a href=3D"http=
+://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopId&rt=3Dikgwysrh&req=3Did=
+%3D308045%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_l=
+edernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Hera=
+klion" style=3D"text-decoration:none" target=3D"_blank"><img src=3D"http://=
+static.promovacances.com/photos/vacances/voyage/sejour_171377_pghd.jpg" alt=
+=3D"Heraklion" width=3D"174" height=3D"116" border=3D"0" style=3D"display:b=
+lock; color:#FFFFFF; font-size:12px; line-height:normal" /></a></td></tr>
+<tr><td height=3D"18" bgcolor=3D"#d5efff"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" summary=3D"" width=3D"160" align=3D"center">
+<tr><td align=3D"left"><a href=3D"http://news.promovacances.com/re?l=3DD0Il=
+ijkwkI61kfoopIe&rt=3Dikgwysrh&req=3Did%3D308045%26cid%3DEMAUTO-PMVC-intenti=
+onniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbf=
+b952733d5ffefaea30fa26b" title=3D"Heraklion" style=3D"text-decoration:none"=
+ target=3D"_blank"><b style=3D"font-size:11px; line-height:normal; color:#0=
+049c2; text-align:left">Avis client</b></a></td><td align=3D"right"><a href=
+=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIf&rt=3Dikgwysri&=
+req=3Did%3D308045%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAV=
+T82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=
+=3D"Heraklion" style=3D"text-decoration:none" target=3D"_blank"><b style=3D=
+"font-size:11px; line-height:normal; color:#0049c2; text-align:left">EXCELL=
+ENT=20
+(4/5)
+</b></a></td></tr>
+</table></td></tr>
+<tr><td height=3D"18" valign=3D"top"><img src=3D"http://newsletter.service-=
+voyages.com/promovacances/Relance_SurfV2/shadow2.jpg" alt=3D"" border=3D"0"=
+ width=3D"174" height=3D"9" /></td></tr>
+</table></td>
+<td width=3D"229" style=3D"padding-left:10px;"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" summary=3D"" width=3D"229" style=3D"font-family=
+:Trebuchet MS">
+<tr><td height=3D"83"><a href=3D"http://news.promovacances.com/re?l=3DD0Ili=
+jkwkI61kfoopIg&rt=3Dikgwysrj&req=3Did%3D308045%26cid%3DEMAUTO-PMVC-intentio=
+nniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb=
+952733d5ffefaea30fa26b" title=3D"Heraklion" style=3D"text-decoration:none" =
+target=3D"_blank"><span style=3D"line-height:normal; font-size:12px; color:=
+#010101"><b style=3D"color:#ff5f47">Cr=E8te en All Inclusive</b><br /><stro=
+ng>HOTEL DIMITRIOS 3*<br /><span style=3D"font-size:10px">+ H=F4tel =E0 80 =
+m de la plage<br />
++ Id=E9al pour les couples et amis<br />
++ A 2 km de Rethymnon </strong></span></span></a></td></tr>
+<tr><td><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIh=
+&rt=3Dikgwysrj&req=3Did%3D308045%26cid%3DEMAUTO-PMVC-intentionniste-AventMe=
+dia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefae=
+a30fa26b" title=3D"Heraklion" style=3D"text-decoration:none" target=3D"_bla=
+nk"><span style=3D"font-size:11px; color:#0055c2; line-height:normal"><b>On=
+ y va pour</b></span><span style=3D"font-size:10px; color:#0055c2; line-hei=
+ght:normal"> <br /><img src=3D"http://newsletter.service-voyages.com/promov=
+acances/Relance_SurfV2/gui.jpg" alt=3D"" style=3D"display:inline" border=3D=
+"0" width=3D"17" height=3D"10" />
+Proche de la plage <img src=3D"http://newsletter.service-voyages.com/promov=
+acances/Relance_SurfV2/gui2.jpg" alt=3D"" style=3D"display:inline" border=
+=3D"0" width=3D"20" height=3D"9" /></span></a></td></tr>
+</table></td>
+<td width=3D"1"><img src=3D"http://newsletter.service-voyages.com/promovaca=
+nces/Relance_SurfV2/separ.jpg" width=3D"1" height=3D"147" alt=3D"" border=
+=3D"0" /></td>
+<td width=3D"76"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" su=
+mmary=3D"" width=3D"64" align=3D"center" style=3D"font-family:Trebuchet MS"=
+>
+<tr><td height=3D"120" align=3D"center" valign=3D"top"><a href=3D"http://ne=
+ws.promovacances.com/re?l=3DD0IlijkwkI61kfoopIi&rt=3Dikgwysrk&req=3Did%3D30=
+8045%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledern=
+ierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Heraklion=
+" style=3D"text-decoration:none" target=3D"_blank"><span style=3D"font-size=
+:22px; color:#ff5f47; line-height:normal"><b>439&euro;</b><br /><b style=3D=
+"font-size:10px">Prix TTC <br />&agrave; partir de<br />Au d&eacute;part de=
+ Paris</b></span></a></td></tr>
+<tr><td height=3D"19" align=3D"center"><a href=3D"http://news.promovacances=
+.com/re?l=3DD0IlijkwkI61kfoopIj&rt=3Dikgwysrk&req=3Did%3D308045%26cid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Heraklion" style=3D"text-=
+decoration:none" target=3D"_blank"><img src=3D"http://newsletter.service-vo=
+yages.com/promovacances/Relance_SurfV2/button.jpg" width=3D"54" height=3D"1=
+9" align=3D"middle" alt=3D"Voir" style=3D"display:block; line-height:normal=
+; font-size:12px; color:#FFFFFF; background-color:#ff5f47" border=3D"0" /><=
+/a></td></tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr><td bgcolor=3D"#EFEFF1" height=3D"5"></td></tr>
+<!--fin produit2-->
+<!--produit3-->
+<tr>
+<td height=3D"147" bgcolor=3D"#FFFFFF"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" summary=3D"" width=3D"494">
+<tr>
+<td width=3D"174" style=3D"padding:4px 0 0 4px"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" summary=3D"" width=3D"174" style=3D"font-famil=
+y:Trebuchet MS">
+<tr><td height=3D"116" bgcolor=3D"#4c82be" align=3D"center"><a href=3D"http=
+://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIk&rt=3Dikgwysrl&req=3Did=
+%3D168228%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_l=
+edernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Func=
+hal" style=3D"text-decoration:none" target=3D"_blank"><img src=3D"http://st=
+atic.promovacances.com/photos/vacances/voyage/sejour_81070_pghd.jpg" alt=3D=
+"Funchal" width=3D"174" height=3D"116" border=3D"0" style=3D"display:block;=
+ color:#FFFFFF; font-size:12px; line-height:normal" /></a></td></tr>
+<tr><td height=3D"18" bgcolor=3D"#d5efff"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" summary=3D"" width=3D"160" align=3D"center">
+<tr><td align=3D"left"><a href=3D"http://news.promovacances.com/re?l=3DD0Il=
+ijkwkI61kfoopIl&rt=3Dikgwysrl&req=3Did%3D168228%26cid%3DEMAUTO-PMVC-intenti=
+onniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbf=
+b952733d5ffefaea30fa26b" title=3D"Funchal" style=3D"text-decoration:none" t=
+arget=3D"_blank"><b style=3D"font-size:11px; line-height:normal; color:#004=
+9c2; text-align:left">Avis client</b></a></td><td align=3D"right"><a href=
+=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIm&rt=3Dikgwysrm&=
+req=3Did%3D168228%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAV=
+T82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=
+=3D"Funchal" style=3D"text-decoration:none" target=3D"_blank"><b style=3D"f=
+ont-size:11px; line-height:normal; color:#0049c2; text-align:left">TRES BON=
+=20
+(4/5)
+</b></a></td></tr>
+</table></td></tr>
+<tr><td height=3D"18" valign=3D"top"><img src=3D"http://newsletter.service-=
+voyages.com/promovacances/Relance_SurfV2/shadow2.jpg" alt=3D"" border=3D"0"=
+ width=3D"174" height=3D"9" /></td></tr>
+</table></td>
+<td width=3D"229" style=3D"padding-left:10px;"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" summary=3D"" width=3D"229" style=3D"font-family=
+:Trebuchet MS">
+<tr><td height=3D"83"><a href=3D"http://news.promovacances.com/re?l=3DD0Ili=
+jkwkI61kfoopIn&rt=3Dikgwysrm&req=3Did%3D168228%26cid%3DEMAUTO-PMVC-intentio=
+nniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb=
+952733d5ffefaea30fa26b" title=3D"Funchal" style=3D"text-decoration:none" ta=
+rget=3D"_blank"><span style=3D"line-height:normal; font-size:12px; color:#0=
+10101"><b style=3D"color:#ff5f47">Madere en All Inclusive </b><br /><strong=
+>HOTEL MONTE MAR 4*<br /><span style=3D"font-size:10px">+ Situation privil=
+=E9gi=E9e dominant une falaise<br />
++ Piscine d'eau douce avec bassin enfant <br />
++ Id=E9al pour les amoureux de la Nature </strong></span></span></a></td></=
+tr>
+<tr><td><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIo=
+&rt=3Dikgwysrn&req=3Did%3D168228%26cid%3DEMAUTO-PMVC-intentionniste-AventMe=
+dia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefae=
+a30fa26b" title=3D"Funchal" style=3D"text-decoration:none" target=3D"_blank=
+"><span style=3D"font-size:11px; color:#0055c2; line-height:normal"><b>On y=
+ va pour</b></span><span style=3D"font-size:10px; color:#0055c2; line-heigh=
+t:normal"> <br /><img src=3D"http://newsletter.service-voyages.com/promovac=
+ances/Relance_SurfV2/gui.jpg" alt=3D"" style=3D"display:inline" border=3D"0=
+" width=3D"17" height=3D"10" />
+Dominant la mer<img src=3D"http://newsletter.service-voyages.com/promovacan=
+ces/Relance_SurfV2/gui2.jpg" alt=3D"" style=3D"display:inline" border=3D"0"=
+ width=3D"20" height=3D"9" /></span></a></td></tr>
+</table></td>
+<td width=3D"1"><img src=3D"http://newsletter.service-voyages.com/promovaca=
+nces/Relance_SurfV2/separ.jpg" width=3D"1" height=3D"147" alt=3D"" border=
+=3D"0" /></td>
+<td width=3D"76"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" su=
+mmary=3D"" width=3D"64" align=3D"center" style=3D"font-family:Trebuchet MS"=
+>
+<tr><td height=3D"120" align=3D"center" valign=3D"top"><a href=3D"http://ne=
+ws.promovacances.com/re?l=3DD0IlijkwkI61kfoopIp&rt=3Dikgwysrn&req=3Did%3D16=
+8228%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledern=
+ierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Funchal" =
+style=3D"text-decoration:none" target=3D"_blank"><span style=3D"font-size:2=
+2px; color:#ff5f47; line-height:normal"><b>469&euro;</b><br /><b style=3D"f=
+ont-size:10px">Prix TTC <br />&agrave; partir de<br />Au d&eacute;part de P=
+aris</b></span></a></td></tr>
+<tr><td height=3D"19" align=3D"center"><a href=3D"http://news.promovacances=
+.com/re?l=3DD0IlijkwkI61kfoopIq&rt=3Dikgwysro&req=3Did%3D168228%26cid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Funchal" style=3D"text-de=
+coration:none" target=3D"_blank"><img src=3D"http://newsletter.service-voya=
+ges.com/promovacances/Relance_SurfV2/button.jpg" align=3D"middle" alt=3D"Vo=
+ir" width=3D"54" height=3D"19" style=3D"display:block; line-height:normal; =
+font-size:12px; color:#FFFFFF; background-color:#ff5f47" border=3D"0" /></a=
+></td></tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr><td bgcolor=3D"#EFEFF1" height=3D"5"></td></tr>
+<!--fin produit3-->
+<!--produit4-->
+<tr>
+<td height=3D"147" bgcolor=3D"#FFFFFF"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" summary=3D"" width=3D"494">
+<tr>
+<td width=3D"174" style=3D"padding:4px 0 0 4px"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" summary=3D"" width=3D"174" style=3D"font-famil=
+y:Trebuchet MS">
+<tr><td height=3D"116" bgcolor=3D"#4c82be" align=3D"center"><a href=3D"http=
+://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIr&rt=3Dikgwysrp&req=3Did=
+%3D162433%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_l=
+edernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Fuer=
+teventura" style=3D"text-decoration:none" target=3D"_blank"><img src=3D"htt=
+p://static.promovacances.com/photos/vacances/voyage/sejour_291131_pghd.jpg"=
+ alt=3D"Fuerteventura" width=3D"174" height=3D"116" border=3D"0" style=3D"d=
+isplay:block; color:#FFFFFF; font-size:12px; line-height:normal" /></a></td=
+></tr>
+<tr><td height=3D"18" bgcolor=3D"#d5efff"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" summary=3D"" width=3D"160" align=3D"center">
+<tr><td align=3D"left"><a href=3D"http://news.promovacances.com/re?l=3DD0Il=
+ijkwkI61kfoopIs&rt=3Dikgwysrp&req=3Did%3D162433%26cid%3DEMAUTO-PMVC-intenti=
+onniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbf=
+b952733d5ffefaea30fa26b" title=3D"Fuerteventura" style=3D"text-decoration:n=
+one" target=3D"_blank"><b style=3D"font-size:11px; line-height:normal; colo=
+r:#0049c2; text-align:left">Avis client</b></a></td><td align=3D"right"><a =
+href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIt&rt=3Dikgwy=
+srq&req=3Did%3D162433%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualifi=
+eeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" t=
+itle=3D"Fuerteventura" style=3D"text-decoration:none" target=3D"_blank"><b =
+style=3D"font-size:11px; line-height:normal; color:#0049c2; text-align:left=
+">TRES BON=20
+(4/5)
+</b></a></td></tr>
+</table></td></tr>
+<tr><td height=3D"18" valign=3D"top"><img src=3D"http://newsletter.service-=
+voyages.com/promovacances/Relance_SurfV2/shadow2.jpg" alt=3D"" border=3D"0"=
+ width=3D"174" height=3D"9" /></td></tr>
+</table></td>
+<td width=3D"229" style=3D"padding-left:10px;"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" summary=3D"" width=3D"229" style=3D"font-family=
+:Trebuchet MS">
+<tr><td height=3D"83"><a href=3D"http://news.promovacances.com/re?l=3DD0Ili=
+jkwkI61kfoopIu&rt=3Dikgwysrr&req=3Did%3D162433%26cid%3DEMAUTO-PMVC-intentio=
+nniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb=
+952733d5ffefaea30fa26b" title=3D"Fuerteventura" style=3D"text-decoration:no=
+ne" target=3D"_blank"><span style=3D"line-height:normal; font-size:12px; co=
+lor:#010101"><b style=3D"color:#ff5f47">Fuerteventura en All Inclusive </b>=
+<br /><strong>HOTEL ROYAL SUITE 3*<br /><span style=3D"font-size:10px">+ H=
+=F4tel agr=E9able et calme <br />
++ Chambres familiales possibles<br />
+
++ Piscine couverte </strong></span></span></a></td></tr>
+<tr><td><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIv=
+&rt=3Dikgwysrr&req=3Did%3D162433%26cid%3DEMAUTO-PMVC-intentionniste-AventMe=
+dia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefae=
+a30fa26b" title=3D"Fuerteventura" style=3D"text-decoration:none" target=3D"=
+_blank"><span style=3D"font-size:11px; color:#0055c2; line-height:normal"><=
+b>On y va pour</b></span><span style=3D"font-size:10px; color:#0055c2; line=
+-height:normal"><br /><img src=3D"http://newsletter.service-voyages.com/pro=
+movacances/Relance_SurfV2/gui.jpg" alt=3D"" style=3D"display:inline" border=
+=3D"0" width=3D"17" height=3D"10" />
+Calme & d=E9tente<img src=3D"http://newsletter.service-voyages.com/promovac=
+ances/Relance_SurfV2/gui2.jpg" alt=3D"" style=3D"display:inline" border=3D"=
+0" width=3D"20" height=3D"9" /></span></a></td></tr>
+</table></td>
+<td width=3D"1"><img src=3D"http://newsletter.service-voyages.com/promovaca=
+nces/Relance_SurfV2/separ.jpg" width=3D"1" height=3D"147" alt=3D"" border=
+=3D"0" /></td>
+<td width=3D"76"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" su=
+mmary=3D"" width=3D"64" align=3D"center" style=3D"font-family:Trebuchet MS"=
+>
+<tr><td height=3D"120" align=3D"center" valign=3D"top"><a href=3D"http://ne=
+ws.promovacances.com/re?l=3DD0IlijkwkI61kfoopIw&rt=3Dikgwysrs&req=3Did%3D16=
+2433%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledern=
+ierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Fuerteven=
+tura" style=3D"text-decoration:none" target=3D"_blank"><span style=3D"font-=
+size:22px; color:#ff5f47; line-height:normal"><b>519&euro;</b><br /><b styl=
+e=3D"font-size:10px">Prix TTC <br />&agrave; partir de<br />Au d&eacute;par=
+t de Paris</b></span></a></td></tr>
+<tr><td height=3D"19" align=3D"center"><a href=3D"http://news.promovacances=
+.com/re?l=3DD0IlijkwkI61kfoopIx&rt=3Dikgwysrs&req=3Did%3D162433%26cid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Fuerteventura" style=3D"t=
+ext-decoration:none" target=3D"_blank"><img src=3D"http://newsletter.servic=
+e-voyages.com/promovacances/Relance_SurfV2/button.jpg" width=3D"54" height=
+=3D"19" align=3D"middle" alt=3D"Voir" style=3D"display:block; line-height:n=
+ormal; font-size:12px; color:#FFFFFF; background-color:#ff5f47" border=3D"0=
+" /></a></td></tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr><td bgcolor=3D"#EFEFF1" height=3D"5"></td></tr>
+<!--fin produit4-->
+<!--produit5-->
+<tr>
+<td height=3D"147" bgcolor=3D"#FFFFFF"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" summary=3D"" width=3D"494">
+<tr>
+<td width=3D"174" style=3D"padding:4px 0 0 4px"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" summary=3D"" width=3D"174" style=3D"font-famil=
+y:Trebuchet MS">
+<tr><td height=3D"116" bgcolor=3D"#4c82be" align=3D"center"><a href=3D"http=
+://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopIy&rt=3Dikgwysrt&req=3Did=
+%3D96649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_le=
+dernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Punta=
+ Cana" style=3D"text-decoration:none" target=3D"_blank"><img src=3D"http://=
+static.promovacances.com/photos/vacances/voyage/sejour_280417_pghd.jpg" alt=
+=3D"Punta Cana" width=3D"174" height=3D"116" border=3D"0" style=3D"display:=
+block; color:#FFFFFF; font-size:12px; line-height:normal" /></a></td></tr>
+<tr><td height=3D"18" bgcolor=3D"#d5efff"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" summary=3D"" width=3D"160" align=3D"center">
+<tr><td align=3D"left"><a href=3D"http://news.promovacances.com/re?l=3DD0Il=
+ijkwkI61kfoopIz&rt=3Dikgwyssn&req=3Did%3D96649%26cid%3DEMAUTO-PMVC-intentio=
+nniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb=
+952733d5ffefaea30fa26b" title=3D"Punta Cana" style=3D"text-decoration:none"=
+ target=3D"_blank"><b style=3D"font-size:11px; line-height:normal; color:#0=
+049c2; text-align:left">Avis client</b></a></td><td align=3D"right"><a href=
+=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI10&rt=3Dikgwysso=
+&req=3Did%3D96649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAV=
+T82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=
+=3D"Punta Cana" style=3D"text-decoration:none" target=3D"_blank"><b style=
+=3D"font-size:11px; line-height:normal; color:#0049c2; text-align:left">BON=
+=20
+(3/5)
+</b></a></td></tr>
+</table></td></tr>
+<tr><td height=3D"18" valign=3D"top"><img src=3D"http://newsletter.service-=
+voyages.com/promovacances/Relance_SurfV2/shadow2.jpg" alt=3D"" border=3D"0"=
+ width=3D"174" height=3D"9" /></td></tr>
+</table></td>
+<td width=3D"229" style=3D"padding-left:10px;"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" summary=3D"" width=3D"229" style=3D"font-family=
+:Trebuchet MS">
+<tr><td height=3D"83"><a href=3D"http://news.promovacances.com/re?l=3DD0Ili=
+jkwkI61kfoopI11&rt=3Dikgwyssp&req=3Did%3D96649%26cid%3DEMAUTO-PMVC-intentio=
+nniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb=
+952733d5ffefaea30fa26b" title=3D"Punta Cana" style=3D"text-decoration:none"=
+ target=3D"_blank"><span style=3D"line-height:normal; font-size:12px; color=
+:#010101"><b style=3D"color:#ff5f47">Rep Dominicaine en All Inclusive </b><=
+br /><strong>HOTEL SIRENIS COCOTAL BEACH & AQUAGAMES 5*<br /><span style=3D=
+"font-size:10px">+ Une grande plage de 400 m=E8tres de long<br />
++ Nombreuses activit=E9s de loisirs et sportives<br />
++ Parc aquatique accessible gratuitement </strong></span></span></a></td></=
+tr>
+<tr><td><a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1=
+2&rt=3Dikgwyssq&req=3Did%3D96649%26cid%3DEMAUTO-PMVC-intentionniste-AventMe=
+dia_QualifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefae=
+a30fa26b" title=3D"Punta Cana" style=3D"text-decoration:none" target=3D"_bl=
+ank"><span style=3D"font-size:11px; color:#0055c2; line-height:normal"><b>O=
+n y va pour</b></span><span style=3D"font-size:10px; color:#0055c2; line-he=
+ight:normal"> <br /><img src=3D"http://newsletter.service-voyages.com/promo=
+vacances/Relance_SurfV2/gui.jpg" alt=3D"" style=3D"display:inline" border=
+=3D"0" width=3D"17" height=3D"10" /> Vacances en famille<img src=3D"http://=
+newsletter.service-voyages.com/promovacances/Relance_SurfV2/gui2.jpg" alt=
+=3D"" style=3D"display:inline" border=3D"0" width=3D"20" height=3D"9" /></s=
+pan></a></td></tr>
+</table></td>
+<td width=3D"1"><img src=3D"http://newsletter.service-voyages.com/promovaca=
+nces/Relance_SurfV2/separ.jpg" width=3D"1" height=3D"147" alt=3D"" border=
+=3D"0" /></td>
+<td width=3D"76"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" su=
+mmary=3D"" width=3D"64" align=3D"center" style=3D"font-family:Trebuchet MS"=
+>
+<tr><td align=3D"center" valign=3D"top" height=3D"120"><a href=3D"http://ne=
+ws.promovacances.com/re?l=3DD0IlijkwkI61kfoopI13&rt=3Dikgwyssq&req=3Did%3D9=
+6649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledern=
+ierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Punta Can=
+a" style=3D"text-decoration:none" target=3D"_blank"><span style=3D"font-siz=
+e:22px; color:#ff5f47; line-height:normal"><b>879&euro;</b><br /><b style=
+=3D"font-size:10px;line-height:normal">Prix TTC <br />&agrave; partir de<br=
+ />Au d&eacute;part de Paris</b></span></a></td></tr>
+<tr><td height=3D"19" align=3D"center"><a href=3D"http://news.promovacances=
+.com/re?l=3DD0IlijkwkI61kfoopI14&rt=3Dikgwyssr&req=3Did%3D96649%26cid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Punta Cana" style=3D"text=
+-decoration:none" target=3D"_blank"><img src=3D"http://newsletter.service-v=
+oyages.com/promovacances/Relance_SurfV2/button.jpg" width=3D"54" height=3D"=
+19" align=3D"middle" alt=3D"Voir" style=3D"display:block; line-height:norma=
+l; font-size:12px; color:#FFFFFF; background-color:#ff5f47" border=3D"0" />=
+</a></td></tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr><td bgcolor=3D"#EFEFF1" height=3D"5"></td></tr>
+<!--fin produit5-->
+<tr>
+  <td bgcolor=3D"#EFEFF1" height=3D"27" valign=3D"top"><a href=3D"http://ne=
+ws.promovacances.com/re?l=3DD0IlijkwkI61kfoopI15&rt=3Dikgwysss&req=3Dcid%3D=
+EMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%2=
+0%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" target=3D"_blank" style=3D"text=
+-decoration:none"><img src=3D"http://newsletter.service-voyages.com/promova=
+cances/Relance_SurfV2/puces2.jpg" width=3D"13" height=3D"8" border=3D"0" st=
+yle=3D"display:inline" alt=3D"" /><span style=3D"line-height:normal; font-s=
+ize:12px; color:#0055c2">Voir plus d&acute;offres </span></a></td>
+</tr>
+</table>
+<!--Fin bloc produit--></td>
+<td width=3D"4" bgcolor=3D"#EFEFF1"></td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"700" align=3D"center" style=3D"line-height:2px; font-size:2px">
+<tr><td height=3D"10"></td></tr>
+</table>
+<!--client ayant voyage-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"700" align=3D"center" style=3D"line-height:2px; font-size:2px; font-fam=
+ily:Trebuchet MS">
+<tr><td height=3D"39" bgcolor=3D"#EFEFEF" style=3D"padding-left:12px; borde=
+r:1px solid #CACACA; border-bottom:none" width=3D"686"><b style=3D"font-siz=
+e:16px; line-height:normal; color:#0055c2;">D=E9couvrez le top de nos vente=
+s du moment</b></td></tr>
+<tr><td bgcolor=3D"#EFEFEF" style=3D"border:1px solid #CACACA; border-top:n=
+one; border-bottom:none"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" summary=3D"" width=3D"700" style=3D"font-family:Trebuchet MS">
+<tr>
+<td width=3D"12"></td>
+<td width=3D"162">
+<!--produit 6-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"162" style=3D"font-family:Trebuchet MS">
+<tr><td width=3D"162" height=3D"108"  bgcolor=3D"#4c82be" align=3D"center">=
+<a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI16&rt=3Di=
+kgwysst&req=3Did%3D220021%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qua=
+lifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26=
+b" title=3D"Funchal" target=3D"_blank" style=3D"text-decoration:none"><img =
+src=3D"http://static.promovacances.com/photos/vacances/voyage/sejour_81070_=
+pghd.jpg" width=3D"162" height=3D"108" alt=3D"Funchal" border=3D"0" style=
+=3D"line-height:normal; font-size:12px; color:#FFFFFF" /></a></td>
+</tr>
+<tr><td width=3D"162" height=3D"20" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI17&rt=3Dikg=
+wysst&req=3Did%3D220021%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Quali=
+fieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"=
+ title=3D"Funchal" target=3D"_blank" style=3D"text-decoration:none"><span s=
+tyle=3D"line-height:normal; font-size:13px; color:#FFFFFF"><b>Madere</b></s=
+pan></a></td></tr>
+<tr><td width=3D"162" height=3D"9" bgcolor=3D"#FFFFFF"><img src=3D"http://n=
+ewsletter.service-voyages.com/promovacances/Relance_SurfV2/shadow3.jpg" wid=
+th=3D"162" height=3D"9" alt=3D"" border=3D"0" /></td>
+</tr>
+<tr><td width=3D"162" height=3D"94" bgcolor=3D"#FFFFFF" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI18&rt=3Dikg=
+wyssu&req=3Did%3D220021%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Quali=
+fieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"=
+ title=3D"Funchal" target=3D"_blank" style=3D"text-decoration:none"><span s=
+tyle=3D"line-height:normal; font-size:12px; color:#010101"><b style=3D"colo=
+r:#ff5f47">Funchal&nbsp;4*<br />en Petit D=E9jeuner</b><br /><span style=3D=
+"color:#003AB5 ;font-size:12px">A saisir d'urgence !</span><br /><span styl=
+e=3D"font-size:10px;"><strong>+ Situation privil=E9gi=E9e domin...<br />+ P=
+iscine d'eau douce avec ba...<br /> </strong></span></a><br /><a href=3D"?c=
+id=3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierprodu=
+it- &uid=3D3dec99fbfb952733d5ffefaea30fa26b&eid=3DProductPack_BP_6" title=
+=3D"Voir le guide" target=3D"_blank" style=3D"text-decoration:none"></span>=
+</a></td></tr>
+<tr><td width=3D"162" height=3D"29" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI19&rt=3Dikg=
+wyssv&req=3Did%3D220021%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Quali=
+fieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"=
+ title=3D"Funchal" target=3D"_blank" style=3D"text-decoration:none"><span s=
+tyle=3D"font-size:10px; line-height:normal; color:#FFFFFF">D&egrave;s <b st=
+yle=3D"font-size:21px">349&euro;</b>TTC</span></a></td></tr>
+</table><!--Fin produit 6--></td>
+<td width=3D"10"></td>
+<td width=3D"162"><!--produit 7--><table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" summary=3D"" width=3D"162" style=3D"font-family:Trebuchet MS=
+">
+<tr><td width=3D"162" height=3D"108"  bgcolor=3D"#4c82be" align=3D"center">=
+<a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1a&rt=3Di=
+kgwyssw&req=3Did%3D191429%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qua=
+lifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26=
+b" title=3D"Majorque" target=3D"_blank" style=3D"text-decoration:none"><img=
+ src=3D"http://static.promovacances.com/photos/vacances/voyage/sejour_10964=
+4_pghd.jpg" width=3D"162" height=3D"108" alt=3D"Majorque" border=3D"0" styl=
+e=3D"line-height:normal; font-size:12px; color:#FFFFFF" /></a></td>
+</tr>
+<tr><td width=3D"162" height=3D"20" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1b&rt=3Dikg=
+wyssw&req=3Did%3D191429%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Quali=
+fieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"=
+ title=3D"Majorque" target=3D"_blank" style=3D"text-decoration:none"><span =
+style=3D"line-height:normal; font-size:13px; color:#FFFFFF"><b>Baleares</b>=
+</span></a></td></tr>
+<tr><td width=3D"162" height=3D"9" bgcolor=3D"#FFFFFF"><img src=3D"http://n=
+ewsletter.service-voyages.com/promovacances/Relance_SurfV2/shadow3.jpg" wid=
+th=3D"162" height=3D"9" alt=3D"" border=3D"0" /></td>
+</tr>
+<tr><td width=3D"162" height=3D"94" bgcolor=3D"#FFFFFF" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1c&rt=3Dikg=
+wyssx&req=3Did%3D191429%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Quali=
+fieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"=
+ title=3D"Majorque" target=3D"_blank" style=3D"text-decoration:none"><span =
+style=3D"line-height:normal; font-size:12px; color:#010101"><b style=3D"col=
+or:#ff5f47">Majorque&nbsp;3*<br />en Demi Pension</b><br /><span style=3D"c=
+olor:#003AB5 ;font-size:12px">A ne pas manquer</span><br /><span style=3D"f=
+ont-size:10px;"><strong> + Situ=E9 dans la station anim=E9...<br />+ Proxim=
+it=E9 de la plage<br />+ Id=E9al pour partir =E0 la d=E9co...</strong></spa=
+n></a><br /><a href=3D"?cid=3DEMAUTO-PMVC-intentionniste-AventMedia_Qualifi=
+eeAVT82-J1_ledernierproduit- &uid=3D3dec99fbfb952733d5ffefaea30fa26b&eid=3D=
+ProductPack_BP_7" title=3D"Voir le guide" target=3D"_blank" style=3D"text-d=
+ecoration:none"></span></a></td></tr>
+<tr><td width=3D"162" height=3D"29" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1d&rt=3Dikg=
+wyssy&req=3Did%3D191429%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Quali=
+fieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b"=
+ title=3D"Majorque" target=3D"_blank" style=3D"text-decoration:none"><span =
+style=3D"font-size:10px; line-height:normal; color:#FFFFFF">D&egrave;s <b s=
+tyle=3D"font-size:21px">539&euro;</b>TTC</span></a></td></tr>
+</table><!--Fin produit 7--></td>
+<td width=3D"10"></td>
+<td width=3D"162"><!--produit 8--><table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" summary=3D"" width=3D"162" style=3D"font-family:Trebuchet MS=
+">
+<tr><td width=3D"162" height=3D"108"  bgcolor=3D"#4c82be" align=3D"center">=
+<a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1e&rt=3Di=
+kgwyssy&req=3Did%3D75649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qual=
+ifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b=
+" title=3D"Heraklion" target=3D"_blank" style=3D"text-decoration:none"><img=
+ src=3D"http://static.promovacances.com/photos/vacances/voyage/sejour_26712=
+9_pghd.jpg" width=3D"162" height=3D"108" alt=3D"Heraklion" border=3D"0" sty=
+le=3D"line-height:normal; font-size:12px; color:#FFFFFF" /></a></td>
+</tr>
+<tr><td width=3D"162" height=3D"20" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1f&rt=3Dikg=
+wyssz&req=3Did%3D75649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualif=
+ieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" =
+title=3D"Heraklion" target=3D"_blank" style=3D"text-decoration:none"><span =
+style=3D"line-height:normal; font-size:13px; color:#FFFFFF"><b>Cr=E8te</b><=
+/span></a></td></tr>
+<tr><td width=3D"162" height=3D"9" bgcolor=3D"#FFFFFF"><img src=3D"http://n=
+ewsletter.service-voyages.com/promovacances/Relance_SurfV2/shadow3.jpg" wid=
+th=3D"162" height=3D"9" alt=3D"" border=3D"0" /></td>
+</tr>
+<tr><td width=3D"162" height=3D"94" bgcolor=3D"#FFFFFF" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1g&rt=3Dikg=
+wyssz&req=3Did%3D75649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualif=
+ieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" =
+title=3D"Heraklion" target=3D"_blank" style=3D"text-decoration:none"><span =
+style=3D"line-height:normal; font-size:12px; color:#010101"><b style=3D"col=
+or:#ff5f47">Heraklion&nbsp;4*<br />en All Inclusive</b><br /><span style=3D=
+"color:#003AB5 ;font-size:12px">Il n'y en aura pas pour tout le monde</span=
+><br /><span style=3D"font-size:10px;"><strong>+ Chambres spacieuses et jol=
+i...<br />+ Accueil francophone chaleureux<br />+ Chambres familiales sur d=
+em...</strong></span></a><br /><a href=3D"?cid=3DEMAUTO-PMVC-intentionniste=
+-AventMedia_QualifieeAVT82-J1_ledernierproduit- &uid=3D3dec99fbfb952733d5ff=
+efaea30fa26b&eid=3DProductPack_BP_8" title=3D"Voir le guide" target=3D"_bla=
+nk" style=3D"text-decoration:none"></span></a></td></tr>
+<tr><td width=3D"162" height=3D"29" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1h&rt=3Dikg=
+wyst0&req=3Did%3D75649%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualif=
+ieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" =
+title=3D"Heraklion" target=3D"_blank" style=3D"text-decoration:none"><span =
+style=3D"font-size:10px; line-height:normal; color:#FFFFFF">D&egrave;s <b s=
+tyle=3D"font-size:21px">539&euro;</b>TTC</span></a></td></tr>
+</table><!--Fin produit 8--></td>
+<td width=3D"10"></td>
+<td width=3D"162"><!--produit 9--><table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" summary=3D"" width=3D"162" style=3D"font-family:Trebuchet MS=
+">
+<tr><td width=3D"162" height=3D"108"  bgcolor=3D"#4c82be" align=3D"center">=
+<a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1i&rt=3Di=
+kgwyst1&req=3Did%3D47480%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qual=
+ifieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b=
+" title=3D"Fuerteventura" target=3D"_blank" style=3D"text-decoration:none">=
+<img src=3D"http://static.promovacances.com/photos/vacances/voyage/sejour_3=
+07603_pghd.jpg" width=3D"162" height=3D"108" alt=3D"Fuerteventura" border=
+=3D"0" style=3D"line-height:normal; font-size:12px; color:#FFFFFF" /></a></=
+td>
+</tr>
+<tr><td width=3D"162" height=3D"20" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1j&rt=3Dikg=
+wyst1&req=3Did%3D47480%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualif=
+ieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" =
+title=3D"Fuerteventura" target=3D"_blank" style=3D"text-decoration:none"><s=
+pan style=3D"line-height:normal; font-size:13px; color:#FFFFFF"><b>Fuerteve=
+ntura</b></span></a></td></tr>
+<tr><td width=3D"162" height=3D"9" bgcolor=3D"#FFFFFF"><img src=3D"http://n=
+ewsletter.service-voyages.com/promovacances/Relance_SurfV2/shadow3.jpg" wid=
+th=3D"162" height=3D"9" alt=3D"" border=3D"0" /></td>
+</tr>
+<tr><td width=3D"162" height=3D"94" bgcolor=3D"#FFFFFF" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1k&rt=3Dikg=
+wyst2&req=3Did%3D47480%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualif=
+ieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" =
+title=3D"Fuerteventura" target=3D"_blank" style=3D"text-decoration:none"><s=
+pan style=3D"line-height:normal; font-size:12px; color:#010101"><b style=3D=
+"color:#ff5f47">Fuerteventura&nbsp;4*<br />en All Inclusive</b><br /><span =
+style=3D"color:#003AB5 ;font-size:12px">Vacances de r=EAve</span><br /><spa=
+n style=3D"font-size:10px;"><strong>+ Un h=F4tel en front de mer<br /> <br =
+/> </strong></span></a><br /><a href=3D"?cid=3DEMAUTO-PMVC-intentionniste-A=
+ventMedia_QualifieeAVT82-J1_ledernierproduit- &uid=3D3dec99fbfb952733d5ffef=
+aea30fa26b&eid=3DProductPack_BP_9" title=3D"Voir le guide" target=3D"_blank=
+" style=3D"text-decoration:none"></span></a></td></tr>
+<tr><td width=3D"162" height=3D"29" bgcolor=3D"#003AB5" align=3D"center"><a=
+ href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1l&rt=3Dikg=
+wyst3&req=3Did%3D47480%26cid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qualif=
+ieeAVT82-J1_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" =
+title=3D"Fuerteventura" target=3D"_blank" style=3D"text-decoration:none"><s=
+pan style=3D"font-size:10px; line-height:normal; color:#FFFFFF">D&egrave;s =
+<b style=3D"font-size:21px">829&euro;</b>TTC</span></a></td></tr>
+</table>
+<!--Fin produit 9-->
+</td>
+<td width=3D"10"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td bgcolor=3D"#EFEFEF" height=3D"35" style=3D"padding-left:12px; borde=
+r:1px solid #CACACA; border-top:none" width=3D"688"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1m&rt=3Dikgwyst3&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Voir plus d&acute;offres =
+de voyages" target=3D"_blank" style=3D"text-decoration:none"><img src=3D"ht=
+tp://newsletter.service-voyages.com/promovacances/Relance_SurfV2/puces2.jpg=
+" width=3D"13" height=3D"8" border=3D"0" style=3D"display:inline" alt=3D"" =
+/><span style=3D"line-height:normal; font-size:12px; color:#0055c2">Voir pl=
+us d&acute;offres de voyages</span></a></td></tr>
+</table>
+<!--fin client ayant voyage-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"" width=
+=3D"700" align=3D"center" style=3D"line-height:2px; font-size:2px">
+<tr><td height=3D"9"></td></tr>
+<tr><td height=3D"1" bgcolor=3D"#ff5f47" style=3D"display:block"></td></tr>
+</table>
+<!--destinations-->
+<table summary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"700" align=3D"center" style=3D"line-height:2px; font-size:2px">
+<tr>
+<td bgcolor=3D"#fcebe3"><table summary=3D"" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"700" style=3D"font-family:Trebuchet MS">
+<tr>
+<td bgcolor=3D"#ff5f47" height=3D"36" width=3D"1"></td>
+<td style=3D"text-align: center;" bgcolor=3D"#fcebe3" height=3D"36" width=
+=3D"240"><span style=3D"font-size: 20px; line-height: normal; color: rgb(25=
+5, 102, 0);"><b>Nos TOPS destinations</b></span></td>
+<td bgcolor=3D"#fcebe3" height=3D"36" width=3D"458"></td>
+<td bgcolor=3D"#ff5f47" height=3D"36" width=3D"1"></td>
+</tr>
+ </table></td>
+ </tr>
+<tr><td bgcolor=3D"#fcebe3"><table summary=3D"" align=3D"left" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"700">
+<tr>
+<td bgcolor=3D"#ff5f47" height=3D"132" width=3D"1"></td>
+<td bgcolor=3D"#fcebe3" height=3D"132" width=3D"5"></td>
+<!--Top desti ligne1-->
+<td><table summary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"225">
+<tr>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"29"><img src=3D"http://newsl=
+etter.service-voyages.com/promovacances/Thematique/desti_r1_c1.jpg" width=
+=3D"29" height=3D"20" style=3D"display: block; font-size: 2px; line-height:=
+ normal;" alt=3D"" /></td>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1n&rt=3Dikgwyst4&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Tunisie" title=3D"=
+TUNISIE" target=3D"_blank" style=3D"border: medium none ; text-decoration: =
+none;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1, 1=
+, 1);"><b> TUNISIE </b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI1o&rt=3Dikgwyst4&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Tunisie" title=3D"T=
+UNISIE" target=3D"_blank" style=3D"border: medium none ; text-decoration: n=
+one;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, 1,=
+ 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height: n=
+ormal; color: rgb(255, 0, 0);"> 239 &euro;</span><span style=3D"font-size: =
+10px;line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a></td>
+</tr>
+<tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1p&rt=3Dikgwyst5&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Maroc" title=3D"Ma=
+roc" target=3D"_blank" style=3D"border: medium none ; text-decoration: none=
+;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1, 1, 1)=
+;"><b>Maroc</b></span></a></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI1q&rt=3Dikgwyst5&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Maroc" title=3D"Mar=
+oc" target=3D"_blank" style=3D"border: medium none ; text-decoration: none;=
+"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, 1, 1);=
+">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height: norma=
+l; color: rgb(255, 0, 0);">299 &euro;</span><span style=3D"font-size: 10px;=
+ line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a></td></tr=
+>
+<tr>
+<td bgcolor=3D"#ffefe5" height=3D"24" width=3D"29"></td>
+<td bgcolor=3D"#ffefe5" height=3D"24" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1r&rt=3Dikgwyst5&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Egypte" title=3D"E=
+gypte" target=3D"_blank" style=3D"border: medium none ; text-decoration: no=
+ne;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1, 1, =
+1);"><b>Egypte</b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"24" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI1s&rt=3Dikgwyst6&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Egypte" title=3D"Eg=
+ypte" target=3D"_blank" style=3D"border: medium none ; text-decoration: non=
+e;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, 1, 1=
+);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height: nor=
+mal; color: rgb(255, 0, 0);">459 &euro;</span><span style=3D"font-size: 10p=
+x; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a></td>
+</tr>
+ <tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110">
+<a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI1t&rt=3Di=
+kgwyst6&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1=
+_ledernierproduit-%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopD=
+esti_Sicile%20et%20Italie%20du%20Sud" title=3D"Sicile" target=3D"_blank" st=
+yle=3D"border: medium none ; text-decoration: none;"><span style=3D"font-si=
+ze: 12px; line-height: normal; color: rgb(1, 1, 1);"><b>Sicile</b></span></=
+a>
+                   </td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI1u&rt=3Dikgwyst7&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Sicile%20et%20Itali=
+e%20du%20Sud" title=3D"Sicile" target=3D"_blank" style=3D"border: medium no=
+ne ; text-decoration: none;"><span style=3D"font-size: 11px; line-height: n=
+ormal; color: rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-siz=
+e: 14px; line-height: normal; color: rgb(255, 0, 0);"> 399 &euro;</span><sp=
+an style=3D"font-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&=
+nbsp;TTC</span></a></td>
+</tr>
+<tr>
+<td bgcolor=3D"#ffefe5" height=3D"25" width=3D"29"></td>
+<td bgcolor=3D"#ffefe5" height=3D"25" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1v&rt=3Dikgwyst7&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Chypre" title=3D"C=
+hypre" target=3D"_blank" style=3D"border: medium none ; text-decoration: no=
+ne;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1, 1, =
+1);"><b>Chypre</b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"25" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI1w&rt=3Dikgwyst8&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Chypre" title=3D"Ch=
+ypre" target=3D"_blank" style=3D"border: medium none ; text-decoration: non=
+e;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, 1, 1=
+);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height: nor=
+mal; color: rgb(255, 0, 0);"> 539 &euro;</span><span style=3D"font-size: 10=
+px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a></td>
+</tr>
+<tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1x&rt=3Dikgwyst8&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Fuerteventura" tit=
+le=3D"Fuerteventura" target=3D"_blank" style=3D"border: medium none ; text-=
+decoration: none;"><span style=3D"font-size: 12px; line-height: normal; col=
+or: rgb(1, 1, 1);"><b>Fuerteventura</b></span></a></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI1y&rt=3Dikgwyst9&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Fuerteventura" titl=
+e=3D"Fuerteventura" target=3D"_blank" style=3D"border: medium none ; text-d=
+ecoration: none;"><span style=3D"font-size: 11px; line-height: normal; colo=
+r: rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; li=
+ne-height: normal; color: rgb(255, 0, 0);">269 &euro;</span><span style=3D"=
+font-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</sp=
+an></a></td>
+</tr>
+</table></td>
+<td bgcolor=3D"#fcebe3" height=3D"132" width=3D"7"></td>
+<!--Top desti ligne2-->
+<td><table summary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"225">
+                      <tr>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"29"><img src=3D"http://newsl=
+etter.service-voyages.com/promovacances/Thematique/desti_r1_c1.jpg" alt=3D"=
+" width=3D"29" height=3D"20" /></td>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI1z&rt=3Dikgwysta&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Cr%C3%A8te" title=
+=3D"CR&Egrave;TE" target=3D"_blank" style=3D"border: medium none ; text-dec=
+oration: none;"><span style=3D"font-size: 12px; line-height: normal; color:=
+ rgb(1, 1, 1);"><b>CR&Egrave;TE</b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI20&rt=3Dikgwystb&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Cr%C3%A8te" title=
+=3D"CR&Egrave;TE" target=3D"_blank" style=3D"border: medium none ; text-dec=
+oration: none;"><span style=3D"font-size: 11px; line-height: normal; color:=
+ rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line=
+-height: normal; color: rgb(255, 0, 0);">349 &euro;</span><span style=3D"fo=
+nt-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span=
+></a></td>
+</tr>
+<tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"><img src=3D"http://newsl=
+etter.service-voyages.com/promovacances/Thematique/desti_r1_c.jpg" alt=3D""=
+ width=3D"29" height=3D"20" /></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI21&rt=3Dikgwystb&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Baleares" title=3D=
+"BAL&Eacute;ARES" target=3D"_blank" style=3D"border: medium none ; text-dec=
+oration: none;"><span style=3D"font-size: 12px; line-height: normal; color:=
+ rgb(1, 1, 1);"><b>BAL&Eacute;ARES</b></span></a></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI22&rt=3Dikgwystc&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Baleares" title=3D"=
+BAL&Eacute;ARES" target=3D"_blank" style=3D"border: medium none ; text-deco=
+ration: none;"><span style=3D"font-size: 11px; line-height: normal; color: =
+rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-=
+height: normal; color: rgb(255, 0, 0);">399 &euro;</span><span style=3D"fon=
+t-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span>=
+</a>                   </td>
+</tr>
+<tr>
+<td bgcolor=3D"#ffefe5" height=3D"24" width=3D"29"><img src=3D"http://newsl=
+etter.service-voyages.com/promovacances/Thematique/desti_r1_c1.jpg" alt=3D"=
+" width=3D"29" height=3D"20" /></td>
+<td bgcolor=3D"#ffefe5" height=3D"24" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI23&rt=3Dikgwystd&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Canaries" title=3D=
+"CANARIES" target=3D"_blank" style=3D"border: medium none ; text-decoration=
+: none;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1,=
+ 1, 1);"><b>CANARIES</b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"24" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI24&rt=3Dikgwyste&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Canaries" title=3D"=
+CANARIES" target=3D"_blank" style=3D"border: medium none ; text-decoration:=
+ none;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, =
+1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height:=
+ normal; color: rgb(255, 0, 0);">299 &euro;</span><span style=3D"font-size:=
+ 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a>   =
+                </td>
+</tr>
+<tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI25&rt=3Dikgwyste&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Turquie" title=3D"=
+Turquie" target=3D"_blank" style=3D"border: medium none ; text-decoration: =
+none;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1, 1=
+, 1);"><b>Turquie</b></span></a></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI26&rt=3Dikgwystf&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Turquie" title=3D"T=
+urquie" target=3D"_blank" style=3D"border: medium none ; text-decoration: n=
+one;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, 1,=
+ 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height: n=
+ormal; color: rgb(255, 0, 0);">407 &euro;</span><span style=3D"font-size: 1=
+0px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a></td>
+</tr>
+<tr>
+<td bgcolor=3D"#ffefe5" height=3D"25" width=3D"29"></td>
+<td bgcolor=3D"#ffefe5" height=3D"25" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI27&rt=3Dikgwystg&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Croatie" title=3D"=
+Croatie" target=3D"_blank" style=3D"border: medium none ; text-decoration: =
+none;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1, 1=
+, 1);"><b>Croatie</b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"25" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI28&rt=3Dikgwysth&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Croatie" title=3D"C=
+roatie" target=3D"_blank" style=3D"border: medium none ; text-decoration: n=
+one;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1, 1,=
+ 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height: n=
+ormal; color: rgb(255, 0, 0);">509 &euro;</span><span style=3D"font-size: 1=
+0px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a>  </t=
+d>
+</tr>
+<tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI29&rt=3Dikgwysth&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Grece" title=3D"Gr=
+&egrave;ce" target=3D"_blank" style=3D"border: medium none ; text-decoratio=
+n: none;"><span style=3D"font-size: 12px; line-height: normal; color: rgb(1=
+, 1, 1);"><b>Gr&egrave;ce</b></span></a></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI2a&rt=3Dikgwysti&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Grece" title=3D"Gr&=
+egrave;ce" target=3D"_blank" style=3D"border: medium none ; text-decoration=
+: none;"><span style=3D"font-size: 11px; line-height: normal; color: rgb(1,=
+ 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-height=
+: normal; color: rgb(255, 0, 0);">407 &euro;</span><span style=3D"font-size=
+: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span></a> <=
+/td>
+</tr></table>
+
+       </td>
+<td bgcolor=3D"#fcebe3" height=3D"132" width=3D"6"></td>
+
+       <!--Top desti ligne3-->
+=09   <td><table summary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"225">
+<tr>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"29"><img src=3D"http://newsl=
+etter.service-voyages.com/promovacances/Thematique/desti_r1_c1.jpg" alt=3D"=
+" width=3D"29" height=3D"23" /></td>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI2b&rt=3Dikgwysti&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Republique%20Domin=
+icaine" title=3D"Rep Dominicaine" target=3D"_blank" style=3D"border: medium=
+ none ; text-decoration: none;"><span style=3D"font-size: 12px; line-height=
+: normal; color: rgb(1, 1, 1);"><b>REP DOM</b></span></a></td>
+<td bgcolor=3D"#ffefe5" height=3D"23" width=3D"86"><a href=3D"http://news.p=
+romovacances.com/re?l=3DD0IlijkwkI61kfoopI2c&rt=3Dikgwystj&req=3Dcid%3DEMAU=
+TO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26=
+uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Republique%20Domini=
+caine" title=3D"Rep Dominicaine" target=3D"_blank" style=3D"border: medium =
+none ; text-decoration: none;"><span style=3D"font-size: 11px; line-height:=
+ normal; color: rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-s=
+ize: 14px; line-height: normal; color: rgb(255, 0, 0);">589 &euro;</span><s=
+pan style=3D"font-size: 10px; line-height: normal; color: rgb(255, 0, 0);">=
+&nbsp;TTC</span></a>                   </td>
+</tr>
+<tr>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+<td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"><a href=3D"http://news.=
+promovacances.com/re?l=3DD0IlijkwkI61kfoopI2d&rt=3Dikgwystk&req=3Dcid%3DEMA=
+UTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%2=
+6uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Mexique" title=3D"=
+M&eacute;xique" target=3D"_blank" style=3D"border: medium none ; text-decor=
+ation: none;"><span style=3D"font-size: 12px; line-height: normal; color: r=
+gb(1, 1, 1);"><b>M&eacute;xique</b></span></a></td>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2e&rt=3Dikgwystk&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Mexique" title=3D=
+"M&eacute;xique" target=3D"_blank" style=3D"border: medium none ; text-deco=
+ration: none;"> <span style=3D"font-size: 11px; line-height: normal; color:=
+ rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line=
+-height: normal; color: rgb(255, 0, 0);">699 &euro;</span><span style=3D"fo=
+nt-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span=
+></a>                   </td>
+</tr>
+<tr>
+ <td bgcolor=3D"#ffefe5" height=3D"24" width=3D"29"> </td>
+ <td bgcolor=3D"#ffefe5" height=3D"24" width=3D"110"> <a href=3D"http://new=
+s.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2f&rt=3Dikgwystl&req=3Dcid%3DE=
+MAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20=
+%26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Martinique" titl=
+e=3D"Martinique" target=3D"_blank" style=3D"border: medium none ; text-deco=
+ration: none;"><span style=3D"font-size: 12px; line-height: normal; color: =
+rgb(1, 1, 1);"><b>Martinique</b></span></a> </td>
+ <td bgcolor=3D"#ffefe5" height=3D"24" width=3D"86"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2g&rt=3Dikgwystl&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Martinique" title=
+=3D"Martinique" target=3D"_blank" style=3D"border: medium none ; text-decor=
+ation: none;"> <span style=3D"font-size: 11px; line-height: normal; color: =
+rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-=
+height: normal; color: rgb(255, 0, 0);">589 &euro;</span><span style=3D"fon=
+t-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span>=
+</a>                   </td>
+</tr>
+<tr>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"> <a href=3D"http://new=
+s.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2h&rt=3Dikgwystm&req=3Dcid%3DE=
+MAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20=
+%26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Cap%20Vert" titl=
+e=3D"Iles Grenadines" target=3D"_blank" style=3D"border: medium none ; text=
+-decoration: none;"><span style=3D"font-size: 12px; line-height: normal; co=
+lor: rgb(1, 1, 1);"><b>Iles Grenadines</b></span></a> </td>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2i&rt=3Dikgwystm&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Cap%20Vert" title=
+=3D"Iles Grenadines" target=3D"_blank" style=3D"border: medium none ; text-=
+decoration: none;"> <span style=3D"font-size: 11px; line-height: normal; co=
+lor: rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; =
+line-height: normal; color: rgb(255, 0, 0);">789 &euro;</span><span style=
+=3D"font-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC=
+</span></a> </td>
+</tr>
+<tr>
+ <td bgcolor=3D"#ffefe5" height=3D"25" width=3D"29"></td>
+ <td bgcolor=3D"#ffefe5" height=3D"25" width=3D"110"> <a href=3D"http://new=
+s.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2j&rt=3Dikgwystm&req=3Dcid%3DE=
+MAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20=
+%26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Guadeloupe" titl=
+e=3D"Guadeloupe" target=3D"_blank" style=3D"border: medium none ; text-deco=
+ration: none;"><span style=3D"font-size: 12px; line-height: normal; color: =
+rgb(1, 1, 1);"><b>Guadeloupe</b></span></a> </td>
+ <td bgcolor=3D"#ffefe5" height=3D"25" width=3D"86"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2k&rt=3Dikgwystn&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Guadeloupe" title=
+=3D"Guadeloupe" target=3D"_blank" style=3D"border: medium none ; text-decor=
+ation: none;"> <span style=3D"font-size: 11px; line-height: normal; color: =
+rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; line-=
+height: normal; color: rgb(255, 0, 0);">579 &euro;</span><span style=3D"fon=
+t-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</span>=
+</a>   </td>
+</tr>
+<tr>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"29"></td>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"110"> <a href=3D"http://new=
+s.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2l&rt=3Dikgwystn&req=3Dcid%3DE=
+MAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20=
+%26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Ile%20Maurice" t=
+itle=3D"Ile Maurice" target=3D"_blank" style=3D"border: medium none ; text-=
+decoration: none;"><span style=3D"font-size: 12px; line-height: normal; col=
+or: rgb(1, 1, 1);"><b>Ile Maurice</b></span></a> </td>
+ <td bgcolor=3D"#fbcaa9" height=3D"20" width=3D"86"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2m&rt=3Dikgwysto&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26uid%3D3dec99fbfb952733d5ffefaea30fa26b%26eid%3DTopDesti_Ile%20Maurice" ti=
+tle=3D"Ile Maurice" target=3D"_blank" style=3D"border: medium none ; text-d=
+ecoration: none;"> <span style=3D"font-size: 11px; line-height: normal; col=
+or: rgb(1, 1, 1);">d&egrave;s&nbsp;</span><span style=3D"font-size: 14px; l=
+ine-height: normal; color: rgb(255, 0, 0);">949 &euro;</span><span style=3D=
+"font-size: 10px; line-height: normal; color: rgb(255, 0, 0);">&nbsp;TTC</s=
+pan></a></td>
+</tr></table>
+</td>
+<td bgcolor=3D"#fcebe3" height=3D"132" width=3D"5"></td>
+<td bgcolor=3D"#ff5f47" height=3D"132" width=3D"1"></td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td bgcolor=3D"#fcebe3">
+<table summary=3D"" align=3D"left" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"700">
+<tr>
+<td bgcolor=3D"#ff5f47" height=3D"31" width=3D"1"></td>
+<td bgcolor=3D"#fcebe3" height=3D"31" width=3D"495"></td>
+<td style=3D"text-align: center;" bgcolor=3D"#fcebe3" height=3D"31" width=
+=3D"203">
+       =09=09<a href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kf=
+oopI2n&rt=3Dikgwysto&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_Qual=
+ifieeAVT82-J1_ledernierproduit-%20%26eid%3D%20" title=3D"Voir toutes nos de=
+stinations" target=3D"_blank" style=3D"border: medium none ; text-decoratio=
+n: none;"><span style=3D"font-size: 13px; line-height: normal; color: rgb(2=
+55, 102, 0);"><u>&gt; Voir toutes nos destinations</u></span></a>
+       </td>
+<td bgcolor=3D"#ff5f47" height=3D"31" width=3D"1"></td>
+</tr> </table>
+</td>
+</tr>
+ <tr>
+<td bgcolor=3D"#fcebe3" height=3D"11" width=3D"700"><table summary=3D"" ali=
+gn=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"700">
+<tr>
+<td bgcolor=3D"#ff5f47" height=3D"11" width=3D"1"></td>
+<td bgcolor=3D"#fcebe3" height=3D"11" width=3D"698"></td>
+<td bgcolor=3D"#ff5f47" height=3D"11" width=3D"1"></td>
+</tr></table></td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"700" align=
+=3D"center" style=3D"line-height:2px; font-size:2px; font-family:Trebuchet =
+MS">
+<tr><td height=3D"1" bgcolor=3D"#ff5f47" style=3D"display:block"></td></tr>
+<tr><td height=3D"9"></td></tr>
+</table>
+<!--fin destinations-->
+<!--barre de navigation--><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" summary=3D"" width=3D"700" align=3D"center">
+<tr>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"85" align=3D"center"> <a tit=
+le=3D"Maxi-Affaires " style=3D"text-decoration: none;" target=3D"_blank" hr=
+ef=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2o&rt=3Dikgwys=
+tp&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_lede=
+rnierproduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: =
+normal; color: rgb(255, 255, 255);">Maxi Affaires</span> </a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"93" align=3D"center"> <a tit=
+le=3D"Derni&egrave;re minute" style=3D"text-decoration: none;" target=3D"_b=
+lank" href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2p&rt=
+=3Dikgwystp&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT8=
+2-J1_ledernierproduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line=
+-height: normal; color: rgb(255, 255, 255);">Derni&egrave;re minute</span><=
+/a> </td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"45" align=3D"center"> <a tit=
+le=3D"S&eacute;jour" style=3D"text-decoration: none;" target=3D"_blank" hre=
+f=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2q&rt=3Dikgwyst=
+q&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_leder=
+nierproduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: n=
+ormal; color: rgb(255, 255, 255);">S&eacute;jour</span></a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"47" align=3D"center"> <a tit=
+le=3D"Circuit" style=3D"text-decoration: none;" target=3D"_blank" href=3D"h=
+ttp://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2r&rt=3Dikgwystq&req=
+=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierp=
+roduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: normal=
+; color: rgb(255, 255, 255);">Circuit</span></a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"57" align=3D"center"> <a tit=
+le=3D"Croisi&egrave;re" style=3D"text-decoration: none;" target=3D"_blank" =
+href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2s&rt=3Dikgw=
+ystq&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_le=
+dernierproduit-%20"><span style=3D"font-size: 11px; line-height: normal; co=
+lor: rgb(255, 255, 255);">Croisi&egrave;re</span></a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"63" align=3D"center"> <a tit=
+le=3D"Tout inclus" style=3D"text-decoration: none;" target=3D"_blank" href=
+=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2t&rt=3Dikgwystr=
+&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledern=
+ierproduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: no=
+rmal; color: rgb(255, 255, 255);">Tout inclus</span></a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"63" align=3D"center"> <a tit=
+le=3D"Thalasso" style=3D"text-decoration: none;" target=3D"_blank" href=3D"=
+http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2u&rt=3Dikgwystr&req=
+=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierp=
+roduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: normal=
+; color: rgb(255, 255, 255);">Thalasso</span></a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"73" align=3D"center"> <a tit=
+le=3D"Billet d&acute;avion" style=3D"text-decoration: none;" target=3D"_bla=
+nk" href=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2v&rt=3D=
+ikgwysts&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J=
+1_ledernierproduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-he=
+ight: normal; color: rgb(255, 255, 255);">Billet d&acute;avion</span></a> <=
+/td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"62" align=3D"center"> <a tit=
+le=3D"Week-end" style=3D"text-decoration: none;" target=3D"_blank" href=3D"=
+http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2w&rt=3Dikgwysts&req=
+=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierp=
+roduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: normal=
+; color: rgb(255, 255, 255);">Week-end</span></a></td>
+<td bgcolor=3D"#ffffff" height=3D"20" width=3D"1"></td>
+<td bgcolor=3D"#ff5f47" height=3D"20" width=3D"40" align=3D"center"> <a tit=
+le=3D"H&ocirc;tel" style=3D"text-decoration: none;" target=3D"_blank" href=
+=3D"http://news.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2x&rt=3Dikgwystt=
+&req=3Dcid%3DEMAUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledern=
+ierproduit-%20%26eid%3D%20"><span style=3D"font-size: 11px; line-height: no=
+rmal; color: rgb(255, 255, 255);">H&ocirc;tel</span></a></td>
+</tr>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" summary=3D"=
+" width=3D"700" align=3D"center">
+<tr><td height=3D"2"></td></tr>
+</table><!--fin barre de navigation-->
+<!--comment reserver--><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" summary=3D"" width=3D"700" align=3D"center" style=3D"font-family:Trebuc=
+het MS; line-height:2px; font-size:2px">
+<tr>
+<td bgcolor=3D"#dadada" height=3D"39" width=3D"100"> <img src=3D"http://new=
+sletter.service-voyages.com/promovacances/Relance_Surf/comment.jpg" alt=3D"=
+Comment r&eacute;server?" style=3D"font-size: 12px; line-height: normal; co=
+lor: rgb(255, 102, 0); display: block;" border=3D"0" height=3D"39" width=3D=
+"100" /> </td>
+<td bgcolor=3D"#dadada" height=3D"39" width=3D"185"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2y&rt=3Dikgwystt&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26eid%3D%20" title=3D"www.promovacances.com" target=3D"_blank" style=3D"bor=
+der: medium none ; text-decoration: none; font-size: 2px;"><img src=3D"http=
+://newsletter.service-voyages.com/promovacances/Relance_Surf/site.jpg" alt=
+=3D"www.promovacances.com" style=3D"font-size: 12px; line-height: normal; c=
+olor: rgb(255, 102, 0); display: block; font-family: Arial;" border=3D"0" h=
+eight=3D"39" width=3D"185" /></a></td>
+<td bgcolor=3D"#dadada" height=3D"39" width=3D"114"> <a href=3D"http://news=
+.promovacances.com/re?l=3DD0IlijkwkI61kfoopI2z&rt=3Dikgwystt&req=3Dcid%3DEM=
+AUTO-PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%=
+26eid%3D%20" title=3D"Nos agences" target=3D"_blank" style=3D"border: mediu=
+m none ; text-decoration: none;"><img src=3D"http://newsletter.service-voya=
+ges.com/promovacances/Relance_Surf/agence.jpg" alt=3D"Nos agences" style=3D=
+"font-size: 12px; line-height: normal; color: rgb(255, 102, 0); display: bl=
+ock; font-family: Arial;" border=3D"0" height=3D"39" width=3D"114" /></a></=
+td>
+<td bgcolor=3D"#dadada" height=3D"39" width=3D"152"> <img src=3D"http://new=
+sletter.service-voyages.com/promovacances/Relance_Surf/tel.jpg" alt=3D"0899=
+ 654 850*" style=3D"font-size: 12px; line-height: normal; color: rgb(255, 1=
+02, 0); display: block; font-family: Arial;" border=3D"0" height=3D"39" wid=
+th=3D"152" /> </td>
+<td bgcolor=3D"#dadada" height=3D"39" =3D"149"> <a href=3D"http://news.prom=
+ovacances.com/re?l=3DD0IlijkwkI61kfoopI30&rt=3Dikgwystu&req=3Dcid%3DEMAUTO-=
+PMVC-intentionniste-AventMedia_QualifieeAVT82-J1_ledernierproduit-%20%26eid=
+%3D%20%26uid%3D3dec99fbfb952733d5ffefaea30fa26b" title=3D"Application Iphon=
+e" target=3D"_blank" style=3D"border: medium none ; text-decoration: none;"=
+><img src=3D"http://newsletter.service-voyages.com/promovacances/Relance_Su=
+rf/apple.jpg" alt=3D"Application Iphone" style=3D"border: 0px solid ; font-=
+size: 12px; line-height: normal; color: rgb(255, 102, 0); display: block; w=
+idth: 149px; height: 39px;" /></a></td>
+</tr>
+</table><!--fin comment reserver-->
+<!--footer-->
+<table style=3D"font-size: 2px; line-height:2px; font-family: Trebuchet MS,=
+Arial Sans Sherif;" summary=3D"" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"700" align=3D"center">
+<tr><td height=3D"9"></td></tr>
+<tr><td height=3D"1" bgcolor=3D"#CCCCCC"></td></tr>
+<tr>
+<td bgcolor=3D"#EFEFEF"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" summary=3D"" width=3D"675" align=3D"center">
+<tr>
+<td height=3D"60"><table style=3D"font-family: Trebuchet MS,Arial Sans Sher=
+if;" summary=3D"" align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"675">
+<tr>
+<td height=3D"36" width=3D"143"><span style=3D"font-size: 16px; font-weight=
+: bold; line-height:normal;">Bon voyage !<br /> Promovacances.com</span> </=
+td>
+<td height=3D"36" width=3D"532"></td>
+</tr>
+</table></td>
+ </tr>
+<tr><td width=3D"675" height=3D"60"><span style=3D"font-size: 10px; font-fa=
+mily: Trebuchet MS,Arial Sans Sherif; line-height:normal;">Les tarifs de no=
+s voyages sont affich&eacute;s TTC (soit le prix du s&eacute;jour HT compl&=
+eacute;t&eacute; des taxes obligatoires, hors taxes de s&eacute;jour). Prix=
+ "&agrave; partir de", et sous r&eacute;serve de disponibilit&eacute;s. Ces=
+ tarifs n&acute;incluent pas les frais de dossier et de derni&egrave;re min=
+ute, ni les suppl&eacute;ments sp&eacute;cifiques susceptibles de s&acute;a=
+ppliquer &agrave; certaines destinations. Les prix indiqu&eacute;s correspo=
+ndent aux tarifs en ligne sur notre site Internet &agrave; la date d'envoi =
+de la pr&eacute;sente lettre d'informations commerciale. Ils peuvent faire =
+l'objet d'une actualisation suivant l'&eacute;volution de nos disponibilit&=
+eacute;s.<br/>Photos illustratives et non contractuelles.</span> </td>
+</tr>
+<tr><td height=3D"8" width=3D"675"></td></tr>
+<tr><td><table style=3D"font-family: Trebuchet MS,Arial Sans Sherif;" summa=
+ry=3D"" cellpadding=3D"0" cellspacing=3D"0">
+<tr>
+<td height=3D"42" width=3D"523"><span style=3D"font-size: 10px; line-height=
+: 14px; font-family: Trebuchet MS,Arial Sans Sherif; line-height:normal">Ka=
+ravel, 17 rue de l'Echiquier 75010 Paris - SAS au capital de 145.131.987 eu=
+ros - RCS Paris B 532 321 916 - TVA intracommunautaire: FR 52 532 321 916
+T&eacute;l : 0899 652 650 (1.35 &euro;/appel puis 0.34&euro;/min TTC depuis=
+ un poste fixe) - Fax : 01 48 01 51 33 - Immatriculation n&deg; IM075140042=
+ aupr&egrave;s d'ATOUT FRANCE 79/81 rue de Clichy 75009 Paris - Garant : AP=
+S, 15 av Carnot 75017 Paris - RCP : Hiscox, 19 rue Louis le Grand 75002 Par=
+is.</span> </td></tr>
+ </table></td>
+</tr>
+<tr>
+<td height=3D"60" width=3D"675"><span style=3D"font-size: 10px; font-family=
+: Trebuchet MS,Arial Sans Sherif; line-height:normal;">Afin de respecter le=
+s dispositions l&eacute;gales concernant les courriers &eacute;lectroniques=
+. Vous disposez d&acute;un droit d&acute;acc&egrave;s, de modification, de =
+rectification et de suppression des donn&eacute;es qui vous concernent (art=
+icles 38 et suivants de la loi du 6 janvier 1978 relative &agrave; l&acute;=
+ informatique, aux fichiers et aux libert&eacute;s). </td>
+</tr>
+</table></td>
+</tr>
+ </table>
+<!--fin footer-->
+
+<br />
+<br/>
+<div align=3D"center">
+<font face=3D"arial" size=3D"2" color=3D"#00000">
+Pour ne plus recevoir votre newsletter Promovacances, <a href=3D"http://new=
+s.promovacances.com/public/unsubscribe.jsp?gid=3D1300567715&uid=3D131554843=
+45&mid=3D1300936340&sig=3DADGAFEOMIKEOHIOP&l=3DD0IlijkwkI61kfoopI&slt=3D4">=
+vous pouvez vous d&eacute;sinscrire ici</a>. </font></div><br />
+
+</body>
+</html></table>
+            </td></tr>                      =20
+        </table>

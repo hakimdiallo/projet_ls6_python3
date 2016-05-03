@@ -1,0 +1,158 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id GTwPJo5p5Fa3mwAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:10:06 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 856F361FA1;
+	Sat, 12 Mar 2016 20:10:06 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 11.059
+X-Spam-Level: ***********
+X-Spam-Status: Yes, score=11.059 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HK_NAME_MR_MRS=1, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=liafa.univ-paris-diderot.fr; domainkeys=neutral
+	reason="invalid (public key: not available)"
+	header.from=algocomp-apply@liafa.univ-paris-diderot.fr
+	header.d=liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id pr5-BBxPJYYQ; Sat, 12 Mar 2016 20:10:01 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 2FFDF61FA2;
+	Sat, 12 Mar 2016 20:10:01 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2CJA1V3024143;
+	Sat, 12 Mar 2016 20:10:01 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 0E6B0D4049; Sat, 12 Mar 2016 20:10:01 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id E66F8D4049
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:59 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id DCE32A199A
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:59 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=liafa.univ-paris-diderot.fr; domainkeys=neutral
+	reason="invalid (public key: not available)"
+	header.from=algocomp-apply@liafa.univ-paris-diderot.fr
+	header.d=liafa.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id dibmqKl3GYCU
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sat, 12 Mar 2016 20:09:59 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 8160E9F805
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:59 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u2CJ9xEX019244
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:59 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 763F061FA1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:59 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id q3Ul0YeJhqdW
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sat, 12 Mar 2016 20:09:52 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 44BDF61F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:52 +0100 (CET)
+Received: from mta80.27tp.com (mta80.27tp.com [213.252.245.83])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2CJ9qD5024117
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sat, 12 Mar 2016 20:09:52 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=liafa.univ-paris-diderot.fr;
+ h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding; i=algocomp-apply@liafa.univ-paris-diderot.fr;
+ bh=m0ddBi1q4Yy3vNWl6uym2l61W+o=;
+ b=k7FMnHcNgNXdR0+haItktQNA6x8rz9gkrOGnggHXEFIEHvDdY7w4zW4IgR/dyvW78Z2+tvP9KqWZ
+   laP6H8CC0yACA0FDabvyQ8STWP/EGgRUO1heh0zZlcinFa8Q1dA5BJmH76QHl0N5P+fDRxSij35j
+   64t0Rt/jsDEfpoLMM0s=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=liafa.univ-paris-diderot.fr;
+ b=DE/6FhMbMcA3jlF3/ZC/1Z25Ppsd0wUIswsVkSmbM0yA20AxQP5JqX4uJqlxNKybzW1THwwK2F9L
+   tn/EJ0F2FXjTNo+y5p+iIYCVhdp+nX8QG9Djuf4tJl9X3SuY/DYgyAuXaYjCnGZBbEeRIZrISqRt
+   T4vRUtZaL5O/YEZrRG0=;
+Reply-To: "Mr. Guff"<algocomp-apply@liafa.univ-paris-diderot.fr>
+From: "Mr. Guff"<algocomp-apply@liafa.univ-paris-diderot.fr>
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Date: 13 Mar 2016 03:04:44 +0800
+Message-ID: <20160313030444.832265854424BB1F@liafa.univ-paris-diderot.fr>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sat, 12 Mar 2016 20:10:01 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sat, 12 Mar 2016 20:09:59 +0100 (CET)
+X-Greylist: Delayed for 00:05:00 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sat, 12 Mar 2016 20:09:52 +0100 (CET)
+X-Miltered: at potemkin with ID 56E46989.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56E46987.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56E46980.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E46989.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56E46987.000 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@liafa.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56E46980.000 from mta80.27tp.com/mta80.27tp.com/null/mta80.27tp.com/<algocomp-apply@liafa.univ-paris-diderot.fr>
+X-j-chkmail-Score: MSGID : 56E46989.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E46987.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E46980.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] Work at home with this brand new app!
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1499
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+I=E2=80=99m going to show you how you can make $350 to $700 a day from=20
+home.
+
+I=E2=80=99m going to show you how you can work from anywhere in the world=
+=20
+with an internet connection.
+
+I=E2=80=99m going to show you how you can work from your laptop, your=20
+tablet and even your phone!
+
+I=E2=80=99m going to show you how you can get started for nothing (minus=20=
+
+a commission for the owner).
+
+Are you interested?
+
+Are you?
+
+Okay, then I=E2=80=99m going to introduce you to Jeremy Matthew=E2=80=99s =
+=E2=80=9CMy=20
+First Online Payday=E2=80=9D
+
+You can see it here:
+
+>> http://superrservers.com/r/secret0311/
+
+Have a good one!
+
+ 
+
+Mr. Guff
+
+P.S. He=E2=80=99s going to start you up with $50 to try it out!

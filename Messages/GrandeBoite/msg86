@@ -1,0 +1,540 @@
+Return-Path: <g-14180966873-14009-1400813687-1456477679359@bounce.news.springer.com>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 11LGOOIX0FboTQAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 26 Feb 2016 10:19:20 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 3509B61F9D
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 26 Feb 2016 10:19:20 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 3.324
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.324 tagged_above=-10000 required=5
+	tests=[BAYES_60=1.5, DCC_CHECK=1.1, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id GephcuHC8UcC for <laplante@liafa.univ-paris-diderot.fr>;
+	Fri, 26 Feb 2016 10:19:18 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 83F2D61FA2
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 26 Feb 2016 10:19:18 +0100 (CET)
+Received: from novemnulla.sigma.ec-cluster.com (novemnulla.sigma.ec-cluster.com [195.140.184.90])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1Q9JIHE010004
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 26 Feb 2016 10:19:18 +0100
+Received: from app14.muc.ec-messenger.com (app14.muc.domeus.com [172.16.8.44])
+	by mta85.muc.domeus.com (READY) with ESMTP id 5853917A7F
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 26 Feb 2016 10:07:59 +0100 (CET)
+Date: Fri, 26 Feb 2016 10:07:59 +0100 (CET)
+From: SpringerOpen <springer@news.springer.com>
+Reply-To: "onlineservice@springer.com" <con28193_1_addresses-reply@news.springer.com>
+To: laplante@liafa.univ-paris-diderot.fr
+Message-ID: <vq88bl.il3h7dvigqia1ml@news.springer.com>
+Subject: Get to know our open access journals in Computer Science
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-eC-messenger-mid: 1400813687
+List-Id: <1400326808.news.springer.com>
+X-eC-messenger-cid: 14009
+X-eC-messenger-token: n60arbI6iizc2h
+List-Unsubscribe: <http://news.springer.com/public/list_unsubscribe.jsp?action=listUnsubscribe&gid=1400326808&uid=14180966873&mid=1400813687&siglistunsub=NBMPBOMPJGAINFHK&errorPage=/public/list_unsubscribe.jsp>, <mailto:listunsubscribe-1400326808-1400813687-14180966873@news.springer.com>
+X-eC-messenger-sender-domain: bounce.news.springer.com
+X-eC-messenger-sendouttypeid: 0
+X-eC-messenger-addresseeroleid: 1
+X-eC-messenger-recipienttypeid: 2
+List-Help: <mailto:complaint@intl.teradatadmc.com>
+X-CSA-Complaints: whitelist-complaints@eco.de
+X-Mailer: eC-Messenger Build 6.90.1988.1
+X-eC-messenger-email: laplante@liafa.univ-paris-diderot.fr
+X-Greylist: Delayed for 00:11:19 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Fri, 26 Feb 2016 10:19:18 +0100 (CET)
+X-Miltered: at potemkin with ID 56D01896.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D01896.000 from novemnulla.sigma.ec-cluster.com/novemnulla.sigma.ec-cluster.com/null/novemnulla.sigma.ec-cluster.com/<g-14180966873-14009-1400813687-1456477679359@bounce.news.springer.com>
+X-j-chkmail-Score: MSGID : 56D01896.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xht=
+ml11/DTD/xhtml11.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"content-type" />
+<title>SpringerOpen in Computer Science</title>
+</head>
+<body vlink=3D"#5c5b5b" topmargin=3D"0" text=3D"#5c5b5b" link=3D"#5c5b5b" l=
+eftmargin=3D"0" bgcolor=3D"#FFFFFF" marginwidth=3D"0" marginheight=3D"0" al=
+ink=3D"#5c5b5b">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600">
+<tr>
+<td colspan=3D"6" valign=3D"bottom" width=3D"600">
+<img src=3D"https://images.springer.com/cda/content/image/cda_displayimage.=
+jpg?SGWID=3D0-0-16-1848336-0" width=3D"600" height=3D"75" alt=3D"SpringerOp=
+en" />
+</td>
+</tr>
+<tr>
+<td bgcolor=3D"#E7E8E3" valign=3D"center" align=3D"left" height=3D"32" widt=
+h=3D"55" />
+<td bgcolor=3D"#E7E8E3" valign=3D"center" align=3D"left" height=3D"32" widt=
+h=3D"358">
+<font size=3D"2" face=3D"Times New Roman, serif" color=3D"#003366">
+<i>SpringerOpen in Computer Science</i>
+</font>
+</td>
+<td bgcolor=3D"#E7E8E3" valign=3D"center" align=3D"left" height=3D"32" widt=
+h=3D"12" />
+<td bgcolor=3D"#E7E8E3" valign=3D"center" align=3D"left" height=3D"32" widt=
+h=3D"10" />
+<td bgcolor=3D"#E7E8E3" valign=3D"center" align=3D"left" height=3D"32" widt=
+h=3D"153">
+<font size=3D"2" face=3D"Times New Roman" color=3D"#003366">
+<font color=3D"#003366">Visit us on <a href=3D"http://news.springer.com/re?=
+l=3DD0In60arbI6iizc2hIe" target=3D"blank"><font color=3D"#035289">SpringerO=
+pen</font></a></font>
+</font>
+</td>
+<td bgcolor=3D"#E7E8E3" valign=3D"center" align=3D"left" height=3D"32" widt=
+h=3D"12" />
+</tr>
+<tr>
+<td height=3D"20" width=3D"55" />
+<td colspan=3D"4" height=3D"20" width=3D"533" />
+<td width=3D"12" />
+</tr>
+<tr>
+<td width=3D"55" />
+<td valign=3D"top" align=3D"left" colspan=3D"4">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"533">
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<b>Dear Sophie Laplante,</b>
+</font>
+</td>
+</tr>
+<tr>
+<td height=3D"20" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">We are writing today=
+ to let you know about our wide range of open access <a href=3D"http://news=
+.springer.com/re?l=3DD0In60arbI6iizc2hIf#Computer%20Science" target=3D"blan=
+k"><b>Computer Science</b></a> titles and to invite you to be part of it.</=
+font>
+</td>
+</tr>
+<tr>
+<td height=3D"30" />
+</tr>
+<tr>
+<td>
+<font color=3D"#035289" face=3D"Times New Roman, serif" size=3D"5">Featured=
+ Computer Science journals</font>
+</td>
+</tr>
+<tr>
+<td height=3D"4" />
+</tr>
+<tr>
+<td bgcolor=3D"#E7E8E3" height=3D"1" />
+</tr>
+<tr>
+<td height=3D"10" />
+</tr>
+<tr>
+<td height=3D"10" />
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"533">
+<tr>
+<td width=3D"10" />
+<td valign=3D"top" width=3D"158">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIg">
+<img src=3D"https://images.springer.com/sgw/journals/small/13673.jpg" width=
+=3D"95" height=3D"126" border=3D"0" alt=3D"Human-centric Computing and Info=
+rmation Sciences" />
+</a>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIh">
+<b>Human-centric Computing and Information Sciences</b>
+</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"20" />
+<td valign=3D"top" width=3D"158">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIi">
+<img src=3D"https://images.springer.com/sgw/journals/small/40595.jpg" width=
+=3D"95" height=3D"126" border=3D"0" alt=3D"Vietnam Journal of Computer Scie=
+nce" />
+</a>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIj">
+<b>Vietnam Journal of Computer Science</b>
+</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"20" />
+<td valign=3D"top" width=3D"158">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIk">
+<img src=3D"https://images.springer.com/sgw/journals/small/13677.jpg" width=
+=3D"95" height=3D"126" border=3D"0" alt=3D"Journal of Cloud Computing: Adva=
+nces, Systems and Applications" />
+</a>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIl">
+<b>Journal of Cloud Computing: Advances, Systems and Applications</b>
+</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"9" />
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif"><PARAGRAPH></font>
+</td>
+</tr>
+<tr>
+<td height=3D"10" />
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"533">
+<tr>
+<td width=3D"10" />
+<td valign=3D"top" width=3D"158">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIm">
+<img src=3D"https://images.springer.com/sgw/journals/small/13688.jpg" width=
+=3D"95" height=3D"126" border=3D"0" alt=3D"EPJ Data Science" />
+</a>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIn">
+<b>EPJ Data Science</b>
+</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"20" />
+<td valign=3D"top" width=3D"158">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIo">
+<img src=3D"https://images.springer.com/sgw/journals/small/40708.jpg" width=
+=3D"95" height=3D"123" border=3D"0" alt=3D"Brain Informatics" />
+</a>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIp">
+<b>Brain Informatics</b>
+</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"20" />
+<td valign=3D"top" width=3D"158">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIq">
+<img src=3D"https://images.springer.com/sgw/journals/small/13174.jpg" width=
+=3D"95" height=3D"126" border=3D"0" alt=3D"Journal of Internet Services and=
+ Applications" />
+</a>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">
+<a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIr">
+<b>Journal of Internet Services and Applications</b>
+</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"9" />
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif"><PARAGRAPH></font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif">If the above titles =
+do not fit your work, you may also want to check out our interdisciplinary,=
+ open access journal <a href=3D"http://news.springer.com/re?l=3DD0In60arbI6=
+iizc2hIs" target=3D"blank">SpringerPlus</a>, which accepts manuscripts from=
+ all areas of science.</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif"><PARAGRAPH></font>
+</td>
+</tr>
+<tr>
+<td height=3D"10" />
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"533">
+<tr>
+<td align=3D"middle">
+<table border=3D"0" cellpadding=3D"1" cellspacing=3D"0" width=3D"523">
+<tr>
+<td bgcolor=3D"#db9f04">
+<table bgcolor=3D"#ffd134" border=3D"0" cellpadding=3D"10" cellspacing=3D"0=
+" width=3D"521">
+<tr>
+<td align=3D"center">
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif"><b><a href=3D"http:/=
+/news.springer.com/re?l=3DD0In60arbI6iizc2hIt" target=3D"blank">Ready to su=
+bmit? Find the right journal</a></b></font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"10" />
+</tr>
+<tr>
+<td>
+<img border=3D"0" height=3D"1" width=3D"524" alt=3D"separating line" src=3D=
+"http://www.springer.com/?SGWID=3D0-0-16-116738-0" />
+</td>
+</tr>
+<tr>
+<td height=3D"10" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif"><a href=3D"http://ne=
+ws.springer.com/re?l=3DD0In60arbI6iizc2hIu" target=3D"blank"><b>Keep up to =
+date</b></a> =E2=80=94 get the latest articles delivered straight to your i=
+nbox.</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font size=3D"2" face=3D"Arial, Helvetica, sans-serif"><PARAGRAPH><br />Bes=
+t wishes, <br />Your SpringerOpen Marketing Team</font>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"12" />
+</tr>
+<tr>
+<td width=3D"55" />
+<td colspan=3D"5" width=3D"545">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"545">
+<tr>
+<td height=3D"8" />
+</tr>
+<tr>
+<td>
+<img border=3D"0" height=3D"1" width=3D"542" alt=3D"separating line" src=3D=
+"http://www.springer.com/?SGWID=3D0-0-16-147201-0" />
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<table>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">Th=
+is email has been sent to laplante@liafa.univ-paris-diderot.fr</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">Yo=
+u are receiving this e-mail because you are registered with Springer Servic=
+es or  <a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2hIv">Spri=
+ngerAlerts</a>
+</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">If=
+ you would not like to receive further information on Springer's publishing=
+ program in your interest field, please use this link:=20
+<a href=3D"http://www.springer.com/tocUnsubscribe.jsp?email=3Dlaplante@liaf=
+a.univ-paris-diderot.fr&checkval=3De58c770aaebc711f48665b10542ff23f&wt_mc=
+=3Demail.newsletter.8.CON28193.ISI_1">
+  unsubscription</a></font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">Fo=
+r all enquiries, problems or suggestions regarding this service, please con=
+tact <a href=3D"mailto:springeralerts@springer.com" >springeralerts@springe=
+r.com</a>.</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">Sp=
+ringer respects your privacy and does not disclose, sell or rent your perso=
+nal information to any nonaffiliated third parties without your consent. Pl=
+ease visit our  <a href=3D"http://news.springer.com/re?l=3DD0In60arbI6iizc2=
+hIw">Springer Privacy Statement</a>
+</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">Sp=
+ringer-Verlag GmbH, Tiergartenstrasse 17, 69121 Heidelberg, Germany, phone:=
+ +49 6221 487 0, fax: +49 6221 487 8366</font>
+</td>
+</tr>
+<tr>
+<td height=3D"6" />
+</tr>
+<tr>
+<td>
+<font color=3D"#333333" size=3D"1" face=3D"Arial, Helvetica, sans-serif">
+                 &copy; Springer 2016, <a href=3D"http://news.springer.com/=
+re?l=3DD0In60arbI6iizc2hIx">springer.com</a>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"right">
+<font color=3D"#999999" size=3D"1" face=3D"Arial, Helvetica, sans-serif">CO=
+N28193</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src=3D"http://news.springer.com/tr/p.gif?uid=3D14180966873&mid=3D14008=
+13687&msd=3D1456477621763&st=3D0" width=3D"1" height=3D"1" alt=3D"" /></bod=
+y>
+</html>

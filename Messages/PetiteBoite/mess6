@@ -1,0 +1,64 @@
+Return-Path: <bounce+rYL-479zx-OMPe@mix.lecadodujour.com>
+Delivered-To: amicheli+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id oh/RN+pgmlYJOQAAKHrkRA
+	for <amicheli+spam@liafa.univ-paris-diderot.fr>; Sat, 16 Jan 2016 16:25:34 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 708B161FA1
+	for <amicheli+spam@liafa.univ-paris-diderot.fr>; Sat, 16 Jan 2016 16:25:34 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 13.762
+X-Spam-Level: *************
+X-Spam-Status: Yes, score=13.762 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (body has been altered)"
+	header.d=mix.lecadodujour.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id AfY__hlvoSb9 for <amicheli@liafa.univ-paris-diderot.fr>;
+	Sat, 16 Jan 2016 16:25:32 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id BBEC461FA3
+	for <anne.micheli@liafa.univ-paris-diderot.fr>; Sat, 16 Jan 2016 16:25:32 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u0GFPWeD019038
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <anne.micheli@liafa.univ-paris-diderot.fr>; Sat, 16 Jan 2016 16:25:32 +0100
+Received: from smtp93.mix.lecadodujour.com (smtp93.mix.lecadodujour.com [82.196.26.93])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0GFOhl3048332
+          for <anne.micheli@liafa.jussieu.fr>; Sat, 16 Jan 2016 16:25:01 +0100 (CET)
+X-Ids:168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=s2c; d=mix.lecadodujour.com;
+ h=Date:To:From:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Transfer-Encoding:Content-Type; i=news@mix.lecadodujour.com;
+ bh=ESICeB/0mD+cfBaQ4p6MY1sy/g8=;
+ b=Lcp6bmSaeIlySRnrr6EEQXw0V/RESLR8KF8ltDAf2k/PfLmBsHyqCZzTB+hZl1euehkWsCvi3D2w
+   5/o96fbrByChn4bcRgH3nbTffQOPMQC5qcjHTuXDPgicFtqk+GjM4+kV3J4enTutC25K+RXc7Mtx
+   K7xJo6KRjixsGWvJ0VI=
+Received: by smtp93.mix.lecadodujour.com id hj9gcq1vjtgd for <anne.micheli@liafa.jussieu.fr>; Sat, 16 Jan 2016 16:06:02 +0100 (envelope-from <bounce+rYL-479zx-OMPe@mix.lecadodujour.com>)
+Date: Sat, 16 Jan 2016 16:06:02 +0100
+To: anne.micheli@liafa.jussieu.fr
+From: Plaisir Shop <news@mix.lecadodujour.com>
+Subject: =?UTF-8?Q?C=E2=80=99est_parti_:_Soldes_jusqu=E2=80=99=C3=A0_90_pourcent_d?=
+ =?UTF-8?Q?e_r=C3=A9duction?=
+Message-ID: <bounce+rYL-479zx-OMPe@mix.lecadodujour.com>
+List-Unsubscribe: <mailto:bounce+rYL-479zx-OMPe@mix.lecadodujour.com?subject=unsubscribe-rYL-479zx>,<http://trk.mix.lecadodujour.com/usb/rYL-479zx.php>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/html; charset="UTF-8"
+X-Miltered: at korolev with ID 569A60EC.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 569A60BB.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 569A60EC.001 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounce+rYL-479zx-OMPe@mix.lecadodujour.com>
+X-j-chkmail-Enveloppe: 569A60BB.002 from smtp93.mix.lecadodujour.com/smtp93.mix.lecadodujour.com/82.196.26.93/smtp93.mix.lecadodujour.com/<bounce+rYL-479zx-OMPe@mix.lecadodujour.com>
+X-Scores-Stats: 569A60BB.002 B=0.50000 L=0.87195 G=0.87195 Agree    
+X-j-chkmail-Score: MSGID : 569A60EC.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 569A60BB.002 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.872 -> S=0.912
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sat, 16 Jan 2016 16:25:32 +0100 (CET)

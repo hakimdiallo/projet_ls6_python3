@@ -1,0 +1,256 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id ixYgIsdqyVa1HwAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:44:07 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7639161FA5;
+	Sun, 21 Feb 2016 08:44:07 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 16.312
+X-Spam-Level: ****************
+X-Spam-Status: Yes, score=16.312 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DATE_IN_FUTURE_06_12=1.947,
+	DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_IMAGE_ONLY_28=1.404,
+	HTML_MESSAGE=0.001, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=my4server.org; domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=admin@my4server.org header.d=my4server.org
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id l-BGlasuuHVK; Sun, 21 Feb 2016 08:44:05 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id DAF3661FA2;
+	Sun, 21 Feb 2016 08:44:05 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1L7i5xF032745;
+	Sun, 21 Feb 2016 08:44:05 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id C4438D40BF; Sun, 21 Feb 2016 08:44:05 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id 05278D4039
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:44:02 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id ED25AA1DF8
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:44:01 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=my4server.org;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=admin@my4server.org header.d=my4server.org
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id 0n_u85QxKalt
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sun, 21 Feb 2016 08:44:01 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 6DA6EA1D39
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:44:01 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1L7i19R003950
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:44:01 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 5638461F9D
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:44:01 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id v_AiYW54FcAv
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sun, 21 Feb 2016 08:43:59 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id A8B2061FA5
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:43:59 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1L7hxPY032727
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:43:59 +0100
+Received: from my4server.org (server31.my4server.org [69.50.195.62])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u1L7gN5j021465
+          for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 21 Feb 2016 08:43:10 +0100 (CET)
+X-Ids: 165
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=my4server.org;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding; i=postmaster@my4server.org;
+ bh=/lCN5aB/KRs52PfsyNSj3tJF0/8=;
+ b=YRktwdIwLhWr8yTaUqoXukrYVYade4q3OJIrqYkQVjyeysSdUSysMQnVW3Lyqx76GeQ2vphTkc40
+   W/aL34uvAi0J1dq7TogK6phxfGzT3npisfPNwyLT3OpIndpi2K+gMO8niF4A85xrcxye6z/9OJF9
+   BjlPl4efAJCW0TnXmrk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=my4server.org;
+ b=U5e2gu0peqLgNd62nimfdrDvQcziKuTseFXBLwpKojo7Wf/K90co40IqA+E1CDzT8fpTS1uotHJ4
+   mcK3/TtoPv4+AwcIl+VFHZZnj0CDsajjzNZyuF7zSPsdhJU7P8nQ8yVMEPU3bGqw+WXhTsWZlk/7
+   6w86SdRGHbCmjJvGlJg=;
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Message-ID: <8edb21bc5cff98a006ce4ed78b4c1992@my4server.org>
+Date: Sun, 21 Feb 2016 08:57:20 -0500
+From: "GOOGLE" <admin@my4server.org>
+Reply-To: admin@my4server.org
+MIME-Version: 1.0
+X-Mailer-LID: 2,1
+X-Mailer-SID: 27
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_45ec1d392fd219d4fc2b99ffe0f805dd"
+Content-Transfer-Encoding: 8bit
+X-Miltered: at potemkin with ID 56C96AC5.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56C96AC1.003 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56C96ABF.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56C96A5F.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56C96AC5.001 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56C96AC1.003 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<my4server@my4server.org>
+X-j-chkmail-Enveloppe: 56C96ABF.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<my4server@my4server.org>
+X-j-chkmail-Enveloppe: 56C96A5F.001 from server31.my4server.org/server31.my4server.org/69.50.195.62/my4server.org/<my4server@my4server.org>
+X-Scores-Stats: 56C96A5F.001 B=0.50000 L=0.00000 G=0.50000 Agree    
+X-j-chkmail-Score: MSGID : 56C96AC5.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C96AC1.003 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C96ABF.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C96A5F.001 on shiva.jussieu.fr : j-chkmail score : XXX : R=. U=. O=. B=0.500 -> S=0.500
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Unsure
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sun, 21 Feb 2016 08:44:05 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sun, 21 Feb 2016 08:44:01 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sun, 21 Feb 2016 08:43:59 +0100 (CET)
+Subject: [algocomp-permanents] $4,300 Commission Deposited for:
+ algocomp-apply@liafa.univ-paris-diderot.fr
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1452
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+--b1_45ec1d392fd219d4fc2b99ffe0f805dd
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Your email client cannot read this email.
+To view it online, please go here:
+http://my4server.org/access/display.php?M=23270&C=be252485d38c487964afa403a1e5dfeb&S=27&L=2&N=2
+
+
+To stop receiving these
+emails:http://my4server.org/access/unsubscribe.php?M=23270&C=be252485d38c487964afa403a1e5dfeb&L=2&N=27
+
+--b1_45ec1d392fd219d4fc2b99ffe0f805dd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html><head><title></title>
+</head>
+<body bgcolor=#FFFFFF leftmargin=5 topmargin=5 rightmargin=5
+bottommargin=5>
+<div>Hey algocomp-apply@liafa.univ-paris-diderot.fr,</div>
+<div>&nbsp;</div>
+<div>What if you could make Google pay you between $1,800 to $4,300 every
+single day?</div>
+<div>Would you take it?</div>
+<div>&nbsp;</div>
+<div>Of course you would!</div>
+<div>&nbsp;</div>
+<div><a
+href="http://my4server.org/access/link.php?M=23270&N=27&L=1&F=H"><font
+color="#0000FF"><u>Contact Google Trader Here!</u></font></a></div>
+<div>&nbsp;</div>
+<div>There are over 1,000 members who get daily payments of at least
+$1,800,</div>
+<div>...what about you?</div>
+<div>&nbsp;</div>
+<div>Don't wait - <a
+href="http://my4server.org/access/link.php?M=23270&N=27&L=1&F=H"><font
+color="#0000FF" size="3"><u>Contact Google Now!</u></font></a></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>Talk soon,</div>
+<div>&nbsp;</div>
+<div>- Peng Joo</div>
+<div>&nbsp;</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>To stop receiving these emails:<a
+href="http://my4server.org/access/unsubscribe.php?M=23270&C=be252485d38c487964afa403a1e5dfeb&L=2&N=27"><font
+color="#0000FF"><u>CLICK HERE</u></font></a>.</div>
+<img
+src="http://my4server.org/access/open.php?M=23270&L=2&N=27&F=H&image=.jpg"
+height="1" width="10"></body></html>
+
+--b1_45ec1d392fd219d4fc2b99ffe0f805dd--
+

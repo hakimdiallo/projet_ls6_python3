@@ -1,0 +1,421 @@
+Return-Path: <bounces@email-bonsplans.ovh>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id AF6yGFEjoVa84gAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 19:28:33 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 9ECE561FA3;
+	Thu, 21 Jan 2016 19:28:30 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 7.751
+X-Spam-Level: *******
+X-Spam-Status: Yes, score=7.751 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7, URIBL_JP_SURBL=1.25]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=email-bonsplans.ovh
+	header.b=CYd/YjFl; domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=contact@email-bonsplans.ovh header.d=email-bonsplans.ovh;
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=email-bonsplans.ovh header.b=32Cx7xnF
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 1AJ-qNRjdwQ7; Thu, 21 Jan 2016 19:28:27 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 8228D61FA2
+	for <auliafa@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 19:28:26 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0LISQ0o028056
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <auliafa@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 19:28:26 +0100
+Received: from mail1fr13.email-bonsplans.ovh (mail1fr13.email-bonsplans.ovh [51.255.55.39])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0LIPvdp098158
+          for <auliafa@liafa.jussieu.fr>; Thu, 21 Jan 2016 19:26:14 +0100 (CET)
+X-Ids: 165
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=email-bonsplans.ovh;
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id; i=contact@email-bonsplans.ovh;
+ bh=M+eXgFBwkE+YLCwHRcjSwuaLyZg=;
+ b=CYd/YjFliIZIj/Vxu2jqr4V6WCOZZuJ4Y6MiO0HHnYex2v/5m9XKufjKqG+jPEzKR1yvVVYX1Vi7
+   izIBF7I1+HFJYbqCENgftGwONMKMvWhHQdR4u8tcbqIZBoJybzTYvYu1ynX29eSXYx2BFje1tohX
+   12KMEvVBzEfGIdjOcq8=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=email-bonsplans.ovh;
+ b=bxUIZ5E9ueOltllv6zK4eFs6z6OPnrMNpB1pBH98PvCkfBU1AKQ4pZhmW1rH2QEWdczWRmhlToJf
+   9xIA+3wC93ytTcOnn5gbD+1mnZzfiRZtIsziegiX230EqdTZdfo9NDZfYvhpuDHpJ/mRz3N8TkSX
+   HHHHjs0zMXso6N4oCaw=;
+DKIM-Signature: v=1; a=rsa-sha1; bh=oa8xSsJqUneJB76vY/oRJDfDWhc=;
+ d=email-bonsplans.ovh; h=Message-ID: Date: Subject: From: Reply-To: To:
+ MIME-Version: Content-Type: X-Mw-Customer-Uid: X-Receiver: X-Mw-Tracking-Did:
+ X-Mw-Campaign-Uid: List-Unsubscribe: X-Mw-Customer-Gid: List-Id:
+ X-Mw-Subscriber-Uid: X-Report-Abuse: X-Sender: Feedback-ID: X-Mw-Mailer:
+ X-Mw-Delivery-Sid; i=@email-bonsplans.ovh; s=mailer; t=1453400752;
+ b=32Cx7xnFSYO5KPVimO6bWwHSGDwDiPts3by2ZIwJk2ZT5pxsZy0ZdCKVuINt0G2BrkQsC3WJw
+ yr2pEw2RXTtcb4Z7ort5T3Q+JLiN2+0xZ+Usv9iBAZNb7neE/LEThv7jt9RK6L4NvnUkbV3Bp
+ 03c7gnpx2ynhJnAUsu4v+Q5w8=
+Message-ID: <dff2304bf40a2c00cdfdc28c6dab4592@email-bonsplans.ovh>
+Date: Thu, 21 Jan 2016 18:25:52 +0000
+Subject: Soldes jusqu'a -60 pourcent + livraison gratuite !
+From: Chemises hommes et femmes <contact@email-bonsplans.ovh>
+Reply-To: Chemises hommes et femmes <contact@email-bonsplans.ovh>
+To: "auliafa@liafa.jussieu.fr" <auliafa@liafa.jussieu.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1453400752_8331b50f1a9ab488c6169162c792d6df_=_"
+X-Mw-Campaign-Uid: cz023p5qf9cc3
+List-Unsubscribe: <http://track.email-bonsplans.ovh/index.php/lists/zt705w8j7x3e7/unsubscribe/dw04133ks8b3a/cz023p5qf9cc3>,
+ <mailto:contact@wizzema-3020642.ovh?subject=Unsubscribe&body=Please
+ unsubscribe me from Newlisd list.>
+X-Mw-Customer-Gid: 17
+List-Id: zt705w8j7x3e7 <Newlisd>
+X-Receiver: auliafa@liafa.jussieu.fr
+X-Report-Abuse: Please report abuse for this campaign here:
+ http://track.email-bonsplans.ovh/index.php/campaigns/cz023p5qf9cc3/report-abuse/zt705w8j7x3e7/dw04133ks8b3a
+X-Mw-Subscriber-Uid: dw04133ks8b3a
+Feedback-ID: cz023p5qf9cc3:dw04133ks8b3a:zt705w8j7x3e7:co199qscayeeb
+X-Sender: bounces@email-bonsplans.ovh
+X-Mw-Customer-Uid: co199qscayeeb
+X-Mw-Mailer: SwiftMailer
+X-Mw-Delivery-Sid: 76
+X-Mw-Tracking-Did: 3
+X-Miltered: at potemkin with ID 56A1234A.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56A122B5.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A1234A.002 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounces@email-bonsplans.ovh>
+X-j-chkmail-Enveloppe: 56A122B5.000 from mail1fr13.email-bonsplans.ovh/mail1fr13.email-bonsplans.ovh/51.255.55.39/mail1fr13.email-bonsplans.ovh/<bounces@email-bonsplans.ovh>
+X-Scores-Stats: 56A122B5.000 B=0.50000 L=0.85305 G=0.85305 Agree    
+X-j-chkmail-Score: MSGID : 56A1234A.002 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56A122B5.000 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.853 -> S=0.880
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 21 Jan 2016 19:28:26 +0100 (CET)
+
+
+--_=_swift_v4_1453400752_8331b50f1a9ab488c6169162c792d6df_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ PLACER CE MESSAGE EN INDESIRABLE
+http://track.email-bonsplans.ovh/index.=
+php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/49d083d0dbd7015550a26fe=
+1c7473bec51e027ed
+
+
+Si ce message ne s'affiche pas correctement, cons=
+ultez la version en
+ligne
+http://track.email-bonsplans.ovh/index.php/ca=
+mpaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/3c4e2ceab9dc717fb768ffffc181e=
+e45527c0860
+
+
+=09=09=C2=A0
+
+=09=09
+http://track.email-bonsplans=
+.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/b764e87c18af=
+55f836db0764f2d7ef1ce0ddaf2f
+ =09=09
+http://track.email-bonsplans.ovh/i=
+ndex.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/a7be7e02d2ace14633=
+381ed07be98658b75856ad
+ =09=09
+http://track.email-bonsplans.ovh/index.p=
+hp/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/4126087bbf2259a4d87f4334=
+45fae8e75d468cf7
+
+=09=09CHEMISES HOMME
+http://track.email-bonsplans.o=
+vh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/bcb2897ae6092f=
+88d7c11241dc48c5ac45ed1bad
+=C2=A0=C2=A0=C2=A0 | =C2=A0=C2=A0=C2=A0 CHEMIS=
+IERS FEMME
+http://track.email-bonsplans.ovh/index.php/campaigns/cz023p5qf=
+9cc3/track-url/dw04133ks8b3a/fc84678e9f83aefaf72067f499620f2f333b3312
+=
+=C2=A0=C2=A0=C2=A0 | =C2=A0=C2=A0=C2=A0 CRAVATES
+http://track.email-bonsp=
+lans.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/ef214023=
+010f3f5db4ca861bb31130e22fbd9f9d
+=C2=A0=C2=A0=C2=A0 | =C2=A0=C2=A0=C2=
+=A0 NOUVEAUTES
+http://track.email-bonsplans.ovh/index.php/campaigns/cz023=
+p5qf9cc3/track-url/dw04133ks8b3a/9f50b66ab7d86d62f9ab65c513b303a90e44a040=
+
+
+=09=09- SOLDES SUPPLEMENTAIRES -
+
+=09=09
+http://track.email-bon=
+splans.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/b764e8=
+7c18af55f836db0764f2d7ef1ce0ddaf2f
+
+=09=09=C2=A0
+
+=09=09=C2=A0
+=
+
+=09=09
+http://track.email-bonsplans.ovh/index.php/campaigns/cz023p5qf9=
+cc3/track-url/dw04133ks8b3a/cfc1d7dc30503d378b9e960d6a11cebabd440a97
+
+ =
+=09=09=C2=A0
+
+=09=09
+http://track.email-bonsplans.ovh/index.php/campa=
+igns/cz023p5qf9cc3/track-url/dw04133ks8b3a/4c755439253b4a90a38eb874ba8da604=
+64dcb287
+
+=09=09=C2=A0
+
+=09=09
+http://track.email-bonsplans.ovh/i=
+ndex.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/befea68cb793ec71f9=
+1f5d1cda966d3f31220be6
+
+ =09=09=C2=A0
+
+=09=09
+http://track.email-=
+bonsplans.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/26a=
+3e11482bda25df2cd3426bf76cc2e037db709
+
+=09=09
+http://track.email-bons=
+plans.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/a6ce818=
+bb98a610bfc16eaa47387dbff41542e70
+
+D=C3=89TAIL DE L'OFFRE: Les soldes s=
+ont valables sur tout le site, dans la
+limite des stocks disponibles, du =
+06 janvier 2016 au 16 f=C3=A9vrier 2016
+inclus. Les frais de port sont =
+=C3=A9galement offerts des 2 chemises ou
+chemisiers achet=C3=A9s. Il vous=
+ suffit d'ajouter 2 articles ou plus a
+votre panier et la r=C3=A9duction =
+s'appliquera automatiquement. Vous
+pouvez combiner chemises homme et chem=
+isiers femme, ou ajouter 2 fois
+le m=C3=AAme article.
+
+ Ozoa Chemises=
+ est le n=C2=B01 de la vente de chemises et chemisiers en
+ligne. Notre ob=
+jectif est de vous proposer en permanence des mod=C3=A8les
+100% coton en =
+=C3=A9dition limit=C3=A9e qui font la mode. Plus de 300 chemises
+et chemi=
+siers sont disponibles en coupe cintree et coupe droite, du S
+au XXXXL po=
+ur l'homme et du 36 au 52 pour la femme. Tous les styles
+sont repr=C3=
+=A9sentes : casual, chic, sportswear, etc... Trouvez votre
+mod=C3=A8le et=
+ commandez en un minimum de clics, en toute confiance : vous
+b=C3=A9n=
+=C3=A9ficiez de la garantie satisfait ou rembourse et du paiement 100%
+s=
+=C3=A9curis=C3=A9.=20
+
+=09=09=C2=A9 2016 Ozoa Chemises
+
+POUR NE PLUS =
+RECEVOIR CE GENRE DE MESSAGE DE NOTRE PART D=C3=89SABONNEZ-
+VOUS.
+http:=
+//track.email-bonsplans.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw0=
+4133ks8b3a/51672c4d4442b84fdf9287509992d742363da1fb
+http://track.email-bo=
+nsplans.ovh/index.php/campaigns/cz023p5qf9cc3/track-url/dw04133ks8b3a/3713e=
+070811135c457562a9be80825eba9007590
+
+
+--_=_swift_v4_1453400752_8331b50f1a9ab488c6169162c792d6df_=_
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+CjxodG1sPjxoZWFkPjxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlw
+ZSIgCmNvbnRlbnQ9InRleHQvaHRtbDtjaGFyc2V0PXV0Zi04Ij48bWV0YSBuYW1lPSJjaGFyc2V0
+IiAKY29udGVudD0idXRmLTgiPjx0aXRsZT5OZXdzbGV0dGVyIC0gT1pPQS1jaGVtaXNlcy5jb208
+L3RpdGxlPjwvaGVhZD48Ym9keSAKc3R5bGU9ImJhY2tncm91bmQtY29sb3I6I2U0ZGNkOTtmb250
+LWZhbWlseTomYW1wO2FtcDsjMDM5O2hlbHZldGljYSAKbmV1ZSZhbXA7YW1wOyMwMzk7LGhlbHZl
+dGljYSxhcmlhbCxzYW5zLXNlcmlmO2ZvbnQtc2l6ZTouNzVlbTtmb250LXdlaWdodDoyMDA7bGlu
+ZS1oZWlnaHQ6MS41ZW07Y29sb3I6Izc2NzY3NCI+CgogICAgICAgICAgICA8Y2VudGVyPjxhIApo
+cmVmPSJodHRwOi8vdHJhY2suZW1haWwtYm9uc3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFpZ25z
+L2N6MDIzcDVxZjljYzMvdHJhY2stdXJsL2R3MDQxMzNrczhiM2EvNDlkMDgzZDBkYmQ3MDE1NTUw
+YTI2ZmUxYzc0NzNiZWM1MWUwMjdlZCIgCnN0eWxlPSJmb250LWZhbWlseTpBcmlhbDtmb250LXNp
+emU6MTJweDtjb2xvcjojMDAwO3RleHQtZGVjb3JhdGlvbjpub25lOyIgCnRhcmdldD0iX2JsYW5r
+Ij48Yj5QbGFjZXIgY2UgbWVzc2FnZSBlbiBpbmRlc2lyYWJsZTwvYj48L2E+PC9jZW50ZXI+Cgo8
+Y2VudGVyPgo8cCBzdHlsZT0iZm9udC1mYW1pbHk6QXJpYWw7Zm9udC1zaXplOjEycHg7Ij5TaSBj
+ZSBtZXNzYWdlIG5lIHMnYWZmaWNoZSBwYXMgCmNvcnJlY3RlbWVudCwgPGEgCmhyZWY9Imh0dHA6
+Ly90cmFjay5lbWFpbC1ib25zcGxhbnMub3ZoL2luZGV4LnBocC9jYW1wYWlnbnMvY3owMjNwNXFm
+OWNjMy90cmFjay11cmwvZHcwNDEzM2tzOGIzYS8zYzRlMmNlYWI5ZGM3MTdmYjc2OGZmZmZjMTgx
+ZWU0NTUyN2MwODYwIiAKc3R5bGU9ImZvbnQtZmFtaWx5OkFyaWFsO2ZvbnQtc2l6ZToxMnB4O2Nv
+bG9yOiM2NjY7dGV4dC1kZWNvcmF0aW9uOm5vbmU7IiAKdGFyZ2V0PSJfYmxhbmsiPiBjb25zdWx0
+ZXogbGEgdmVyc2lvbiBlbiBsaWduZTwvYT48L3A+CjwvY2VudGVyPgo8aW1nIGFsdD0ib3Blbk5h
+b3Nob290LnBocD9pPTQ4MTAmYW1wO2M9MzEwNiZhbXA7ZW1haWw9W0VNIiBoZWlnaHQ9IjEiIApz
+cmM9Imh0dHA6Ly9wY2xlc2luZm9zLmZyL29wZW5OYW9zaG9vdC5waHA/aT00ODEwJmFtcDtjPTMx
+MDYmYW1wO2VtYWlsPWF1bGlhZmFAbGlhZmEuanVzc2lldS5mciZhbXA7ZT0wJmFtcDtzbT0wJmFt
+cDtpcD0iIApzdHlsZT0iZGlzcGxheTpub25lOyIgd2lkdGg9IjEiPjxpbWcgCmFsdD0iYXhjaW9t
+LnBocD9lbWFpbD1hdWxpYWZhQGxpYWZhLmp1c3NpZXUuZnIiIGJvcmRlcj0iMCIgaGVpZ2h0PSIx
+IiAKaHNwYWNlPSIwIiAKc3JjPSJodHRwOi8vcGNsZXNpbmZvcy5mci9heGNpb20ucGhwP2VtYWls
+PWF1bGlhZmFAbGlhZmEuanVzc2lldS5mciIgCnN0eWxlPSJkaXNwbGF5Om5vbmU7IiB2c3BhY2U9
+IjAiIHdpZHRoPSIxIj48dGFibGUgYWxpZ249ImNlbnRlciIgYm9yZGVyPSIwIiAKY2VsbHBhZGRp
+bmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBpZD0iVGFiMCIgCnN0eWxlPSJ3aWR0aDo3MDBweDtiYWNr
+Z3JvdW5kLWNvbG9yOiNmZmY7Ym9yZGVyOjFweCBzb2xpZCAKI2NjYzZjNjsiPjx0Ym9keT48dHI+
+PHRkPgoJCQk8dGFibGUgYWxpZ249ImNlbnRlciIgYm9yZGVyPSIwIiBjZWxscGFkZGluZz0iMCIg
+Y2VsbHNwYWNpbmc9IjAiIGlkPSJUYWIxIiAKc3R5bGU9IndpZHRoOjY2MHB4OyI+PHRib2R5Pjx0
+ciBzdHlsZT0iaGVpZ2h0OjQ4cHg7Ij48dGQgCnN0eWxlPSJib3JkZXItdG9wOjFweCBzb2xpZCAj
+ZTRkY2Q5OyI+wqA8L3RkPgoJCQkJCTwvdHI+PHRyPjx0ZD4KCQkJCQkJPHRhYmxlIGFsaWduPSJj
+ZW50ZXIiIGJvcmRlcj0iMCIgY2VsbHBhZGRpbmc9IjAiIApjZWxsc3BhY2luZz0iMCI+PHRib2R5
+Pjx0ciBzdHlsZT0iaGVpZ2h0OjQ4cHg7IiB2YWxpZ249InRvcCI+PHRkPjxhIApocmVmPSJodHRw
+Oi8vdHJhY2suZW1haWwtYm9uc3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFpZ25zL2N6MDIzcDVx
+ZjljYzMvdHJhY2stdXJsL2R3MDQxMzNrczhiM2EvYjc2NGU4N2MxOGFmNTVmODM2ZGIwNzY0ZjJk
+N2VmMWNlMGRkYWYyZiIgCnRpdGxlPSJBY2N1ZWlsIGQnT1pPQS1jaGVtaXNlcy5jb20iPjxpbWcg
+YWx0PSJBY2N1ZWlsIGR1IHNpdGUgaW50ZXJuZXQiIApzcmM9Imh0dHA6Ly93d3cub3pvYS1jaGVt
+aXNlLmNvbS9pbWcvbG9nb19vem9hLnBuZyIgCnN0eWxlPSJ3aWR0aDozNjZweDtoZWlnaHQ6NDhw
+eDtib3JkZXI6MDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Ij48L2E+PC90ZD4KCQkJCQkJCQkJPHRkPjxh
+IApocmVmPSJodHRwOi8vdHJhY2suZW1haWwtYm9uc3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFp
+Z25zL2N6MDIzcDVxZjljYzMvdHJhY2stdXJsL2R3MDQxMzNrczhiM2EvYTdiZTdlMDJkMmFjZTE0
+NjMzMzgxZWQwN2JlOTg2NThiNzU4NTZhZCIgCnRpdGxlPSJMaXZyYWlzb24gZ3JhdHVpdGUgZMOo
+cyAyIGNoZW1pc2VzIGFjaGV0w6llcyI+PGltZyBhbHQ9IkxpdnJhaXNvbiAKZ3JhdHVpdGUgZMOo
+cyAyIGNoZW1pc2VzIGFjaGV0w6llcyIgCnNyYz0iaHR0cDovL3d3dy5vem9hLWNoZW1pc2UuY29t
+L2ltZy9pY29fbGl2cmFpc29uLnBuZyIgCnN0eWxlPSJ3aWR0aDoxODBweDtoZWlnaHQ6NDhweDti
+b3JkZXI6MDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Ij48L2E+PC90ZD4KCQkJCQkJCQkJPHRkPjxhIApo
+cmVmPSJodHRwOi8vdHJhY2suZW1haWwtYm9uc3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFpZ25z
+L2N6MDIzcDVxZjljYzMvdHJhY2stdXJsL2R3MDQxMzNrczhiM2EvNDEyNjA4N2JiZjIyNTlhNGQ4
+N2Y0MzM0NDVmYWU4ZTc1ZDQ2OGNmNyIgCnRpdGxlPSJFeHDDqWRpdGlvbiAyNEgiPjxpbWcgYWx0
+PSJFeHDDqWRpdGlvbiAyNGgiIApzcmM9Imh0dHA6Ly93d3cub3pvYS1jaGVtaXNlLmNvbS9pbWcv
+aWNvX2V4cGVkaXRpb24ucG5nIiAKc3R5bGU9ImhlaWdodDo0OHB4O2JvcmRlcjowO3ZlcnRpY2Fs
+LWFsaWduOnRvcDsiPjwvYT48L3RkPgoJCQkJCQkJCTwvdHI+PC90Ym9keT48L3RhYmxlPjwvdGQ+
+CgkJCQkJPC90cj48dHIgCnN0eWxlPSJoZWlnaHQ6MjdweDtmb250LXNpemU6MS4yNWVtO2ZvbnQt
+d2VpZ2h0OjIwMDt0ZXh0LWFsaWduOmNlbnRlcjsiPjx0ZCAKc3R5bGU9ImJvcmRlci1ib3R0b206
+MXB4IHNvbGlkICNlNGRjZDk7Ym9yZGVyLXRvcDowIHNvbGlkICNlNGRjZDk7Ij48YSAKaHJlZj0i
+aHR0cDovL3RyYWNrLmVtYWlsLWJvbnNwbGFucy5vdmgvaW5kZXgucGhwL2NhbXBhaWducy9jejAy
+M3A1cWY5Y2MzL3RyYWNrLXVybC9kdzA0MTMza3M4YjNhL2JjYjI4OTdhZTYwOTJmODhkN2MxMTI0
+MWRjNDhjNWFjNDVlZDFiYWQiIApzdHlsZT0iY29sb3I6Izc2NzY3NDt0ZXh0LWRlY29yYXRpb246
+bm9uZTsiIHRpdGxlPSJDaGVtaXNlcyBob21tZSI+Q0hFTUlTRVMgCkhPTU1FPC9hPiDCoMKgwqAg
+fCDCoMKgwqAgPGEgCmhyZWY9Imh0dHA6Ly90cmFjay5lbWFpbC1ib25zcGxhbnMub3ZoL2luZGV4
+LnBocC9jYW1wYWlnbnMvY3owMjNwNXFmOWNjMy90cmFjay11cmwvZHcwNDEzM2tzOGIzYS9mYzg0
+Njc4ZTlmODNhZWZhZjcyMDY3ZjQ5OTYyMGYyZjMzM2IzMzEyIiAKc3R5bGU9ImNvbG9yOiM3Njc2
+NzQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7IiB0aXRsZT0iQ2hlbWlzaWVycyBmZW1tZSI+IApDSEVN
+SVNJRVJTIEZFTU1FPC9hPiDCoMKgwqAgfCDCoMKgwqAgPGEgCmhyZWY9Imh0dHA6Ly90cmFjay5l
+bWFpbC1ib25zcGxhbnMub3ZoL2luZGV4LnBocC9jYW1wYWlnbnMvY3owMjNwNXFmOWNjMy90cmFj
+ay11cmwvZHcwNDEzM2tzOGIzYS9lZjIxNDAyMzAxMGYzZjVkYjRjYTg2MWJiMzExMzBlMjJmYmQ5
+ZjlkIiAKc3R5bGU9ImNvbG9yOiM3Njc2NzQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7IiB0aXRsZT0i
+Q3JhdmF0ZXMiPiBDUkFWQVRFUzwvYT4gCsKgwqDCoCB8IMKgwqDCoCA8YSAKaHJlZj0iaHR0cDov
+L3RyYWNrLmVtYWlsLWJvbnNwbGFucy5vdmgvaW5kZXgucGhwL2NhbXBhaWducy9jejAyM3A1cWY5
+Y2MzL3RyYWNrLXVybC9kdzA0MTMza3M4YjNhLzlmNTBiNjZhYjdkODZkNjJmOWFiNjVjNTEzYjMw
+M2E5MGU0NGEwNDAiIApzdHlsZT0iY29sb3I6Izc2NzY3NDt0ZXh0LWRlY29yYXRpb246bm9uZTsi
+IHRpdGxlPSJOb3V2ZWF1dGVzIj4gCk5PVVZFQVVURVM8L2E+PC90ZD4KCQkJCQk8L3RyPjx0ciBh
+bGlnbj0iY2VudGVyIiAKc3R5bGU9ImhlaWdodDozMHB4O2JhY2tncm91bmQtY29sb3I6I2ZmZjtm
+b250LXNpemU6MS4yZW07Zm9udC13ZWlnaHQ6MjAwO2NvbG9yOiMyNDZmYjQ7Ij48dGQ+LSAKU09M
+REVTIFNVUFBMRU1FTlRBSVJFUyAtPC90ZD4KCQkJCQk8L3RyPjx0cj48dGQgc3R5bGU9ImhlaWdo
+dDozMDBweDsiIHZhbGlnbj0idG9wIj48YSAKaHJlZj0iaHR0cDovL3RyYWNrLmVtYWlsLWJvbnNw
+bGFucy5vdmgvaW5kZXgucGhwL2NhbXBhaWducy9jejAyM3A1cWY5Y2MzL3RyYWNrLXVybC9kdzA0
+MTMza3M4YjNhL2I3NjRlODdjMThhZjU1ZjgzNmRiMDc2NGYyZDdlZjFjZTBkZGFmMmYiIAp0aXRs
+ZT0iVm9pciBsZXMgU09MREVTIHN1ciB0b3V0IGxlIHNpdGUiPjxpbWcgYWx0PSJWb2lyIGxlcyBT
+T0xERVMgc3VyIHRvdXQgCmxlIHNpdGUiIApzcmM9Imh0dHA6Ly93d3cub3pvYS1jaGVtaXNlLmNv
+bS9pbWcvTmV3c2xldHRlcl9Pem9hX1NvbGRlc19IMTZfVjNiaXMuanBnIiAKc3R5bGU9IndpZHRo
+OjY2MHB4O2hlaWdodDo0MDlweDtib3JkZXI6MDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Ij48L2E+PC90
+ZD4KCQkJCQk8L3RyPjx0cj48dGQ+wqA8L3RkPgoJCQkJCTwvdHI+PHRyIHN0eWxlPSJoZWlnaHQ6
+NXB4OyI+PHRkPsKgPC90ZD4KCQkJCQk8L3RyPjx0cj48dGQ+CgkJCQkJCTx0YWJsZSBhbGlnbj0i
+Y2VudGVyIiBib3JkZXI9IjAiIGNlbGxwYWRkaW5nPSIwIiAKY2VsbHNwYWNpbmc9IjAiPjx0Ym9k
+eT48dHI+PHRkPgoJCQkJCQkJCQk8dGFibGUgYWxpZ249ImNlbnRlciIgYm9yZGVyPSIwIiBjZWxs
+cGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIApzdHlsZT0id2lkdGg6MzAwcHg7aGVpZ2h0OjI0
+MHB4O2JvcmRlcjowIHNvbGlkICNlNGRjZDk7Ij48dGJvZHk+PHRyIAphbGlnbj0iY2VudGVyIj48
+dGQ+PGEgCmhyZWY9Imh0dHA6Ly90cmFjay5lbWFpbC1ib25zcGxhbnMub3ZoL2luZGV4LnBocC9j
+YW1wYWlnbnMvY3owMjNwNXFmOWNjMy90cmFjay11cmwvZHcwNDEzM2tzOGIzYS9jZmMxZDdkYzMw
+NTAzZDM3OGI5ZTk2MGQ2YTExY2ViYWJkNDQwYTk3IiAKdGl0bGU9IkNoZW1pc2VzIGhvbW1lIGNp
+bnRyZWVzIj48aW1nIGFsdD0iQ2hlbWlzZXMgaG9tbWUgY2ludHJlZXMiIApzcmM9Imh0dHA6Ly93
+d3cub3pvYS1jaGVtaXNlLmNvbS9pbWcvQmFubmllcmVfTmV3c2xldHRlcl9Tb2xkZXNfSG9tbWVf
+djMuanBnIiAKc3R5bGU9IndpZHRoOjMyMHB4O2hlaWdodDoyNDBweDtib3JkZXI6MDt2ZXJ0aWNh
+bC1hbGlnbjptaWRkbGU7Ij48L2E+PC90ZD4KCQkJCQkJCQkJCQk8L3RyPjwvdGJvZHk+PC90YWJs
+ZT48L3RkPgoJCQkJCQkJCQk8dGQgc3R5bGU9IndpZHRoOjUycHg7Ij7CoDwvdGQ+CgkJCQkJCQkJ
+CTx0ZD4KCQkJCQkJCQkJPHRhYmxlIGFsaWduPSJjZW50ZXIiIGJvcmRlcj0iMCIgY2VsbHBhZGRp
+bmc9IjAiIGNlbGxzcGFjaW5nPSIwIiAKc3R5bGU9IndpZHRoOjMyMHB4O2hlaWdodDoyNDBweDti
+b3JkZXI6MCBzb2xpZCAjZTRkY2Q5OyI+PHRib2R5Pjx0ciAKYWxpZ249ImNlbnRlciI+PHRkPjxh
+IApocmVmPSJodHRwOi8vdHJhY2suZW1haWwtYm9uc3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFp
+Z25zL2N6MDIzcDVxZjljYzMvdHJhY2stdXJsL2R3MDQxMzNrczhiM2EvNGM3NTU0MzkyNTNiNGE5
+MGEzOGViODc0YmE4ZGE2MDQ2NGRjYjI4NyIgCnRpdGxlPSJDaGVtaXNlcyBob21tZSBub24gY2lu
+dHJlZXMiPjxpbWcgYWx0PSJDaGVtaXNlcyBob21tZSBub24gY2ludHJlZXMiIApzcmM9Imh0dHA6
+Ly93d3cub3pvYS1jaGVtaXNlLmNvbS9pbWcvQmFubmllcmVfTmV3c2xldHRlcl9Tb2xkZXNfSG9t
+bWVfTkNfdjMuanBnIiAKc3R5bGU9IndpZHRoOjMyMHB4O2hlaWdodDoyNDBweDtib3JkZXI6MDt2
+ZXJ0aWNhbC1hbGlnbjptaWRkbGU7Ij48L2E+PC90ZD4KCQkJCQkJCQkJCQk8L3RyPjwvdGJvZHk+
+PC90YWJsZT48L3RkPgoJCQkJCQkJCTwvdHI+PC90Ym9keT48L3RhYmxlPjwvdGQ+CgkJCQkJPC90
+cj48dHIgc3R5bGU9ImhlaWdodDoyMnB4OyI+PHRkPsKgPC90ZD4KCQkJCQk8L3RyPjx0ciBhbGln
+bj0ibGVmdCIgc3R5bGU9ImZvbnQtc2l6ZTouOTE3ZW07aGVpZ2h0OjMwcHg7Ij48dGQ+CgkJCQkJ
+CTx0YWJsZSBhbGlnbj0iY2VudGVyIiBib3JkZXI9IjAiIGNlbGxwYWRkaW5nPSIwIiAKY2VsbHNw
+YWNpbmc9IjAiPjx0Ym9keT48dHI+PHRkPgoJCQkJCQkJCQk8dGFibGUgYWxpZ249ImNlbnRlciIg
+Ym9yZGVyPSIwIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIApzdHlsZT0id2lkdGg6
+MzIwcHg7aGVpZ2h0OjI0MHB4O2JvcmRlcjowIHNvbGlkICNlNGRjZDk7Ij48dGJvZHk+PHRyIAph
+bGlnbj0iY2VudGVyIj48dGQ+PGEgCmhyZWY9Imh0dHA6Ly90cmFjay5lbWFpbC1ib25zcGxhbnMu
+b3ZoL2luZGV4LnBocC9jYW1wYWlnbnMvY3owMjNwNXFmOWNjMy90cmFjay11cmwvZHcwNDEzM2tz
+OGIzYS9iZWZlYTY4Y2I3OTNlYzcxZjkxZjVkMWNkYTk2NmQzZjMxMjIwYmU2IiAKdGl0bGU9IkNo
+ZW1pc2llcnMgZmVtbWUgY2ludHJlcyI+PGltZyBhbHQ9IkNoZW1pc2llcnMgZmVtbWUgY2ludHJl
+cyIgCnNyYz0iaHR0cDovL3d3dy5vem9hLWNoZW1pc2UuY29tL2ltZy9CYW5uaWVyZV9OZXdzbGV0
+dGVyX1NvbGRlc19GZW1tZV92My5qcGciIApzdHlsZT0id2lkdGg6MzIwcHg7aGVpZ2h0OjI0MHB4
+O2JvcmRlcjowO3ZlcnRpY2FsLWFsaWduOm1pZGRsZTsiPjwvYT48L3RkPgoJCQkJCQkJCQkJCTwv
+dHI+PC90Ym9keT48L3RhYmxlPjwvdGQ+CgkJCQkJCQkJCTx0ZCBzdHlsZT0id2lkdGg6NTJweDsi
+PsKgPC90ZD4KCQkJCQkJCQkJPHRkPgoJCQkJCQkJCQk8dGFibGUgYWxpZ249ImNlbnRlciIgYm9y
+ZGVyPSIwIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIApzdHlsZT0iYm9yZGVyOjAg
+c29saWQgI2U0ZGNkOTt3aWR0aDozMjBweDtoZWlnaHQ6MjQwcHg7Ij48dGJvZHk+PHRyIAphbGln
+bj0iY2VudGVyIj48dGQ+PGEgCmhyZWY9Imh0dHA6Ly90cmFjay5lbWFpbC1ib25zcGxhbnMub3Zo
+L2luZGV4LnBocC9jYW1wYWlnbnMvY3owMjNwNXFmOWNjMy90cmFjay11cmwvZHcwNDEzM2tzOGIz
+YS8yNmEzZTExNDgyYmRhMjVkZjJjZDM0MjZiZjc2Y2MyZTAzN2RiNzA5IiAKdGl0bGU9IkNoZW1p
+c2llcnMgZmVtbWUgbm9uIGNpbnRyZXMiPjxpbWcgYWx0PSJDaGVtaXNpZXJzIGZlbW1lIG5vbiBj
+aW50cmVzIiAKc3JjPSJodHRwOi8vd3d3Lm96b2EtY2hlbWlzZS5jb20vaW1nL0Jhbm5pZXJlX05l
+d3NsZXR0ZXJfU29sZGVzX0ZlbW1lX05DX3YzLmpwZyIgCnN0eWxlPSJ3aWR0aDozMjBweDtoZWln
+aHQ6MjQwcHg7Ym9yZGVyOjA7dmVydGljYWwtYWxpZ246bWlkZGxlOyI+PC9hPjwvdGQ+CgkJCQkJ
+CQkJCQkJPC90cj48L3Rib2R5PjwvdGFibGU+PC90ZD4KCQkJCQkJCQk8L3RyPjwvdGJvZHk+PC90
+YWJsZT48L3RkPgoJCQkJCTwvdHI+PHRyPjx0ZD4KCQkJCQkJPHRhYmxlIGFsaWduPSJjZW50ZXIi
+IGJvcmRlcj0iMCIgY2VsbHBhZGRpbmc9IjAiIApjZWxsc3BhY2luZz0iMCI+PHRib2R5Pjx0ciBz
+dHlsZT0iaGVpZ2h0OjEyMHB4OyI+PHRkPjxhIApocmVmPSJodHRwOi8vdHJhY2suZW1haWwtYm9u
+c3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFpZ25zL2N6MDIzcDVxZjljYzMvdHJhY2stdXJsL2R3
+MDQxMzNrczhiM2EvYTZjZTgxOGJiOThhNjEwYmZjMTZlYWE0NzM4N2RiZmY0MTU0MmU3MCIgCnRp
+dGxlPSJWb2lyIHRvdXMgbGVzIG1vZGVsZXMiPjxpbWcgYWx0PSJWb2lyIHRvdXMgbGVzIG1vZMOo
+bGVzIiAKc3JjPSJodHRwOi8vd3d3Lm96b2EtY2hlbWlzZS5jb20vaW1nL2Jhbm5pZXJlX2Jhc19u
+ZXdzLmpwZyIgCnN0eWxlPSJ3aWR0aDo2MTBweDtoZWlnaHQ6MzZweDtib3JkZXI6MDsiPjwvYT48
+L3RkPgoJCQkJCQkJCTwvdHI+PC90Ym9keT48L3RhYmxlPjwvdGQ+CgkJCQkJPC90cj48dHIgYWxp
+Z249Imp1c3RpZnkiIHN0eWxlPSJmb250LXNpemU6LjkxN2VtO2hlaWdodDozMHB4OyI+PHRkIApz
+dHlsZT0iYm9yZGVyLXRvcDoxcHggc29saWQgI2U0ZGNkOTtib3JkZXItYm90dG9tOjFweCBzb2xp
+ZCAKI2U0ZGNkOTsiPjxicj48YnI+PGI+RMOpdGFpbCBkZSBsJ29mZnJlOjwvYj4gTGVzIHNvbGRl
+cyBzb250IHZhbGFibGVzIHN1ciAKdG91dCBsZSBzaXRlLCBkYW5zIGxhIGxpbWl0ZSBkZXMgc3Rv
+Y2tzIGRpc3BvbmlibGVzLCBkdSAwNiBqYW52aWVyIDIwMTYgYXUgMTYgCmbDqXZyaWVyIDIwMTYg
+aW5jbHVzLiBMZXMgZnJhaXMgZGUgcG9ydCBzb250IMOpZ2FsZW1lbnQgb2ZmZXJ0cyBkZXMgMiAK
+Y2hlbWlzZXMgb3UgY2hlbWlzaWVycyBhY2hldMOpcy4gSWwgdm91cyBzdWZmaXQgZCdham91dGVy
+IDIgYXJ0aWNsZXMgb3UgcGx1cyAKYSB2b3RyZSBwYW5pZXIgZXQgbGEgcsOpZHVjdGlvbiBzJ2Fw
+cGxpcXVlcmEgYXV0b21hdGlxdWVtZW50LiBWb3VzIHBvdXZleiAKY29tYmluZXIgY2hlbWlzZXMg
+aG9tbWUgZXQgY2hlbWlzaWVycyBmZW1tZSwgb3UgYWpvdXRlciAyIGZvaXMgbGUgbcOqbWUgCmFy
+dGljbGUuPGJyPjxicj4KCQkJCQkJT3pvYSBDaGVtaXNlcyBlc3QgbGUgbsKwMSBkZSBsYSB2ZW50
+ZSBkZSBjaGVtaXNlcyBldCBjaGVtaXNpZXJzIGVuIApsaWduZS4gTm90cmUgb2JqZWN0aWYgZXN0
+IGRlIHZvdXMgcHJvcG9zZXIgZW4gcGVybWFuZW5jZSBkZXMgbW9kw6hsZXMgMTAwJSAKY290b24g
+ZW4gw6lkaXRpb24gbGltaXTDqWUgcXVpIGZvbnQgbGEgbW9kZS4gUGx1cyBkZSAzMDAgY2hlbWlz
+ZXMgZXQgCmNoZW1pc2llcnMgc29udCBkaXNwb25pYmxlcyBlbiBjb3VwZSBjaW50cmVlIGV0IGNv
+dXBlIGRyb2l0ZSwgZHUgUyBhdSBYWFhYTCAKcG91ciBsJ2hvbW1lIGV0IGR1IDM2IGF1IDUyIHBv
+dXIgbGEgZmVtbWUuIFRvdXMgbGVzIHN0eWxlcyBzb250IHJlcHLDqXNlbnRlcyAKOiBjYXN1YWws
+IGNoaWMsIHNwb3J0c3dlYXIsIGV0Yy4uLiBUcm91dmV6IHZvdHJlIG1vZMOobGUgZXQgY29tbWFu
+ZGV6IGVuIHVuIAptaW5pbXVtIGRlIGNsaWNzLCBlbiB0b3V0ZSBjb25maWFuY2UgOiB2b3VzIGLD
+qW7DqWZpY2lleiBkZSBsYSBnYXJhbnRpZSAKc2F0aXNmYWl0IG91IHJlbWJvdXJzZSBldCBkdSBw
+YWllbWVudCAxMDAlIHPDqWN1cmlzw6kuPC90ZD4KCQkJCQk8L3RyPjx0ciBhbGlnbj0iY2VudGVy
+IiAKc3R5bGU9ImhlaWdodDozNXB4O2ZvbnQtc2l6ZTouOTE3ZW07bGluZS1oZWlnaHQ6Mi4yNWVt
+OyI+PHRkPsKpIDIwMTYgT3pvYSAKQ2hlbWlzZXM8L3RkPgoJCQkJCTwvdHI+PC90Ym9keT48L3Rh
+YmxlPjwvdGQ+CgkJPC90cj48L3Rib2R5PjwvdGFibGU+PGNlbnRlcj48YSAKaHJlZj0iaHR0cDov
+L3RyYWNrLmVtYWlsLWJvbnNwbGFucy5vdmgvaW5kZXgucGhwL2NhbXBhaWducy9jejAyM3A1cWY5
+Y2MzL3RyYWNrLXVybC9kdzA0MTMza3M4YjNhLzUxNjcyYzRkNDQ0MmI4NGZkZjkyODc1MDk5OTJk
+NzQyMzYzZGExZmIiIApzdHlsZT0iZm9udC1mYW1pbHk6QXJpYWw7Zm9udC1zaXplOjEycHg7Y29s
+b3I6IzAwMDt0ZXh0LWRlY29yYXRpb246bm9uZTsiIAp0YXJnZXQ9Il9ibGFuayI+PGI+UG91ciBu
+ZSBwbHVzIHJlY2V2b2lyIGNlIGdlbnJlIGRlIG1lc3NhZ2UgZGUgbm90cmUgcGFydCAKZMOpc2Fi
+b25uZXotIHZvdXMuPC9iPjwvYT48L2NlbnRlcj4KPGEgCmhyZWY9Imh0dHA6Ly90cmFjay5lbWFp
+bC1ib25zcGxhbnMub3ZoL2luZGV4LnBocC9jYW1wYWlnbnMvY3owMjNwNXFmOWNjMy90cmFjay11
+cmwvZHcwNDEzM2tzOGIzYS8zNzEzZTA3MDgxMTEzNWM0NTc1NjJhOWJlODA4MjVlYmE5MDA3NTkw
+Ij48aW1nIAphbHQ9ImltYWdlUGl4LmpwZyIgaGVpZ2h0PSIxIiBzcmM9Imh0dHA6Ly9wY2xlc2lu
+Zm9zLmZyL2ltZy9pbWFnZVBpeC5qcGciIApzdHlsZT0iZGlzcGxheTpub25lO3dpZHRoOjFweDto
+ZWlnaHQ6MXB4OyIgd2lkdGg9IjEiPjwvYT48aW1nIHdpZHRoPSIxIiAKaGVpZ2h0PSIxIiAKc3Jj
+PSJodHRwOi8vdHJhY2suZW1haWwtYm9uc3BsYW5zLm92aC9pbmRleC5waHAvY2FtcGFpZ25zL2N6
+MDIzcDVxZjljYzMvdHJhY2stb3BlbmluZy9kdzA0MTMza3M4YjNhIiAKYWx0PSIiIC8+CjwvYm9k
+eT48L2h0bWw+Cgo=
+
+--_=_swift_v4_1453400752_8331b50f1a9ab488c6169162c792d6df_=_--

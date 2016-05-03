@@ -1,0 +1,65 @@
+Return-Path: <amel.benmouna@utbm.fr>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id Kdy1Ojbh2FbutgAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 04 Mar 2016 02:13:27 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 993CB61FA3;
+	Fri,  4 Mar 2016 02:13:26 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 4.654
+X-Spam-Level: ****
+X-Spam-Status: No, score=4.654 tagged_above=-10000 required=5
+	tests=[BAYES_40=-0.001, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_BL_SPAMCOP_NET=1.347, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=utbm.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id xljjt3rio-G2; Fri,  4 Mar 2016 02:13:24 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 9D3B561FA1;
+	Fri,  4 Mar 2016 02:13:24 +0100 (CET)
+Received: from smtp2.utbm.fr (smtp2.utbm.fr [193.48.231.38])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u241DOlC014225;
+	Fri, 4 Mar 2016 02:13:24 +0100
+DKIM-Filter: OpenDKIM Filter v2.9.2 zimbra.utbm.fr D3CD64A3C0F9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=utbm.fr;
+	s=73CF4976-6698-11E3-BE5A-BE842501B475; t=1457044544;
+	bh=JgMHAk5LHe1HHTYT5k6Tw1cgTQx/jbuAmGY5thz+OQQ=;
+	h=Date:From:Message-ID:Subject:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=aFtz6X59klmrYKHDcIn73NEvIxiBipu9AhIDSL+T8Aw5824eUJEJ5m0aO3rkGpHE/
+	 x7dMQ6kATJdqraFPhDrTOVf89xjc6ea4yi1OULnx0imbP5VqCdN0YMUk5/w5TkK66B
+	 rdFdbLyJpZ7yHTtLvF6kB59sVOLB7ppgV9HAPchM=
+Date: Thu, 3 Mar 2016 23:35:37 +0100 (CET)
+From: "webmaster@univ-tours.fr" <amel.benmouna@utbm.fr>
+Message-ID: <1901060557.8859002.1457044537290.JavaMail.zimbra@utbm.fr>
+Subject: Alerte
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Originating-IP: [197.211.53.5]
+Thread-Topic: Alerte
+Thread-Index: aZu8QTncZAHyaK7NN4yt+6UhW0qPtA==
+To: undisclosed-recipients:;
+X-Greylist: Delayed for 01:20:56 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Fri, 04 Mar 2016 02:13:24 +0100 (CET)
+X-Miltered: at korolev with ID 56D8E134.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D8E134.000 from smtp2.utbm.fr/smtp2.utbm.fr/null/smtp2.utbm.fr/<amel.benmouna@utbm.fr>
+X-j-chkmail-Score: MSGID : 56D8E134.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+Cher compte utilisateur,
+
+Votre compte e-mail a =C3=A9t=C3=A9 inhabituellement connect=C3=A9 aujourd'=
+hui par Unknown IP Lieu, vous =C3=AAtes conseiller de cliquer sur le lien c=
+i-dessous pour ADMIN Mise =C3=A0 jour et v=C3=A9rifier votre compte e-mail,=
+ sinon vous ne serez pas en mesure d'envoyer des messages sortants.
+
+Cliquez sur le lien =3D=3D> https://formcrafts.com/a/17909
+
+Merci de votre coop=C3=A9ration.
+Webmail administrateur H=C3=A9bergement

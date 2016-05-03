@@ -1,0 +1,93 @@
+Return-Path: <pvalderrama.ver@inah.gob.mx>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id DfltFJPSqVaVMQAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 28 Jan 2016 09:34:27 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 28C4961FA1;
+	Thu, 28 Jan 2016 09:34:27 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 3.247
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.247 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, RCVD_IN_BL_SPAMCOP_NET=1.347,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=inah.gob.mx
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 7JE9hg4qpuUU; Thu, 28 Jan 2016 09:34:25 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 6071061F9D;
+	Thu, 28 Jan 2016 09:34:25 +0100 (CET)
+Received: from mx101.inah.gob.mx (mx101.inah.gob.mx [189.202.224.101])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0S8YNYB006668
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=FAIL);
+	Thu, 28 Jan 2016 09:34:25 +0100
+Received: from mx101.inah.gob.mx (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id ED2DB751FD;
+	Thu, 28 Jan 2016 01:45:46 -0600 (CST)
+Received: from tonali.inah.gob.mx (unknown [172.16.4.3])
+	by mx101.inah.gob.mx (Postfix) with ESMTPS id E4DD7751F5;
+	Thu, 28 Jan 2016 01:45:46 -0600 (CST)
+Received: from tonali.inah.gob.mx (localhost.localdomain [127.0.0.1])
+	by tonali.inah.gob.mx (Postfix) with ESMTPS id D86E87406F5;
+	Thu, 28 Jan 2016 01:42:15 -0600 (CST)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by tonali.inah.gob.mx (Postfix) with ESMTP id 73EE57407FA;
+	Thu, 28 Jan 2016 01:42:15 -0600 (CST)
+DKIM-Filter: OpenDKIM Filter v2.9.2 tonali.inah.gob.mx 73EE57407FA
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=inah.gob.mx;
+	s=8AA5E4C8-8AF7-11E4-9D02-4B907B4FDBF2; t=1453966935;
+	bh=ojyGkdugHyQsN+C32GDdpUUsxUj6zjvM1ag6q/tcZr8=;
+	h=Date:From:Message-ID:Subject:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=FvEXu5ZtXDCGDqgBfAoXhRIqwJk6tFZnOHaKPejFeg8XXKzm0djJWn4pK4KLATlvm
+	 2CJUeW4FtfNg3qLKxa/AlSlXa56oscXVpxyfFUAmNK7PYaB9rpsiWUIpr6tyQWEBe8
+	 Y7vhE4HQsoWn40rXrodM83gY9wEDeZmS5hdn6vdw=
+Received: from tonali.inah.gob.mx ([127.0.0.1])
+	by localhost (tonali.inah.gob.mx [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id dARlokQK1wQs; Thu, 28 Jan 2016 01:42:15 -0600 (CST)
+Received: from tonali.inah.gob.mx (tonali.inah.gob.mx [172.16.4.3])
+	by tonali.inah.gob.mx (Postfix) with ESMTP id 82991740CDE;
+	Thu, 28 Jan 2016 01:42:12 -0600 (CST)
+Date: Thu, 28 Jan 2016 01:42:12 -0600 (CST)
+From: Webmaster <pvalderrama.ver@inah.gob.mx>
+Message-ID: <1693517968.766429.1453966932460.JavaMail.zimbra@inah.gob.mx>
+Subject: Avertissement
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Originating-IP: [128.199.207.123]
+X-Mailer: Zimbra 8.6.0_GA_1153 (zclient/8.6.0_GA_1153)
+Thread-Topic: Avertissement
+Thread-Index: vUpfets+SZfBRQaghOsPzRk0Uc4laQ==
+To: undisclosed-recipients:;
+X-TM-AS-GCONF: 00
+X-TM-AS-Product-Ver: IMSVA-9.0.0.1383-8.0.0.1202-22094.004
+X-TM-AS-Result: No-0.899-5.0-31-10
+X-imss-scan-details: No-0.899-5.0-31-10
+X-TMASE-Version: IMSVA-9.0.0.1383-8.0.1202-22094.004
+X-TMASE-Result: 10-0.899400-5.000000
+X-TMASE-MatchedRID: 1VjE71Ur4kJHQJGk1Hph9kY3Lx2d4Ibiv6yYjhNZ/XfB62+naM7G8DvM
+	epZh+imnTiotbXXy88SegzIPnxirdCtrjOXv5ah8ngIgpj8eDcBZDL1gLmoa/L1anA5c4q+/tNr
+	5O1/q1W/QLWxBF9DMQcRB0bsfrpPInxMyeYT53Rkl6K7fcjefYjNIybp0XAwLU596HJQdjlfGBQ
+	2nqWnIhgk3NWS5YSYYzrB6rzWl1VSAiX3abxRtz0bwknQ2Uyya11WpVnT6Nfsf5OY70NxEpUEJq
+	OnH7Es2DQcESlx5Buczie8x8eLkrsPINhwTXBeZ
+X-TMASE-SNAP-Result: 1.811037.0001-0-1-22:0,12:0
+X-Greylist: Delayed for 00:41:18 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 28 Jan 2016 09:34:25 +0100 (CET)
+X-Miltered: at potemkin with ID 56A9D28F.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A9D28F.001 from mx101.inah.gob.mx/mx101.inah.gob.mx/null/mx101.inah.gob.mx/<pvalderrama.ver@inah.gob.mx>
+X-j-chkmail-Score: MSGID : 56A9D28F.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+Votre limite compte de stockage de courrier a d=C3=A9pass=C3=A9 en raison d=
+u taux =C3=A9lev=C3=A9 de spams / courrier ind=C3=A9sirable de, tous les me=
+ssages entrants sont rejet=C3=A9s. Pour re-valider votre compte de messager=
+ie. Cliquez sur le lien ci-dessous et soumettre le formulaire de re-valider=
+ votre e-mail.
+
+CLIQUEZ ICI: http://vbcds.tripod.com/correio
+
+=C2=A92016 courrier =C3=A9quipe de support technique.

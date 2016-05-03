@@ -1,0 +1,178 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id /218MYd1ulbxggAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:59 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id B744361FA1;
+	Wed, 10 Feb 2016 00:25:59 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 10.428
+X-Spam-Level: **********
+X-Spam-Status: Yes, score=10.428 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	FREEMAIL_FORGED_FROMDOMAIN=0.001, FREEMAIL_FROM=0.001,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=asianescortsex.com; domainkeys=neutral
+	reason="invalid (public key: not available)"
+	header.from=algocomp-apply@gmail.com header.d=gmail.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Spl8xM8vASHb; Wed, 10 Feb 2016 00:25:54 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id D0CDD61FB1;
+	Wed, 10 Feb 2016 00:25:52 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u19NPq98019826;
+	Wed, 10 Feb 2016 00:25:52 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id B7933D405F; Wed, 10 Feb 2016 00:25:52 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id D8FA2D4039
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:51 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id CE047A0807
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:51 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=asianescortsex.com;
+	domainkeys=neutral reason="invalid (public key: not available)"
+	header.from=algocomp-apply@gmail.com header.d=gmail.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id kqXippW43F2I
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Wed, 10 Feb 2016 00:25:50 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id AEB389F673
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:50 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u19NPoAn006983
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:50 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 98A2761FA3
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:50 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rksIN12BkOwT
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Wed, 10 Feb 2016 00:25:43 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 9CFA761F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:43 +0100 (CET)
+Received: from rdp-host-50.asianescortsex.com ([69.50.222.70])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u19NPhB4019756
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Wed, 10 Feb 2016 00:25:43 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=gmail; d=asianescortsex.com;
+ h=From:To:Subject:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding:Date;
+ bh=K96edMLo6kbHS2qXYfPJN6agZJ4=;
+ b=R8RjjVykTKHbcdoEF+OuV4Z717n2yw2nf/Zx0MJYRbcJg78S46QUepwNIHNXyYFb1FicQTqAR5i3
+   ZuaGy9DGJ7QyQrXGwawmP/LxTkSmugeTGJ6oEtfAl1n8GiHvxUwD0ICgTQ+pUV7rmEyxMZmDT50i
+   kSdF+3o2EOdOTaGZYT8=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=gmail; d=gmail.com;
+ b=XW9y/faRJ0ZcD1nAZZggmklmrawySJhSsGd6kfAdabys0eicw5f0/GY8p0o61o1iNIXjWM8EdI/A
+   7m2VfP4dl1t+hWLp1jju51P14yQTpMz1XtolhiettlxyQeNAnS6/gx0xyYkZqZm05yvmjo6K+CQR
+   NY10TZ/Th24sdDtCSFM=;
+From: admin <algocomp-apply@gmail.com>
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Message-ID: <20160209231519.B8E21185E32144FF@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 10 Feb 2016 02:23:03 +0300
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 10 Feb 2016 00:25:52 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Wed, 10 Feb 2016 00:25:50 +0100 (CET)
+X-Greylist: Delayed for 00:10:23 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 10 Feb 2016 00:25:43 +0100 (CET)
+X-Miltered: at potemkin with ID 56BA7580.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56BA757E.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56BA7577.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56BA7580.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56BA757E.001 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@gmail.com>
+X-j-chkmail-Enveloppe: 56BA7577.000 from [69.50.222.70]/[69.50.222.70]/null/rdp-host-50.asianescortsex.com/<algocomp-apply@gmail.com>
+X-j-chkmail-Score: MSGID : 56BA7580.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56BA757E.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56BA7577.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] $****Suffering from Diabetes, Then This Will
+ Be the Most Important Message You Will Ever Read***
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1433
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17514"></HEAD>
+<body style=3D"MARGIN: 0.5em"><FONT color=3D#ff0000 size=3D2><FONT color=3D=
+#ff0000 size=3D2>
+<P align=3Dleft>ATTENTION! </FONT></FONT><FONT size=3D2>If You or Someone Y=
+ou Love is Suffering from Diabetes, </P>
+<P align=3Dleft>Then This Will Be the Most Important Message You Will Ever =
+Read...</P>
+<P align=3Dleft></P>
+<P align=3Dleft>Discover How Thousands of Men and Women Worldwide Have Alre=
+ady </P>
+<P align=3Dleft>Used The Reverse Diabetes Today</P>
+<P align=3Dleft></FONT><A href=3D"http://gmailsuccess.link/script//diabetes=
+"><U><FONT color=3D#0000ff size=3D2><FONT color=3D#0000ff size=3D2>&lt;&lt;=
+&lt;&lt;&lt;Their Type 2 Diabetes in Three Weeks Or Less!&gt;&gt;&gt;&gt;&g=
+t;</U></FONT></FONT></A></P><FONT size=3D2>
+<P align=3Dleft></P>
+<P align=3Dleft></P>
+<P align=3Dleft>The information in this newsletter is for information purpo=
+ses </P>
+<P align=3Dleft>only and should not be construed as medical advice. You sho=
+uld </P>
+<P align=3Dleft>always consult with your physician before using any informa=
+tion you read in this newsletter.</P>
+<P align=3Dleft></P>
+<P align=3Dleft>This email has been delivered to you by EPC Mail Pro and ha=
+s been sent</P>
+<P align=3Dleft>out to you on behalf of one of EPC Mail Pros clients. You h=
+ave received</P>
+<P align=3Dleft>this electronic mailing because you or someone using your e=
+mail</P>
+<P align=3Dleft>address as opted in to receive mail for the particular serv=
+ice or product</P>
+<P align=3Dleft>being featured in this newsletter.</P>
+<P align=3Dleft></FONT><A href=3D"http://gmailsuccess.link/script//diabetes=
+"><U><FONT color=3D#0000ff size=3D2><FONT color=3D#0000ff size=3D2>&lt;&lt;=
+&lt;&lt;&lt;Visit Here&gt;&gt;&gt;&gt;&gt;</U></FONT></FONT></A></P><FONT s=
+ize=3D2>
+<P align=3Dleft></P>
+<P align=3Dleft>If you have not subscribed to these daily product updates o=
+r would like to</P>
+<P align=3Dleft>stop receiving daily product updates, you can unsubscribe b=
+elow</P>
+<P align=3Dleft></P>
+<P align=3Dleft>Health News Mail</P>
+<P align=3Dleft>5042 Wilshire Blvd</P>
+<P align=3Dleft>Los Angeles, CA 90036 US</P>
+<P align=3Dleft></P>
+<P>To stop receiving these emails: </FONT><A href=3D"http://wealthmagnet201=
+4.link/dex/"><U><FONT color=3D#0000ff size=3D2><FONT color=3D#0000ff size=
+=3D2>unsubscribe here!</U></FONT></FONT></A></P></BODY></HTML>

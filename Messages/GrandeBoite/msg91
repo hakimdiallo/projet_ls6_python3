@@ -1,0 +1,218 @@
+Return-Path: <noreply@bestleads.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id PwdGMjdQzVbHwQAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 24 Feb 2016 07:39:52 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7062B61FA3;
+	Wed, 24 Feb 2016 07:39:50 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 14.12
+X-Spam-Level: **************
+X-Spam-Status: Yes, score=14.12 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	domainkeys=pass (1024-bit key) header.from=noreply@bestleads.fr
+	header.d=bestleads.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id OB5-psl4KdkZ; Wed, 24 Feb 2016 07:39:48 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 00B8861FA1
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed, 24 Feb 2016 07:39:47 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1O6dlNR001845
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Wed, 24 Feb 2016 07:39:47 +0100
+Received: from bestleads.fr (mx1.bestleads.fr [91.236.254.217])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u1O6cd6N019987
+          for <liafa@liafa.jussieu.fr>; Wed, 24 Feb 2016 07:39:09 +0100 (CET)
+X-Ids: 165
+Received: from www.bestleads.fr (unknown [91.236.254.217])
+	by bestleads.fr (Postfix) with ESMTPA id 2C9D91C0B6D
+	for <liafa@liafa.jussieu.fr>; Wed, 24 Feb 2016 07:38:37 +0100 (CET)
+DomainKey-Signature: a=rsa-sha1;  q=dns; c=nofws;
+  s=default; d=bestleads.fr;
+  b=CrvqK1UZE9XICrQG+3o6imnLO8E/mQRUszkB6TAz+N40OW/6ZPUeI9lAoGODEEHahtUP5BmTyY0TwxOqIZTavwofHIyfwe7tssgZAaGMdxLxqOKVj2sKo9NFokub/KJGBfW7LPpRIfuIvWM1ZuSlQDyGovSozBrLv4juh/NC1dU=;
+  h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:Content-Transfer-Encoding:X-SUB:X-Priority:X-CMP;
+Message-ID: <98e1c0d50af6d84bfa37f3e84a3b40f7@www.bestleads.fr>
+Date: Wed, 24 Feb 2016 07:38:37 +0100
+Subject: Votre Capital obseques  =?utf-8?Q?=C3=A0?= partir de
+ =?utf-8?Q?5=E2=82=AC?= par mois
+From: Votre capital =?utf-8?Q?Obs=C3=A8ques?= <noreply@bestleads.fr>
+Reply-To: Votre capital =?utf-8?Q?Obs=C3=A8ques?= <noreply@bestleads.fr>
+To: "liafa@liafa.jussieu.fr" <liafa@liafa.jussieu.fr>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-SUB: 3289032SIDEND
+X-Priority: 3 (Normal)
+X-CMP: 1072CMPEND
+X-Miltered: at potemkin with ID 56CD5033.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56CD4FEF.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56CD5033.001 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<noreply@bestleads.fr>
+X-j-chkmail-Enveloppe: 56CD4FEF.000 from mx1.bestleads.fr/mx1.bestleads.fr/91.236.254.217/bestleads.fr/<noreply@bestleads.fr>
+X-Scores-Stats: 56CD4FEF.000 B=0.50000 L=0.93305 G=0.93305 Agree    
+X-j-chkmail-Score: MSGID : 56CD5033.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56CD4FEF.000 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.933 -> S=0.951
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 24 Feb 2016 07:39:47 +0100 (CET)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>=09=09<meta http-=
+equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></meta>  =09<=
+title>Assurance Obseques</title>=09<!--=09Don t remove the next meta=09-->=
+=09=09<meta name=3D"pdlbat1tkn" content=3D"XCGAeWBd"></meta></head><body st=
+yle=3D"background-color:#ffffff;"><img src=3D"http://dbkpwi4c6v97q.cloudfro=
+nt.net/?sc=3D1410&amp;t=3D0&amp;l=3D147719&amp;p=3D10500" width=3D"1" heigh=
+t=3D"1" alt=3D"" border=3D"0" />=09<div>=09=09<div style=3D"text-align: cen=
+ter;"><span style=3D"font-family: Arial, sans-serif; font-size: 12px;"><a t=
+arget=3D"_blank" href=3D"http://www.bestleads.fr/subscriber/newsletter.php?=
+e2=3Db2b0a3ada985b1aaa7ada375b2bab8b4afacb775aeb7&amp;c=3D1072&amp;h=3D1&am=
+p;t=3D0&l=3D130" nvhide=3D"">Cliquez ici pour lire cet e-mail dans votre na=
+vigateur.</a><br />=09=09=09=09</span></div>=09=09<p></p>=09=09<table borde=
+r=3D"0" width=3D"600" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+style=3D"font-family:Arial, Sans-Serif; font-size:12px; border:0px solid #F=
+FFFFF;">=09=09=09<tbody>=09=09=09=09<tr>=09=09=09=09=09<td>=09=09=09=09=09=
+=09<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" a=
+lign=3D"center">=09=09=09=09=09=09=09<tbody>=09=09=09=09=09=09=09=09<tr>=09=
+=09=09=09=09=09=09=09=09<td width=3D"191" height=3D"106" style=3D"backgroun=
+d-color:#ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.php?r=3D328903=
+2c1072c49775" target=3D"_blank"><img style=3D"display:block;" src=3D"http:/=
+/d31epa2i3egyy4.cloudfront.net/placedelassuranceobseques/051115/assuobse_01=
+.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=C3=A8que qui vous correspond" =
+width=3D"191" height=3D"106" border=3D"0" /></a></td>=09=09=09=09=09=09=09=
+=09=09<td width=3D"222" height=3D"106" style=3D"background-color:#ffffff;">=
+<a href=3D"http://www.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49775" targ=
+et=3D"_blank"><img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cl=
+oudfront.net/placedelassuranceobseques/051115/assuobse_02.jpg" alt=3D"Trouv=
+ez l=E2=80=99assurance obs=C3=A8que qui vous correspond" width=3D"222" heig=
+ht=3D"106" border=3D"0" /></a></td>=09=09=09=09=09=09=09=09=09<td width=3D"=
+187" height=3D"106" style=3D"background-color:#ffffff;"><a href=3D"http://w=
+ww.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49775" target=3D"_blank"><img =
+style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfront.net/placed=
+elassuranceobseques/051115/assuobse_03.jpg" alt=3D"Trouvez l=E2=80=99assura=
+nce obs=C3=A8que qui vous correspond" width=3D"187" height=3D"106" border=
+=3D"0" /></a></td>=09=09=09=09=09=09=09=09</tr>=09=09=09=09=09=09=09</tbody=
+>=09=09=09=09=09=09</table></td>=09=09=09=09</tr>=09=09=09=09<tr>=09=09=09=
+=09=09<td>=09=09=09=09=09=09<table border=3D"0" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" align=3D"center">=09=09=09=09=09=09=09<tbody>=09=
+=09=09=09=09=09=09=09<tr>=09=09=09=09=09=09=09=09=09<td width=3D"191" heigh=
+t=3D"102" style=3D"background-color:#ffffff;"><a href=3D"http://www.bestlea=
+ds.fr/inc/rdr.php?r=3D3289032c1072c49775" target=3D"_blank"><img style=3D"d=
+isplay:block;" src=3D"http://d31epa2i3egyy4.cloudfront.net/placedelassuranc=
+eobseques/051115/assuobse_04.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=
+=C3=A8que qui vous correspond" width=3D"191" height=3D"102" border=3D"0" />=
+</a></td>=09=09=09=09=09=09=09=09=09<td width=3D"222" height=3D"102" style=
+=3D"background-color:#ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.p=
+hp?r=3D3289032c1072c49775" target=3D"_blank"><img style=3D"display:block;" =
+src=3D"http://d31epa2i3egyy4.cloudfront.net/placedelassuranceobseques/05111=
+5/assuobse_05.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=C3=A8que qui vous=
+ correspond" width=3D"222" height=3D"102" border=3D"0" /></a></td>=09=09=09=
+=09=09=09=09=09=09<td width=3D"187" height=3D"102" style=3D"background-colo=
+r:#ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.php?r=3D3289032c1072=
+c49775" target=3D"_blank"><img style=3D"display:block;" src=3D"http://d31ep=
+a2i3egyy4.cloudfront.net/placedelassuranceobseques/051115/assuobse_06.jpg" =
+alt=3D"Trouvez l=E2=80=99assurance obs=C3=A8que qui vous correspond" width=
+=3D"187" height=3D"102" border=3D"0" /></a></td>=09=09=09=09=09=09=09=09</t=
+r>=09=09=09=09=09=09=09</tbody>=09=09=09=09=09=09</table></td>=09=09=09=09<=
+/tr>=09=09=09=09<tr>=09=09=09=09=09<td>=09=09=09=09=09=09<table border=3D"0=
+" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">=09=
+=09=09=09=09=09=09<tbody>=09=09=09=09=09=09=09=09<tr>=09=09=09=09=09=09=09=
+=09=09<td width=3D"191" height=3D"164" style=3D"background-color:#ffffff;">=
+<a href=3D"http://www.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49775" targ=
+et=3D"_blank"><img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cl=
+oudfront.net/placedelassuranceobseques/051115/assuobse_07.jpg" alt=3D"Trouv=
+ez l=E2=80=99assurance obs=C3=A8que qui vous correspond" width=3D"191" heig=
+ht=3D"164" border=3D"0" /></a></td>=09=09=09=09=09=09=09=09=09<td width=3D"=
+222" height=3D"164" style=3D"background-color:#ffffff;"><a href=3D"http://w=
+ww.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49775" target=3D"_blank"><img =
+style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfront.net/placed=
+elassuranceobseques/051115/assuobse_08.jpg" alt=3D"Trouvez l=E2=80=99assura=
+nce obs=C3=A8que qui vous correspond" width=3D"222" height=3D"164" border=
+=3D"0" /></a></td>=09=09=09=09=09=09=09=09=09<td width=3D"187" height=3D"16=
+4" style=3D"background-color:#ffffff;"><a href=3D"http://www.bestleads.fr/i=
+nc/rdr.php?r=3D3289032c1072c49775" target=3D"_blank"><img style=3D"display:=
+block;" src=3D"http://d31epa2i3egyy4.cloudfront.net/placedelassuranceobsequ=
+es/051115/assuobse_09.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=C3=A8que =
+qui vous correspond" width=3D"187" height=3D"164" border=3D"0" /></a></td>=
+=09=09=09=09=09=09=09=09</tr>=09=09=09=09=09=09=09</tbody>=09=09=09=09=09=
+=09</table></td>=09=09=09=09</tr>=09=09=09=09<tr>=09=09=09=09=09<td>=09=09=
+=09=09=09=09<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" align=3D"center">=09=09=09=09=09=09=09<tbody>=09=09=09=09=09=09=09=
+=09<tr>=09=09=09=09=09=09=09=09=09<td width=3D"191" height=3D"161" style=3D=
+"background-color:#ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.php?=
+r=3D3289032c1072c49775" target=3D"_blank"><img style=3D"display:block;" src=
+=3D"http://d31epa2i3egyy4.cloudfront.net/placedelassuranceobseques/051115/a=
+ssuobse_10.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=C3=A8que qui vous co=
+rrespond" width=3D"191" height=3D"161" border=3D"0" /></a></td>=09=09=09=09=
+=09=09=09=09=09<td width=3D"222" height=3D"161" style=3D"background-color:#=
+ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49=
+775" target=3D"_blank"><img style=3D"display:block;" src=3D"http://d31epa2i=
+3egyy4.cloudfront.net/placedelassuranceobseques/051115/assuobse_11.jpg" alt=
+=3D"Trouvez l=E2=80=99assurance obs=C3=A8que qui vous correspond" width=3D"=
+222" height=3D"161" border=3D"0" /></a></td>=09=09=09=09=09=09=09=09=09<td =
+width=3D"187" height=3D"161" style=3D"background-color:#ffffff;"><a href=3D=
+"http://www.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49775" target=3D"_bla=
+nk"><img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfront.n=
+et/placedelassuranceobseques/051115/assuobse_12.jpg" alt=3D"Trouvez l=
+=E2=80=99assurance obs=C3=A8que qui vous correspond" width=3D"187" height=
+=3D"161" border=3D"0" /></a></td>=09=09=09=09=09=09=09=09</tr>=09=09=09=09=
+=09=09=09</tbody>=09=09=09=09=09=09</table></td>=09=09=09=09</tr>=09=09=09=
+=09<tr>=09=09=09=09=09<td>=09=09=09=09=09=09<table border=3D"0" width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">=09=09=09=09=09=09=
+=09<tbody>=09=09=09=09=09=09=09=09<tr>=09=09=09=09=09=09=09=09=09<td width=
+=3D"191" height=3D"116" style=3D"background-color:#ffffff;"><a href=3D"http=
+://www.bestleads.fr/inc/rdr.php?r=3D3289032c1072c49775" target=3D"_blank"><=
+img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfront.net/pl=
+acedelassuranceobseques/051115/assuobse_13.jpg" alt=3D"Trouvez l=E2=80=
+=99assurance obs=C3=A8que qui vous correspond" width=3D"191" height=3D"116"=
+ border=3D"0" /></a></td>=09=09=09=09=09=09=09=09=09<td width=3D"222" heigh=
+t=3D"116" style=3D"background-color:#ffffff;"><a href=3D"http://www.bestlea=
+ds.fr/inc/rdr.php?r=3D3289032c1072c49775" target=3D"_blank"><img style=3D"d=
+isplay:block;" src=3D"http://d31epa2i3egyy4.cloudfront.net/placedelassuranc=
+eobseques/051115/assuobse_14.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=
+=C3=A8que qui vous correspond" width=3D"222" height=3D"116" border=3D"0" />=
+</a></td>=09=09=09=09=09=09=09=09=09<td width=3D"187" height=3D"116" style=
+=3D"background-color:#ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.p=
+hp?r=3D3289032c1072c49775" target=3D"_blank"><img style=3D"display:block;" =
+src=3D"http://d31epa2i3egyy4.cloudfront.net/placedelassuranceobseques/05111=
+5/assuobse_15.jpg" alt=3D"Trouvez l=E2=80=99assurance obs=C3=A8que qui vous=
+ correspond" width=3D"187" height=3D"116" border=3D"0" /></a></td>=09=09=09=
+=09=09=09=09=09</tr>=09=09=09=09=09=09=09</tbody>=09=09=09=09=09=09</table>=
+</td>=09=09=09=09</tr>=09=09=09=09<tr>=09=09=09=09=09<td>=09=09=09=09=09=09=
+<table border=3D"0" width=3D"100%" cellpadding=3D"23" cellspacing=3D"0" ali=
+gn=3D"center">=09=09=09=09=09=09=09<tbody>=09=09=09=09=09=09=09=09<tr>=09=
+=09=09=09=09=09=09=09=09<td width=3D"600" height=3D"65" style=3D"background=
+-color:#ffffff;"><a href=3D"http://www.bestleads.fr/inc/rdr.php?r=3D3289032=
+c1072c49775" style=3D"text-decoration:none;" target=3D"_blank"><span size=
+=3D"2" style=3D"font-family:Arial,Sans-Serif; font-size:15px; color:#000000=
+; font-weight:;"><span style=3D"color:#55a63a;font-size:20px;font-weight:bo=
+ld;">Pourquoi prendre une assurance obs=C3=A8ques?</span><br />=09=09=09=09=
+=09=09=09=09=09=09=09=09<br />=09=09=09=09=09=09=09=09=09=09=09=09En moyenn=
+e, on estime =C3=A0 <span style=3D"font-weight: bold;">4000&euro;</span> le=
+s frais d=E2=80=99obs=C3=A8ques apr=C3=A8s un d&eacute;c=C3=A8s : cela comp=
+rend entre autres les frais li&eacute;s au cercueil, =C3=A0 la c&eacute;l&e=
+acute;bration, =C3=A0 l=E2=80=99inhumation ou =C3=A0 la cr&eacute;mation.<b=
+r />=09=09=09=09=09=09=09=09=09=09=09=09<br />=09=09=09=09=09=09=09=09=09=
+=09=09=09Pour &eacute;viter tout souci d=E2=80=99ordre financier =C3=A0 vot=
+re entourage lors de votre d&eacute;c=C3=A8s, la l&eacute;gislation permet =
+depuis 2004 de souscrire une <span style=3D"font-weight: bold;">assurance o=
+bs=C3=A8ques.</span><br />=09=09=09=09=09=09=09=09=09=09=09=09<br />=09=09=
+=09=09=09=09=09=09=09=09=09=09Souscrire une assurance obs=C3=A8ques permet =
+=C3=A0 vos proches, lors de votre d&eacute;c=C3=A8s, de <span style=3D"font=
+-weight: bold;">n=E2=80=99avoir rien =C3=A0 r&eacute;gler de leur poche.</s=
+pan></span></a></td>=09=09=09=09=09=09=09=09</tr>=09=09=09=09=09=09=09</tbo=
+dy>=09=09=09=09=09=09</table></td>=09=09=09=09</tr>=09=09=09</tbody>=09=09<=
+/table>=09=09<p>&nbsp;</p>=09=09<p style=3D"text-align: center;"><a href=3D=
+"http://www.bestleads.fr/subscriber/optOut.php?t=3D&l=3D130&c=3D1072&e2=3Db=
+2b0a3ada985b1aaa7ada375b2bab8b4afacb775aeb7&a=3D1">Se d&eacute;sabonner</a>=
+</p></div><img src=3D"http://www.bestleads.fr/inc/or.php?sid=3D3289032&c=3D=
+1072&h=3D1" width=3D"1" height=3D"1"></body></html>

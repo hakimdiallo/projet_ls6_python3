@@ -1,0 +1,190 @@
+Return-Path: <darcila_semel@itajuba.mg.gov.br>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 27V9McxMq1ZBSAAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 29 Jan 2016 12:28:45 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id CE95961FA8;
+	Fri, 29 Jan 2016 12:28:44 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 1.822
+X-Spam-Level: *
+X-Spam-Status: No, score=1.822 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, HTML_MESSAGE=0.001, MISSING_HEADERS=1.021,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id WIcURFk3nZLV; Fri, 29 Jan 2016 12:28:43 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id D9F3761FA3;
+	Fri, 29 Jan 2016 12:28:42 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u0TBSgSo028835
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO);
+	Fri, 29 Jan 2016 12:28:42 +0100
+Received: from ns2.itajuba.mg.gov.br (mail.itajuba.mg.gov.br [186.225.220.251])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0TBQ0Yl021449
+          ; Fri, 29 Jan 2016 12:26:27 +0100 (CET)
+X-Ids: 165
+Received: from localhost (localhost [127.0.0.1])
+	by ns2.itajuba.mg.gov.br (Postfix) with ESMTP id D6D351AA81A5;
+	Fri, 29 Jan 2016 09:21:53 -0200 (BRST)
+Received: from ns2.itajuba.mg.gov.br ([127.0.0.1])
+	by localhost (ns2.itajuba.mg.gov.br [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id VkhqWLR1Fga9; Fri, 29 Jan 2016 09:21:48 -0200 (BRST)
+Received: from localhost (localhost [127.0.0.1])
+	by ns2.itajuba.mg.gov.br (Postfix) with ESMTP id F2FF71AA8190;
+	Fri, 29 Jan 2016 09:21:47 -0200 (BRST)
+X-Virus-Scanned: amavisd-new at itajuba.mg.gov.br
+Received: from ns2.itajuba.mg.gov.br ([127.0.0.1])
+	by localhost (ns2.itajuba.mg.gov.br [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id LpaRofa916mv; Fri, 29 Jan 2016 09:21:46 -0200 (BRST)
+Received: from ns2.itajuba.mg.gov.br (ns2.itajuba.mg.gov.br [186.225.220.251])
+	by ns2.itajuba.mg.gov.br (Postfix) with ESMTP id 302B01AA7FA3;
+	Fri, 29 Jan 2016 09:21:46 -0200 (BRST)
+Date: Fri, 29 Jan 2016 09:21:45 -0200 (BRST)
+From: Darcila <darcila_semel@itajuba.mg.gov.br>
+Message-ID: <1869242096.6418.1454066505931.JavaMail.zimbra@itajuba.mg.gov.br>
+Subject: Chers utilisateurs d'Admin,
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_6417_697303470.1454066505928"
+X-Originating-IP: [154.66.52.78]
+X-Mailer: Zimbra 8.6.0_GA_1153 (ZimbraWebClient - GC48 (Win)/8.6.0_GA_1153)
+Thread-Topic: Chers utilisateurs d'Admin,
+Thread-Index: uDdZZX9H5/P2+/VXnFAoHoYptyN+sQ==
+X-Miltered: at korolev with ID 56AB4CEA.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56AB4C48.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56AB4CEA.002 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<darcila_semel@itajuba.mg.gov.br>
+X-j-chkmail-Enveloppe: 56AB4C48.000 from mail.itajuba.mg.gov.br/mail.itajuba.mg.gov.br/186.225.220.251/ns2.itajuba.mg.gov.br/<darcila_semel@itajuba.mg.gov.br>
+X-Scores-Stats: 56AB4C48.000 B=0.50000 L=0.79121 G=0.79121 Agree    
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 56AB4CEA.002 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56AB4C48.000 on shiva.jussieu.fr : j-chkmail score : XXXXX : R=# U=. O=# B=0.791 -> S=0.836
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Fri, 29 Jan 2016 12:28:42 +0100 (CET)
+
+------=_Part_6417_697303470.1454066505928
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Chers utilisateurs d'Admin,=20
+
+nous avons r=C3=A9alis=C3=A9 que votre compte webmail est accessible depuis=
+ une autre ip pour =C3=A9viter la d=C3=A9sactivation, cliquez sur le lien c=
+i-dessous pour v=C3=A9rifier les informations de sucuenta.=20
+
+Click Here=20
+
+Dans le cas contraire, elle peut entra=C3=AEner la r=C3=A9siliation de votr=
+e compte webmail.=20
+Merci et D=C3=A9sol=C3=A9 pour le d=C3=A9rangement=20
+Admin / Webmaster / localhost=20
+
+------=_Part_6417_697303470.1454066505928
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><div style=3D"font-family: arial,helvetica,sans-serif; font-siz=
+e: 12pt; color: #000000"><div><div data-mce-style=3D"color: #222222; font-f=
+amily: arial, sans-serif; font-size: small; font-style: normal; font-varian=
+t: normal; font-weight: normal; letter-spacing: normal; line-height: normal=
+; orphans: auto; text-align: start; text-indent: 0px; text-transform: none;=
+ white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-wid=
+th: 0px;" style=3D"font-style: normal; font-variant: normal; font-weight: n=
+ormal; letter-spacing: normal; line-height: normal; orphans: auto; text-ali=
+gn: start; text-indent: 0px; text-transform: none; white-space: normal; wid=
+ows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: rgb(34, 3=
+4, 34); font-family: arial, sans-serif; font-size: small; background-color:=
+ rgb(255, 255, 255);">Chers utilisateurs d'Admin,</div><div data-mce-style=
+=3D"color: #222222; font-family: arial, sans-serif; font-size: small; font-=
+style: normal; font-variant: normal; font-weight: normal; letter-spacing: n=
+ormal; line-height: normal; orphans: auto; text-align: start; text-indent: =
+0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0p=
+x; -webkit-text-stroke-width: 0px;" style=3D"font-style: normal; font-varia=
+nt: normal; font-weight: normal; letter-spacing: normal; line-height: norma=
+l; orphans: auto; text-align: start; text-indent: 0px; text-transform: none=
+; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-wi=
+dth: 0px; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size=
+: small; background-color: rgb(255, 255, 255);"><br></div><div data-mce-sty=
+le=3D"color: #222222; font-family: arial, sans-serif; font-size: small; fon=
+t-style: normal; font-variant: normal; font-weight: normal; letter-spacing:=
+ normal; line-height: normal; orphans: auto; text-align: start; text-indent=
+: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: =
+0px; -webkit-text-stroke-width: 0px;" style=3D"font-style: normal; font-var=
+iant: normal; font-weight: normal; letter-spacing: normal; line-height: nor=
+mal; orphans: auto; text-align: start; text-indent: 0px; text-transform: no=
+ne; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-=
+width: 0px; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-si=
+ze: small; background-color: rgb(255, 255, 255);">&nbsp;nous avons r=C3=A9a=
+lis=C3=A9 que votre compte webmail est accessible depuis une autre ip pour =
+=C3=A9viter la d=C3=A9sactivation, cliquez sur le lien ci-dessous pour v=C3=
+=A9rifier les informations de sucuenta.</div><div data-mce-style=3D"color: =
+#222222; font-family: arial, sans-serif; font-size: small; font-style: norm=
+al; font-variant: normal; font-weight: normal; letter-spacing: normal; line=
+-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-t=
+ransform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-=
+text-stroke-width: 0px;" style=3D"font-style: normal; font-variant: normal;=
+ font-weight: normal; letter-spacing: normal; line-height: normal; orphans:=
+ auto; text-align: start; text-indent: 0px; text-transform: none; white-spa=
+ce: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; c=
+olor: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; ba=
+ckground-color: rgb(255, 255, 255);"><br></div><div data-mce-style=3D"color=
+: #222222; font-family: arial, sans-serif; font-size: small; font-style: no=
+rmal; font-variant: normal; font-weight: normal; letter-spacing: normal; li=
+ne-height: normal; orphans: auto; text-align: start; text-indent: 0px; text=
+-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webki=
+t-text-stroke-width: 0px;" style=3D"font-style: normal; font-variant: norma=
+l; font-weight: normal; letter-spacing: normal; line-height: normal; orphan=
+s: auto; text-align: start; text-indent: 0px; text-transform: none; white-s=
+pace: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;=
+ color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small; =
+background-color: rgb(255, 255, 255);"><a href=3D"http://page1234.moonfruit=
+.com/" target=3D"_blank" data-mce-href=3D"http://page1234.moonfruit.com/" d=
+ata-mce-style=3D"color: #1155cc;" style=3D"color: rgb(17, 85, 204);">Click =
+Here</a><br></div><div data-mce-style=3D"color: #222222; font-family: arial=
+, sans-serif; font-size: small; font-style: normal; font-variant: normal; f=
+ont-weight: normal; letter-spacing: normal; line-height: normal; orphans: a=
+uto; text-align: start; text-indent: 0px; text-transform: none; white-space=
+: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" st=
+yle=3D"font-style: normal; font-variant: normal; font-weight: normal; lette=
+r-spacing: normal; line-height: normal; orphans: auto; text-align: start; t=
+ext-indent: 0px; text-transform: none; white-space: normal; widows: 1; word=
+-spacing: 0px; -webkit-text-stroke-width: 0px; color: rgb(34, 34, 34); font=
+-family: arial, sans-serif; font-size: small; background-color: rgb(255, 25=
+5, 255);"><br></div><div data-mce-style=3D"color: #222222; font-family: ari=
+al, sans-serif; font-size: small; font-style: normal; font-variant: normal;=
+ font-weight: normal; letter-spacing: normal; line-height: normal; orphans:=
+ auto; text-align: start; text-indent: 0px; text-transform: none; white-spa=
+ce: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" =
+style=3D"font-style: normal; font-variant: normal; font-weight: normal; let=
+ter-spacing: normal; line-height: normal; orphans: auto; text-align: start;=
+ text-indent: 0px; text-transform: none; white-space: normal; widows: 1; wo=
+rd-spacing: 0px; -webkit-text-stroke-width: 0px; color: rgb(34, 34, 34); fo=
+nt-family: arial, sans-serif; font-size: small; background-color: rgb(255, =
+255, 255);">Dans le cas contraire, elle peut entra=C3=AEner la r=C3=A9silia=
+tion de votre compte webmail.</div><div data-mce-style=3D"color: #222222; f=
+ont-family: arial, sans-serif; font-size: small; font-style: normal; font-v=
+ariant: normal; font-weight: normal; letter-spacing: normal; line-height: n=
+ormal; orphans: auto; text-align: start; text-indent: 0px; text-transform: =
+none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-strok=
+e-width: 0px;" style=3D"font-style: normal; font-variant: normal; font-weig=
+ht: normal; letter-spacing: normal; line-height: normal; orphans: auto; tex=
+t-align: start; text-indent: 0px; text-transform: none; white-space: normal=
+; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: rgb(=
+34, 34, 34); font-family: arial, sans-serif; font-size: small; background-c=
+olor: rgb(255, 255, 255);">Merci et D=C3=A9sol=C3=A9 pour le d=C3=A9rangeme=
+nt</div><div data-mce-style=3D"color: #222222; font-family: arial, sans-ser=
+if; font-size: small; font-style: normal; font-variant: normal; font-weight=
+: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-=
+align: start; text-indent: 0px; text-transform: none; white-space: normal; =
+widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" style=3D"fon=
+t-style: normal; font-variant: normal; font-weight: normal; letter-spacing:=
+ normal; line-height: normal; orphans: auto; text-align: start; text-indent=
+: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: =
+0px; -webkit-text-stroke-width: 0px; color: rgb(34, 34, 34); font-family: a=
+rial, sans-serif; font-size: small; background-color: rgb(255, 255, 255);">=
+&nbsp;Admin / Webmaster / localhost</div></div></div></body></html>
+------=_Part_6417_697303470.1454066505928--

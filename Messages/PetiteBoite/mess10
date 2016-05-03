@@ -1,0 +1,64 @@
+Return-Path: <bounce+ijntrjournal@server.ijntr.com>
+Delivered-To: amicheli@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id ylbmM0bsoFafrQAAKHrkRA
+	for <amicheli@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 15:34:04 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 1926E61FA2
+	for <amicheli@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 15:34:04 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 2.611
+X-Spam-Level: **
+X-Spam-Status: No, score=2.611 tagged_above=-10000 required=5
+	tests=[BAYES_60=1.5, DCC_CHECK=1.1, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_FILL_THIS_FORM_SHORT=0.01]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=ijntr.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id nnVjDdiP3z6t for <amicheli@liafa.univ-paris-diderot.fr>;
+	Thu, 21 Jan 2016 15:34:01 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id CF94461FA1
+	for <amicheli@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 15:34:01 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u0LEY11t013058
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <amicheli@liafa.univ-paris-diderot.fr>; Thu, 21 Jan 2016 15:34:01 +0100
+Received: from server.ijntr.com (server.ijntr.com [37.59.222.188])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0LEVc7V073737
+          for <amicheli@liafa.jussieu.fr>; Thu, 21 Jan 2016 15:32:03 +0100 (CET)
+X-Ids:168
+To: amicheli@liafa.jussieu.fr
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ijntr.com; s=2001;
+	t=1453385542; bh=7IOYu3mvJRoEuBcdDV3x8ZhkBtnBw9S+JXf3nIgdJdE=;
+	h=Subject:Message-ID:Date:From:Reply-To:MIME-Version:
+	 List-Unsubscribe:Content-Type:Content-Transfer-Encoding;
+	b=dXYyvA65aHcrA7UMs5haXD7KFbB/g41AhX4VRjSrXMPPjr4PjceM4rjDGeyXZ4bhF
+	 nJC8Mz84mfmnfuFQ662YVw1q23tgNl62Qx1q1qKzdxob9RUBJecZ91SF3LBaYRYCMT
+	 bAoFWlip4GXzqKoe5uhnMgjObCo6gofn/riG8Uek=
+Subject: Nextgen Research Publication
+Message-ID: <374947f42f302ca59dae39b8488a3f73@ijntrjournal.com>
+Date: Thu, 21 Jan 2016 20:14:34 +0600
+From: "IJNTR" <editor05@ijntr.com>
+Reply-To: editor06@ijntr.com
+MIME-Version: 1.0
+X-Mailer-LID: 8
+List-Unsubscribe: <http://ijntrjournal.com/unsubscribe.php?M=958599&C=f74a20c9a40d7af0147ae9b4b6ab9859&L=8&N=145>
+X-Mailer-RecptId: 958599
+X-Mailer-SID: 145
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_68926f5a9b4ec2e300a5b525cbadd23b"
+Content-Transfer-Encoding: 8bit
+X-Miltered: at korolev with ID 56A0EC59.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56A0EBCA.005 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A0EC59.002 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounce+ijntrjournal@server.ijntr.com>
+X-j-chkmail-Enveloppe: 56A0EBCA.005 from server.ijntr.com/server.ijntr.com/37.59.222.188/server.ijntr.com/<bounce+ijntrjournal@server.ijntr.com>
+X-Scores-Stats: 56A0EBCA.005 B=0.50000 L=0.97559 G=0.97559 Agree    
+X-j-chkmail-Score: MSGID : 56A0EC59.002 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56A0EBCA.005 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=. B=0.976 -> S=0.976
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Thu, 21 Jan 2016 15:34:01 +0100 (CET)

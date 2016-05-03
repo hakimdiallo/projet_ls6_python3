@@ -1,0 +1,119 @@
+Return-Path: <non-reply@airekacells.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id q/T6NCLx6Fa9FgAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 16 Mar 2016 06:38:57 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 08A3761FA2
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 16 Mar 2016 06:38:57 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 15.503
+X-Spam-Level: ***************
+X-Spam-Status: Yes, score=15.503 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DATE_IN_PAST_06_12=1.543,
+	DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293, HTML_IMAGE_ONLY_12=2.059,
+	HTML_MESSAGE=0.001, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, XPRIO=3.499]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id h0vfLoC9Et2G for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed, 16 Mar 2016 06:38:53 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 2567861FA1
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed, 16 Mar 2016 06:38:53 +0100 (CET)
+Received: from server.airekacell.com (server.airekacell.com [198.154.241.208])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2G5cpLX023256
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Wed, 16 Mar 2016 06:38:52 +0100
+Received: from airekace by server.airekacell.com with local (Exim 4.86_1)
+	(envelope-from <non-reply@airekacells.com>)
+	id 1aftV3-0001fX-Be
+	for sophie.laplante@liafa.univ-paris-diderot.fr; Tue, 15 Mar 2016 18:15:21 +0000
+To: Sophie <sophie.laplante@liafa.univ-paris-diderot.fr>
+Subject: =?utf-8?Q?10=CE=BCm_Filtration_Apparatus?=
+X-PHP-Script: vial.airekacell.com/index.php for 85.17.89.41
+Date: Tue, 15 Mar 2016 12:15:21 -0600
+From: Ginna Xu <ginna.xu@airekacells.com>
+Reply-To: Ginna Xu <ginna.xu@airekacells.com>
+Message-ID: <MzI3ODg4NQAC72392Y39BAMTQ1ODA2NTcyMTc2OTA4@vial.airekacell.com>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.6 (https://github.com/PHPMailer/PHPMailer/)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_76e11f8b78865557fb08db8d91591722"
+Content-Transfer-Encoding: 8bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.airekacell.com
+X-AntiAbuse: Original Domain - liafa.univ-paris-diderot.fr
+X-AntiAbuse: Originator/Caller UID/GID - [500 500] / [47 12]
+X-AntiAbuse: Sender Address Domain - airekacells.com
+X-Get-Message-Sender-Via: server.airekacell.com: authenticated_id: airekace/only user confirmed/virtual account not confirmed
+X-Authenticated-Sender: server.airekacell.com: airekace
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Greylist: Delayed for 03:25:52 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 16 Mar 2016 06:38:53 +0100 (CET)
+X-Miltered: at potemkin with ID 56E8F16B.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E8F16B.002 from server.airekacell.com/server.airekacell.com/null/server.airekacell.com/<non-reply@airekacells.com>
+X-j-chkmail-Score: MSGID : 56E8F16B.002 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--b1_76e11f8b78865557fb08db8d91591722
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Sophie,
+
+Our filtration apparatus is $199/pc now. FedEx/UPS/DHL/Express delivery to door. 
+
+More info: http://airekacells.com/filtration/filtration-apparatus
+
+Kindly let me know if you are interested. 
+
+Thank you and best regards, 
+
+Ginna
+
+Aireka Scientific Co., Ltd
+Tel: +86 186 6704 3072
+Email: ginna.xu@airekacells.com
+Web: http://www.airekacells.com 
+ 
+Unsubscribe ( http://vial.airekacell.com/index.php?subid=72392&option=com_acymailing&ctrl=user&task=out&mailid=39&key=VWK8OijoEecpqK )
+
+
+--b1_76e11f8b78865557fb08db8d91591722
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Sophie,<br />
+<br />
+Our filtration apparatus is $199/pc now. FedEx/UPS/DHL/Express delivery to door.&nbsp;<br />
+<br />
+More info: http://airekacells.com/filtration/filtration-apparatus<br />
+<br />
+<img alt="" src="http://airekacells.com/image//Filtration/2016-FiltrationApp.jpg" /><br />
+<br />
+Kindly let me know if you are interested.&nbsp;<br />
+<br />
+Thank you and best regards,&nbsp;<br />
+<br />
+Ginna<br />
+<br />
+Aireka Scientific Co., Ltd<br />
+Tel: +86 186 6704 3072<br />
+Email: ginna.xu@airekacells.com<br />
+Web:&nbsp;http://www.airekacells.com&nbsp;<br />
+&nbsp;<br />
+<a style="text-decoration:none;" target="_blank"
+href="http://vial.airekacell.com/index.php?subid=72392&option=com_acymailing&ctrl=user&task=out&mailid=39&key=VWK8OijoEecpqK"><span
+class="acymailing_unsub">Unsubscribe</span></a><br />
+&nbsp;<img class="spict" alt="" src="http://vial.airekacell.com/index.php?option=com_acymailing&ctrl=stats&mailid=39&subid=72392"  border="0" 
+height="1"  width="50" />
+
+
+
+--b1_76e11f8b78865557fb08db8d91591722--

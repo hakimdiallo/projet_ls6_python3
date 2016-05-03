@@ -1,0 +1,356 @@
+Return-Path: <postmaster@cetaitla.ovh>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id F0AENurUvlb1ZgAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 08:02:02 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id D7E0C61FA3
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 08:02:02 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 12.862
+X-Spam-Level: ************
+X-Spam-Status: Yes, score=12.862 tagged_above=-10000 required=5
+	tests=[BAD_ENC_HEADER=0.001, BAYES_99=3.5, BAYES_999=0.2,
+	DCC_CHECK=1.1, FORGED_MUA_OIMO=2.599, FORGED_OUTLOOK_TAGS=0.052,
+	HTML_MESSAGE=0.001, MISSING_MIMEOLE=1.899, RCVD_IN_DNSWL_NONE=-0.0001,
+	T_MANY_HDRS_LCASE=0.01, UNPARSEABLE_RELAY=0.001, XPRIO=3.499]
+	autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id DWfQRNhZ8gZJ for <laplante@liafa.univ-paris-diderot.fr>;
+	Sat, 13 Feb 2016 08:02:01 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 0091C61FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 08:02:00 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1D720nu030914
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 08:02:00 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 5CA6E302EB8
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 07:52:41 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id 40070300FCF
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 07:52:40 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id CD093403FB
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 07:52:40 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id st2Cu9QAKyPD for <laplante@liafa.univ-paris-diderot.fr>;
+	Sat, 13 Feb 2016 07:52:40 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id AF122403A0
+	for <laplante@liafa.univ-paris-diderot.fr>; Sat, 13 Feb 2016 07:52:40 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id A7050E0570; Sat, 13 Feb 2016 07:52:40 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id A598AE02BC
+	for <laplante@lri.fr>; Sat, 13 Feb 2016 07:52:40 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTP id EDDC6E03D2
+	for <laplante@lri.fr>; Sat, 13 Feb 2016 07:52:39 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+ (MTA Server) with ESMTP id <0O2H00C5O3TDYIC0@pnmsss226z03fe0.bouyguestel.com>;
+ Sat, 13 Feb 2016 07:52:28 +0100 (CET)
+Date: Sat, 13 Feb 2016 07:52:33 +0100
+From: =?utf-8?Q?Am=C3=A9liorer?= <postmaster@cetaitla.ovh>
+Subject: =?iso-8859-1?Q?sa communication orale?=
+Sender: =?utf-8?Q?Am=C3=A9liorer?= <postmaster@cetaitla.ovh>
+To: laplante@lri.fr
+Reply-to: =?utf-8?Q?Am=C3=A9liorer?= <postmaster@cetaitla.ovh>
+Message-id: <0O2H00CL04FFYIE0@pnmsss226z03fe0.bouyguestel.com>
+MIME-version: 1.0
+X-Mailer: Microsoft Outlook IMO Build 9.0.2416 (9.0.2910.0)
+Content-type: multipart/alternative;
+ boundary="Boundary_(ID_cqMeJJ0r6BC7TNT6MVPoaA)"
+X-Priority: 3 (Normal)
+X-MSMail-priority: Normal)
+Sun-Java-System-SMTP-Warning: Lines longer than SMTP allows found and truncated.
+X-Greylist: Delayed for 00:09:18 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sat, 13 Feb 2016 08:02:00 +0100 (CET)
+X-Miltered: at korolev with ID 56BED4E8.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56BED4E8.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<postmaster@cetaitla.ovh>
+X-j-chkmail-Score: MSGID : 56BED4E8.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+
+--Boundary_(ID_cqMeJJ0r6BC7TNT6MVPoaA)
+Content-type: text/plain; charset="iso-8859-1"
+Content-transfer-encoding: quoted-printable
+
+
+
+
+&nbsp;
+
+Comment communiquer de mani&egrave;re efficace et=20
+authentique&nbsp;? Comment convaincre ? Comment d&eacute;velopper une vraie=
+pr&eacute;sence=20
+pour passer la rampe en r&eacute;union, en entretien et en public ? La cl&e=
+acute; du succ&egrave;s=20
+repose dans un bon &eacute;quilibreentre la communication non verbale (la p=
+osture=20
+du corps, le regard, l=92ancrage, la voix=85), le contenu des messages,    =
+            et la prise en compte de la relation avec vos interlocuteurs.
+Gr=E2ce aux outils du th&eacute;=E2tre et de la vid&eacute;o,=20
+cette formation, ludique et concr&egrave;te, vous permettra de prendre cons=
+cience de=20
+la                     fa&ccedil;on dont vous vous exprimez habituellement =
+et de d&eacute;velopper des outils adapt&eacute;s &agrave; vos besoins pour=
+ atteindre cet &eacute;quilibre.
+                                       &nbsp;
+Cliquez ICI pour en savoir plus                                      =20
+A qui s=92adresse cette formation&nbsp;:
+
+- aux cadres, dirigeants d'entreprise, salari&eacute;s=20
+ =20
+- aux entrepreneurs, professions lib&eacute;rales=20
+ =20
+- aux professionnels de la relation d'aide=20
+ =20
+- aux &eacute;lus=20
+ =20
+- aux personnes souhaitant se pr&eacute;parer &agrave; un entretien de=20
+  recrutement=20
+ =20
+- aux &eacute;tudiants qui pr&eacute;parent des oraux=20
+ =20
+
+- et plus g&eacute;n&eacute;ralement &agrave; toute personne=20
+  souhaitant am&eacute;liorer sa capacit&eacute; &agrave;           s=92exp=
+rimer de mani&egrave;re efficace &agrave; l=92orale, dans un contexte profe=
+ssionnel ou personnel
+
+
+-=20
+Travail sur les outils de l=92orateur     - Travail sur la mise en relation=
+-=20
+Travail sur le discours   - Travail autour du stress et des &eacute;motions
+
+M&eacute;thode et outils p&eacute;dagogiques    =20
+La&nbsp;m&eacute;thode&nbsp;utilis&eacute;e est qualifi&eacute;e d=92 &laqu=
+o;&nbsp;active&nbsp;&raquo;, car elle place le participant au c=9Cur de la =
+formation et le rend &laquo;&nbsp;acteur&nbsp;&raquo; de son changement. Gr=
+=E2ce &agrave; des&nbsp;mises en situation film&eacute;es, les participants=
+ d&eacute;gagent par eux-m&ecirc;mes les probl&eacute;matiques inh&eacute;r=
+entes &agrave; leur situation. Apr&egrave;s une analyse approfondie, desexe=
+rcices issus du training de l=92acteur&nbsp;ainsi que des&nbsp;techniques d=
+e conscience corporelle&nbsp;leur apportent des outils concrets pour s=92en=
+gager sur un chemin de progression. Enfin, de nouvelles improvisations leur=
+ permettent ensuite de mettre en pratique ce qu=92ils ont d&eacute;gag&eacu=
+te;.
+Cette formation, ludique et concr&egrave;te, permet de faire appara&icirc;t=
+re des r&egrave;gles et techniques simples et pratiques, aidant &agrave; am=
+&eacute;liorer ses capacit&eacute;s d=92expression et relationnelles, et &a=
+grave; communiquer de mani&egrave;re authentique et efficace.&nbsp;&nbsp;&n=
+bsp;
+&nbsp;
+Cliquez ICI pour en savoir plus
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+Cliquez ICI pour ne plus recevoir de mails de notre=20
+part         =20
+
+
+
+--Boundary_(ID_cqMeJJ0r6BC7TNT6MVPoaA)
+Content-type: text/html; charset="iso-8859-1"
+Content-transfer-encoding: quoted-printable
+
+<html>
+  <head>
+    <title>pour le terrain</title>
+    </style>
+  </head>
+  <body>
+<DIV><A href=3D"http://t.ymlp18.com/ewuaaaemwhuakabewacau/click.php"><IMG s=
+tyle=3D"BORDER-RIGHT: 0pt; BORDER-TOP: 0pt; BORDER-LEFT: 0pt; BORDER-BOTTOM=
+: 0pt" alt=3D"Acad=E9mie Fran=E7aise de Formation - T=E9l : 01 82 83 40 80"=
+ hspace=3D"0" src=3D"http://img.ymlp18.com/mzu6_haut_3.jpg" border=3D"0"></=
+A></DIV>
+<DIV><A href=3D"http://t.ymlp18.com/ewuaaaemwhuakabewacau/click.php"><IMG s=
+tyle=3D"BORDER-RIGHT: 0pt; BORDER-TOP: 0pt; BORDER-LEFT: 0pt; BORDER-BOTTOM=
+: 0pt" alt=3D"Am=E9liorer sa Communication Orale - 2 jours, 14 heures de fo=
+rmation" hspace=3D"0" src=3D"http://img.ymlp18.com/mzu6_titre.jpg" border=
+=3D"0"></A></DIV>
+<div>&nbsp;</div>
+<div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 15px; COLOR: #222222; LIN=
+E-HEIGHT: 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BAC=
+KGROUND-COLOR: #ffffff; box-sizing: inherit; text-rendering: optimizeLegibi=
+lity">Comment communiquer de mani=E8re efficace et=20
+authentique&nbsp;? Comment convaincre ? Comment d=E9velopper une vraie<BR>p=
+r=E9sence=20
+pour passer la rampe en r=E9union, en entretien et en public ? La cl=E9 du =
+succ=E8s=20
+repose dans un bon =E9quilibre<BR>entre la communication non verbale (la po=
+sture=20
+du corps, le regard, l=92ancrage, la voix=85), le contenu des messages,<BR>=
+                et la prise en compte de la relation avec vos interlocuteur=
+s.</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">Gr=E2ce aux outils du th=E9=E2tre et de=
+ la vid=E9o,=20
+cette formation, ludique et concr=E8te, vous permettra de prendre conscienc=
+e de=20
+la<BR>                     fa=E7on dont vous vous exprimez habituellement e=
+t de d=E9velopper des outils adapt=E9s =E0 vos besoins pour atteindre cet =
+=E9quilibre.</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">                                       =
+&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit"><A href=3D"http://t.ymlp18.com/ewuaaaem=
+whuakabewacau/click.php">Cliquez ICI pour en savoir plus</A>               =
+                        </div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 15px; COLOR: #222222; LIN=
+E-HEIGHT: 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BAC=
+KGROUND-COLOR: #ffffff; box-sizing: inherit; text-rendering: optimizeLegibi=
+lity"><strong style=3D"box-sizing: inherit"  ><BR>A qui s=92adresse cette f=
+ormation</strong>&nbsp;:</div>
+<ul class=3D"Style46 check_square_o check_list" style=3D"PADDING-RIGHT: 0px=
+; PADDING-LEFT: 0px; FONT-WEIGHT: bold; LIST-STYLE-POSITION: outside; PADDI=
+NG-BOTTOM: 0px; MARGIN: 0px 0px 1px; COLOR: #222222; LINE-HEIGHT: 1.6; PADD=
+ING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-COLOR: #ffff=
+ff; box-sizing: inherit">
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >- aux cadres, dirigeants d'entreprise, salari=E9s=20
+ =20
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >- aux entrepreneurs, professions lib=E9rales=20
+ =20
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >- aux professionnels de la relation d'aide=20
+ =20
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >- aux =E9lus=20
+ =20
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >- aux personnes souhaitant se pr=E9parer =E0 un entretien de=20
+  recrutement=20
+ =20
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >- aux =E9tudiants qui pr=E9parent des oraux=20
+ =20
+<li style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px 0px 5px 2em; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; LIST-STYLE-TYPE: none; box-sizing: inherit"=20
+ >
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADD=
+ING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; box-sizing: inherit"=20
+ >- et plus g=E9n=E9ralement =E0 toute personne=20
+  souhaitant am=E9liorer sa capacit=E9 =E0<BR>           s=92exprimer de ma=
+ni=E8re efficace =E0 l=92orale, dans un contexte professionnel ou personnel=
+</div>
+</li>
+</ul>
+<div style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px; PADDI=
+NG-BOTTOM: 0px; MARGIN: 0px 0px 15px; COLOR: #222222; LINE-HEIGHT: 21px; PA=
+DDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-COLOR: #ff=
+ffff; box-sizing: inherit; text-rendering: optimizeLegibility"><strong styl=
+e=3D"box-sizing: inherit"  ><BR>-=20
+Travail sur les outils de l=92orateur<BR>     </strong><strong style=3D"box=
+-sizing: inherit"  >- Travail sur la mise en relation</strong><BR><strong s=
+tyle=3D"box-sizing: inherit"  >-=20
+Travail sur le discours<BR>   </strong><strong style=3D"box-sizing: inherit=
+"  >- Travail autour du stress et des =E9motions</strong></div>
+<UL=20
+style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: outsid=
+e; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 1px; COLOR: #222222; LINE-HEIGHT: 1=
+.6; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-COLO=
+R: #ffffff; box-sizing: inherit">
+<li class=3D"check_square_o check_list" style=3D"PADDING-RIGHT: 0px; PADDIN=
+G-LEFT: 0px; FONT-SIZE: 0.95em; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-T=
+OP: 0px; box-sizing: inherit"=20
+ ><strong style=3D"box-sizing: inherit"=20
+  >M=E9thode et outils p=E9dagogiques</strong>     </li></UL>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 15px; COLOR: #222222; LIN=
+E-HEIGHT: 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BAC=
+KGROUND-COLOR: #ffffff; box-sizing: inherit; text-rendering: optimizeLegibi=
+lity">La&nbsp;<strong style=3D"box-sizing: inherit"  >m=E9thode</strong>&nb=
+sp;utilis=E9e est qualifi=E9e d=92 =AB&nbsp;<strong style=3D"box-sizing: in=
+herit"  >active&nbsp;</strong>=BB, car elle place le participant au c=9Cur =
+de la formation et le rend =AB&nbsp;acteur&nbsp;=BB de son changement. Gr=
+=E2ce =E0 des&nbsp;<strong style=3D"box-sizing: inherit"  >mises en situati=
+on film=E9es</strong>, les participants d=E9gagent par eux-m=EAmes les prob=
+l=E9matiques inh=E9rentes =E0 leur situation. Apr=E8s une analyse approfond=
+ie, des<strong style=3D"box-sizing: inherit"  >exercices issus du training =
+de l=92acteur</strong>&nbsp;ainsi que des&nbsp;<strong style=3D"box-sizing:=
+ inherit"  >techniques de conscience corporelle</strong>&nbsp;leur apporten=
+t=20
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit"><strong style=3D"box-sizing: inherit"  =
+>Cette formation, ludique et concr=E8te, permet de faire appara=EEtre des r=
+=E8gles et techniques simples et pratiques, aidant =E0 am=E9liorer ses capa=
+cit=E9s d=92expression et relationnelles, et =E0 communiquer de mani=E8re a=
+uthentique et efficace.&nbsp;&nbsp;</strong>&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit"><A href=3D"http://t.ymlp18.com/ewuaaaem=
+whuakabewacau/click.php">Cliquez ICI pour en savoir plus</A></div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit">&nbsp;</div>
+<div align=3D"justify" style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT=
+-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #222222; LINE-HEIGHT:=
+ 21px; PADDING-TOP: 0px; FONT-FAMILY: 'Open Sans', sans-serif; BACKGROUND-C=
+OLOR: #ffffff; box-sizing: inherit"><A href=3D"http://t.ymlp18.com/eweaiaem=
+whuadabewavau/click.php"><FONT=20
+size=3D1>Cliquez ICI pour ne plus recevoir de mails de notre=20
+part</FONT>          </A></div>
+</div>
+</BODY></html>
+
+--Boundary_(ID_cqMeJJ0r6BC7TNT6MVPoaA)--

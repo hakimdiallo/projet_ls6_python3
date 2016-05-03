@@ -1,0 +1,194 @@
+Return-Path: <service-client@newsletter.elu41.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id s7MCLPYR6FapZwAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 14:45:27 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 0646061FA5;
+	Tue, 15 Mar 2016 14:45:25 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 16.6
+X-Spam-Level: ****************
+X-Spam-Status: Yes, score=16.6 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_MSPIKE_H3=-0.01,
+	RCVD_IN_MSPIKE_WL=-0.01, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_DBL_SPAM=2.5, URIBL_WS_SURBL=1.608]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=newsletter.elu41.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id M1b-a6af-ql5; Tue, 15 Mar 2016 14:45:20 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 651BB61FA1
+	for <liafa@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 14:45:20 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u2FDjKAx001226
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 14:45:20 +0100
+Received: from zinc-foei.emv4.net (zinc-foei.emv4.net [81.92.124.48])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u2FDggHU051439
+          for <liafa@liafa.jussieu.fr>; Tue, 15 Mar 2016 14:43:13 +0100 (CET)
+X-Ids: 165
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=emv; d=newsletter.elu41.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:List-Id; i=service-client@newsletter.elu41.com;
+ bh=xeSMY9TU38Ah9NLyPYO+iZJDqTI=;
+ b=nHZU3qiH4nvyZJcnwvgI11uwrYtRr606K/G219HqQqfyZlR3L7f6FCNZ906GNaYi7hPQhfKfQqfY
+   OEzW50L5CVGHjlBrWpjv1QmazYZ4AYMILFfQ1RlWgeHc6e8vHvueESzZZKfll1VmaYQk2J5Ng1ai
+   xA/JvEV0YBexuTRS24k=
+Received: by zinc-foei.emv4.net id ht08mq167585 for <liafa@liafa.jussieu.fr>; Tue, 15 Mar 2016 14:42:37 +0100 (envelope-from <service-client@newsletter.elu41.com>)
+Date: Tue, 15 Mar 2016 14:42:41 +0100 (CET)
+From: Toner Services <service-client@newsletter.elu41.com>
+Reply-To: Toner Services <service-client@elu41.com>
+To: <liafa@liafa.jussieu.fr>
+Message-ID: <2.1.74.1101061264.1717302.7690747069@newsletter.elu41.com>
+Subject: Livraison offerte sur votre commande
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+X-EMV-Platform: p9cce.campaigncommander.com$
+X-EMV-CampagneId: 1717302$
+X-EMV-MemberId: 7690747069$
+List-Unsubscribe: <http://newsletter.elu41.com/HD?b=EUy3MgBJ11obYwVN-BQSFc17eDxnVRvT5Z2sj-VfdpZbKWYnCfs2Cm5tLMVIrM2p&c=3KrM2nnFSDRxwiMSviEjuw>, <mailto:unsubscribe@newsletter.elu41.com?subject=unsubscribe-74-EUy3MgBJ11obYwVN-BQSFc17eDxnVRvT5Z2sj-VfdpZbKWYnCfs2Cm5tLMVIrM2p/3KrM2nnFSDRxwiMSviEjuw>
+List-Id: <1101061264.74.1.1.list-id.newsletter.elu41.com>
+X-Miltered: at korolev with ID 56E811F0.003 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56E81152.003 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E811F0.003 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<service-client@newsletter.elu41.com>
+X-j-chkmail-Enveloppe: 56E81152.003 from zinc-foei.emv4.net/zinc-foei.emv4.net/81.92.124.48/zinc-foei.emv4.net/<service-client@newsletter.elu41.com>
+X-Scores-Stats: 56E81152.003 B=0.50000 L=0.92990 G=0.92990 Agree    
+X-j-chkmail-Score: MSGID : 56E811F0.003 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E81152.003 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=. B=0.930 -> S=0.943
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Tue, 15 Mar 2016 14:45:20 +0100 (CET)
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<HEAD>
+<TITLE>Toner Services -- Livraison offerte sur votre commande</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<!--[if gte mso 9]><xml> <o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></HEAD>
+<body text="#003366" link="#333366">
+<BR>
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+<TD width="200" align="center" bgcolor="#D7D4D4" style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px">&nbsp;&nbsp;&nbsp;<A style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px" HREF="http://newsletter.elu41.com/HP?b=K8Tvf0Zw1a4llSx60HiumBjlig5M5RfYhtaG2rY7uCPWAP5YkvCz3R0OUBpIDUvU&c=McBsYyANttx6yC8IMTuOWA">Signaler comme ind&eacute;sirable</A>&nbsp;&nbsp;&nbsp;</TD>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<CENTER>
+<CENTER><FONT style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000">Si ce message ne s'affiche pas correctement, merci de suivre <A href='http://newsletter.elu41.com/HM?b=GC9jZLymQyxgOLAcRkbZnhSIpdFBP3B3cXbEffdTEOdqZueMf4lsKomcGvS9msEe&c=3kHS8PNPAA60xW7DkWbVOQ'>ce lien</A></FONT></CENTER>
+</CENTER>
+<DIV align="center">
+<TABLE width="750" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD width="750" valign="top">
+<TABLE width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+<TBODY>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=Zmh6vMjqkITfm76NjN1g82FFlQgP2DLiSLJXPYfYYY6Y88hLykKz3RFeWufz0YFd&c=R75q_PQVxUHyJvQVdKyzeQ" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-01.jpg" width="700" height="86" alt="Toner Services - Cartouches d&rsquo;imprimantes &agrave; prix discount" border="0" style="display: block;"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+<TBODY>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=UaweaVZBk9DbPWYUfeV4lgRAyRFbctKHlyQpLieI_RK0EFnajsdsycXFcYer-1fH&c=R56Gthc3gepOFx2mPIQguA" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-02.jpg" width="145" height="45" alt="" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=ofI1Us4AixW1WvaC7HD5hmQs1aOtnIwhjBu2AgZaBPL6IJfbzOBvk8QK5_ctUux9&c=q2QlY-E9IoieG80u1mqzig" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-03.jpg" width="82" height="45" alt="HP" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=X14QEtw85uFrrUWjvxSZY-d7RTLl9egq-MYTIz9ZbgvCGPQ_xoFqxSogCinVSAPf&c=QKveEIgdQxY5ZFo8tg-GZg" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-04.jpg" width="82" height="45" alt="Canon" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=m46C77E-CtzspNc-sjV7ACahVEpowPqO_Z11r1KSw1CBSbK41Zh9H-NlwWSELZNI&c=KWUSFqdVAdjL-yjZn1oTcA" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-05.jpg" width="90" height="45" alt="Epson" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=V0nZxXjs54MkA0WmnwnunZMdBNK63YOQ4S2HycWY9A1S6s4YzSiBrUDC3ebNsT_H&c=FJnUGQqR-kNkAfJE3jZjmQ" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-06.jpg" width="98" height="45" alt="Brother" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=CR40kJhZ4NX22CtoOhMM9fqF3RKBtD38AGo6WT79OAHtd9y1ytDXyQnVQCwvanlA&c=NCeP1G12VNY6uLdEqg0wGw" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-07.jpg" width="100" height="45" alt="Lexmark" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=1dy5qsA9utAsFvrioXWB-GZrx6IBeJapR-5HHKSLBKzFz2ro_adpZaqHJrmvKgoQ&c=5GpDrs4lkCNLwN2MNK_M7w" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-08.jpg" width="103" height="45" alt="Samsung" border="0" style="display: block;"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+<TBODY>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=bKODLKUBZxjRHynDtz01ve_ZB8E40BP3OT5RVcRcoe692cHYBtH2NavS1SR8zocY&c=flqfotkL6LWOCka6tr6JOQ" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-09.jpg" width="700" height="81" alt="Livraison 0&euro; pour toute commande!" border="0" style="display: block;"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=9m5DGxj--VGVXb4xlkhBJAOYdPuiKlSOh-y04Fu7pddP4lBlNVgUQ_jx_5ZGzLGr&c=dV6pCc3SGgSaMcboPLMXdw" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-10.jpg" width="700" height="162" alt="Sans minimum d&rsquo;achat." border="0" style="display: block;"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=Q-7ypG20_rh8VXx0NMKUhOAXq7JX1bVZmPWATHtCnaU79z_l2GSaX11gii6Xv5D0&c=OgWpC39R1h_Xo4v0N_Gxhw" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-11.jpg" width="700" height="81" alt="" border="0" style="display: block;"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=p645SthEESK7u82gzCZX0oGs6Dtivjk1PgaHCh2UEwLJ5V3VWNwalseyo-1WO93P&c=EOrAgrKdDRECdaceYeslfg" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-12.jpg" width="700" height="81" alt="" border="0" style="display: block;"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=Jpkt1_Hmlmd-20s67Vj8-cgpK8lddM67RMexqCKCBjq8tUogV8tuTvmBT9PtlTJz&c=u9jQbdqzTS8kGAH_X1GQwA" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-13.jpg" width="700" height="81" alt="" border="0" style="display: block;"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=mttSTu4Tieoa9AGV-oE6Z86Zm-tM8ulClTRV9xAaT0CqhQmvM4ww93QZopoKPDMt&c=_Rv-aEpKZt-m5dVCgkFo-Q" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-14.jpg" width="700" height="81" alt="" border="0" style="display: block;"></A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=oJGuSbmqpIm_fEvcsNdkiKOKV2tpHXgZPuKGFdRmdGRPzRa6Cnz-xY-VwuP-9BTc&c=Naa-gT_N1ephFF7fGB1ADg" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-15.jpg" width="700" height="132" alt="J&rsquo;en profite!" border="0" style="display: block;"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+<TBODY>
+<TR>
+<TD><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-18.jpg" width="300" height="70" alt="" border="0" style="display: block;"></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=EyQuGihWrk0dHfZvTDVoBO7VmwdF40kFT8hQxbMjXwI_G5OXx1Vpct3G9za_KP5C&c=laOXdjrGSaleyVMBafOlBQ" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-18_01.jpg" width="50" height="70" alt="Facebook" border="0" style="display: block;"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=XnzansX5zkJ-HYXgD203oLM9MyucW3qlVaMze8OfUUMbuYG1Zd-yuKfDnRSknJbe&c=9phg9Aq4Mf7kCac_UCFAKA" target="_blank"><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-18_02.jpg" width="50" height="70" alt="Twitter" border="0" style="display: block;"></A></TD>
+<TD><IMG src="http://stor.elu41.com/1187/www/img/_IMG3/TON-18199-18.jpg" width="300" height="70" alt="" border="0" style="display: block;"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+<TBODY>
+<TR>
+<TD height="160" bgcolor="#FFFFFF" align="center" valign="top"><FONT style="font-family:Arial; font-size:10px; line-height:12px;" color="#212223">FRAIS DE PORT 0&euro; SUR TOUT LE SITE ET SANS CONDITIONS.<BR>
+Les prix de nos produits sont indiqu&eacute;s toutes taxes comprises et b&eacute;n&eacute;ficient d&rsquo;une garantie de un an.<BR>
+Le d&eacute;lai de livraison sur votre commande est de 48h/72h.<BR>
+Toner Services livre en France m&eacute;tropolitaine et en Belgique uniquement.<BR>
+Toner Services<BR>
+10/14 av. du g&eacute;n&eacute;ral Leclerc 78230 Le Pecq</FONT></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD colspan="3">
+<DIV align="center">
+<P class="formulairecomments"><FONT size="1" face="Arial, Helvetica, sans-serif">
+Conform&eacute;ment &agrave; l'article 34 de la loi Informatique et Libert&eacute;<BR>
+du 6 janvier 1978, vous disposez d'un droit d'acc&egrave;s, de modification, de rectification et de suppression<BR>
+des donn&eacute;es vous concernant.&nbsp;&nbsp;&nbsp; </FONT></P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<TABLE width="100%" border="0">
+<TR>
+<TD>
+<DIV align="center"><FONT size="1" face="Arial, Helvetica, sans-serif">Vous recevez cet e-mail car vous &ecirc;tes r&eacute;f&eacute;renc&eacute; sur la base de donn&eacute;es de notre partenaire.<BR>
+Si vous souhaitez vous desinscrire, merci d'utiliser <A href="http://newsletter.elu41.com/HD?b=1hN5ELEOeZQQuyH8CJW6qw4GwY1oIylV12KA5Fl6mNucj3Sy7UDdH1VKM3d74Tax&c=20-r2B3nl6gP3zngR7Sa6g">le lien suivant.</A></FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<IMG src="http://adtrack.adleadevent.com/adtckrtg.php?ids=1240&email=liafa@liafa.jussieu.fr" width="1" height="1" border="0">
+<img border="0" width="1" height="1" src="http://trcd.elu41.com/trcd/trcdo.php?cid=82057&em=liafa@liafa.jussieu.fr&do=elu41.com&rout=emvi&ts=1458036998" />
+<img border="0" hspace="0" vspace="0" width="1" height="1" src="http://p-eu.acxiom-online.com/pixel/ema?eml=3dec99fbfb952733d5ffefaea30fa26b&ha=md5&pid=6346&t=634603&sc=cdec&ot=pixel" />
+<img src="http://www.audienceinsights.net/p?f=gif&idp=8583f4fa574d2af8&xi.e.md5=3dec99fbfb952733d5ffefaea30fa26b&n.v.e=1" alt="" width="1" height="1" style="display: none;" />
+<img src="http://dm.elu41.com/44?_cid=capdec&md5_opp=1&support=email&uinfo=1&md5=3dec99fbfb952733d5ffefaea30fa26b" alt="" width="1" height="1" style="display: none;" />
+<img src="http://newsletter.elu41.com/HO?FFIz5etVQtVcac3fyXeGE5YkA0jk66bTBwh-KngV9lyu5M18iOMOzk5RhojYfLPk/g-iFKPX9hHkxwlvze87OIA.gif" border="0" alt="" width="1" height="1" /></body>
+</HTML>

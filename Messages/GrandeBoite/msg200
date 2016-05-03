@@ -1,0 +1,428 @@
+Return-Path: <marketingbg@mail.ru>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id DuynBX+VrFYGgAEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sat, 30 Jan 2016 11:50:39 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 1112261FA2
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sat, 30 Jan 2016 11:50:39 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 17.634
+X-Spam-Level: *****************
+X-Spam-Status: Yes, score=17.634 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DATE_IN_PAST_12_24=1.049,
+	DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293, FREEMAIL_FORGED_FROMDOMAIN=0.25,
+	FREEMAIL_FROM=0.001, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	HTML_MESSAGE=0.001, RAZOR2_CHECK=0.922, RCVD_IN_BL_SPAMCOP_NET=1.347,
+	RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_SBL=0.141, RCVD_IN_SBL_CSS=3.335,
+	URIBL_BLACK=1.7, URIBL_SBL=1.623, URIBL_SBL_A=0.1,
+	URI_NO_WWW_INFO_CGI=2.071] autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id PDGuJ_TTnhlw for <laplante@liafa.univ-paris-diderot.fr>;
+	Sat, 30 Jan 2016 11:50:35 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 0A43E61F9D
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Sat, 30 Jan 2016 11:50:35 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0UAoYfL021284
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Sat, 30 Jan 2016 11:50:34 +0100
+Received: from scientificevents.info (scientificevents.info [85.91.139.82])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0UAnVmH034942
+          for <sophie.laplante@liafa.univ-paris-diderot.fr>; Sat, 30 Jan 2016 11:49:49 +0100 (CET)
+X-Ids: 168
+Received: from mail.scientificevents.info (unknown [192.168.1.106])
+	by scientificevents.info (Postfix) with ESMTPA id ED17E645A36
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Sat, 30 Jan 2016 12:23:16 +0200 (EET)
+To: sophie.laplante@liafa.univ-paris-diderot.fr
+Subject: International Science Events, Bulgaria
+Message-ID: <91089b40abe398251cafd0abe361faa7@mail.scientificevents.info>
+Date: Fri, 29 Jan 2016 23:37:24 +0200
+From: "International Scientific Events" <marketing@scientificevents.info>
+Reply-To: sciencebg@gmail.com
+MIME-Version: 1.0
+X-Mailer-LID: 11,39,13,41,42,60,61,62,63,64,65,66,67,68,17
+List-Unsubscribe: <mailto:unsubscribe@mail.scientificevents.info?subject=Unsubscribe%20Me>, <http://mail.scientificevents.info/unsubscribe.php?M=3206773&C=43746d0a3a21ec6ed0574c066308a92e&L=61&N=96>
+X-Mailer-RecptId: 3206773
+X-Mailer-SID: 96
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_68b3ccf9d9983b6b821c6efe56c97e44"
+Content-Transfer-Encoding: 8bit
+X-Miltered: at potemkin with ID 56AC957A.004 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56AC953B.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56AC957A.004 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<marketingbg@mail.ru>
+X-j-chkmail-Enveloppe: 56AC953B.001 from scientificevents.info/scientificevents.info/85.91.139.82/scientificevents.info/<marketingbg@mail.ru>
+X-Scores-Stats: 56AC953B.001 B=0.50000 L=0.99246 G=0.99246 Agree    
+X-j-chkmail-Score: MSGID : 56AC957A.004 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56AC953B.001 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=. B=0.992 -> S=0.992
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sat, 30 Jan 2016 11:50:34 +0100 (CET)
+
+--b1_68b3ccf9d9983b6b821c6efe56c97e44
+Content-Type: text/plain; format="flowed"; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+MjUgeWVhcnMgSW50ZXJuYXRpb25hbCBTY2llbmNlIEV2ZW50cywgQnVsZ2FyaWEKCkNvbmZlcmVu
+Y2UgSW52aXRhdGlvbgoKIlNjaWVuY2UgYW5kIEVkdWNhdGlvbiIgZm91bmRhdGlvbiBhbmQgaXRz
+IHBhcnRuZXJzIGtpbmRseSBpbnZpdGUgeW91IHRvCnRha2UgcGFydCBpbiB0aGUgc2NpZW50aWZp
+YyBldmVudHMgdGhhdCB3ZSBhcmUgaG9sZGluZyBpbiBFbGVuaXRlIEhvbGlkYXkKVmlsbGFnZSwg
+QnVsZ2FyaWEKKGh0dHA6Ly9tYWlsLnNjaWVudGlmaWNldmVudHMuaW5mby9saW5rLnBocD9NPTMy
+MDY3NzMmTj05NiZMPTQ2JkY9VCkgZHVyaW5nCjIwMTYuCgpDb25mZXJlbmNlcyBpbiBKdW5lIDIw
+MTYKClRoZSA0dGggSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlICJBZ3JpY3VsdHVyZSBhbmQgRm9v
+ZCIsIHdoaWNoIHdpbGwgYmUgaGVsZApvbiA2LTEwIEp1bmUKClRoZSAyNXRoIEludGVybmF0aW9u
+YWwgQ29uZmVyZW5jZSAiRWNvbG9neSBhbmQgU2FmZXR5Iiwgd2hpY2ggd2lsbCBiZSBoZWxkCm9u
+IDktMTMgSnVuZQoKVGhlIDE4dGggSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlICJNYXRlcmlhbHMs
+IE1ldGhvZHMgYW5kIFRlY2hub2xvZ2llcyIsCndoaWNoIHdpbGwgYmUgaGVsZCBvbiAxMi0xNiBK
+dW5lCgpDb25mZXJlbmNlcyBpbiBTZXB0ZW1iZXIgMjAxNgoKVGhlIDE1dGggSW50ZXJuYXRpb25h
+bCBDb25mZXJlbmNlICJFY29ub215IGFuZCBCdXNpbmVzcyIsIHdoaWNoIHdpbGwgYmUKaGVsZCBv
+biAxLTUgU2VwdGVtYmVyCgpUaGUgN3RoIEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSAiRWR1Y2F0
+aW9uLCBSZXNlYXJjaCBhbmQgRGV2ZWxvcG1lbnQiLAp3aGljaCB3aWxsIGJlIGhlbGQgb24gNC04
+IFNlcHRlbWJlcgoKVGhlIDEwdGggSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlICJMYW5ndWFnZSwg
+SW5kaXZpZHVhbCBhbmQgU29jaWV0eSIsIHdoaWNoCndpbGwgYmUgaGVsZCBvbiA3LTExIFNlcHRl
+bWJlcgoKRm9yIG1vcmUgaW5mb3JtYXRpb24gYW5kIHJlZ2lzdHJhdGlvbiwgcGxlYXNlIHZpc2l0
+OgoKSW50ZXJuYXRpb25hbCBTY2llbnRpZmljIEV2ZW50cyAoRW5nbGlzaCk6Cmh0dHA6Ly9tYWls
+LnNjaWVudGlmaWNldmVudHMuaW5mby9saW5rLnBocD9NPTMyMDY3NzMmTj05NiZMPTQ3JkY9VAoK
+SW50ZXJuYXRpb25hbCBTY2llbnRpZmljIEV2ZW50cyAoUnVzc2lhbik6Cmh0dHA6Ly9tYWlsLnNj
+aWVudGlmaWNldmVudHMuaW5mby9saW5rLnBocD9NPTMyMDY3NzMmTj05NiZMPTQ4JkY9VAoKSW50
+ZXJuYXRpb25hbCBTY2llbnRpZmljIEV2ZW50cyAoQnVsZ2FyaWFuKToKaHR0cDovL21haWwuc2Np
+ZW50aWZpY2V2ZW50cy5pbmZvL2xpbmsucGhwP009MzIwNjc3MyZOPTk2Jkw9NDkmRj1UCgpQaG90
+byBhbmQgVmlkZW8gR2FsbGVyeToKaHR0cDovL21haWwuc2NpZW50aWZpY2V2ZW50cy5pbmZvL2xp
+bmsucGhwP009MzIwNjc3MyZOPTk2Jkw9NTAmRj1UCgpBbGwgdGhlIHBhcGVycyBwcmVzZW50ZWQg
+d2lsbCBiZSBwdWJsaXNoZWQgaW4gb3BlbiBhY2Nlc3Mgb25saW5lIGpvdXJuYWxzLApwYXJ0IG9m
+IEludGVybmF0aW9uYWwgU2NpZW50aWZpYyBQdWJsaWNhdGlvbnM6CgpJU1AgSm91cm5hbHMgKEVu
+Z2xpc2gpOgpodHRwOi8vbWFpbC5zY2llbnRpZmljZXZlbnRzLmluZm8vbGluay5waHA/TT0zMjA2
+NzczJk49OTYmTD01MSZGPVQKCklTUCBKb3VybmFscyAoRnJlbmNoKToKaHR0cDovL21haWwuc2Np
+ZW50aWZpY2V2ZW50cy5pbmZvL2xpbmsucGhwP009MzIwNjc3MyZOPTk2Jkw9NTImRj1UCgpJU1Ag
+Sm91cm5hbHMgKFJ1c3NpYW4pOgpodHRwOi8vbWFpbC5zY2llbnRpZmljZXZlbnRzLmluZm8vbGlu
+ay5waHA/TT0zMjA2NzczJk49OTYmTD01MyZGPVQKCklTUCBKb3VybmFscyAoQnVsZ2FyaWFuKToK
+aHR0cDovL21haWwuc2NpZW50aWZpY2V2ZW50cy5pbmZvL2xpbmsucGhwP009MzIwNjc3MyZOPTk2
+Jkw9NTQmRj1UCgpSZWdpc3RlciBub3cgYW5kIGpvaW4gdXMgb24gdGhlIGNvbmZlcmVuY2Ugc2l0
+ZToKaHR0cDovL21haWwuc2NpZW50aWZpY2V2ZW50cy5pbmZvL2xpbmsucGhwP009MzIwNjc3MyZO
+PTk2Jkw9NTUmRj1UCgpUaGlzIGlzIGEgY29tbWVyY2lhbCBtZXNzYWdlLiBQbGVhc2UgZG8gbm90
+IHJlcGx5IHRvIHRoaXMgZW1haWwuIFRoaXMKbWFpbGJveCBpcyBub3QgbW9uaXRvcmVkIGFuZCB5
+b3Ugd2lsbCBub3QgcmVjZWl2ZSBhIHJlc3BvbnNlLgpJZiB5b3UgaGF2ZSBxdWVzdGlvbnMgb3Ig
+bmVlZCBhc3Npc3RhbmNlLCBhc2sgdXMgaGVyZToKaHR0cDovL21haWwuc2NpZW50aWZpY2V2ZW50
+cy5pbmZvL2xpbmsucGhwP009MzIwNjc3MyZOPTk2Jkw9NTYmRj1UCgpVbnN1YnNjcmliZSBtZSBm
+cm9tIHRoaXMgbGlzdDoKaHR0cDovL21haWwuc2NpZW50aWZpY2V2ZW50cy5pbmZvL3Vuc3Vic2Ny
+aWJlLnBocD9NPTMyMDY3NzMmQz00Mzc0NmQwYTNhMjFlYzZlZDA1NzRjMDY2MzA4YTkyZSZMPTYx
+Jk49OTYKCkNvcHlyaWdodCDCqSAyMDE2IFNjaWVuY2UgRXZlbnRzLCBCdWxnYXJpYS4gQWxsIFJp
+Z2h0cyBSZXNlcnZlZC4KCg==
+
+--b1_68b3ccf9d9983b6b821c6efe56c97e44
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">#outlook
+a { padding: 0; } .ReadMsgBody { width: 100%; } .ExternalClass { width:
+100%; } .ExternalClass, .ExternalClass p, .ExternalClass span,
+ExternalClass font, .ExternalClass td, .ExternalClass div { line-height:
+100%; } div, p, a, li, td { -webkit-text-size-adjust: none; } img {
+-ms-interpolation-mode: bicubic; }</style><style type="text/css">
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        a { color: inherit;}
+        @media only screen and (max-width: 660px) {
+            table[class="bgtable"] {
+                padding:0px 10px !important;
+            }
+            table[class="container"] {
+                padding: 5px 0px !important;
+                width: 100% !important;
+            }
+            table[class="header"] {
+                padding: 0px 10px 10px !important;
+            }
+            span[class="company"] {
+                font-size: 22px !important;
+            }
+            span[class="date"] {
+                font-size: 14px !important;
+            }
+            span[class="headline"] {
+                font-size: 24px !important;
+                line-height: 1em;
+            }
+            td[class="full_width_image_container"] {
+                padding: 15px 15px 0 15px !important;
+            }
+            span[class="date"] a {
+               font-size: 12px !important;
+               text-decoration: none !important;
+            }
+            td[class="full_width_image_container"] img{
+                max-width: 100% !important; height: auto !important;
+            }
+            table[class="fullCenter"] {
+                width: 100%!important; text-align: center!important; clear:
+both;
+            }
+            td[class="fullCenter"] {
+                width: 100%!important; text-align: center!important;
+            }
+        }
+        .main-container { box-shadow: rgba(0,0,0,0.4) 0px 1px 4px;
+-moz-box-shadow: rgba(0,0,0,0.4) 0px 1px 4px; -webkit-box-shadow:
+rgba(0,0,0,0.4) 0px 1px 4px; }
+    </style><title>Conference Invitation - 2016</title><style
+type="text/css">/* These styles are automatically generated by Direct Mail.
+Please do not edit or remove them. */
+ .company, .date, .footer-area, .footer-area
+a{color:#656565;text-shadow:0px 1px 0px #ffffff;}body,
+container{background-color:#efefef;}</style><meta content="text/html;
+charset=utf-8" http-equiv="Content-Type"/></head><body
+style="alt:'';-webkit-animation-delay:0s;animation-delay:0s;-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-duration:0s;animation-duration:0s;animation-fill-mode:none;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-name:none;animation-name:none;-webkit-animation-play-state:running;animation-play-state:running;-webkit-animation-timing-function:ease;animation-timing-function:ease;background-attachment:scroll;background-blend-mode:normal;background-clip:border-box;background-color:rgb(239,
+239,
+239);background-image:none;background-origin:padding-box;background-position:0%
+0%;background-repeat:repeat;background-size:auto;border-bottom-color:rgb(0,
+0,
+0);border-bottom-left-radius:0px;border-bottom-right-radius:0px;border-bottom-style:none;border-bottom-width:0px;border-collapse:separate;border-image-outset:0px;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-color:rgb(0,
+0,
+0);border-left-style:none;border-left-width:0px;border-right-color:rgb(0,
+0,
+0);border-right-style:none;border-right-width:0px;border-top-color:rgb(0,
+0,
+0);border-top-left-radius:0px;border-top-right-radius:0px;border-top-style:none;border-top-width:0px;bottom:auto;box-shadow:none;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;caption-side:top;clear:none;clip:auto;color:rgb(0,
+0,
+0);cursor:auto;direction:ltr;display:block;empty-cells:show;float:none;font-family:-webkit-standard;font-size:16px;font-style:normal;font-synthesis:style
+weight;font-variant:normal;font-weight:normal;image-rendering:auto;left:auto;letter-spacing:normal;line-height:18px;list-style-image:none;list-style-position:outside;list-style-type:disc;max-height:none;max-width:none;min-height:0px;min-width:0px;opacity:1;orphans:auto;outline-color:rgb(0,
+0,
+0);outline-offset:0px;outline-style:none;outline-width:0px;overflow-wrap:normal;page-break-after:auto;page-break-before:auto;page-break-inside:auto;pointer-events:auto;position:static;resize:none;right:auto;speak:normal;table-layout:auto;tab-size:8;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:rgb(0,
+0,
+0);text-decoration-skip:auto;text-underline-position:auto;text-indent:0px;text-rendering:auto;text-shadow:none;text-overflow:clip;text-transform:none;top:auto;-ms-transform:none;-moz-transform:none;-webkit-transform:none;transform:none;-ms-transform-origin:490px
+589.5px;-moz-transform-origin:490px 589.5px;-webkit-transform-origin:490px
+589.5px;transform-origin:490px
+589.5px;-webkit-transform-style:flat;transform-style:flat;-moz-transition-delay:0s;-webkit-transition-delay:0s;transition-delay:0s;-moz-transition-duration:0s;-webkit-transition-duration:0s;transition-duration:0s;-moz-transition-property:all;-webkit-transition-property:all;transition-property:all;-moz-transition-timing-function:ease;-webkit-transition-timing-function:ease;transition-timing-function:ease;unicode-bidi:normal;vertical-align:baseline;visibility:visible;white-space:normal;widows:auto;word-break:normal;word-spacing:0px;word-wrap:normal;scroll-snap-type:none;scroll-snap-points-x:none;scroll-snap-points-y:none;scroll-snap-destination:0px
+0px;scroll-snap-coordinate:none;z-index:auto;zoom:1;-webkit-animation-delay:0s;animation-delay:0s;-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-duration:0s;animation-duration:0s;animation-fill-mode:none;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-name:none;animation-name:none;-webkit-animation-play-state:running;animation-play-state:running;-webkit-animation-timing-function:ease;animation-timing-function:ease;-moz-appearance:none;-webkit-appearance:none;appearance:none;-ms-backface-visibility:visible;-moz-backface-visibility:visible;-webkit-backface-visibility:visible;backface-visibility:visible;background-clip:border-box;background-composite:source-over;background-origin:padding-box;background-size:auto;mix-blend-mode:normal;isolation:auto;border-fit:border;border-horizontal-spacing:0px;border-image:none;border-vertical-spacing:0px;-moz-box-align:stretch;-webkit-box-align:stretch;box-align:stretch;box-d!
+ ecoration
+ -break:slice;-moz-box-direction:normal;-webkit-box-direction:normal;box-direction:normal;-moz-box-flex:0;-webkit-box-flex:0;box-flex:0;box-flex-group:1;box-lines:single;-moz-box-ordinal-group:1;-webkit-box-ordinal-group:1;box-ordinal-group:1;-moz-box-orient:horizontal;-webkit-box-orient:horizontal;box-orient:horizontal;-moz-box-pack:start;-webkit-box-pack:start;box-pack:start;box-reflect:none;box-shadow:none;clip-path:none;color-correction:default;column-break-after:auto;column-break-before:auto;column-break-inside:auto;column-axis:auto;-moz-column-count:auto;-webkit-column-count:auto;column-count:auto;column-fill:balance;-moz-column-gap:normal;-webkit-column-gap:normal;column-gap:normal;column-progression:normal;-moz-column-rule-color:rgb(0,
+0, 0);-webkit-column-rule-color:rgb(0, 0, 0);column-rule-color:rgb(0, 0,
+0);-moz-column-rule-style:none;-webkit-column-rule-style:none;column-rule-style:none;-moz-column-rule-width:0px;-webkit-column-rule-width:0px;column-rule-width:0px;-webkit-column-span:none;column-span:none;-webkit-column-width:auto;column-width:auto;cursor-visibility:auto;align-content:start;align-items:start;align-self:start;flex-basis:auto;flex-grow:0;flex-shrink:1;flex-direction:row;flex-wrap:nowrap;justify-content:start;justify-self:start;justify-items:start;filter:none;backdrop-filter:none;font-kerning:auto;font-smoothing:auto;font-variant-ligatures:normal;hyphenate-character:auto;hyphenate-limit-after:auto;hyphenate-limit-before:auto;hyphenate-limit-lines:no-limit;hyphens:manual;initial-letter:normal;line-align:none;line-box-contain:block
+inline
+replaced;line-break:auto;line-clamp:none;line-grid:none;line-snap:none;locale:auto;margin-before-collapse:collapse;margin-after-collapse:collapse;-webkit-marquee-direction:auto;marquee-direction:auto;marquee-increment:6px;marquee-repetition:infinite;-webkit-marquee-style:scroll;marquee-style:scroll;mask-box-image:none;mask-box-image-outset:0px;mask-box-image-repeat:stretch;mask-box-image-slice:0
+fill;mask-box-image-source:none;mask-box-image-width:auto;mask-clip:border-box;mask-composite:source-over;mask-image:none;mask-origin:border-box;mask-position:0%
+0%;mask-repeat:repeat;mask-size:auto;mask-source-type:alpha;nbsp-mode:normal;order:0;-webkit-perspective:none;perspective:none;-webkit-perspective-origin:490px
+589.5px;perspective-origin:490px
+589.5px;print-color-adjust:economy;rtl-ordering:logical;shape-outside:none;text-combine:none;text-decorations-in-effect:none;text-emphasis-color:rgb(0,
+0, 0);text-emphasis-position:over
+right;text-emphasis-style:none;text-fill-color:rgb(0, 0,
+0);text-orientation:vertical-right;text-security:none;text-stroke-color:rgb(0,
+0,
+0);text-stroke-width:0px;-webkit-transform-style:flat;transform-style:flat;-moz-transition-delay:0s;-webkit-transition-delay:0s;transition-delay:0s;-moz-transition-duration:0s;-webkit-transition-duration:0s;transition-duration:0s;-moz-transition-property:all;-webkit-transition-property:all;transition-property:all;-moz-transition-timing-function:ease;-webkit-transition-timing-function:ease;transition-timing-function:ease;user-drag:auto;user-modify:read-only;user-select:text;writing-mode:horizontal-tb;flow-into:none;flow-from:none;region-break-after:auto;region-break-before:auto;region-break-inside:auto;region-fragment:auto;shape-margin:0px;shape-image-threshold:0;buffered-rendering:auto;clip-path:none;clip-rule:nonzero;cx:0px;cy:0px;mask:none;filter:none;flood-color:rgb(0,
+0, 0);flood-opacity:1;lighting-color:rgb(255, 255, 255);stop-color:rgb(0,
+0,
+0);stop-opacity:1;color-interpolation:srgb;color-interpolation-filters:linearrgb;color-rendering:auto;fill:#000000;fill-opacity:1;fill-rule:nonzero;marker-end:none;marker-mid:none;marker-start:none;mask-type:luminance;paint-order:normal;r:0px;rx:0px;ry:0px;shape-rendering:auto;stroke:none;stroke-dasharray:none;stroke-dashoffset:0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:1px;alignment-baseline:auto;baseline-shift:baseline;dominant-baseline:auto;kerning:0;text-anchor:start;writing-mode:lr-tb;glyph-orientation-horizontal:0deg;glyph-orientation-vertical:auto;svg-shadow:none;vector-effect:none;x:0px;y:0px;">
+<center>
+<table class="container" cellspacing="0" cellpadding="0"
+style="background-color: #efefef; height: 100%; padding-top: 20px;
+padding-bottom: 20px; width: 640px;">
+<tbody>
+<tr style="vertical-align: top;">
+<td>
+<table class="header" cellpadding="0" cellspacing="0" style="padding: 0px
+10px 20px 0px; width: 100%;">
+<tbody>
+<tr>
+<td align="left" style="vertical-align: top;">
+<table border="0" cellpadding="0" cellspacing="0" align="left"
+style="text-align: center; font-size: 12px; border-collapse: collapse;
+width: 360px;" class="fullCenter">
+<tbody>
+<tr>
+<td align="left" width="100%" class="fullCenter" style="text-align:
+left;"><span style="font-family: arial, helvetica, sans-serif; font-size:
+medium;"><font face="HelveticaNeue-Light, Helvetica Neue Light, sans-serif"
+color="#ff9d21">&nbsp; &nbsp; 25 years International Science Events,
+Bulgaria</font></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="main-container" cellpadding="0" cellspacing="0"
+style="box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px; width: 100%;">
+<tbody>
+<tr>
+<td>
+<table class="page" cellpadding="0" cellspacing="0"
+style="background-color: #ffffff; padding-bottom: 25px;
+border-image-source: initial; border-image-slice: initial;
+border-image-width: initial; border-image-outset: initial;
+border-image-repeat: initial; text-align: left; width: 100%; border-width:
+0px; border-color: initial; border-style: initial; margin: 0px;">
+<tbody>
+<tr>
+<td class="full_width_image_container" style="padding-top: 25px;
+padding-right: 25px; padding-bottom: 0px; padding-left: 25px;"><span
+class="headline" style="font-style: normal; font-variant: normal;
+font-weight: normal; font-size: 30px; line-height: normal; font-family:
+HelveticaNeue-Light, 'Helvetica Neue Light', sans-serif; display: block;
+color: #000000;"><strong style="font-family: arial, sans-serif; font-size:
+medium; widows: 1;"><font color="#ffa416">Conference
+Invitation</font></strong></span></td>
+</tr>
+<tr style="font-style: normal; font-variant: normal; font-weight: normal;
+font-size: 13px; line-height: 19px; font-family: Helvetica, sans-serif;">
+<td class="full_width_image_container" style="padding-top: 25px;
+padding-right: 25px; padding-bottom: 0px; padding-left: 25px;">
+<p style="font-family: arial, sans-serif; font-size: small; widows: 1;
+margin-top: 0px; margin-right: 0px; margin-bottom: 20px; margin-left:
+0px;"><font color="#222222">"Science and Education" foundation and its
+partners kindly invite you to take part in the scientific events that we
+are holding in&nbsp;</font><span style="color: #ff9900;"><font
+color="#1155cc"><span style="color: #ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=46&F=H">Elenite
+Holiday Village</a></span></font></span><font color="#222222">, Bulgaria
+during 2016.</font><br /><br /><strong><font color="#ff9d18">Conferences in
+June 2016</font></strong></p>
+<p style="font-family: arial, sans-serif; font-size: small; widows: 1;
+margin-top: 0px; margin-right: 0px; margin-bottom: 20px; margin-left:
+0px;"><span style="color: #222222;">The 4th International Conference
+"Agriculture and Food", which will be held on 13-17 June</span></p>
+<p align="left" style="widows: 1; margin-top: 0px; margin-right: 0px;
+margin-bottom: 20px; margin-left: 0px;"><font color="#222222"
+style="font-family: arial, sans-serif; font-size: small;">The 25th
+International Conference "Ecology and Safety", which will be held on 16-20
+June</font><br /><br /><font color="#222222"><font face="arial, sans-serif"
+size="2">The 18th International Conference "Materials, Methods and
+Technologies&rdquo;,&nbsp;</font></font><span style="color: #222222;
+font-family: arial, sans-serif; font-size: small;">which will be held on
+19-23 June</span></p>
+<p align="left" style="font-family: arial, sans-serif; font-size: small;
+widows: 1; margin-top: 0px; margin-right: 0px; margin-bottom: 20px;
+margin-left: 0px;"><strong><font color="#ff9013">Conferences in September
+2016</font></strong></p>
+<p style="color: #222222; font-family: arial, sans-serif; font-size: small;
+widows: 1; margin-top: 0px; margin-right: 0px; margin-bottom: 20px;
+margin-left: 0px;">The 15th International Conference "Economy and
+Business", which will be held on 1-5 September<br /><br />The 7th
+International Conference "Education, Research and Development", which will
+be held on 4-8 September<br /><br />The 10th International Conference
+"Language, Individual and Society", which will be held on 7-11
+September</p>
+<p style="color: #222222; widows: 1; margin-top: 0px; margin-right: 0px;
+margin-bottom: 20px; margin-left: 0px;"><font face="arial, sans-serif"
+size="2">For more information and registration, please visit International
+Scientific Events:<br /></font><span style="color: #ff9900;"><font
+color="#1155cc" face="arial, sans-serif" size="2"><span style="color:
+#ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=47&F=H">English</a>
+&nbsp; &nbsp;&nbsp;</span>&nbsp;</font><font color="#1155cc" face="arial,
+sans-serif" size="2"><span style="color: #ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=53&F=H">Russian</a>&nbsp;
+&nbsp; &nbsp;</span></font><span style="font-size: small;"><font
+face="ArialMT,Arial,Helvetica,sans-serif"><span style="color: #ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=49&F=H">Bulgarian</a>&nbsp;
+&nbsp; &nbsp;<a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=50&F=H"
+target="_blank">Photo and Video
+Gallery</a></span></font></span></span></p>
+<div><span style="font-size: small;"><font
+face="ArialMT,Arial,Helvetica,sans-serif"><span style="widows: 1;">All the
+papers presented will be published in open access online journals, part of
+International Scientific Publications: <span style="color: #ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=51&F=H"
+target="_blank"><span style="color: #ff9900;">English</span></a>&nbsp;
+&nbsp;<span style="color: #ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=53&F=H"
+target="_blank">Russian</a>&nbsp; <a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=52&F=H">French</a>&nbsp;
+&nbsp;<a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=54&F=H">Bulgarian</a></span></span></span></font><font
+face="ArialMT,Arial,Helvetica,sans-serif" style="color: #1155cc; widows:
+1;"><br /></font></span></div>
+<div>
+<p style="margin: 0px;"><span style="font-size: small;"><font
+face="ArialMT,Arial,Helvetica,sans-serif"><br /><span style="color:
+#ff9900;"><span style="color: #ff9900;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=55&F=H">Register
+now</a></span></span> and join us on the conference site.<br /><br
+/></font></span></p>
+</div>
+<div>
+<div dir="ltr" style="color: #222222; font-family: arial, sans-serif;
+font-size: small; widows: 1;"><span style="font-size: 12.8px;">Best
+regards,</span></div>
+<div dir="ltr" style="color: #222222; font-family: arial, sans-serif;
+font-size: small; widows: 1;"><br style="font-size: 12.8px;" /><span
+style="font-size: 12.8px;">Ivan Genov</span><br style="font-size: 12.8px;"
+/><span style="font-size: 12.8px;">Director,</span></div>
+<div dir="ltr" style="color: #222222; font-family: arial, sans-serif;
+font-size: small; widows: 1;"><span style="font-size:
+12.8px;">International Scientific Events</span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="font-style: normal; font-variant: normal; font-weight:
+normal; font-size: 12px; line-height: 1.5; font-family: Helvetica,
+sans-serif; text-align: center; width: 100%;">
+<tbody>
+<tr>
+<td height="20" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+</tr>
+<tr>
+<td class="footer-area" style="color: #656565; text-shadow: #ffffff 0px 1px
+0px;"><font face="ArialMT,Arial,Helvetica,sans-serif"><span
+style="font-size: 9px;"><span style="color: #222222; text-align: start;
+widows: 1;"><b>Copyright &copy; 2016 Science Events Ltd, Bulgaria. All
+Rights Reserved.<br /></b></span>21 Oborishte Str., Burgas, Bulgaria<br
+/></span></font><span style="text-align: start; widows: 1; color: #222222;
+font-family: arial, sans-serif; font-size: xx-small;">If you have questions
+or need assistance,&nbsp;</span><font face="arial, sans-serif"
+style="color: #000000; font-size: 10px; text-align: start; widows:
+1;"><span style="font-size: xx-small;"><a
+href="http://mail.scientificevents.info/link.php?M=3206773&N=96&L=56&F=H"
+style="color: #656565; text-shadow: #ffffff 0px 1px 0px;"
+data-dm-link-id="10">ask us here</a>.<br /><a
+href="http://mail.scientificevents.info/unsubscribe.php?M=3206773&C=43746d0a3a21ec6ed0574c066308a92e&L=61&N=96">Unsubscribe
+me from this list</a></span></font><font
+face="ArialMT,Arial,Helvetica,sans-serif"><span style="font-size: 9px;"><br
+/></span></font>
+<div dir="ltr" style="color: #222222; widows: 1; text-align: center;"><font
+face="ArialMT,Arial,Helvetica,sans-serif"><span style="font-size: 9px;">The
+information in this email is confidential and may be legally
+privileged.&nbsp;It is intended solely for the addressee.&nbsp;Access to
+this email by anyone else is unauthorized.&nbsp;</span></font><span
+style="font-size: 9px; font-family: Arial;">If you are not the intended
+recipient, any disclosure, copying, distribution or any action taken or
+omitted to be taken in reliance on it, is prohibited and may be
+unlawful.</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+<tbody>
+<tr height="20px" style="height: 20px;">
+<td height="20px" style="height: 20px;"></td>
+</tr>
+<tr>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<img
+src="http://mail.scientificevents.info/open.php?M=3206773&L=61&N=96&F=H&image=.jpg"
+height="1" width="10"></body></html>
+
+--b1_68b3ccf9d9983b6b821c6efe56c97e44--
+

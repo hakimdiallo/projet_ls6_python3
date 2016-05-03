@@ -1,0 +1,187 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id du+aOCS15lbcSQAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:25 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 175F461FA3;
+	Mon, 14 Mar 2016 13:58:25 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 14.183
+X-Spam-Level: **************
+X-Spam-Status: Yes, score=14.183 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	FREEMAIL_FORGED_FROMDOMAIN=0.249, FREEMAIL_FROM=0.001,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, PYZOR_CHECK=1.392,
+	RAZOR2_CF_RANGE_51_100=0.5, RAZOR2_CF_RANGE_E8_51_100=1.886,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001,
+	RCVD_IN_MSPIKE_H3=-0.01, RCVD_IN_MSPIKE_WL=-0.01,
+	URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7, URIBL_DBL_ABUSE_REDIR=0.001,
+	URIBL_DBL_SPAM=2.5, URIBL_WS_SURBL=1.608]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=bigheats.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rUwXNzYcx6Ar; Mon, 14 Mar 2016 13:58:21 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 4CDCB61F9D;
+	Mon, 14 Mar 2016 13:58:21 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u2ECwLcw025636;
+	Mon, 14 Mar 2016 13:58:21 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 34F45D405B; Mon, 14 Mar 2016 13:58:21 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id D5DE6D4052
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:15 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id D0A70A21B9
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:15 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=bigheats.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id hM_iQmfujb_I
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 14 Mar 2016 13:58:14 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id A9E84A08B6
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:14 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2ECwEqR025934
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:14 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 9D1BC61FA2
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:14 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id oGjKGVXHlhI2
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 14 Mar 2016 13:58:10 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id B2BC861F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:10 +0100 (CET)
+Received: from bigheats.com (rdp-host16.bigheats.com [23.227.104.234])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u2ECwAJn025521
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 13:58:10 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=bigheats.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding; i=postmaster@bigheats.com;
+ bh=hfFewiPiSiT8nBlWZ/UOOq7YXNU=;
+ b=FLUuNapVHwMoha8drmUyw3UbRD5gGJeSNVUMmZ4VUgecwGGx92iGQR0W26Zo5j9r+CkSyq0J7vW7
+   UjX7KJpUg+fdCa/m5mPHG5cHY/MlL7gsICgmEWiGGsyadx7Eh1z8X8Fc/dEbKeDmuHImvpwFPMJm
+   2/RdAvQN63/7gL5rzmk=
+Received: from gmail.com (81.17.30.14) by bigheats.com id hsql0u0001gd for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 13 Mar 2016 18:35:11 -0400 (envelope-from <algocomp-apply@gmail.com>)
+From: Google Checkout <algocomp-apply@gmail.com>
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Date: 13 Mar 2016 16:21:46 -0700
+Message-ID: <20160313162146.B1693083AE16BD1B@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 14 Mar 2016 13:58:21 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Mon, 14 Mar 2016 13:58:14 +0100 (CET)
+X-Greylist: Delayed for 03:08:18 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 14 Mar 2016 13:58:10 +0100 (CET)
+X-Miltered: at korolev with ID 56E6B56D.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56E6B566.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56E6B562.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E6B56D.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56E6B566.001 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@gmail.com>
+X-j-chkmail-Enveloppe: 56E6B562.001 from rdp-host16.bigheats.com/rdp-host16.bigheats.com/null/bigheats.com/<algocomp-apply@gmail.com>
+X-j-chkmail-Score: MSGID : 56E6B56D.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E6B566.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E6B562.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] Google Checkout Just Sent $4,300 USD!
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1504
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+Hey algocomp-apply,
+
+What if you could make Google pay you between $1,800 to $4,300
+every single day?
+Would you take it?
+
+Of course you would!
+
+http://migre.me/t51NS
+
+There are over 1,000 members who get daily payments of at least
+$1,800,
+=2E..what about you?
+
+Copy and paste this to yor browser:
+
+http://migre.me/t51NS
+
+
+Talk soon,
+
+- Peng J.
+
+Ps. If link above are not clickable please go below:
+
+http://theclicktrusted.com/?clickid=3Dalgocomp-apply
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please accept my deepest apology if you receive this
+message in error, to stop all mailing please click below:
+
+http://theclicktrusted.com/unsubscribe.php

@@ -1,0 +1,226 @@
+Return-Path: <qfuqfsyj_ag7.4g@neolinko.fr>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id D4bTDlf5p1YdSgEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:56:57 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id E675F61FF7
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:56:57 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 1.248
+X-Spam-Level: *
+X-Spam-Status: No, score=1.248 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_REMOTE_IMAGE=0.01]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=neolinko.fr;
+	domainkeys=pass (1024-bit key) header.from=Pasta_Presto@neolinko.fr
+	header.d=neolinko.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id vy04Jl_Zagy9 for <laplante@liafa.univ-paris-diderot.fr>;
+	Tue, 26 Jan 2016 23:56:56 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 0DD6561FF2
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:56:56 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u0QMutiF009920
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:56:55 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id AA0B6303187
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:51:24 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id 80FF0302E6B
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:51:24 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 6610B404FD
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:51:24 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ZtqDJYAPcNlb for <laplante@liafa.univ-paris-diderot.fr>;
+	Tue, 26 Jan 2016 23:51:04 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 4FFB540094
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 23:51:04 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id 49846E0294; Tue, 26 Jan 2016 23:51:04 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id 47C2DE0270
+	for <laplante@lri.fr>; Tue, 26 Jan 2016 23:51:04 +0100 (CET)
+X-Greylist: Delayed for 00:05:31 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Tue, 26 Jan 2016 23:56:56 +0100 (CET)
+X-Greylist: delayed 493 seconds by postgrey-1.34 at lri; Tue, 26 Jan 2016 23:51:02 CET
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTP id E77CCE01FE
+	for <laplante@lri.fr>; Tue, 26 Jan 2016 23:51:02 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=neolinko.fr; h=to
+	:subject:date:from:reply-to:list-unsubscribe:message-id
+	:mime-version:content-type; s=smb; bh=1Y9wXVEs007a641U0fVulc+Vkg
+	pbDaOHWLMY52fRwg0=; b=ONV4J+oSoJ+WVXxMuuTR8ICFAEFXimGOVPAx/jRNjP
+	597HI1xeZWmm4ShzT5Lg+QkCqo5F7chcZlGxAaNvv9o0LDGUAQ/ka+8/+jsxv3Pk
+	mcxGAhQpVn55nYluHLrWBOj6EVDvPH9WLNyiNAdwQj2pjhcA4UjNTSBXp8zMdWzv
+	M=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=neolinko.fr; h=to:subject
+	:date:from:reply-to:list-unsubscribe:message-id:mime-version
+	:content-type; q=dns; s=smb; b=rhf10ZzraleBXp7HW8JSH2oMNdqe9oMNO
+	jEYKfKzXjXUjjMNqUweYnGLTc3PkyRpIAn6JwNLHxvC+/QtKxpTt7djB889NB7hq
+	zdcRe0AuCsv4SqwuuVEB6Z33khUNLhNUP0uOZ4Eshdz/rlNMZ74uLgzrBWHbRT0t
+	K8rG5V+m9s=
+To: laplante <laplante@lri.fr>
+Subject: =?utf-8?Q?Proposez_des_p=C3=A2tes_=C3=A0_vos_clients_,_c'est_facile_et_re?=  =?utf-8?Q?ntable?=
+X-PHP-Originating-Script: 1002:class.phpmailer.php
+Date: Tue, 26 Jan 2016 23:14:36 +0100
+From: Pasta Presto <Pasta_Presto@neolinko.fr>
+Reply-to: Pasta Presto <qfuqfsyj_ag7.4g@neolinko.fr>
+X-campaign_id: 89443017738913283917_6
+X-uid_id_m: bGFwbGFudGVAbHJpLmZy=175
+List-Unsubscribe: <http://app.neolinko.fr/d/?camp=89443017738913283917_6&ms=bGFwbGFudGVAbHJpLmZy>
+Message-ID: <05dbfe6586b75d3318d3a0a8d4ec437b@neolinko.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="Part1_05dbfe6586b75d3318d3a0a8d4ec437b"
+X-Miltered: at korolev with ID 56A7F9B7.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A7F9B7.001 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<qfuqfsyj_ag7.4g@neolinko.fr>
+X-j-chkmail-Score: MSGID : 56A7F9B7.001 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--Part1_05dbfe6586b75d3318d3a0a8d4ec437b
+Content-Type: text/plain; charset = "utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Pour visualiser et se d=C3=A9sabonner ce message,
+=20
+Veuillez, copier puis coller, l'adresse URL compl=C3=A8te ci-dessous dans=
+ la
+barre d'adresse de votre navigateur et appuyer sur la touche "Entr=C3=A9e=
+" de
+votre clavier.
+
+
+
+- - - - - - - - - - - - - - - - -=20
+
+http://app.neolinko.fr/v/?camp=3D89443017738913283917_6&ms=3DbGFwbGFudGVA=
+bHJpLmZy
+
+- - - - - - - - - - - - - - - - -=20
+
+
+
+
+--Part1_05dbfe6586b75d3318d3a0a8d4ec437b
+Content-Type: text/html; charset = "utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"fr" lang=3D"fr">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" =
+/>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0" />
+<title>Proposez des p=C3=A2tes =C3=A0 vos clients , c\'est facile et rent=
+able</title>
+</head><body marginwidth=3D"0" marginheight=3D"0" topmargin=3D"0" style=3D=
+"-webkit-text-size-adjust:none; margin:0px; text-size-adjust:none; paddin=
+g:0px; -moz-text-size-adjust:none; -ms-text-size-adjust:none;" leftmargin=
+=3D"0">
+<center><p>
+<a href=3D"http://app.neolinko.fr/v/?camp=3D89443017738913283917_6&ms=3Db=
+GFwbGFudGVAbHJpLmZy" target=3D"_blank" title=3D"Si cet e-mail ne s'affich=
+e pas correctement, suivez ce lien." style=3D"color:#00F; font-family:'Ar=
+ial'; font-size:12px; text-decoration:underline;">Si cet email ne s&rsquo=
+;affiche pas correctement, suivez ce lien.</a></p><p>&nbsp;</p> <table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+600">     <tbody>         <tr>             <td bgcolor=3D"#100c0d"><a hre=
+f=3D"http://app.neolinko.fr/r/?m=3DbGFwbGFudGVAbHJpLmZy&c=3D8944301773891=
+3283917_6&rc=3DaHR0cDovL25vZGVzLm5wNGhyYnhzaWwuY29tL3IvY2xpYy01ODAtMjk5LT=
+UyOTEtdXJsLWFIUjBjRG92TDNSeVlXTnJNVE16TnpRME5EZ3VaV1ptYVcxaGFXeHpNVGxpYVh=
+NdVkyOXRMM05sY25ac1pYUXZaV1ptYVM1eVpXUnBjajlwWkY5amIyMXdkR1YxY2oweE16TTNO=
+RFEwT0NaMWNtdzlhSFIwY0RvdkwzZDNkeTUwY21Ga2FTMXhkV0ZzTG1OdmJTOXVaWGR6YkdWM=
+GRHVnljeTl3WVhOMFlYQnlaWE4wYnk5d2NESXdNVFF2YVc1a1pYZ3VjR2h3SlROR2IzSnBaMm=
+x1WlNVelJHMWhNakF4TkZaUz9yZ3JvdXA9cF8xMDMxNSZhbXA7dHJhY2thZmY9JmFtcDtncm9
+ 1cD0=3D" style=3D" text-decoration:none; color:#C9D12B;" target=3D"_blan=
+k"><img style=3D"display:block;" src=3D"http://app.neolinko.fr/r/?rc=3DaH=
+R0cDovL3d3dy50cmFkaS1xdWFsLmNvbS9uZXdzbGV0dGVycy9wYXN0YXByZXN0by9wcDIwMTQ=
+vZW1haWwvZWZmL2ltZy9wYXN0YXByZXN0by5qcGc=3D" alt=3D"Pasta presto" border=3D=
+"0" height=3D"270" width=3D"600"></a></td>         </tr>         <tr>    =
+         <td>             <table align=3D"left" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"600">                 <tbody>             =
+        <tr>                         <td align=3D"center" bgcolor=3D"#100=
+c0d" height=3D"40" width=3D"600"><a href=3D"http://app.neolinko.fr/r/?m=3D=
+bGFwbGFudGVAbHJpLmZy&c=3D89443017738913283917_6&rc=3DaHR0cDovL25vZGVzLm5w=
+NGhyYnhzaWwuY29tL3IvY2xpYy01ODAtMjk5LTUyOTEtdXJsLWFIUjBjRG92TDNSeVlXTnJNV=
+E16TnpRME5EZ3VaV1ptYVcxaGFXeHpNVGxpYVhNdVkyOXRMM05sY25ac1pYUXZaV1ptYVM1eV=
+pXUnBjajlwWkY5amIyMXdkR1YxY2oweE16TTNORFEwT0NaMWNtdzlhSFIwY0RvdkwzZDNkeTU=
+wY21Ga2FTMXhkV0ZzTG1OdmJTOXVaWGR6YkdWMGRHVnljeTl3WVhOMFlYQnlaWE4wYnk5d2NE=
+SXdNVFF2YVc
+ 1a1pYZ3VjR2h3SlROR2IzSnBaMmx1WlNVelJHMWhNakF4TkZaUz9yZ3JvdXA9cF8xMDMxNSZ=
+hbXA7dHJhY2thZmY9JmFtcDtncm91cD0=3D" style=3D" text-decoration:none;" tar=
+get=3D"_blank"><span style=3D"font-family:Arial, Helvetica, sans-serif; f=
+ont-size:20px; font-weight:normale; color:#C9D12B;">Proposez des P&acirc;=
+tes &agrave; vos clients, c'est facile et rentable !</span></a></td>     =
+                </tr>                 </tbody>             </table>      =
+       </td>         </tr>         <tr>             <td>             <tab=
+le align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"600">                 <tbody>                     <tr>                  =
+       <td bgcolor=3D"#C9D12B"><a href=3D"http://app.neolinko.fr/r/?m=3Db=
+GFwbGFudGVAbHJpLmZy&c=3D89443017738913283917_6&rc=3DaHR0cDovL25vZGVzLm5wN=
+GhyYnhzaWwuY29tL3IvY2xpYy01ODAtMjk5LTUyOTEtdXJsLWFIUjBjRG92TDNSeVlXTnJNVE=
+16TnpRME5EZ3VaV1ptYVcxaGFXeHpNVGxpYVhNdVkyOXRMM05sY25ac1pYUXZaV1ptYVM1eVp=
+XUnBjajlwWkY5amIyMXdkR1YxY2oweE16TTNORFEwT0NaMWNtdzlhSFIwY0RvdkwzZD
+ NkeTUwY21Ga2FTMXhkV0ZzTG1OdmJTOXVaWGR6YkdWMGRHVnljeTl3WVhOMFlYQnlaWE4wYn=
+k5d2NESXdNVFF2YVc1a1pYZ3VjR2h3SlROR2IzSnBaMmx1WlNVelJHMWhNakF4TkZaUz9yZ3J=
+vdXA9cF8xMDMxNSZhbXA7dHJhY2thZmY9JmFtcDtncm91cD0=3D" style=3D" text-decor=
+ation:none; color:#100c0d;" target=3D"_blank"><img style=3D"display:block=
+;" src=3D"http://app.neolinko.fr/r/?rc=3DaHR0cDovL3d3dy50cmFkaS1xdWFsLmNv=
+bS9uZXdzbGV0dGVycy9wYXN0YXByZXN0by9wcDIwMTQvZW1haWwvZWZmL2ltZy9lbnNhdm9pc=
+nBsdXMuanBn" alt=3D"En savoir plus" border=3D"0" height=3D"86" width=3D"6=
+00"></a></td>                     </tr>                 </tbody>         =
+    </table>             </td>         </tr>         <tr>             <td=
+>             <table align=3D"left" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"600">                 <tbody>                     <t=
+r>                         <td align=3D"center" bgcolor=3D"#C9D12B" heigh=
+t=3D"100" width=3D"600"><a href=3D"http://app.neolinko.fr/r/?m=3DbGFwbGFu=
+dGVAbHJpLmZy&c=3D89443017738913283917_6&rc=3DaHR0cDovL25vZGVzLm5wNGhyYnhz=
+aWwuY29tL3IvY2
+ xpYy01ODAtMjk5LTUyOTEtdXJsLWFIUjBjRG92TDNSeVlXTnJNVE16TnpRME5EZ3VaV1ptYV=
+cxaGFXeHpNVGxpYVhNdVkyOXRMM05sY25ac1pYUXZaV1ptYVM1eVpXUnBjajlwWkY5amIyMXd=
+kR1YxY2oweE16TTNORFEwT0NaMWNtdzlhSFIwY0RvdkwzZDNkeTUwY21Ga2FTMXhkV0ZzTG1O=
+dmJTOXVaWGR6YkdWMGRHVnljeTl3WVhOMFlYQnlaWE4wYnk5d2NESXdNVFF2YVc1a1pYZ3VjR=
+2h3SlROR2IzSnBaMmx1WlNVelJHMWhNakF4TkZaUz9yZ3JvdXA9cF8xMDMxNSZhbXA7dHJhY2=
+thZmY9JmFtcDtncm91cD0=3D" style=3D"text-decoration:none;" target=3D"_blan=
+k"><span style=3D"font-family:Arial, Helvetica, sans-serif; font-size:16p=
+x; font-weight:normale; color:#000000;">Pasta Presto, un concept de resta=
+uration rapide cl&eacute; en main<br>                         Une valeur =
+s&ucirc;re de la restauration rapide <br>                         D&eacut=
+e;marrage en 48h seulement </span></a></td>                     </tr>    =
+             </tbody>             </table>             </td>         </tr=
+>     </tbody> </table> <p><img style=3D"display:block;" src=3D"http://ap=
+p.neolinko.fr/r/?rc=3DaHR0cDovL3RyYWNrMTMzNzQ0NDguZWZma
+ W1haWxzMTliaXMuY29tL3NlcnZsZXQvZWZmaS5waXhlbD9pZF9jb21wdGV1cj0xMzM3NDQ0O=
+A=3D=3D" alt=3D""></p><img alt=3D"" src=3D"http://app.neolinko.fr/r/?rc=3D=
+aHR0cDovL25vZGVzLm5wNGhyYnhzaWwuY29tL21haWxpbmctNTgwLTI5OS01MjkxP3Jncm91c=
+D1wXzEwMzE1JmFtcDtncm91cD0=3D" border=3D"0" height=3D"1" width=3D"1"><img=
+ src=3D"http://app.neolinko.fr/t/?i=3D89443017738913283917_6&m=3DbGFwbGFu=
+dGVAbHJpLmZy&url=3Dhttp://app.neolinko.fr/images/blank.jpg" alt=3D"_pspac=
+er6"  /><p>
+<a href=3D"http://app.neolinko.fr/d/?camp=3D89443017738913283917_6&ms=3Db=
+GFwbGFudGVAbHJpLmZy" target=3D"_blank" title=3D"Ne plus recevoir d'inform=
+ations de notre part" style=3D"color:#00F; font-family:'Arial'; font-size=
+:12px; text-decoration:underline;">Pour se d&eacute;sabonner : Suivez ce =
+lien.</a><br />Si ce message vous a caus&eacute; un quelconque d&eacute;r=
+angement, nous vous prions de nous en excuser.
+</p><center>
+</body>
+</html>
+
+
+
+--Part1_05dbfe6586b75d3318d3a0a8d4ec437b--

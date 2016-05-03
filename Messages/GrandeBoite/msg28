@@ -1,0 +1,359 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 0UKnE00g51Z2rAAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:24 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 3C25061FA1;
+	Mon, 14 Mar 2016 21:34:21 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 8.483
+X-Spam-Level: ********
+X-Spam-Status: Yes, score=8.483 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	PYZOR_CHECK=1.392, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_MSPIKE_H3=-0.01,
+	RCVD_IN_MSPIKE_WL=-0.01, URIBL_WS_SURBL=1.608]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=productivepointers.com; domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=info@productivepointers.com
+	header.d=productivepointers.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id BGoebx4ZjfRb; Mon, 14 Mar 2016 21:34:18 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id CE36461FA2;
+	Mon, 14 Mar 2016 21:34:18 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u2EKYIj3014413;
+	Mon, 14 Mar 2016 21:34:18 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id AD4ACD405B; Mon, 14 Mar 2016 21:34:18 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id A9F38D4052
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:14 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 9E75BA222A
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:14 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=productivepointers.com;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=info@productivepointers.com
+	header.d=productivepointers.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id 0r_Z7ANu_K0K
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 14 Mar 2016 21:34:12 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [IPv6:2001:660:3301:8000::1:1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id E1C489F624
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:12 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2EKYCLr028413
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:12 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id CC12061FA1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:12 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id VrCiGEsftgXd
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 14 Mar 2016 21:34:10 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 98CE261F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:10 +0100 (CET)
+Received: from prod24.productivepointers.com (prod25.productivepointers.com [173.44.51.117] (may be forged))
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2EKYAwe028380
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 14 Mar 2016 21:34:10 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=productivepointers.com;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:List-Unsubscribe:Content-Type:Content-Transfer-Encoding; i=info@productivepointers.com;
+ bh=Jo32fFV4tr8PVfSpkcPjQ5taghE=;
+ b=Hs2yaae1gQlZ27+TOpilS0GnHiHKqqfxYznbKzpRL1+rp+sn4km/e9kZkW0E7zf35MwIvqHva6lZ
+   pzW+RsPawY6D1zuEIA3qOpU7F1c4pqcjOWIchn0f0dcpFqFciygz0ZfoUg9K3Vu3mLGesh8EUSh3
+   pRu4sJfjttBQo0jHSGk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=productivepointers.com;
+ b=QHP4wJNkYlzODKKi3tbcwwURnzMQoNwBS2LJFQa4i0g7eNEW+6vYt2U03S5EXhZ8Jmp8+0+aoPop
+   ULdeK4MxlGhidqJMhxaqPI/shpVAdp/sX+4f0WiQWpktQKlCJ4FLWmCihOn3L6mXo9AcAe4vbrNP
+   qvB6SQnmJWe62p0O82E=;
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Message-ID: <1ab7fbebd09f089ede272e9394451538@productivepointers.com>
+Date: Mon, 14 Mar 2016 20:23:20 +0000
+From: "Mike (Cloud T)" <info@productivepointers.com>
+Reply-To: info@productivepointers.com
+MIME-Version: 1.0
+X-Mailer-LID: 1,30,34,24
+List-Unsubscribe: <http://productivepointers.com/unsubscribe.php?M=7065659&C=228fec9ebceb800e32a7a8f13c09007b&L=30&N=361>
+X-Mailer-RecptId: 7065659
+X-Mailer-SID: 361
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_34c1d71c827f527e1849e169c778a431"
+Content-Transfer-Encoding: 8bit
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 14 Mar 2016 21:34:18 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Mon, 14 Mar 2016 21:34:12 +0100 (CET)
+X-Greylist: Delayed for 00:10:44 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Mon, 14 Mar 2016 21:34:10 +0100 (CET)
+X-Miltered: at korolev with ID 56E7204A.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56E72044.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56E72042.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E7204A.002 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56E72044.001 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<bounce@productivepointers.com>
+X-j-chkmail-Enveloppe: 56E72042.000 from [173.44.51.117]/prod25.productivepointers.com/null/prod24.productivepointers.com/<bounce@productivepointers.com>
+X-j-chkmail-Score: MSGID : 56E7204A.002 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E72044.001 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E72042.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] PAID Beta Tester Enrolments
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1505
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+--b1_34c1d71c827f527e1849e169c778a431
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Important information: You are a valued subscriber of ours. If you wish to
+stop receiving updates please use the unsubscribe link at the bottom.I'll
+need your full attention for this so drop everything you are doing so you
+don't miss this Important announcement.
+
+WATCH THIS AND LEARN
+[http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=T]
+
+
+
+At present you are losing more trades than you are gaining and this is
+because you don't have this simple element to add to your ageing methods.
+
+A simple "Trick of the trade" which has been in full existence for months
+now but you didn&rsquo;t know about it because the big hitters didn&rsquo;t
+want the smaller trader to use it.
+
+The full method revealed here
+[http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=T]
+
+
+Just watch the very short tutorial and put this simple trick to use today.
+
+
+
+You will see and results improve immediately and you will receive instant
+payments into your selected account.
+
+
+
+I don't care how much you know or how much you&rsquo;ve forgotten within
+this powerful industry.
+
+
+You have never seen anything like this before and you will not get a second
+possibility.
+
+Your personal copy is secure for the next 30 minutes
+
+
+ [http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=T]
+
+You will be PAID upfront today
+[http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=T]
+
+
+Ps: I'm sorry but if the links above don't work then it means that
+positions are full
+
+However for taking the time and effort to read this message I would like to
+thank you
+
+
+
+Faster Way - Copy Paste Link:
+ShortCopy.Link/CloudTrader
+
+
+
+
+You're welcome!
+Mike
+
+
+
+
+
+Copyright &copy; 2016Update subscription preferences
+[http://productivepointers.com/unsubscribe.php?M=7065659&C=228fec9ebceb800e32a7a8f13c09007b&L=30&N=361]
+
+
+--b1_34c1d71c827f527e1849e169c778a431
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+</head>
+<body>
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td align="center" bgcolor="#DEE0E2">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0"
+cellspacing="0">
+<tbody>
+<tr>
+<td align="center" bgcolor="#dfdfdf">
+<table style="border: 1px solid #bbbbbb; width: 639px;" border="0"
+cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top">
+<table style="border-bottom-width: 1px; border-bottom-style: solid;
+border-bottom-color: #cccccc; width: 100%; background-color: #f4f4f4;"
+border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="preheaderContent" style="padding-top: 10px; padding-right: 20px;
+padding-bottom: 10px; padding-left: 20px; color: #808080; font-family:
+Helvetica; font-size: 10px; line-height: 125%; text-align: left;"
+valign="top">Important information: You are a valued subscriber of ours. If
+you wish to stop receiving updates please use the unsubscribe link at the
+bottom.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="font-family: Helvetica; color: #505050;" align="center"
+valign="top">
+<table style="border-top-width: 1px; border-top-style: solid;
+border-top-color: #ffffff; border-bottom-width: 1px; border-bottom-style:
+solid; border-bottom-color: #cccccc; width: 100%; background-color:
+#f4f4f4;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-size: 14px; line-height: 150%; padding: 20px 20px 10px
+20px;" valign="top">
+<div class="swipe-box text-left"><span style="font-family:
+arial,helvetica,sans-serif;" lang="EN-US"></span>
+<p>I'll need your full attention for this so drop everything you are doing
+so you don't miss this Important announcement.</p>
+<p><a
+href="http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=H">WATCH
+THIS AND LEARN</a><br /><br /></p>
+<p>At present you are losing more trades than you are gaining and this is
+because you don't have this simple element to add to your ageing
+methods.</p>
+<p>A simple "Trick of the trade" which has been in full existence for
+months now but you didn&rsquo;t know about it because the big hitters
+didn&rsquo;t want the smaller trader to use it.</p>
+<p><a
+href="http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=H">The
+full method revealed here</a></p>
+<br />
+<p>Just watch the very short tutorial and put this simple trick to use
+today.</p>
+<p></p>
+<p>You will see and results improve immediately and you will receive
+instant payments into your selected account.</p>
+<p></p>
+<p>I don't care how much you know or how much you&rsquo;ve forgotten within
+this powerful industry.</p>
+<br />
+<p>You have never seen anything like this before and you will not get a
+second possibility.</p>
+<p>Your personal copy is secure for the next 30 minutes</p>
+<p><a
+href="http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=H"><br
+/></a></p>
+<p><a
+href="http://productivepointers.com/link.php?M=7065659&N=361&L=517&F=H">You
+will be PAID upfront today</a></p>
+<br />
+<p>Ps: I'm sorry but if the links above don't work then it means that
+positions are full</p>
+<p>However for taking the time and effort to read this message I would like
+to thank you</p>
+<p></p>
+<p><span style="font-family: arial,helvetica,sans-serif;"
+lang="EN-US"><span style="font-size: medium; font-family:
+arial,helvetica,sans-serif; color: #000000;">Faster Way - Copy Paste Link:
+</span></span><span style="font-size: medium; font-family:
+arial,helvetica,sans-serif; color: #000000;"><span style="font-family:
+arial,helvetica,sans-serif;"></span></span><span style="font-size: large;
+font-family: arial,helvetica,sans-serif;"><strong><span style="color:
+#000000; font-size: medium;"><br
+/>ShortCopy.Link/CloudTrader</span></strong></span></p>
+<p><span style="font-size: large; font-family:
+arial,helvetica,sans-serif;"><strong><span style="color: #000000;
+font-size: medium;"><br /></span></strong></span></p>
+<p class="Body"><span lang="EN-US">You're welcome!</span><span
+lang="EN-US"></span><span lang="EN-US"><br />Mike<br /></span></p>
+<span style="font-size: medium; font-family: arial,helvetica,sans-serif;
+color: #000000;"><strong><span style="color: #000000; font-size:
+medium;"><br /></span></strong></span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #f4f4f4;" align="center" valign="top">
+<table style="border-top-width: 1px; border-top-style: solid;
+border-top-color: #ffffff; border-bottom-width: 1px; border-bottom-style:
+solid; border-bottom-color: #cccccc; font-family: Helvetica; width: 100%;
+background-color: #f4f4f4;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="padding: 10px 20px; font-size: 10px; color: #606060;
+line-height: 150%;" valign="top"><strong>Copyright &copy;
+2016</strong></td>
+</tr>
+<tr>
+<td style="padding: 10px 20px; font-size: 10px; line-height: 100%;"
+valign="top"><a style="color: #606060;"
+href="http://productivepointers.com/unsubscribe.php?M=7065659&C=228fec9ebceb800e32a7a8f13c09007b&L=30&N=361">Update
+subscription preferences</a><br /><br /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<img
+src="http://productivepointers.com/open.php?M=7065659&L=30&N=361&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+
+--b1_34c1d71c827f527e1849e169c778a431--
+

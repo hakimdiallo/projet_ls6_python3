@@ -1,0 +1,140 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id ftP0B2RPylZurgAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:32 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 0950A61FA2;
+	Mon, 22 Feb 2016 00:59:32 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 7.929
+X-Spam-Level: *******
+X-Spam-Status: Yes, score=7.929 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	FREEMAIL_FORGED_FROMDOMAIN=0.001, FREEMAIL_FROM=0.001,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	LOTS_OF_MONEY=0.001, MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=asianescortsex.com; domainkeys=neutral
+	reason="invalid (public key: not available)"
+	header.from=algocomp-apply@gmail.com header.d=gmail.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 74ey9WTdeAjR; Mon, 22 Feb 2016 00:59:27 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id E855661FA1;
+	Mon, 22 Feb 2016 00:59:26 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1LNxQW7032513;
+	Mon, 22 Feb 2016 00:59:26 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id D1C47D4039; Mon, 22 Feb 2016 00:59:26 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id AD3D5D4039
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:25 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id A19DDA1B3B
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:25 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=asianescortsex.com;
+	domainkeys=neutral reason="invalid (public key: not available)"
+	header.from=algocomp-apply@gmail.com header.d=gmail.com
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id L1C77aBUOS8K
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 22 Feb 2016 00:59:25 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 0F8ECA080D
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:25 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1LNxPvv032508
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:25 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 06D2761FA2
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:25 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id h7nQfrxTLR9g
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 22 Feb 2016 00:59:17 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id C61BB61F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:17 +0100 (CET)
+Received: from rdp-host-26.asianescortsex.com ([69.50.222.38])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1LNxH7m004612
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 22 Feb 2016 00:59:17 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=gmail; d=asianescortsex.com;
+ h=From:To:Subject:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding:Date;
+ bh=HgPGtYsh6gnagDZkC7BbxGsMxp0=;
+ b=AviwI9XEXdj4QNwgZu/GSkKUTa371fj448740svoW5cfK1JL1e7lzWpqApM4/wbJUMl3v+8ew320
+   VB0NECoO5BqNQqtinqU2xqhL34juvn/kzDlrUL5VWCtINhJQs62W/pPB7workFBf4C4NIeRXCZ7u
+   mj57T9U0x29n7JtSAS4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=gmail; d=gmail.com;
+ b=EwL66EFyYD9+BZ9fMKx3fG/ZWwyhMYSFTxbRzes3pZ4tvvNN73ExE7Yuen9B/4ydH2DttTItqESJ
+   UkliybtU0x7cVN6UewUnOVC8dijz3gj95WrLFTtp89btUvdM+Na351ejT3fnWrhBWwKKQy3C6THW
+   Q8kwRZx44QWa9Z+iFSA=;
+From: admin <algocomp-apply@gmail.com>
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Message-ID: <20160221234825.055EAFBE4E6A3383@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 22 Feb 2016 02:55:40 +0300
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 22 Feb 2016 00:59:26 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 22 Feb 2016 00:59:25 +0100 (CET)
+X-Greylist: Delayed for 00:10:21 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Mon, 22 Feb 2016 00:59:17 +0100 (CET)
+X-Miltered: at korolev with ID 56CA4F5E.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56CA4F5D.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56CA4F55.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56CA4F5E.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56CA4F5D.000 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@gmail.com>
+X-j-chkmail-Enveloppe: 56CA4F55.000 from [69.50.222.38]/[69.50.222.38]/null/rdp-host-26.asianescortsex.com/<algocomp-apply@gmail.com>
+X-j-chkmail-Score: MSGID : 56CA4F5E.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56CA4F5D.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56CA4F55.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] $****Generated $101,803.84 in 90 days, While
+ Working Only 2 Hours A Day At Home.**
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1453
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17514"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<P>The Amazing Money-Making Forex Strategy<BR>of a Computer Geek from Miami=
+,<BR>Generated $101,803.84 in 90 days,<BR>While Working Only 2 Hours A Day =
+At Home... </P>
+<P>You're About To Learn Secrets That Most Forex Mentors,<BR>Coaches, Even =
+Bank Traders Will Never Know About<BR>How To Really Make A Killing In Curre=
+ncy Trading, <BR>In Any Market Condition, Today...<BR><BR><A href=3D"http:/=
+/gmailsuccess.link/script//3">&lt;&lt;&lt;see you inside&gt;&gt;&gt;<BR></A=
+>if link is broken copy paste to your browser!<BR><A href=3D"http://gmailsu=
+ccess.link/script//3">http://gmailsuccess.link/script//3</A></P>
+<P><BR>&nbsp;</P></BODY></HTML>

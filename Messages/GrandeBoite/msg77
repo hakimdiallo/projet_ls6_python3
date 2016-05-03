@@ -1,0 +1,146 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id SpHFFPPp0lYoJQEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:37:07 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 3E2AA61FA3;
+	Sun, 28 Feb 2016 13:37:07 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 11.058
+X-Spam-Level: ***********
+X-Spam-Status: Yes, score=11.058 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HK_NAME_DR=0.999, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_WS_SURBL=1.608] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=liafa.univ-paris-diderot.fr; domainkeys=neutral
+	reason="invalid (public key: not available)"
+	header.from=algocomp-apply@liafa.univ-paris-diderot.fr
+	header.d=liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id WDkvishH3yvN; Sun, 28 Feb 2016 13:37:01 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 5908461FA2;
+	Sun, 28 Feb 2016 13:37:01 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1SCb18i006369;
+	Sun, 28 Feb 2016 13:37:01 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 3B48AD40A1; Sun, 28 Feb 2016 13:37:01 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id 34CFFD4017
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:56 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 2CFABA0AC8
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:56 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=liafa.univ-paris-diderot.fr; domainkeys=neutral
+	reason="invalid (public key: not available)"
+	header.from=algocomp-apply@liafa.univ-paris-diderot.fr
+	header.d=liafa.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id NIBCfBhPcHUc
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sun, 28 Feb 2016 13:36:55 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id C8FACA0AB5
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:55 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1SCatZ4006353
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:55 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id BDD0F61FA1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:55 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id d-1jRTuCsc0S
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Sun, 28 Feb 2016 13:36:47 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id C81A461F9D
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:47 +0100 (CET)
+Received: from agent1237.agentsemailers.com (agent1237.agentsemailers.com [162.214.25.207])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1SCal78006315
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Sun, 28 Feb 2016 13:36:47 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=liafa.univ-paris-diderot.fr;
+ h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding; i=algocomp-apply@liafa.univ-paris-diderot.fr;
+ bh=C62O61KhoYxUnh53Ms3rS79eeDw=;
+ b=Nn/fXs4zYgjOtlEGb4bx6ff8ZVpo8Tp3c9Z81tQA01+dnXwN5kBz7P1AmP1N5y/D5U3jh1yyyS5u
+   8+VJYSd43Bp+/mbMKLiuNPUSQhpwSrL6Ix54v3f5mkXCNcfhGrMHN6FOYtSczZNy2BGtf6Jp1yki
+   5bqIUwgX4gLl6ppuMJk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=liafa.univ-paris-diderot.fr;
+ b=tP2IZ1tqoxfitIzr1h9PdX0pDWtI1BnL2GWbWxhobIqDU6Lv5UyVwg2Cy4dsVznoymjNCCx7g2o1
+   mUyUd6p/wchbuxQmlGiyfCKECLj0ZUDZp6ZHfiS+RFMyDOL+qUfvlkrARjTv0XCyZRoX4K7JfjBA
+   GCKQz1eIWH7rB0u9KvE=;
+Reply-To: algocomp-apply<algocomp-apply@liafa.univ-paris-diderot.fr>
+From: "Dr. Pearsons"<algocomp-apply@liafa.univ-paris-diderot.fr>
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Date: 28 Feb 2016 20:26:20 +0800
+Message-ID: <20160228202620.9E9448F4A1585F9B@liafa.univ-paris-diderot.fr>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sun, 28 Feb 2016 13:37:01 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sun, 28 Feb 2016 13:36:55 +0100 (CET)
+X-Greylist: Delayed for 00:10:22 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Sun, 28 Feb 2016 13:36:47 +0100 (CET)
+X-Miltered: at korolev with ID 56D2E9ED.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56D2E9E7.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56D2E9DF.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56D2E9ED.002 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56D2E9E7.000 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@liafa.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56D2E9DF.000 from agent1237.agentsemailers.com/agent1237.agentsemailers.com/null/agent1237.agentsemailers.com/<algocomp-apply@liafa.univ-paris-diderot.fr>
+X-j-chkmail-Score: MSGID : 56D2E9ED.002 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56D2E9E7.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56D2E9DF.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] Trust me, this will cure your DIABETES!
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1465
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+Hey, 
+
+If you are struggling with yout type 1, or type 2 diabetes,=20
+you should try this before this will be gone from the internet!
+=20=20=20
+=3D=3D>=20=20
+http://youshouldhaveitnow.com/r/pearsons217/algocomp-apply@liafa.univ-paris=
+-diderot.fr
+
+At first I was skeptical, but when I tried it, I never regret!
+
+Make sure you watch the video to see proofs.
+
+=3D=3D>=20
+http://youshouldhaveitnow.com/r/pearsons217/algocomp-apply@liafa.univ-paris=
+-diderot.fr
+
+
+Have a nice day!
+
+Dr. Pearsons

@@ -1,0 +1,265 @@
+Return-Path: <service-client@newsletter.elu41.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id FXJ+MCKn4lbDTwAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Fri, 11 Mar 2016 12:08:19 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 60A8B61FA5;
+	Fri, 11 Mar 2016 12:08:17 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 16.739
+X-Spam-Level: ****************
+X-Spam-Status: Yes, score=16.739 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_04=0.556, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_ABUSE_SURBL=1.25, URIBL_BLACK=1.7,
+	URIBL_DBL_SPAM=2.5, URIBL_WS_SURBL=1.608]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=newsletter.elu41.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id SMEVLX7E1zac; Fri, 11 Mar 2016 12:08:13 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id D14F461FA2
+	for <liafa@liafa.univ-paris-diderot.fr>; Fri, 11 Mar 2016 12:08:12 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2BB8CHH012024
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Fri, 11 Mar 2016 12:08:12 +0100
+Received: from zinc-foei.emv4.net (zinc-foei.emv4.net [81.92.124.48])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u2BB6fPv065205
+          for <liafa@liafa.jussieu.fr>; Fri, 11 Mar 2016 12:07:08 +0100 (CET)
+X-Ids: 168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=emv; d=newsletter.elu41.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:List-Id; i=service-client@newsletter.elu41.com;
+ bh=H6n76iwI4jDu9SHSJV8+/bHf0t8=;
+ b=Uqn7IYF5raRj4VdFZQoQAiKzGzpxDkNBROvMyakFD1M4shUEBOYXYHjIbTfApBizt1Hzt+ubRwk9
+   CATmePFRYG6xOfIh2WjnGBnXK2bpVp+2awbZ98MeGhCrzzN0VMimcHj4BdbWVLyIFJcwLWyazdPa
+   6+2yt3gdcwPQfH4eDVE=
+Received: by zinc-foei.emv4.net id hsajdi167586 for <liafa@liafa.jussieu.fr>; Fri, 11 Mar 2016 12:06:37 +0100 (envelope-from <service-client@newsletter.elu41.com>)
+Date: Fri, 11 Mar 2016 12:06:40 +0100 (CET)
+From: Chemises pour hommes <service-client@newsletter.elu41.com>
+Reply-To: Chemises pour hommes <service-client@elu41.com>
+To: <liafa@liafa.jussieu.fr>
+Message-ID: <2.1.74.1101061264.1702361.7690747069@newsletter.elu41.com>
+Subject: =?iso-8859-15?Q?TOUT_=E0_-50_pour-cent,_sans_minimum_d'achat?=
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+X-EMV-Platform: p9cce.campaigncommander.com$
+X-EMV-CampagneId: 1702361$
+X-EMV-MemberId: 7690747069$
+List-Unsubscribe: <http://newsletter.elu41.com/HD?b=3lQRgjR3xqQ-YrLdjDwUfXZeZX021uqE-mW886mqu1q1Ga5fJ2fzJ5VTy-TG6F01&c=NWABJM4aNu_kzbNY27bM_g>, <mailto:unsubscribe@newsletter.elu41.com?subject=unsubscribe-74-3lQRgjR3xqQ-YrLdjDwUfXZeZX021uqE-mW886mqu1q1Ga5fJ2fzJ5VTy-TG6F01/NWABJM4aNu_kzbNY27bM_g>
+List-Id: <1101061264.74.1.1.list-id.newsletter.elu41.com>
+X-Miltered: at potemkin with ID 56E2A71C.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56E2A6C1.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E2A71C.002 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<service-client@newsletter.elu41.com>
+X-j-chkmail-Enveloppe: 56E2A6C1.002 from zinc-foei.emv4.net/zinc-foei.emv4.net/81.92.124.48/zinc-foei.emv4.net/<service-client@newsletter.elu41.com>
+X-Scores-Stats: 56E2A6C1.002 B=0.50000 L=0.91848 G=0.91848 Agree    
+X-j-chkmail-Score: MSGID : 56E2A71C.002 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56E2A6C1.002 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=. B=0.918 -> S=0.933
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Fri, 11 Mar 2016 12:08:12 +0100 (CET)
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<HEAD>
+<TITLE>Chemises pour hommes -- TOUT &agrave; -50 pour-cent, sans minimum d'achat</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<!--[if gte mso 9]><xml> <o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></HEAD>
+<body text="#003366" link="#333366">
+<BR>
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+<TD width="200" align="center" bgcolor="#D7D4D4" style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px">&nbsp;&nbsp;&nbsp;<A style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px" HREF="http://newsletter.elu41.com/HP?b=dmiAx90KtIOaFVwt_JNDd6aCBhcVzJpNWfw3QsCEN1FvoRSmMiYlQlLi0W8SS49m&c=Jx5A7cSrKp55a0ewXt8Pcw">Signaler comme ind&eacute;sirable</A>&nbsp;&nbsp;&nbsp;</TD>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<CENTER>
+<CENTER><FONT style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000">Si ce message ne s'affiche pas correctement, merci de suivre <A href='http://newsletter.elu41.com/HM?b=C5qjEm0EbJn3quS3ZY0yWplddZzSj2kZC96Z7bSG-sVcu2TxV8Kz-6BEJSAXC400&c=mB0x5q_6pM167MHqk3eWAQ'>ce lien</A></FONT></CENTER>
+</CENTER>
+<DIV align="center">
+<TABLE width="750" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD width="750" valign="top">
+<TABLE class="w300" style="margin-left:auto;margin-right:auto;text-align:left;" align="center" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD>
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD class="hide"><A HREF="http://newsletter.elu41.com/HP?b=-hWyr8t02aqdJ5IF6gF7KkUbCohEWF3zkoc1gZKsZRFrKsY_vCcV-l9dPtj2Qzkk&c=70lRgibpA0VVX2hzI5VBCA" target="_BLANK"><IMG src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_01_mars.jpg" alt="Caf&eacute; Coton" style="display:block;" height="141" border="0" width="600"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>
+<TABLE class="w300" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=PDt-PtuhaXpi0KbCVUL18eG06WbKBFB4RDzzBDJkMLv4JHMUTMkW5iUojaJI0kul&c=JJxRYJPZd-ixHuz1XlVxfg" target="_BLANK"><IMG class="ImgFooterMobile" img="" src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_02_mars.jpg" alt="Caf&eacute; Coton" style="display:block;" height="120" border="0" width="600"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<!-- 3eme ligne = 2eme tableau -->
+<TR>
+<TD>
+<TABLE class="w300" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR><!-- 1ere colonne-->
+<TD>
+<TABLE style="background-color:#eaeaea;" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD class="hide" style="background-color:#ffffff;"><A HREF="http://newsletter.elu41.com/HP?b=bgBH90gog7z-9HO1IWIHS1_dqkDZ9Yo3rBdmepcfxs3iQLxnqSrfR6Fm-vpa6kIl&c=FWgqTc3HeElG90rodIRCyA" target="_BLANK"><IMG src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_03_mars.jpg" alt="Caf&eacute; Coton" style="display:block;" height="447" border="0" width="300"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+<!-- fin 1ere colonne-->
+<!-- 2eme colonne-->
+<TD>
+<TABLE style="width: 300px; height: 447px;" class="w300" align="center" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD>
+<TABLE class="w300" style="background-color: #fffffff; width: 300px; height: 447px;" align="center" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD><BR></TD>
+<TD style="background-color: #fffffff; text-align: center; font-family: times new roman; font-size: 15px; font-style: italic;" align="center" height="40" width="300"><SPAN style="color: #000034;font-size: 17px;"><BR>
+<SPAN style="font-weight: bold;">TOUTE LA BOUTIQUE &Agrave; -50%</SPAN><BR>
+Et pendant les journ&eacute;es bleues :<BR></SPAN></TD>
+</TR>
+<TR>
+<TD><BR></TD>
+<TD colspan="1" rowspan="1" style="background-color: #fffffff; text-align: center; font-family: times new roman; font-size: 35px;" height="50" width="300"><SPAN style="color: #000034;"><SPAN style="font-weight: bold;">3 CHEMISES* POUR</SPAN><BR></SPAN></TD>
+</TR>
+<TR>
+<TD><BR></TD>
+<TD style="text-align: center;"><SPAN style="color: #000034;"><SPAN style="font-weight: bold; font-size: 80px;">115&euro;</SPAN></SPAN></TD>
+</TR>
+<TR>
+<TD><BR></TD>
+<TD style="text-align: center;"><SPAN style="font-weight: bold;">avec le code : HB120</SPAN></TD>
+</TR>
+<TR>
+<TD><BR></TD>
+<TD style="text-align: center;"><SPAN style="color: #000034;">*de la ligne "Exclusive"</SPAN><SPAN style="color: #000034;"><BR></SPAN></TD>
+</TR>
+<TR>
+<TD><BR></TD>
+<TD colspan="1" rowspan="1">
+<TABLE style="width: 291px; height: 47px;" class="w300" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=5dxvO0w2FhapasclXQ8pyP46lsyGp916zheLUbJFB7gBUQ529iPif6CEgBCwMLkR&c=39VADnRNNAAPheBV3-nOVQ" target="_BLANK"><IMG src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_10_mars.jpg" alt="Caf&eacute; Coton" style="display: block; width: 75px; height: 47px;" border="0"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=58uU0TN_u017oYMiDQieEtP2_AcJ2_a2gN38qacSj1XBZqqqz7F5FK_fA2UqQOaQ&c=l-VTN47AjFumZIsduIRpCg" target="_BLANK"><IMG src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_11_mars.jpg" alt="Caf&eacute; Coton" style="display:block;" height="47" border="0" width="154"></A></TD>
+<TD><A HREF="http://newsletter.elu41.com/HP?b=NNRHC7sRGWDnvYNIa9Wyrg0Oth-uRVMvTA25yZrhj0BvFQrFW-h9OIvA8bRWXiu9&c=TRbs_Vw7JFda0vImiibEDQ" target="_BLANK"><IMG src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_12_mars.jpg" alt="Caf&eacute; Coton" style="display: block;" height="47" border="0" width="62"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD><BR></TD>
+<TD style="text-align: center;"><SPAN style="color: #ad1129;"><A HREF="http://newsletter.elu41.com/HP?b=BOxOP-lcf3vaDTVtA1XaORDQJdhQbnPYwUBB22Qq2BtXqjgvGm75gN44_YvkdQJb&c=fmMULdb-lX_VdndnEnvDjA" target="_BLANK" style="text-decoration: none;"><SPAN style="font-size: 12px;">liafa@liafa.jussieu.fr<BR>
+En cliquant ici j'accepte de recevoir la newsletter Caf&eacute; Coton</SPAN><BR></A></SPAN></TD>
+</TR>
+<!-- 3 eme tableau = bouton jen profite-->
+<!-- fin 3eme tableau--></TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+<!-- fin 2eme colonne--></TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<!-- fin 3eme ligne= fin 2eme tableau-->
+<TR>
+<TD>
+<TABLE class="w300" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD class="hide"><A HREF="http://newsletter.elu41.com/HP?b=91vMQ1OBGrNkKG7fWhz4iQBhERm2Yhh2tVjdo2YO6Mh2FGpIfHei4KKDg_LK7e-7&c=d60KBDSQykI4gSG_AsumcA" target="_BLANK"><IMG src="https://nodes.ads-digitalkeys.com/uploads/visuels/191/160/kits/TEMPLATE_NEWS_ACQUISITION_14_mars.jpg" alt="Caf&eacute; Coton" style="display:block;" height="93" border="0" width="600"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>
+<TABLE style="width: 600px; height: 80px;" class="w300" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD colspan="1" rowspan="1" style="background-color: white; color: black; text-align: left; font-family: times new roman; font-size: 10px;" height="30" width="300"><SPAN style="color: #000003;">CAFE COTON est devenu le sp&eacute;cialiste fran&ccedil;ais des chemises pour hommes avec un r&eacute;seau de plus de cent boutiques exclusives tant en France qu'&agrave; l'&eacute;tranger. L'identit&eacute; de CAFE COTON s'est construite autour de deux valeurs fortes: l'innovation et la noblesse des mati&egrave;res. Depuis la cr&eacute;ation de la marque en 1990, les collections ne cessent d'&eacute;voluer et proposent, chaque saison des mod&egrave;les aux constructions sobres ou &eacute;labor&eacute;es. Gr&acirc;ce &agrave; la s&eacute;lection permanente des meilleures qualit&eacute;s de fils et &agrave; l'attention port&eacute;e aux ateliers de tissage, CAFE COTON garantit un r&eacute;sultat d'excellence &agrave; sa client&egrave;le &eacute;litiste.</SPAN></TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>
+<TABLE class="showMobile" style="display:none;mso-hide:all; max-height:0px; line-height:0px;" align="center" border="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<TR>
+<TD></TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR></TD>
+</TR>
+</TBODY>
+</TABLE>
+<!-- fin tableau principal-->
+<IMG alt="" src="http://nodes.dktktwentynine.com/mailing-160-540-3942?rgroup=p_27202&group=" border="0" height="1" width="1"></TD>
+</TR>
+<TR>
+<TD colspan="3">
+<DIV align="center">
+<P class="formulairecomments"><FONT size="1" face="Arial, Helvetica, sans-serif">
+Conform&eacute;ment &agrave; l'article 34 de la loi Informatique et Libert&eacute;<BR>
+du 6 janvier 1978, vous disposez d'un droit d'acc&egrave;s, de modification, de rectification et de suppression<BR>
+des donn&eacute;es vous concernant.&nbsp;&nbsp;&nbsp; </FONT></P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<TABLE width="100%" border="0">
+<TR>
+<TD>
+<DIV align="center"><FONT size="1" face="Arial, Helvetica, sans-serif">Vous recevez cet e-mail car vous &ecirc;tes r&eacute;f&eacute;renc&eacute; sur la base de donn&eacute;es de notre partenaire.<BR>
+Si vous souhaitez vous desinscrire, merci d'utiliser <A href="http://newsletter.elu41.com/HD?b=g9orfnhcHvxSG6g7v4WI-HQ1-Nf-BZ13GwSiWtQUbN13FVtM4hnR7c2BCBuStC0V&c=ED0BHEGd3jF1xbKJoazgsw">le lien suivant.</A></FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<IMG src="http://adtrack.adleadevent.com/adtckrtg.php?ids=1240&email=liafa@liafa.jussieu.fr" width="1" height="1" border="0">
+<img border="0" width="1" height="1" src="http://trcd.elu41.com/trcd/trcdo.php?cid=81913&em=liafa@liafa.jussieu.fr&do=elu41.com&rout=emvi&ts=1457689881" />
+<img border="0" hspace="0" vspace="0" width="1" height="1" src="http://p-eu.acxiom-online.com/pixel/ema?eml=3dec99fbfb952733d5ffefaea30fa26b&ha=md5&pid=6346&t=634603&sc=cdec&ot=pixel" />
+<img src="http://www.audienceinsights.net/p?f=gif&idp=8583f4fa574d2af8&xi.e.md5=3dec99fbfb952733d5ffefaea30fa26b&n.v.e=1" alt="" width="1" height="1" style="display: none;" />
+<img src="http://dm.elu41.com/44?_cid=capdec&md5_opp=1&support=email&uinfo=1&md5=3dec99fbfb952733d5ffefaea30fa26b" alt="" width="1" height="1" style="display: none;" />
+<img src="http://newsletter.elu41.com/HO?zAzJDgq43VhbqDy6V8M5NGmttuMn-kCEKuPOIJh1WDnE5bgpOzNaiTCRaVNfYEi9/djvx_uyd-hM_bfa9KUeK0A.gif" border="0" alt="" width="1" height="1" /></body>
+</HTML>

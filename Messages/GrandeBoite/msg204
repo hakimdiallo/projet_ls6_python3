@@ -1,0 +1,281 @@
+Return-Path: <bounces@email-promo.ovh>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id /GkJImfDq1ZguQAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Fri, 29 Jan 2016 20:54:16 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7CB0C61FA3;
+	Fri, 29 Jan 2016 20:54:13 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 16.732
+X-Spam-Level: ****************
+X-Spam-Status: Yes, score=16.732 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	RAZOR2_CF_RANGE_51_100=0.5, RAZOR2_CF_RANGE_E8_51_100=1.886,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_SBL_CSS=3.335,
+	URIBL_BLACK=1.7, URIBL_JP_SURBL=1.25, URIBL_WS_SURBL=1.608]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=email-promo.ovh header.b=wYzFw0cG;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=contact@email-promo.ovh header.d=email-promo.ovh;
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=email-promo.ovh header.b=BsRmTz+M
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id uut2j-kkjFhc; Fri, 29 Jan 2016 20:54:09 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 22EB361FA2
+	for <auliafa@liafa.univ-paris-diderot.fr>; Fri, 29 Jan 2016 20:54:08 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0TJs8YE002852
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <auliafa@liafa.univ-paris-diderot.fr>; Fri, 29 Jan 2016 20:54:08 +0100
+Received: from mail1fr6.email-promo.ovh (mail1fr6.email-promo.ovh [51.255.55.18])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0TJrV1b096314
+          for <auliafa@liafa.jussieu.fr>; Fri, 29 Jan 2016 20:53:49 +0100 (CET)
+X-Ids: 168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=email-promo.ovh;
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id; i=contact@email-promo.ovh;
+ bh=UI/1OzQOMGD9hMbJ+x0aNXMkZ6Q=;
+ b=wYzFw0cG6Fev6L0+q/l/s0pJe77ofU4dpzmeSvgmCzIbVI/SYF98qPaY/jl0iY9F7ZOTOYW+ePX1
+   GegtM5Pe0wqR7DALC11Sn1Y1GNMm43ZyiM+N0Fj/njFBi8wiVWhZQTDF5AJecu1NEGEQ5ktyqjhB
+   ntFqiADN5arisrZ3fIU=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=email-promo.ovh;
+ b=LfeA0BJBEJV7jIgYHzMuNKrpWyoM2dxObew6r0tCj32pRGUDlSEqbqxeTwhV0dxfePXE3J8WelXV
+   DjSgjaG0zLWfBKnRes+M2TNYWoezHmfsDemHKlbpLCqjlpzgFsduuiYvKk/1R417jSqTXyEy15dm
+   zWjgxLI4exfIYH+XUnE=;
+DKIM-Signature: v=1; a=rsa-sha1; bh=RPwQUkiRGLn6bDpWECEXUOLtLr0=;
+ d=email-promo.ovh; h=Message-ID: Date: Subject: From: Reply-To: To:
+ MIME-Version: Content-Type: X-Mw-Customer-Uid: X-Receiver: X-Mw-Tracking-Did:
+ X-Mw-Campaign-Uid: List-Unsubscribe: X-Mw-Customer-Gid: List-Id:
+ X-Mw-Subscriber-Uid: X-Report-Abuse: X-Sender: Feedback-ID: X-Mw-Mailer:
+ X-Mw-Delivery-Sid; i=@email-promo.ovh; s=mailer; t=1454097199;
+ b=BsRmTz+My5X8ioI8cPbY2UPVcSFX7Yt9muDUF/AGwJ7xmNJb723d5K9Mut3OzyGwAoai/1aTY
+ t0qVcvY2Ynu7MIVK3TFqTgKSHNdHQIOi8thRYxQ0pbIlN3kF1D3wEPvoLSdb4DJxUMDblR9HA
+ vDhsZkBZXT+j8URJlEW9FeBx0=
+Message-ID: <be4da629eec10934074c64d13701828b@email-promo.ovh>
+Date: Fri, 29 Jan 2016 19:53:19 +0000
+Subject: guide gratuit Impots 2016
+From: Nouveau dispositif fiscal 2016 <contact@email-promo.ovh>
+Reply-To: Nouveau dispositif fiscal 2016 <contact@email-promo.ovh>
+To: "auliafa@liafa.jussieu.fr" <auliafa@liafa.jussieu.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1454097199_4b6a9b6c683337dbe7c7fdc480366ab2_=_"
+X-Mw-Campaign-Uid: ty522j2kd5f38
+List-Unsubscribe: <http://email-promo.ovh/index.php/lists/hc991224f2bad/unsubscribe/hp200ce0kf67a/ty522j2kd5f38>,
+ <mailto:contact@email-promo.ovh?subject=Unsubscribe&body=Please unsubscribe
+ me from Email Promo list.>
+X-Mw-Customer-Gid: 20
+List-Id: hc991224f2bad <Email Promo>
+X-Receiver: auliafa@liafa.jussieu.fr
+X-Report-Abuse: Please report abuse for this campaign here:
+ http://email-promo.ovh/index.php/campaigns/ty522j2kd5f38/report-abuse/hc991224f2bad/hp200ce0kf67a
+X-Mw-Subscriber-Uid: hp200ce0kf67a
+Feedback-ID: ty522j2kd5f38:hp200ce0kf67a:hc991224f2bad:cr15244o50b6d
+X-Sender: bounces@email-promo.ovh
+X-Mw-Customer-Uid: cr15244o50b6d
+X-Mw-Mailer: SwiftMailer
+X-Mw-Delivery-Sid: 22
+X-Mw-Tracking-Did: 2
+X-Miltered: at potemkin with ID 56ABC360.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56ABC33B.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56ABC360.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounces@email-promo.ovh>
+X-j-chkmail-Enveloppe: 56ABC33B.001 from mail1fr6.email-promo.ovh/mail1fr6.email-promo.ovh/51.255.55.18/mail1fr6.email-promo.ovh/<bounces@email-promo.ovh>
+X-Scores-Stats: 56ABC33B.001 B=0.50000 L=0.84039 G=0.84039 Agree    
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 56ABC360.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56ABC33B.001 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.840 -> S=0.891
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Fri, 29 Jan 2016 20:54:08 +0100 (CET)
+
+
+--_=_swift_v4_1454097199_4b6a9b6c683337dbe7c7fdc480366ab2_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=20
+
+ METTRE CET EMAIL EN IND=C3=89SIRABLE
+http://email-promo.ovh/index=
+.php/campaigns/ty522j2kd5f38/report-abuse/hc991224f2bad/hp200ce0kf67a
+
+=
+
+Si ce message ne s'affiche pas correcement, consultez la version en
+li=
+gne
+http://email-promo.ovh/index.php/campaigns/ty522j2kd5f38/web-version/=
+hp200ce0kf67a
+
+
+=09=09
+http://www.capaffiliation.com/tracking/cpc.p=
+hp?ids=3D263&idv=3D336&sid=3D&email=3D&redirect=3Dhttp%3A%2F%2Ftout-savoir-=
+sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%=
+3D212%26email%3D%25%25email%25%25%26nom%3D
+
+=09=09
+http://www.capaffi=
+liation.com/tracking/cpc.php?ids=3D263&idv=3D336&sid=3D&email=3D&redirect=
+=3Dhttp%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptemb=
+re2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D
+=
+
+=09=09
+http://www.capaffiliation.com/tracking/cpc.php?ids=3D263&idv=3D=
+336&sid=3D&email=3D&redirect=3Dhttp%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr=
+%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25=
+%25email%25%25%26nom%3D
+
+=09=09
+http://www.capaffiliation.com/trackin=
+g/cpc.php?ids=3D263&idv=3D336&sid=3D&email=3D&redirect=3Dhttp%3A%2F%2Ftout-=
+savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212=
+%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D
+
+=09=09
+http://www.=
+capaffiliation.com/tracking/cpc.php?ids=3D263&idv=3D336&sid=3D&email=3D&red=
+irect=3Dhttp%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dse=
+ptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D=
+
+
+=09=09
+http://www.capaffiliation.com/tracking/cpc.php?ids=3D263&idv=
+=3D336&sid=3D&email=3D&redirect=3Dhttp%3A%2F%2Ftout-savoir-sur-la-loi-pinel=
+.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D=
+%25%25email%25%25%26nom%3D
+
+=09=09
+http://www.capaffiliation.com/trac=
+king/cpc.php?ids=3D263&idv=3D336&sid=3D&email=3D&redirect=3Dhttp%3A%2F%2Fto=
+ut-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D=
+212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D
+
+=09=09
+http://w=
+ww.capaffiliation.com/tracking/cpc.php?ids=3D263&idv=3D336&sid=3D&email=3D&=
+redirect=3Dhttp%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3=
+Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom=
+%3D
+
+ POUR NE PLUS RECEVOIR CE GENRE DE MESSAGE DE NOTRE PART D=C3=
+=89SABONNEZ
+VOUS.
+http://email-promo.ovh/index.php/lists/hc991224f2bad/=
+unsubscribe/hp200ce0kf67a/ty522j2kd5f38
+
+
+=20
+
+--_=_swift_v4_1454097199_4b6a9b6c683337dbe7c7fdc480366ab2_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html><head><meta name="charset" content="utf-8"><title></title></head><body>
+
+            <p>&nbsp;</p>
+
+<center><a 
+href="http://email-promo.ovh/index.php/campaigns/ty522j2kd5f38/report-abuse/hc991224f2bad/hp200ce0kf67a" 
+style="font-family:Arial;font-size:12px;color:#000;text-decoration:none;" 
+target="_blank"><b>Mettre cet email en ind&eacute;sirable</b></a></center>
+
+<center>
+<center>
+<p style="font-family:Arial;font-size:12px;">Si ce message ne s'affiche pas 
+correcement, <a 
+href="http://email-promo.ovh/index.php/campaigns/ty522j2kd5f38/web-version/hp200ce0kf67a" 
+style="font-family:Arial;font-size:12px;color:#666;text-decoration:none;" 
+target="_blank"> consultez la version en ligne</a></p>
+</center>
+
+<p>&nbsp;</p>
+
+<center>
+<table border="0" cellpadding="0" cellspacing="0" id="Tableau_01" 
+style="height:672px;" width="605"><tbody><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="0euro d'imp&ocirc;t" border="0" height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_header.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="Pendant 12ans c'est possible" border="0" 
+height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_pendant_12ans.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="En savoir plus" border="0" height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_en_savoir_plus.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="Guide Loi Pinel" border="0" height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_haut_book.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="R&eacute;duire ses imp&ocirc;ts et construire un 
+patrimoine" border="0" height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_bas_book.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="T&eacute;l&eacute;chargez le guide" border="0" 
+height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_telechargez.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="D&eacute;couvrez les avantages" border="0" 
+height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_avantages.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr><tr><td height="84" width="605"><a 
+href="http://www.capaffiliation.com/tracking/cpc.php?ids=263&amp;idv=336&amp;sid=&amp;email=&amp;redirect=http%3A%2F%2Ftout-savoir-sur-la-loi-pinel.fr%2Findex.php%3Ftpl%3Dseptembre2015-07%26o_p%3D212%26trk%3D212%26email%3D%25%25email%25%25%26nom%3D" 
+target="_blank"><img alt="Devenir propri&eacute;taire sans apport" border="0" 
+height="84" 
+src="http://stor.capmail.fr/1187/www/img/_IMG3/LEBONPLACEMENT_171115_footer.jpg" 
+style="display:block;overflow:hidden;font-weight:bold;font-size:20px;color:#3C49A3;" 
+width="605"></a></td>
+		</tr></tbody></table></center>
+
+<p>&nbsp;</p>
+
+<center><a 
+href="http://email-promo.ovh/index.php/lists/hc991224f2bad/unsubscribe/hp200ce0kf67a/ty522j2kd5f38" 
+style="font-family:Arial;font-size:12px;color:#000;text-decoration:none;" 
+target="_blank"><b>Pour ne plus recevoir ce genre de message de notre part 
+d&eacute;sabonnez vous.</b></a></center>
+
+<p><img alt="" class="sevntkaghiaumnaylwtq" height="1" 
+src="http://ext.adleadevent.com/adtckrtg.php?ids=1437&amp;hash=%25%25md5%25%25" 
+width="1"><img alt="cpm.php?ids=263&amp;idv=336&amp;sid=" border="0" 
+height="1" 
+src="http://www.capaffiliation.com/tracking/cpm.php?ids=263&amp;idv=336&amp;sid=" 
+width="1"></p>
+
+<p>&nbsp;</p>
+</center><img width="1" height="1" 
+src="http://email-promo.ovh/index.php/campaigns/ty522j2kd5f38/track-opening/hp200ce0kf67a" 
+alt="" />
+</body></html>
+
+
+--_=_swift_v4_1454097199_4b6a9b6c683337dbe7c7fdc480366ab2_=_--

@@ -1,0 +1,633 @@
+Return-Path: <AX3eHYoY2RlShL7gtDkUbfA==_1100547144655_XP82cLanEeOmDtSuUnuJWg==@in.constantcontact.com>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 72dLHcU66FZnlgAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 17:40:07 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 5B07161FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 17:40:07 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 3.72
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.72 tagged_above=-10000 required=5
+	tests=[BAYES_20=-0.001, DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	PYZOR_CHECK=1.392, RCVD_IN_DNSWL_NONE=-0.0001, T_REMOTE_IMAGE=0.01,
+	URIBL_GREY=0.424, URI_NOVOWEL=0.5] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=morganclaypool.ccsend.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HLwM2cv3kfH5 for <laplante@liafa.univ-paris-diderot.fr>;
+	Tue, 15 Mar 2016 17:40:01 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id C45A461FA2
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 17:40:01 +0100 (CET)
+Received: from ccm31.constantcontact.com (ccm31.constantcontact.com [208.75.123.227])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2FGe02J028605
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 17:40:01 +0100
+Received: from ccm23.constantcontact.com (p2-pen10.ad.prodcc.net [10.252.1.140])
+	by p2-dmail10.ccm31.constantcontact.com (Postfix) with ESMTP id 5A13FD26C67
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 12:23:21 -0400 (EDT)
+Received: from p2-jb723.ad.prodcc.net (p2-pen2.ad.prodcc.net [10.252.0.102])
+	by p2-mail219.ccm23.constantcontact.com (Postfix) with ESMTP id 4B930546D9C
+	for <sophie.laplante@liafa.univ-paris-diderot.fr>; Tue, 15 Mar 2016 12:23:19 -0400 (EDT)
+DKIM-Signature: v=1; q=dns/txt; a=rsa-sha256; c=relaxed/relaxed; s=111796; d=morganclaypool.ccsend.com; h=date:mime-version:subject:X-Feedback-ID:message-id:from:reply-to:list-unsubscribe:sender:to; bh=nUtQLfA8w7sWAFZIf1kWeNGBg24uET52Gh/wB/UJKiA=; b=M9vFXtHOBaW//C/hYW5pJVCU7M0zRk8lyBDZk9avqrCtDYQK4kvj3kDN0wbi/7OUZ8LybmTh9qC8ZmJwH626UShiIaJVRhlf94x458few7hQHlAP++vnMVA660F0rakI0iiVNRj72yY6kf4r+6m4VFUgk++bwer/TU6SxEUEeBE=
+Message-ID: <1124103062834.1100547144655.34308.0.201220JL.1002@scheduler.constantcontact.com>
+Date: Tue, 15 Mar 2016 12:23:19 -0400 (EDT)
+From: Morgan & Claypool Publishers <info@morganclaypool.com>
+Reply-To: beckley@morganclaypool.com
+Sender: Morgan & Claypool Publishers <michael@morganclaypool.ccsend.com>
+To: sophie.laplante@liafa.univ-paris-diderot.fr
+Subject: Become a member and save
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_11949745_109919304.1458058999293"
+List-Unsubscribe: http://visitor.constantcontact.com/do?p=un&m=001NIX1l27apS2BTCniDK-pDA%3D%3D&se=001jtFNokdLAt0%3D&t=001EkZLEx15CcE%3D&llr=p5or85aab
+X-Campaign-Activity-ID: 5f778762-8636-4654-a12f-b82d0e451b7c
+X-Channel-ID: 5cff3670-b6a7-11e3-a60e-d4ae527b895a
+X-Mailer: Roving Constant Contact 2012 (http://www.constantcontact.com)
+X-Return-Path-Hint: AX3eHYoY2RlShL7gtDkUbfA==_1100547144655_XP82cLanEeOmDtSuUnuJWg==@in.constantcontact.com
+X-Roving-Campaignid: 1124103062834
+X-Roving-Id: 1100547144655.34308
+X-Feedback-ID: 5cff3670-b6a7-11e3-a60e-d4ae527b895a:5f778762-8636-4654-a12f-b82d0e451b7c:1100547144655:CTCT
+X-CTCT-ID: 5c470a00-b6a7-11e3-a595-d4ae527b895a
+X-Greylist: Delayed for 00:16:39 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 15 Mar 2016 17:40:01 +0100 (CET)
+X-Miltered: at potemkin with ID 56E83AE0.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56E83AE0.000 from ccm31.constantcontact.com/ccm31.constantcontact.com/null/ccm31.constantcontact.com/<AX3eHYoY2RlShL7gtDkUbfA==_1100547144655_XP82cLanEeOmDtSuUnuJWg==@in.constantcontact.com>
+X-j-chkmail-Score: MSGID : 56E83AE0.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+------=_Part_11949745_109919304.1458058999293
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Morgan & Claypool's Retail Store (Print and/or electronic with one click)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Membership Made Simple
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We like simple here. The most important benefit of being a "member" anywhere is 
+the discount.  So, if you become a member of the Morgan & Claypool Retail Bookstore,
+you will save 15% on all print and individual e-books.
+
+https://www.morganclaypoolpublishers.com/catalog_Orig/create_account.php
+
+Not once, not for a certain amount of time...for as long as you want.
+All you have to do is sign up, tell us what subject areas you are interested in, and remain
+on our mailing list.  We rarely reach out more than once a week to any list, so 
+you will never be overwhelmed by email from us.
+
+Whether you are interested in one book for personal use, or want to come back again
+and again to stock a library or laboratory, this is an excellent opportunity for you to 
+save while staying informed on the newest and best-selling titles in your favorite 
+subjects.
+
+Please take a moment to share this email with your colleagues.
+
+If you have any questions or comments, please contact me directly.
+
+With regards,
+
+Brent Beckley
+Direct Marketing Manager
+Morgan & Claypool Publishers
+beckley@morganclaypool.com
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Forward this email
+http://ui.constantcontact.com/sa/fwtf.jsp?llr=p5or85aab&m=1100547144655&ea=$sophie.laplante@liafa.univ-paris-diderot.fr$&a=1124103062834
+
+This email was sent to sophie.laplante@liafa.univ-paris-diderot.fr by info@morganclaypool.com.
+
+Update Profile/Email Address
+http://visitor.constantcontact.com/do?p=oo&m=001NIX1l27apS2BTCniDK-pDA%3D%3D&ch=5cff3670-b6a7-11e3-a60e-d4ae527b895a&ca=5f778762-8636-4654-a12f-b82d0e451b7c
+
+
+Instant removal with SafeUnsubscribe(TM)
+http://visitor.constantcontact.com/do?p=un&m=001NIX1l27apS2BTCniDK-pDA%3D%3D&ch=5cff3670-b6a7-11e3-a60e-d4ae527b895a&ca=5f778762-8636-4654-a12f-b82d0e451b7c
+
+
+Privacy Policy:
+http://www.constantcontact.com/legal/service-provider?cc=about-service-provider
+
+Online Marketing by
+Constant Contact(R)
+www.constantcontact.com
+
+
+
+Morgan & Claypool | 1210 Fifth Ave. | Suite 250 | San Rafael | CA | 94903
+------=_Part_11949745_109919304.1458058999293
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+<body topmargin=3D"0" leftmargin=3D"0" rightmargin=3D"0"><!--Copyright (c) =
+1996-2016 Constant Contact. All rights reserved.  Except as permitted under=
+ a separate
+written agreement with Constant Contact, neither the Constant Contact softw=
+are, nor any content that appears on any Constant Contact site,
+including but not limited to, web pages, newsletters, or templates may be r=
+eproduced, republished, repurposed, or distributed without the
+prior written permission of Constant Contact.  For inquiries regarding repr=
+oduction or distribution of any Constant Contact material, please
+contact legal@constantcontact.com.--><style>
+@media only screen and (max-width:480px) {
+body {
+align:center;
+topmargin:0;
+leftmargin:0;
+marginheight:0;
+marginwidth:0;
+width:100% !important;
+min-width:100% !important;
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+-webkit-text-size-adjust:100%;
+-ms-text-size-adjust:100%;
+}
+table {
+border-collapse:collapse;
+mso-table-lspace:0pt;
+mso-table-rspace:0pt;
+}
+td[class=3D"MainWidth"] {
+width:100% !important;
+}
+table[class=3D"HideInMobile"], img[class=3D"HideInMobile"], td[class=3D"Hid=
+eInMobile"] {
+display: none !important;
+}
+td[class~=3D"OneColumnMobile"], table[class~=3D"OneColumnMobile"] {
+width: 100% !important;
+}
+td[class~=3D"OneColumn"], table[class~=3D"OneColumn"] {
+width: 100% !important;
+display:block !important;
+}
+.BodyPadding {
+padding: 15px 5px 15px 5px !important;
+}
+.OuterBorder {
+padding: 2px 2px 2px 2px !important;
+}
+.PreheaderContent {
+padding: 10px 20px 10px 20px !important;
+}
+.PreheaderText {
+font-size: 12px !important;
+}
+.Logo {
+padding: 10px 20px 10px 20px !important;
+}
+.Image {
+padding: 0px 0px 0px 0px !important;
+}
+.SectionHeadlinePadding {
+padding: 8px 0px 9px 0px !important; =20
+}
+.SectionHeadlineContent {
+padding: 10px 20px 10px 20px !important;
+}
+.SectionHeadlineText {
+font-size: 24px !important;
+}
+.HeadlineContent {
+padding: 10px 20px 10px 20px !important;
+}
+.HeadlineText {
+font-size: 20px !important;
+}
+.SubheadlineContent {
+padding: 10px 20px 10px 20px !important;
+}
+.SubheadlineText {
+font-size: 16px !important;
+}
+.Content {
+padding: 10px 20px 10px 20px !important;
+}
+.FeaturePadding {
+padding: 10px 5px 10px 5px !important;
+}
+.FeatureContent {
+padding: 10px 15px 10px 15px !important;
+}
+.LeftImage {
+padding: 10px 0px 10px 0px !important;
+}
+.RightImage {
+padding: 10px 0px 10px 0px !important;
+}
+.FeatureHeadlineText {
+font-size: 20px !important;
+}
+.FeatureText {
+font-size: 16px !important;
+}
+.FeatureLink {
+font-size: 16px !important;
+}
+.ArticlePadding {
+padding: 10px 20px 10px 20px !important;
+}
+.ArticleHeadlineText {
+font-size: 20px !important;
+}
+.MainText {
+font-size: 16px !important;
+}
+.MainLink {
+font-size: 16px !important;
+}
+.ButtonContent {
+padding: 10px 20px 10px 20px !important;
+}
+.ButtonText {
+font-size: 16px !important;
+}
+.DividerPadding {
+padding: 10px 20px 10px 20px !important;
+}
+.CouponPadding {
+padding: 10px 20px 10px 20px !important;
+}
+.CouponHeadlineText {
+font-size: 20px !important;
+}
+.CouponHeadlineWidth {
+width: 100% !important;
+}
+.CouponContent {
+padding: 10px 20px 10px 20px !important;
+}
+.CouponText {
+font-size: 16px !important;
+}
+.SocialMediaPadding {
+padding: 10px 20px 10px 20px !important;
+}
+.SocialMediaIcon {
+padding: 5px 10px 0px 10px !important;
+}
+.SpacerHeight {
+padding-bottom: 9px !important;
+}
+}
+@media only screen and (max-width:480px) {td[class~=3D"mobile-hidden"] {dis=
+play: none !important;}}</style><style>@media only screen and (max-width:48=
+0px) {table[class~=3D"HideInMobile"], img[class~=3D"HideInMobile"], td[clas=
+s~=3D"HideInMobile"], span[class~=3D"HideInMobile"] {display: none !importa=
+nt;}td[class~=3D"FooterColumn"], table[class~=3D"FooterColumn"], span[class=
+~=3D"FooterColumn"] {display:block !important;}.FooterText {line-height: 1.=
+6 !important;}}</style><style>blockquote .hideInRplyFwd, .WordSection1 .hid=
+eInRplyFwd, blockquote a[href*=3D'http://visitor.constantcontact.com/do?p=
+=3Dun&m=3D001NIX1l27apS2BTCniDK-pDA%3D%3D&ch=3D5cff3670-b6a7-11e3-a60e-d4ae=
+527b895a&ca=3D5f778762-8636-4654-a12f-b82d0e451b7c'], .WordSection1 a[href*=
+=3D'http://visitor.constantcontact.com/do?p=3Dun&m=3D001NIX1l27apS2BTCniDK-=
+pDA%3D%3D&ch=3D5cff3670-b6a7-11e3-a60e-d4ae527b895a&ca=3D5f778762-8636-4654=
+-a12f-b82d0e451b7c'], #OLK_SRC_BODY_SECTION .hideInRplyFwd, #OLK_SRC_BODY_S=
+ECTION a[href*=3D'http://visitor.constantcontact.com/do?p=3Dun&m=3D001NIX1l=
+27apS2BTCniDK-pDA%3D%3D&ch=3D5cff3670-b6a7-11e3-a60e-d4ae527b895a&ca=3D5f77=
+8762-8636-4654-a12f-b82d0e451b7c'] { display: none !important; }</style><di=
+v id=3D"rootDiv"><img src=3D"http://r20.rs6.net/on.jsp?ca=3D5f778762-8636-4=
+654-a12f-b82d0e451b7c&a=3D1100547144655&d=3D1124103062834&r=3D3&o=3Dhttp://=
+ui.constantcontact.com/images/p1x1.gif&c=3D5c470a00-b6a7-11e3-a595-d4ae527b=
+895a&ch=3D5cff3670-b6a7-11e3-a60e-d4ae527b895a" height=3D"1" width=3D"1"/>
+<div class=3D"OuterBGColor" style=3D"background-color:#E6E6E6;" bgcolor=3D"=
+#E6E6E6" align=3D"center">
+<table class=3D"OuterBGColor" style=3D"background-color:#E6E6E6;margin-left=
+:auto;margin-right:auto;" bgcolor=3D"#E6E6E6" border=3D"0" width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"HideInMobile" rowspan=3D"1" colspan=3D"1"><img height=3D"5" vs=
+pace=3D"0" border=3D"0" hspace=3D"0" width=3D"1" alt=3D"" src=3D"https://st=
+atic.ctctcdn.com/letters/images/1101116784221/S.gif"/></td>
+<td class=3D"MainWidth" style=3D"width:630px;" valign=3D"top" width=3D"630"=
+ rowspan=3D"1" colspan=3D"1" align=3D"center">
+<div class=3D"MaxMainWidth" style=3D"max-width:630px;margin-left:auto;margi=
+n-right:auto;" align=3D"center">
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"BodyPadding" style=3D"padding:15px 5px 15px 5px;" valign=3D"to=
+p" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"TopMargin" style=3D"padding:0px 0px 8px 0px;" valign=3D"top" w=
+idth=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"SpacerHeight" style=3D"padding-bottom:9px;height:1px;line-heig=
+ht:1px;" height=3D"1" rowspan=3D"1" colspan=3D"1" align=3D"center"><img hei=
+ght=3D"1" vspace=3D"0" border=3D"0" hspace=3D"0" width=3D"5" style=3D"displ=
+ay: block; height:1px; width:5px;" alt=3D"" src=3D"https://static.ctctcdn.c=
+om/letters/images/1101116784221/S.gif"/></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"OuterBorderColor OuterBorder" style=3D"background-color:#403F4=
+2;padding:10px 10px 10px 10px;" bgcolor=3D"#403F42" valign=3D"top" width=3D=
+"100%" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<table class=3D"InnerBGColor" style=3D"background-color:#FFFFFF;" bgcolor=
+=3D"#FFFFFF" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tr>
+<td class=3D"EmailContainer" style=3D"padding:0px 0px 0px 0px;" valign=3D"t=
+op" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center">
+
+<table style=3D"display: table;" border=3D"0" width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" id=3D"content_LETTER.BLOCK2"><tr><td class=3D"Image M=
+ainText" style=3D"padding:0px 0px 0px 0px;color:#403F42;font-family:Arial;f=
+ont-size:10pt;" valign=3D"top" rowspan=3D"1" colspan=3D"1" align=3D"center"=
+>
+<table class=3D"OneColumnMobile" width=3D"540" data-padding-converted=3D"tr=
+ue" cellspacing=3D"0" cellpadding=3D"0" align=3D"none"><tr><td style=3D"col=
+or: #403f42; padding: 0px;" width=3D"1%" rowspan=3D"1" colspan=3D"1">
+<div align=3D"center"><a class=3D"imgCaptionAnchor" track=3D"on" shape=3D"r=
+ect" href=3D"http://r20.rs6.net/tn.jsp?f=3D0018Z_YxZKsPkmV8jj1Qd9noshj2OCdI=
+0eoCTR2_w33CeSuj17tUqaNxHQ5LucPJWuZT3fWSSNTPXbl2T5KDENICeYb52s1CaoUURIv5Krg=
+EML-1X66W8LUGx2sycmZ5eTM02uGP8Cy1cIVy39BoDlf37TELZUGYCuiPXOOPiMwH6jAspfZDTW=
+aLg=3D=3D&c=3DwgYNbL8sQDQLU5rLqdFWpd0QrpGkQg2ApANEiEIbQYjOspVPhtRKGA=3D=3D&=
+ch=3D15k-qKDukAtUe6VDO1f3ICXnxrmuH6kLQsBExdF7M3nJ3mQnCYOTuw=3D=3D" alt=3D"h=
+ttp://store.morganclaypool.com" target=3D"_blank"><img class=3D"cc-image-re=
+size" style=3D"display: block; height: auto !important; max-width: 100% !im=
+portant;" height=3D"72" vspace=3D"0" border=3D"0" name=3D"ACCOUNT.IMAGE.133=
+" hspace=3D"0" width=3D"540" src=3D"http://files.ctctcdn.com/fcbb8bd3001/54=
+0253ac-9cfd-4d3b-b102-28e8443459b2.jpg"/></a></div>
+</td></tr></table>
+</td></tr></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" id=
+=3D"content_LETTER.BLOCK3"><tr><td class=3D"Content MainText" style=3D"padd=
+ing:8px 20px 9px 20px;color:#403F42;font-family:Arial;font-size:10pt;" vali=
+gn=3D"top" rowspan=3D"1" colspan=3D"1" align=3D"left">
+<div style=3D"text-align: center;" align=3D"center">
+<div><span style=3D"color: #800000;"><strong>Morgan & Claypool's Retail Sto=
+re (Print and/or electronic with one click)</strong></span></div>
+</div>
+</td></tr></table><table border=3D"0" width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" id=3D"content_LETTER.BLOCK4"><tr><td class=3D"HeadlineContent=
+ HeadlineText" style=3D"padding:8px 20px 9px 20px;color:#09A3BA;font-family=
+:Arial;font-weight:bold;font-size:18pt;text-align: center;" valign=3D"top" =
+rowspan=3D"1" colspan=3D"1" align=3D"center">Membership Made Simple <br/></=
+td></tr></table>
+
+
+
+
+
+
+
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" id=
+=3D"content_LETTER.BLOCK13"><tr><td class=3D"FeaturePadding" style=3D"paddi=
+ng:8px 20px 9px 20px;color: rgb(0, 0, 0);" valign=3D"top" rowspan=3D"1" col=
+span=3D"1" align=3D"left">
+<table class=3D"CC_NoEdit" style=3D"margin:0px 0px 0px 0px;" border=3D"0" w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0"><tr><td class=3D"FeatureA=
+rticleBGColor" style=3D"background-color:#403F42;padding: 1px; color: rgb(0=
+, 0, 0);" bgcolor=3D"#403F42" valign=3D"top" rowspan=3D"1" colspan=3D"1" al=
+ign=3D"left">
+<table class=3D"CC_NoEdit InnerBGColor" style=3D"margin:0px 0px 0px 0px;bac=
+kground-color:#FFFFFF;" bgcolor=3D"#FFFFFF" border=3D"0" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0"><tr><td class=3D"FeatureContent FeatureTex=
+t" style=3D"padding:15px 17px 15px 20px;color:#403F42;font-family:Arial;fon=
+t-size:10pt;" valign=3D"top" rowspan=3D"1" colspan=3D"1" align=3D"left">
+<div>We like simple here. The most important benefit of being a "member" an=
+ywhere is the discount.&nbsp; So, if you become a member of the <a style=3D=
+"color: blue; font-weight: bold; text-decoration: underline;" track=3D"on" =
+shape=3D"rect" href=3D"http://r20.rs6.net/tn.jsp?f=3D0018Z_YxZKsPkmV8jj1Qd9=
+noshj2OCdI0eoCTR2_w33CeSuj17tUqaNxBXGEQJ9B29ZyVznjdhjFnFAmTE83ffThQa2cT5Ezv=
+c3EOpaRf-Uw05mef-JBN6hGknvuvzAhxmYYnSWGaOJeGBocZK_n4ry2s34gl8rkWEWd3g1TetjK=
+6uG0Vrl8bh0ANcCHCwvE_yPeFHyyEcuHLBKxkEgQhovtrw3mgfW3cWirIwZ6dj2oewpGPSFolZ0=
+Rg=3D=3D&c=3DwgYNbL8sQDQLU5rLqdFWpd0QrpGkQg2ApANEiEIbQYjOspVPhtRKGA=3D=3D&c=
+h=3D15k-qKDukAtUe6VDO1f3ICXnxrmuH6kLQsBExdF7M3nJ3mQnCYOTuw=3D=3D" linktype=
+=3D"1" alt=3D"https://www.morganclaypoolpublishers.com/catalog_Orig/create_=
+account.php" target=3D"_blank">Morgan & Claypool Retail Bookstore</a>, you =
+will save 15% on all print and individual e-books.&nbsp; <br/><br/>Not once=
+, not for a certain amount of time...for as long as you want.&nbsp; <br/><b=
+r/>All you have to do is <a style=3D"color: blue; font-weight: bold; text-d=
+ecoration: underline;" track=3D"on" shape=3D"rect" href=3D"http://r20.rs6.n=
+et/tn.jsp?f=3D0018Z_YxZKsPkmV8jj1Qd9noshj2OCdI0eoCTR2_w33CeSuj17tUqaNxBXGEQ=
+J9B29ZyVznjdhjFnFAmTE83ffThQa2cT5Ezvc3EOpaRf-Uw05mef-JBN6hGknvuvzAhxmYYnSWG=
+aOJeGBocZK_n4ry2s34gl8rkWEWd3g1TetjK6uG0Vrl8bh0ANcCHCwvE_yPeFHyyEcuHLBKxkEg=
+Qhovtrw3mgfW3cWirIwZ6dj2oewpGPSFolZ0Rg=3D=3D&c=3DwgYNbL8sQDQLU5rLqdFWpd0Qrp=
+GkQg2ApANEiEIbQYjOspVPhtRKGA=3D=3D&ch=3D15k-qKDukAtUe6VDO1f3ICXnxrmuH6kLQsB=
+ExdF7M3nJ3mQnCYOTuw=3D=3D" linktype=3D"1" alt=3D"https://www.morganclaypool=
+publishers.com/catalog_Orig/create_account.php" target=3D"_blank">sign up</=
+a>, tell us what subject areas you are interested in, and remain on our mai=
+ling list.&nbsp; We rarely reach out more than once a week to any list, so =
+you will never be overwhelmed by email from us.<br/><br/>Whether you are in=
+terested in one book for personal use, or want to come back again and again=
+ to stock a library, this is an excellent opportunity for you to save while=
+ staying informed on the newest and best-selling titles in your favorite su=
+bjects.&nbsp; Please take a moment to share this email with your colleagues=
+.<br/></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table><table border=3D"0" width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" id=3D"content_LETTER.BLOCK9"><tr><td class=3D"Content MainTex=
+t" style=3D"padding:8px 20px 9px 20px;color:#403F42;font-family:Arial;font-=
+size:10pt;" valign=3D"top" rowspan=3D"1" colspan=3D"1" align=3D"left">
+<div>If you have any questions or comments, please contact me directly.<br/=
+><br/>With regards,<br/><br/>Brent Beckley<br/>Direct Marketing Manager<br/=
+>Morgan & Claypool Publishers<br/>beckley@morganclaypool.com<br/></div>
+</td></tr></table></td>
+</tr>
+</table>
+<table class=3D"OuterBorderColor" style=3D"background-color:#403F42;padding=
+:9px 0px 8px 0px;" bgcolor=3D"#403F42" border=3D"0" width=3D"100%" cellspac=
+ing=3D"0" cellpadding=3D"0">
+<tr>
+<td rowspan=3D"1" colspan=3D"1">
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"BottomMargin" style=3D"padding:9px 0px 8px 0px;" valign=3D"top=
+" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center">
+
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"SocialMediaPadding" style=3D"padding:8px 0px 9px 0px;" valign=
+=3D"top" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<table class=3D"CC_NoEdit" style=3D"margin:0px 0px 0px 0px;" border=3D"0" w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tr>
+<td style=3D"padding: 0px 0px 10px 0px;" valign=3D"middle" rowspan=3D"1" co=
+lspan=3D"1" align=3D"center">
+<div class=3D"MainText" style=3D"color:#403F42;font-family:Arial;font-size:=
+10pt;">STAY CONNECTED:<br/></div>
+</td>
+</tr>
+<tr>
+<td valign=3D"middle" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<table border=3D"0" width=3D"1" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td class=3D"SocialMediaIcon" style=3D"padding:0px 5px 0px 5px;" valign=3D"=
+middle" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<div><a class=3D"SocialMediaText" shape=3D"rect" href=3D"#" linktype=3D"fac=
+ebook"><img vspace=3D"0" border=3D"0" hspace=3D"0" width=3D"22" style=3D"di=
+splay:block;" alt=3D"Facebook" src=3D"https://static.ctctcdn.com/ui/images1=
+/ic_fbk_36.png"/></a></div>
+</td>
+<td class=3D"SocialMediaIcon" style=3D"padding:0px 5px 0px 5px;" valign=3D"=
+middle" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<div><a class=3D"SocialMediaText" shape=3D"rect" href=3D"#" linktype=3D"twi=
+tter"><img vspace=3D"0" border=3D"0" hspace=3D"0" width=3D"22" style=3D"dis=
+play:block;" alt=3D"Twitter" src=3D"https://static.ctctcdn.com/ui/images1/i=
+c_twit_36.png"/></a></div>
+</td>
+<td class=3D"SocialMediaIcon" style=3D"padding:0px 5px 0px 5px;" valign=3D"=
+middle" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<div><a class=3D"SocialMediaText" shape=3D"rect" href=3D"#" linktype=3D"lin=
+kedin"><img vspace=3D"0" border=3D"0" hspace=3D"0" width=3D"22" style=3D"di=
+splay:block;" alt=3D"LinkedIn" src=3D"https://static.ctctcdn.com/ui/images1=
+/ic_lkdin_36.png"/></a></div>
+</td>
+<td class=3D"SocialMediaIcon" style=3D"padding:0px 5px 0px 5px;" valign=3D"=
+middle" rowspan=3D"1" colspan=3D"1" align=3D"center">
+<div><a class=3D"SocialMediaText" shape=3D"rect" href=3D"#" linktype=3D"pin=
+terest"><img vspace=3D"0" border=3D"0" hspace=3D"0" width=3D"22" style=3D"d=
+isplay:block;" alt=3D"Pinterest" src=3D"https://static.ctctcdn.com/ui/image=
+s1/pinterest-36.png"/></a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td class=3D"HideInMobile" rowspan=3D"1" colspan=3D"1"><img height=3D"5" vs=
+pace=3D"0" border=3D"0" hspace=3D"0" width=3D"1" alt=3D"" src=3D"https://st=
+atic.ctctcdn.com/letters/images/1101116784221/S.gif"/></td>
+</tr>
+</table>
+</div>
+<div id=3D"footerContainer" align=3D"center" style=3D"background-color:#fff=
+fff;">
+<table style=3D"background-color:#ffffff;" border=3D"0" width=3D"100%" cell=
+padding=3D"0" cellspacing=3D"0" id=3D"footerPanelWrap">
+<tr>
+<td rowspan=3D"1" colspan=3D"1" align=3D"center">
+
+<table style=3D"background-color:#ffffff" border=3D"0" width=3D"100%" cells=
+pacing=3D"0" cellpadding=3D"0" id=3D"footerTable"><tr><td class=3D"HideInMo=
+bile" rowspan=3D"1" colspan=3D"1"><img height=3D"5" vspace=3D"0" border=3D"=
+0" hspace=3D"0" width=3D"1" src=3D"https://imgssl.constantcontact.com/lette=
+rs/images/1101116784221/S.gif"/></td><td style=3D"background-color:#FFFFFF;=
+" valign=3D"top" width=3D"610" rowspan=3D"1" colspan=3D"1" align=3D"center"=
+><div style=3D"max-width:610px;margin-left:auto;margin-right:auto;" align=
+=3D"center"><table style=3D"margin-left:auto;margin-right:auto;" border=3D"=
+0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"padd=
+ing: 15px 10px 15px 10px;" valign=3D"top" width=3D"100%" rowspan=3D"1" cols=
+pan=3D"1" align=3D"center"><table style=3D"margin-left:auto;margin-right:au=
+to;" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"><tr><t=
+d style=3D"padding-bottom: 15px;" valign=3D"top" width=3D"100%" rowspan=3D"=
+1" colspan=3D"1" align=3D"center"><div style=3D"font-family:Verdana,Geneva,=
+sans-serif; font-size:13px; color:#5d5d5d;" id=3D"LETTER.PHYSICALADDRESS"><=
+span class=3D"FooterColumn">Morgan & Claypool<span class=3D"HideInMobile">,=
+</span></span><span class=3D"FooterColumn"> 1210&nbsp;Fifth&nbsp;Ave.<span =
+class=3D"HideInMobile">,</span></span><span class=3D"FooterColumn"> Suite&n=
+bsp;250<span class=3D"HideInMobile">,</span></span><span class=3D"FooterCol=
+umn">&nbsp;San Rafael<span class=3D"HideInMobile">,</span>&nbsp;CA&nbsp;949=
+03</span></div></td></tr><tr><td valign=3D"top" width=3D"100%" rowspan=3D"1=
+" colspan=3D"1" align=3D"center"><table border=3D"0" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0"><tr><td style=3D"padding-bottom:5px;" valign=
+=3D"top" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center"><div c=
+lass=3D"FooterText" style=3D"font-family:Verdana,Geneva,sans-serif; font-si=
+ze:12px; color:#5d5d5d; line-height:1.4;"><a class=3D"hideInRplyFwd" style=
+=3D"color:#5d5d5d;" shape=3D"rect" href=3D"http://visitor.constantcontact.c=
+om/do?p=3Dun&m=3D001NIX1l27apS2BTCniDK-pDA%3D%3D&ch=3D5cff3670-b6a7-11e3-a6=
+0e-d4ae527b895a&ca=3D5f778762-8636-4654-a12f-b82d0e451b7c" target=3D"_blank=
+" id=3D"unsubscribeLink"><span id=3D"unsubscribeLinkText">SafeUnsubscribe&t=
+rade;</span> sophie.laplante@liafa.univ-paris-diderot.fr</a></div></td></tr=
+></table><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0"><tr><td valign=3D"top" width=3D"100%" rowspan=3D"1" colspan=3D"1" al=
+ign=3D"center"><div class=3D"FooterText" style=3D"font-family:Verdana,Genev=
+a,sans-serif; font-size:12px; color:#5d5d5d; line-height:1.4;"><span class=
+=3D"FooterColumn"><a style=3D"color:#5d5d5d;" shape=3D"rect" href=3D"http:/=
+/ui.constantcontact.com/sa/fwtf.jsp?llr=3Dp5or85aab&m=3D1100547144655&ea=3D=
+sophie.laplante%40liafa.univ-paris-diderot.fr&a=3D1124103062834" target=3D"=
+_blank" id=3D"fwtfLink">Forward this email</a>&nbsp;<span class=3D"HideInMo=
+bile">|&nbsp;</span></span><span class=3D"FooterColumn"><a class=3D"hideInR=
+plyFwd" style=3D"color:#5d5d5d;" shape=3D"rect" href=3D"http://visitor.cons=
+tantcontact.com/do?p=3Doo&m=3D001NIX1l27apS2BTCniDK-pDA%3D%3D&ch=3D5cff3670=
+-b6a7-11e3-a60e-d4ae527b895a&ca=3D5f778762-8636-4654-a12f-b82d0e451b7c" tar=
+get=3D"_blank" id=3D"updateProfileLink">Update Profile</a><span class=3D"Hi=
+deInMobile hideInRplyFwd">&nbsp;|&nbsp;</span></span><span class=3D"FooterC=
+olumn"><a style=3D"color:#5d5d5d;" shape=3D"rect" href=3D"http://www.consta=
+ntcontact.com/legal/service-provider?cc=3Dabout-service-provider" alt=3D"ht=
+tp://www.constantcontact.com/legal/service-provider?cc=3Dabout-service-prov=
+ider" target=3D"_blank" id=3D"privacyLink">About our service provider</a></=
+span></div></td></tr></table><table border=3D"0" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0"><tr><td style=3D"padding-top:5px;" valign=3D"top" =
+width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center"><div class=3D"F=
+ooterText" style=3D"font-family:Verdana,Geneva,sans-serif; font-size:12px; =
+color:#5d5d5d;">Sent by <a style=3D"color:#5d5d5d;" shape=3D"rect" href=3D"=
+mailto:info@morganclaypool.com" target=3D"_blank" id=3D"sentByEmailLink">in=
+fo@morganclaypool.com</a> in collaboration with</div></td></tr></table></td=
+></tr><tr><td style=3D"padding-top:20px;padding-bottom:20px;" valign=3D"top=
+" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center"><table border=
+=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"=
+padding-bottom:5px;" valign=3D"top" width=3D"100%" rowspan=3D"1" colspan=3D=
+"1" align=3D"center"><div><a shape=3D"rect" href=3D"http://www.constantcont=
+act.com/index.jsp?cc=3DPT1128" target=3D"_blank" id=3D"footerLogoLink"><img=
+ border=3D"0" width=3D"180" style=3D"display: block; height:auto !important=
+; max-width:100% !important;" alt=3D"Constant Contact" src=3D"https://imgss=
+l.constantcontact.com/ui/images1/ctct-logo.png"/></a></div></td></tr><tr><t=
+d valign=3D"top" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"center=
+"><table border=3D"0" width=3D"128" cellspacing=3D"0" cellpadding=3D"0"><tr=
+><td valign=3D"top" width=3D"100%" rowspan=3D"1" colspan=3D"1" align=3D"lef=
+t"><div style=3D"font-family:Verdana,Geneva,sans-serif; font-size:11px; col=
+or:#184f8e;"><a style=3D"font-family:Verdana,Geneva,sans-serif; font-size:1=
+1px; color:#184f8e; text-decoration:none;" shape=3D"rect" href=3D"http://ww=
+w.constantcontact.com/index.jsp?cc=3DPT1128" target=3D"_blank" id=3D"footer=
+LogoTxtLink">Try it free today</a></div></td></tr></table></td></tr></table=
+></td></tr></table></td></tr></table></div></td><td class=3D"HideInMobile" =
+rowspan=3D"1" colspan=3D"1"><img height=3D"5" vspace=3D"0" border=3D"0" hsp=
+ace=3D"0" width=3D"1" src=3D"https://imgssl.constantcontact.com/letters/ima=
+ges/1101116784221/S.gif"/></td></tr></table>
+</td>
+</tr>
+</table>
+</div></div></body>
+
+------=_Part_11949745_109919304.1458058999293--

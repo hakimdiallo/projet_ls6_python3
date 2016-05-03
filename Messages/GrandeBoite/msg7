@@ -1,0 +1,610 @@
+Return-Path: <bnc-75-data_sendout_56ea7769c6965_84-381@bounce.acheter-facilement.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id mxSnFE2p6lYvgAAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Thu, 17 Mar 2016 13:55:41 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id C652961FA1;
+	Thu, 17 Mar 2016 13:55:39 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 9.295
+X-Spam-Level: *********
+X-Spam-Status: Yes, score=9.295 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DATE_IN_PAST_03_06=1.592,
+	DCC_CHECK=1.1, FREEMAIL_FORGED_REPLYTO=2.095,
+	FREEMAIL_REPLYTO_END_DIGIT=0.25, HTML_IMAGE_RATIO_04=0.556,
+	HTML_MESSAGE=0.001, LOTS_OF_MONEY=0.001, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=acheter-facilement.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Mxn0SEILWVaW; Thu, 17 Mar 2016 13:55:37 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id DA16661FA6
+	for <liafa@liafa.univ-paris-diderot.fr>; Thu, 17 Mar 2016 13:55:36 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u2HCta1c025203
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <liafa@liafa.univ-paris-diderot.fr>; Thu, 17 Mar 2016 13:55:36 +0100
+Received: from mta5.acheter-facilement.com (mta5.acheter-facilement.com [89.44.110.252])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u2HCproR034903
+          for <liafa@liafa.jussieu.fr>; Thu, 17 Mar 2016 13:52:24 +0100 (CET)
+X-Ids: 165
+Received: from localhost (localhost [127.0.0.1])
+	by mta5.acheter-facilement.com (Postfix) with ESMTP id 6B44D66B53D
+	for <liafa@liafa.jussieu.fr>; Thu, 17 Mar 2016 10:47:48 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed;
+	d=acheter-facilement.com; s=default; t=1458208068;
+	bh=gfutmgJHw7y8CsSuFcu5bhDfpO8=;
+	h=Date:From:Reply-To:To:Subject:List-Unsubscribe;
+	b=1meFJ30kU+546/e08b0UYVu+9gbPITsmfcJLzsR2eZoBowoKIP/SJJZeso2DIzDxC
+	 /QbOHl8t8KJy72o5Iabsb3pOyjy+yKAhuWtSHecQlxlRqqXz4yNuEc1mHv/QRzl3KO
+	 cfdM9MijGIbg3OhOfJiwmVA50bJXLLpsZ3PXVIT0=
+Date: Thu, 17 Mar 2016 09:47:48 +0000
+From: "Allianz via wcm" <Newsletter@acheter-facilement.com>
+Reply-To: mikedean5577@gmail.com
+To: liafa@liafa.jussieu.fr
+Message-ID: <1458208068-data_sendout_56ea7769c6965_84567845345AB@acheter-facilement.com>
+Subject: 4 bonnes raisons de choisir l'assurance Allianz Auto
+List-Unsubscribe: <http://red.acheter-facilement.com/Unsubscribe.php?email=liafa%40liafa.jussieu.fr&mid=4695>
+X-Slip-uID: 289037
+X-Slip-active: N|desactivated|
+X-BeverlyMail-Recipient: liafa@liafa.jussieu.fr
+X-BeverlyMail-MTA: 381
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_6090d3d366d8f3f53e56b6f1d27f3f92"
+Precedence: Bulk
+Feedback-ID: data_sendout_56ea7769c6965_84:289037:75:SLIPSOFTWARE
+X-Miltered: at potemkin with ID 56EAA948.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56EAA869.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56EAA948.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bnc-75-data_sendout_56ea7769c6965_84-381@bounce.acheter-facilement.com>
+X-j-chkmail-Enveloppe: 56EAA869.002 from mta5.acheter-facilement.com/mta5.acheter-facilement.com/89.44.110.252/mta5.acheter-facilement.com/<bnc-75-data_sendout_56ea7769c6965_84-381@bounce.acheter-facilement.com>
+X-Scores-Stats: 56EAA869.002 B=0.50000 L=0.93638 G=0.93638 Agree    
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 17 Mar 2016 13:55:36 +0100 (CET)
+X-j-chkmail-Score: MSGID : 56EAA948.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--=_6090d3d366d8f3f53e56b6f1d27f3f92
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+
+eAllianz auto
+4 bonnes raisons de choisir l=E2=80=99assurance auto Allianz
+La proximit=C3=A9 d=E2=80=99un Agent G=C3=A9n=C3=A9ral =C3=A0 votre =C3=A9c=
+oute
+Des tarifs uniques sp=C3=A9cial web
+Des services d=E2=80=99assistance pour vous accompagner 24h/24, 7jours/7
+L=E2=80=99expertise Allianz, leader europ=C3=A9en de l=E2=80=99assurance
+Le saviez-vous?
+La loi Hamon introduit un nouveau droit de r=C3=A9siliation : vous, consomm=
+ateur, =C3=AAtes libre de r=C3=A9silier =C3=A0 tout moment votre assurance =
+auto,
+pass=C3=A9 le d=C3=A9lai de un an apr=C3=A8s la premi=C3=A8re souscription,=
+ sans p=C3=A9nalit=C3=A9s ni frais.
+Un interlocuteur Allianz proche de chez vous
+est =C3=A0 votre disposition pour vous conseiller.
+*Offre soumise =C3=A0 conditions, valable 1er janvier au 30 avril 2016 incl=
+us. R=C3=A9duction =C3=A9quivalente =C3=A0 2 mois de cotisation annuelle po=
+ur toute nouvelle souscription d'un contrat =C2=AB eAllianz Auto =C2=BB, en=
+ formule =C2=AB Tous Risques =C2=BB ou en formule =C2=AB Interm=C3=A9diaire=
+ =C2=BB.
+Allianz IARD - SA au capital de 859.142.014 euros =E2=80=93 Entreprise r=C3=
+=A9gie par le Code des assurances =E2=80=93 Si=C3=A8ge social : 1 cours Mic=
+helet -
+CS 30051 - 92076 Paris La D=C3=A9fense Cedex =E2=80=93 www.allianz.fr
+--=_6090d3d366d8f3f53e56b6f1d27f3f92
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"/> =
+=20
+
+<title>eAllianz auto</title>
+<style type=3D"text/css">
+</style>
+
+<!--Don t remove the next meta-->
+<meta name=3D"pdlbat1tkn" content=3D"XCOOf2FU" />
+</head>
+
+<body style=3D"background-color:#e8eaea;">
+<p style=3D"text-align: center;"><a href=3D"http://red.acheter-facilement=
+=2Ecom/click/YToxOntzOjM6InRhZyI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5Nj=
+VfODQiO30%253D/bGlhZmElNDBsaWFmYS5qdXNzaWV1LmZy/114122/4695">Si vous ne par=
+venez pas &agrave; visualiser ce message cliquez ici. </a></p>
+<img src=3D"http://dbkpwi4c6v97q.cloudfront.net/?sc=3D554&t=3D0&l=3D169100&=
+p=3D94709" width=3D"1" height=3D"1" alt=3D"" border=3D"0" />
+
+<table border=3D"0" width=3D"600" cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"center" style=3D"font-family:Arial, Sans-Serif; font-size:12px; ">
+
+	=09
+
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+
+						<td width=3D"143" height=3D"76" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114123/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_01.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"143" height=3D"76" b=
+order=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"157" height=3D"76" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114124/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_02.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"157" height=3D"76" b=
+order=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"168" height=3D"76" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114125/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_03.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"168" height=3D"76" b=
+order=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"132" height=3D"76" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114126/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_04.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"132" height=3D"76" b=
+order=3D"0"/>
+
+							</a>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+
+						<td width=3D"143" height=3D"197" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114127/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_05.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"143" height=3D"197" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"157" height=3D"197" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114128/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_06.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"157" height=3D"197" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"168" height=3D"197" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114129/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_07.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"168" height=3D"197" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"132" height=3D"197" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114130/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_08.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"132" height=3D"197" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+
+						<td width=3D"143" height=3D"318" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114131/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_09.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"143" height=3D"318" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"157" height=3D"318" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114132/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_10.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"157" height=3D"318" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"168" height=3D"318" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114133/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_11.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"168" height=3D"318" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+						<td width=3D"132" height=3D"318" style=3D"background-color:#FFFFFF;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114134/4695" target=3D"_blank">
+
+								<img style=3D"display:block;" src=3D"http://d31epa2i3egyy4.cloudfro=
+nt.net/zanila/2016/090216/auto_250116_12.jpg" alt=3D"eAllianz Auto, une pro=
+tection efficace quelque soit votre profil !" width=3D"132" height=3D"318" =
+border=3D"0"/>
+
+							</a>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+	=09
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+						<td width=3D"600" height=3D"10" style=3D"background-color:#FFFFFF;"><=
+/td>
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+
+						<td width=3D"600" height=3D"" style=3D"background-color:#FFFFFF;text-=
+align:center;vertical-align:top;mso-line-height-rule:exactly; line-height:1=
+8px;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114135/4695" style=3D"text-decoration:none; " target=3D"_=
+blank">
+
+								<font size=3D"2" style=3D"font-family:HelveticaNeue-Light; Arial,Sa=
+ns-Serif;font-size:18px; color:#656565; ">
+							=09
+							<span style=3D"color:#ce0037;font-size:24px;mso-line-height-rule:exa=
+ctly; line-height:24px;">	<b>4 bonnes raisons</b> de choisir<br/> l&rsquo;a=
+ssurance auto Allianz </span><br/><br/>
+							=09
+								La proximit&eacute; d&rsquo;un Agent G&eacute;n&eacute;ral &agrave;=
+ votre &eacute;coute<br/><br/>
+Des tarifs uniques sp&eacute;cial web<br/><br/>
+Des services d&rsquo;assistance pour vous accompagner <br/>24h/24, 7jours/7=
+<br/><br/>
+L&rsquo;expertise Allianz, leader europ&eacute;en de l&rsquo;assurance<br/>
+								</font>
+
+							</a>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+						<td width=3D"600" height=3D"30" style=3D"background-color:#FFFFFF;"><=
+/td>
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"15" cellspacing=3D"0"=
+ align=3D"center">
+
+					<tr>
+						<td width=3D"80" height=3D"20" style=3D"background-color:#FFFFFF;"></=
+td>
+				=09
+
+						<td width=3D"440" height=3D"20" style=3D"background-color:#e8eaea;ver=
+tical-align:top;mso-line-height-rule:exactly; line-height:13px;border:1px s=
+olid #cccccc;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114136/4695" style=3D"text-decoration:none; " target=3D"_=
+blank">
+
+								<font size=3D"2" style=3D"font-family:HelveticaNeue-Light; Arial,Sa=
+ns-Serif;font-size:12px; color:#656565; ">
+							=09
+							<span style=3D"color:#656565;font-size:18px;">	Le saviez-vous? </spa=
+n><br/><br/>
+							=09
+								=20
+						 La loi Hamon introduit un nouveau droit de r&eacute;siliation : vous=
+, consommateur, &ecirc;tes libre de r&eacute;silier &agrave; tout moment vo=
+tre assurance auto,=20
+						 pass&eacute; le d&eacute;lai de un an apr&egrave;s la premi&egrave;r=
+e souscription, sans p&eacute;nalit&eacute;s ni frais.<br/>
+								</font>
+
+							</a>
+
+						</td>
+					=09
+						<td width=3D"80" height=3D"20" style=3D"background-color:#FFFFFF;"></=
+td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+						<td width=3D"600" height=3D"20" style=3D"background-color:#FFFFFF;"><=
+/td>
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+	=09
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center">
+
+					<tr>
+
+						<td width=3D"143" height=3D"65" style=3D"background-color:#013781;tex=
+t-align:center;vertical-align:middle;mso-line-height-rule:exactly; line-hei=
+ght:21px;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114137/4695" style=3D"text-decoration:none; " target=3D"_=
+blank">
+
+								<font size=3D"2" style=3D"font-family:HelveticaNeue-Light; font-siz=
+e:17px; color:#FFFFFF; ">
+							=09
+								<b>Un interlocuteur Allianz proche de chez vous<br/>
+est &agrave; votre disposition pour vous conseiller.
+							=09
+
+								</font>
+
+							</a>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+		<tr>
+
+			<td>
+
+				<table border=3D"0" width=3D"100%" cellpadding=3D"10" cellspacing=3D"0"=
+ align=3D"center">
+
+					<tr>
+
+						<td width=3D"600" height=3D"" style=3D"background-color:#e8eaea;">
+
+							<a href=3D"http://red.acheter-facilement.com/click/YToxOntzOjM6InRhZ=
+yI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaWF=
+mYS5qdXNzaWV1LmZy/114138/4695" style=3D"text-decoration:none;" target=3D"_b=
+lank">
+
+								<font size=3D"1" style=3D"font-family:Arial,Sans-Serif; font-size:1=
+0px; color:#4b4b4b;text-align:left;">
+*Offre soumise &agrave; conditions, valable 1er janvier au 30 avril 2016 in=
+clus. R&eacute;duction &eacute;quivalente &agrave; 2 mois de cotisation ann=
+uelle pour toute nouvelle souscription d'un contrat =C2=AB eAllianz Auto =
+=C2=BB, en formule =C2=AB Tous Risques =C2=BB ou en formule =C2=AB Interm&e=
+acute;diaire =C2=BB.=20
+<br/>					=09
+Allianz IARD - SA au capital de 859.142.014 euros =E2=80=93 Entreprise r&ea=
+cute;gie par le Code des assurances =E2=80=93 Si&egrave;ge social : 1 cours=
+ Michelet -=20
+CS 30051 - 92076 Paris La D&eacute;fense Cedex =E2=80=93 www.allianz.fr
+							=09
+								<br/>
+								</font>
+
+							</a>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>						=09
+
+		</tr>
+	=09
+	=09
+	=09
+	</table>
+
+
+
+
+
+	<p style=3D"text-align: center;"><a href=3D"http://red.acheter-facilement=
+=2Ecom/click/YToxOntzOjM6InRhZyI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5Nj=
+VfODQiO30%253D/bGlhZmElNDBsaWFmYS5qdXNzaWV1LmZy/114139/4695">Si vous ne sou=
+haitez plus recevoir de message de notre part cliquez ici. </a></p>
+<img alt=3D"" src=3D"http://red.acheter-facilement.com/imp/YToxOntzOjM6InRh=
+ZyI7czoyOToiZGF0YV9zZW5kb3V0XzU2ZWE3NzY5YzY5NjVfODQiO30%253D/bGlhZmElNDBsaW=
+FmYS5qdXNzaWV1LmZy/4695" width=3D"1" height=3D"1" border=3D"0" />
+</body>
+	</html>
+--=_6090d3d366d8f3f53e56b6f1d27f3f92--

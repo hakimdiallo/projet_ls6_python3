@@ -1,0 +1,57 @@
+Return-Path: <rpcciavdapcropseeuccvocmrpccrp@envoi.laiplans.com>
+Delivered-To: amicheli@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id pSbvBkyRp1bb9AAAKHrkRA
+	for <amicheli@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 16:33:12 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 078D061FE7
+	for <amicheli@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 16:33:12 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 4.603
+X-Spam-Level: ****
+X-Spam-Status: No, score=4.603 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, DCC_CHECK=1.1, HTML_FONT_LOW_CONTRAST=0.001,
+	HTML_IMAGE_RATIO_08=0.001, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=envoi.laiplans.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rT99B-D3B1KL for <amicheli@liafa.univ-paris-diderot.fr>;
+	Tue, 26 Jan 2016 16:33:09 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id BF8A461FE1
+	for <anne.micheli@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 16:33:09 +0100 (CET)
+Received: from envoi.laiplans.com (envoi.laiplans.com [5.196.180.218])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u0QFX6ei029636
+	for <anne.micheli@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 16:33:08 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=envoi.laiplans.com; s=dkim; l=24645;
+	i=dkim@envoi.laiplans.com; h=From:To:Subject:Date:Message-ID:
+	MIME-Version:Precedence:List-Unsubscribe:Content-Type; bh=2bRqAD
+	Qi6bI+GmgLlNqISaCLvlhnogYWVEa7AAOXkR0=; b=FExCDJsSR9iDl75gGLtuvd
+	9ijlRSAE3S04d77I5vyn5P3g86d2FZsO/xgyxjcBLNkGvv0bgOf0yM3dVhYimwdF
+	R8wKziuvmZKejBcFVEGZqluJVRJ37qYBGclrA4bQ56CN9G/TjRgv6ic0WmZURwcC
+	Gy5BjA+IBrg9H4UPw3jaM=
+From: "Caisses Enregistreuses" <news@envoi.laiplans.com>
+To: "anne.micheli@liafa.univ-paris-diderot.fr"
+	<anne.micheli@liafa.univ-paris-diderot.fr>
+Subject: =?UTF-8?Q?=2C_=C3=89conomisez_jusqu=27=C3=A0_40%_sur_le_prix_d=27achat_d?=
+	=?UTF-8?Q?e_votre_caisse_tactile?=
+Date: Tue, 26 Jan 2016 15:33:17 GMT
+Message-ID: <20160126153315.nmovssaemmotpmudcvovdloinmovnm@envoi.laiplans.com>
+MIME-Version: 1.0
+X-Mailer: XMailerFR
+X-XMailerFR-UID: DIIL2
+X-XMailerFR-CID: 3335154
+X-Complaints-To: abuse@envoi.laiplans.com
+Precedence: Bulk
+List-Unsubscribe: <http://envoi.laiplans.com/n4erkctv2tkwhfbubn0iuafe.htm>, <mailto:rsvoimcbbsvmoslpeevovivrrsvors@envoi.laiplans.com>
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_002_0005_000055F6.1E3A4E3D"
+X-Greylist: Delayed for 00:12:54 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Tue, 26 Jan 2016 16:33:09 +0100 (CET)
+X-Miltered: at korolev with ID 56A791B2.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A791B2.000 from envoi.laiplans.com/envoi.laiplans.com/null/envoi.laiplans.com/<rpcciavdapcropseeuccvocmrpccrp@envoi.laiplans.com>
+X-j-chkmail-Score: MSGID : 56A791B2.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham

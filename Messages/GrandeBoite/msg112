@@ -1,0 +1,488 @@
+Return-Path: <bounce+sophie=cs.uchicago.edu@awd.in.ua>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 7YrLHFppxFYdewEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:37:02 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id B96D561FA3
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:37:02 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 0.716
+X-Spam-Level: 
+X-Spam-Status: No, score=0.716 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, DCC_CHECK=1.1,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_RHS_DOB=1.514]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=awd.in.ua
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id djTeZC5wiMzW for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed, 17 Feb 2016 13:37:00 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 91DE461FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:37:00 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1HCb0qw019618
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:37:00 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 0F75A303011
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:28:33 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id A5D0D302950
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:28:31 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 8F0514054D
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:28:31 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6LvMip3cqIN6 for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed, 17 Feb 2016 13:28:21 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 72C22404FA
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 17 Feb 2016 13:28:21 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id 703F3DFB73; Wed, 17 Feb 2016 13:28:21 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id 6E4D5DFB34
+	for <laplante@lri.fr>; Wed, 17 Feb 2016 13:28:21 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id 20A61E03D2
+	for <laplante@lri.fr>; Wed, 17 Feb 2016 13:28:22 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id 17D80614B1
+	for <laplante@lri.fr>; Wed, 17 Feb 2016 06:28:19 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (mx.cs.uchicago.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id 44GmmtZJVKvQ for <laplante@lri.fr>;
+	Wed, 17 Feb 2016 06:28:06 -0600 (CST)
+X-Greylist: Delayed for 00:08:27 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 17 Feb 2016 13:37:00 +0100 (CET)
+X-Greylist: delayed 393 seconds by postgrey-1.34 at mx; Wed, 17 Feb 2016 06:28:03 CST
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.cs.uchicago.edu (Postfix) with ESMTPS id 5383D6149F
+	for <sophie@cs.uchicago.edu>; Wed, 17 Feb 2016 06:28:03 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mail.awd.in.ua (Postfix) with SMTP id 41085AB02B
+	for <sophie@cs.uchicago.edu>; Wed, 17 Feb 2016 14:20:58 +0200 (EET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=awd.in.ua; s=default;
+	t=1455711658; bh=XiNIgD2Nw0HaJxXcZXybo7pNHJr6pt7Os/2QaZzBDYc=;
+	h=From:Reply-To:To:Subject:List-Unsubscribe:Date:List-id;
+	b=oSLjN3KD2Lu9NLT5oeQBBHIQvUONbFnDBuFn1QY9rKicmyaPW2TFqqrdNl3on3eH2
+	 1ldo6B/Fbb1BJ9T8WLa9hTZFUfsNVNvxxWBtPzTlRvwUegi5L8wGMMf7ZeYD/V0p4M
+	 zF+mLUv2oVQjcRjbIjJgSKBN2holGgguRv6mYaxA=
+From: =?UTF-8?Q?EESJ?= <info@eesj-science.com>
+Reply-To: =?UTF-8?Q?EESJ?= <info@eesj-science.com>
+X-Priority: 3 (Normal)
+Message-ID: <20160217142055.79082308756c465aa47ef05.48880310@awd.in.ua>
+To: <sophie@cs.uchicago.edu>
+Subject: =?UTF-8?Q?EES_journal_=D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F_(=D0=A0=D0=98=D0=9D=D0=A6),_=D0=BF=D1=80=D0=B8=D0=B5=D0=BC_=D0=BD=D0=B0=D1=83=D1=87=D0=BD=D1=8B=D1=85_=D0=BC=D0=B0=D1=82=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D0=BE=D0=B2_=D0=B2_=D1=88=D0=B5=D1=81=D1=82=D0=BE=D0=B9_=D0=B2=D1=8B=D0=BF=D1=83=D1=81=D0=BA_=D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_mult123"
+Precedence: bulk
+List-Unsubscribe: <http://awd.in.ua/unsub.php?do=unsubscribe&id=116&email=sophie@cs.uchicago.edu>
+Sender: bounce+sophie=cs.uchicago.edu@awd.in.ua
+X-Complaints-To: abuse@awd.in.ua
+Date: Wed, 17 Feb 2016 14:20:55 +0200
+List-id: <116>
+X-Postmaster-Msgtype: 116
+X-Campaign-Id: 116
+X-Miltered: at potemkin with ID 56C4696C.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56C4696C.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<bounce+sophie=cs.uchicago.edu@awd.in.ua>
+X-j-chkmail-Score: MSGID : 56C4696C.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--_mult123
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+=0A=0A =D0=9F=D1=80=D0=B8=D0=B3=D0=BB=D0=B0=D1=88=D0=B0=D0=B5=D0=BC =D0=92=
+=D0=B0=D1=81 =D0=BA =D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=
+=D0=B8 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B2=0A=D0=BD=D0=B0=D1=83=D1=
+=87=D0=BD=D0=BE=D0=BC =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B5 EESJ =0A=
+=0A =D0=9F=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D1=83=D1=8E=D1=82=D1=81=D1=8F =D1=
+=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D0=B2=D1=81=D0=B5=D1=85 =D0=BD=D0=B0=D1=
+=83=D1=87=D0=BD=D1=8B=D1=85=0A=D0=BE=D0=B1=D0=BB=D0=B0=D1=81=D1=82=D0=B5=
+=D0=B9. =D0=96=D1=83=D1=80=D0=BD=D0=B0=D0=BB =D0=B8=D0=B7=D0=B4=D0=B0=D0=
+=B5=D1=82=D1=81=D1=8F =D0=BD=D0=B0=0A=D0=B0=D0=BD=D0=B3=D0=BB=D0=B8=D0=B9=
+=D1=81=D0=BA=D0=BE=D0=BC, =D0=BF=D0=BE=D0=BB=D1=8C=D1=81=D0=BA=D0=BE=D0=BC=
+, =D0=BD=D0=B5=D0=BC=D0=B5=D1=86=D0=BA=D0=BE=D0=BC =D0=B8=0A=D1=80=D1=83=
+=D1=81=D1=81=D0=BA=D0=BE=D0=BC, =D0=BA=D0=B0=D0=B7=D0=B0=D1=85=D1=81=D0=BA=
+=D0=BE=D0=BC =D0=B8 =D1=83=D0=BA=D1=80=D0=B0=D0=B8=D0=BD=D1=81=D0=BA=D0=BE=
+=D0=BC=0A=D1=8F=D0=B7=D1=8B=D0=BA=D0=B0=D1=85. =0A=0A =D0=9C=D0=B0=D1=82=
+=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D1=8B =D0=B1=D1=83=D0=B4=D1=83=D1=82 =D0=B2=
+=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D1=8B =D0=B2=0A=D0=A0=D0=BE=D1=81=D1=
+=81=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=B9 =D0=B8=D0=BD=D0=B4=D0=B5=D0=BA=D1=
+=81 =D0=BD=D0=B0=D1=83=D1=87=D0=BD=D0=BE=D0=B3=D0=BE=0A=D1=86=D0=B8=D1=82=
+=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F (=D0=A0=D0=98=D0=9D=D0=A6=
+) =D0=B8 =D1=80=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=D0=B5=D0=BD=D1=8B =D0=B2=0A=
+=D0=9D=D0=B0=D1=83=D1=87=D0=BD=D0=BE=D0=B9 =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=
+=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B1=D0=B8=D0=B1=D0=BB=D0=B8=D0=BE=
+=D1=82=D0=B5=D0=BA=D0=B5. =0A=0A =D0=92 =D0=A0=D0=98=D0=9D=D0=A6 =D0=BD=D0=
+=B0 =D0=B2=D0=B0=D1=88=D0=B8=D1=85 =D0=BF=D0=B5=D1=80=D1=81=D0=BE=D0=BD=D0=
+=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85=0A=D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=B8=
+=D1=86=D0=B0=D1=85 =D0=BE=D1=82=D1=80=D0=B0=D0=B6=D0=B0=D1=8E=D1=82=D1=81=
+=D1=8F =D0=BA=D0=B0=D0=BA =D0=B7=D0=B0=D1=80=D1=83=D0=B1=D0=B5=D0=B6=D0=BD=
+=D1=8B=D0=B5=0A=D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=
+=B8. =0A=0A =D0=94=D0=BB=D1=8F =D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=
+=D1=86=D0=B8=D0=B8 =D0=B2 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B5 =0A=
+=0A =D0=97=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=82=D0=B5 =D0=B0=D0=BD=D0=
+=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B0 [1] =0A=0A-----=
+--------------------=0A=0A=D0=98=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=
+=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE =
+[2]=0A=0A=D0=A1=D0=B0=D0=B9=D1=82 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=
+=B0 [3]=0A=0A-------------------------=0A=0A =D0=A1=D1=82=D0=B0=D1=82=D1=
+=8C=D0=B8 =D0=B2 =D1=82=D0=B5=D0=BA=D1=83=D1=89=D0=B8=D0=B9 =D0=BD=D0=BE=
+=D0=BC=D0=B5=D1=80 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0=0A=D0=BF=D1=
+=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=B4=D0=BE 29 =
+=D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=BB=D1=8F=0A =D0=9F=D0=B5=D1=80=D0=B8=D0=
+=BE=D0=B4=D0=B8=D1=87=D0=BD=D0=BE=D1=81=D1=82=D1=8C: 12 =D0=BD=D0=BE=D0=BC=
+=D0=B5=D1=80=D0=BE=D0=B2 =D0=B2 =D0=B3=D0=BE=D0=B4.=0A =D0=A4=D0=BE=D1=80=
+=D0=BC=D0=B0=D1=82 - A4, =D1=86=D0=B2=D0=B5=D1=82=D0=BD=D0=B0=D1=8F =D0=BF=
+=D0=B5=D1=87=D0=B0=D1=82=D1=8C =0A=0A =D0=92=D1=81=D0=B5 =D1=81=D1=82=D0=
+=B0=D1=82=D1=8C=D0=B8 =D1=80=D0=B5=D1=86=D0=B5=D0=BD=D0=B7=D0=B8=D1=80=D1=
+=83=D1=8E=D1=82=D1=81=D1=8F =0A=0A =D0=9A=D0=B0=D0=B6=D0=B4=D1=8B=D0=B9 =
+=D0=B0=D0=B2=D1=82=D0=BE=D1=80 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D0=B5=
+=D1=82 =D0=BE=D0=B4=D0=BD=D1=83=0A=D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=
+=82=D0=BD=D1=83=D1=8E =D0=BA=D0=BE=D0=BF=D0=B8=D1=8E =D0=B6=D1=83=D1=80=D0=
+=BD=D0=B0=D0=BB=D0=B0 =0A=0A =D0=91=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=
+=BD=D1=8B=D0=B9 =D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=BF =D0=BA =D1=8D=D0=BB=
+=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9=0A=D0=B2=D0=B5=D1=
+=80=D1=81=D0=B8=D0=B8 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =0A=0A =
+=D0=91=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=B0=D1=8F =D0=BF=D1=83=
+=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F =D0=B2 =D0=A0=D0=98=D0=9D=
+=D0=A6 -=0A=D0=BF=D1=80=D0=BE=D1=88=D0=BB=D1=8B=D0=B5 =D0=B2=D1=8B=D0=BF=
+=D1=83=D1=81=D0=BA=D0=B8 =D0=B7=D0=B4=D0=B5=D1=81=D1=8C [4] =0A=0A--------=
+-----------------=0A=0A =D0=94=D0=BB=D1=8F =D1=83=D1=87=D0=B0=D1=81=D1=82=
+=D0=BD=D0=B8=D0=BA=D0=BE=D0=B2 =D0=B8=D0=B7 =D1=81=D1=82=D1=80=D0=B0=D0=BD=
+ =D0=A1=D0=BE=D0=B4=D1=80=D1=83=D0=B6=D0=B5=D1=81=D1=82=D0=B2=D0=B0=0A=D0=
+=9D=D0=B5=D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85 =D0=93=D0=
+=BE=D1=81=D1=83=D0=B4=D0=B0=D1=80=D1=81=D1=82=D0=B2(=D0=A1=D0=9D=D0=93) =
+=D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B0=0A=D0=B8=D0=BD=D0=B4=D0=
+=B5=D0=BA=D1=81=D0=B0=D1=86=D0=B8=D1=8F =D0=A0=D0=98=D0=9D=D0=A6, ISI [5] =
+(=D0=B8=D0=BC=D0=BF=D0=B0=D0=BA=D1=82-=D1=84=D0=B0=D0=BA=D1=82=D0=BE=D1=80=
+=0A0.572), =D0=B0 =D1=82=D0=B0=D0=BA=D0=B6=D0=B5 RESEARCHBIB [6]. =0A=0A--=
+-----------------------=0A=0A=D0=97=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=
+=82=D1=8C =D0=B0=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=D1=
+=80=D0=B0 [7]=0A=0A-------------------------=0A=0A =D0=92=D1=80=D0=B5=D0=
+=BC=D1=8F =D1=80=D0=B0=D1=81=D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=
+=BD=D0=B5=D0=BD=D0=B8=D1=8F =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=
+=BD=D0=BD=D0=BE=D0=B3=D0=BE=0A=D1=8D=D0=BA=D0=B7=D0=B5=D0=BC=D0=BF=D0=BB=
+=D1=8F=D1=80=D0=B0 =D0=B8=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D1=8F - =D0=B4=D0=
+=BE 20 =D0=B4=D0=BD=D0=B5=D0=B9 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5=0A=D0=B7=D0=
+=B0=D0=B2=D0=B5=D1=80=D1=88=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=B8=D0=
+=B5=D0=BC=D0=B0 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B4=D0=BB=D1=8F =
+=D0=B4=D0=B0=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE=0A=D0=B2=D1=8B=D0=BF=D1=83=D1=
+=81=D0=BA=D0=B0, =D1=80=D0=B0=D1=81=D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=
+=B0=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=BD=D1=
+=8B=D1=85=0A=D0=BA=D0=BE=D0=BF=D0=B8=D0=B9 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=
+=D0=BB=D0=B0 - =D0=B4=D0=BE 15 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B8=D1=85 =
+=D0=B4=D0=BD=D0=B5=D0=B9 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5=0A=D1=83=D1=82=D0=
+=B2=D0=B5=D1=80=D0=B6=D0=B4=D0=B5=D0=BD=D0=B8=D1=8F =D1=8D=D0=BB=D0=B5=D0=
+=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE =D0=BC=D0=B0=D0=BA=D0=
+=B5=D1=82=D0=B0.=0A=0A =D0=A5=D0=BE=D1=82=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=
+=D0=B0=D1=82=D0=B8=D1=82=D1=8C =D0=92=D0=B0=D1=88=D0=B5 =D0=B2=D0=BD=D0=B8=
+=D0=BC=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BD=D0=B0 =D1=82=D0=BE,=0A=D1=87=D1=82=
+=D0=BE =D0=BD=D0=B0=D1=83=D1=87=D0=BD=D1=8B=D0=B5 =D1=81=D1=82=D0=B0=D1=82=
+=D1=8C=D0=B8, =D0=BE=D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=BE=D0=B2=D0=B0=
+=D0=BD=D0=BD=D1=8B=D0=B5 =D0=B2=0A=D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=
+=B5, =D1=83=D1=87=D0=B8=D1=82=D1=8B=D0=B2=D0=B0=D1=8E=D1=82=D1=81=D1=8F =
+=D0=92=D1=8B=D1=81=D1=88=D0=B5=D0=B9=0A=D0=B0=D1=82=D1=82=D0=B5=D1=81=D1=
+=82=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BC=D0=
+=B8=D1=81=D1=81=D0=B8=D0=B5=D0=B9 =D0=BA=D0=B0=D0=BA=0A=D0=BF=D0=B5=D1=87=
+=D0=B0=D1=82=D0=BD=D1=8B=D0=B9 =D1=82=D1=80=D1=83=D0=B4. =0A=0A=D0=AD=D1=
+=82=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=
+=8B=D0=BB=D0=BE =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=
+=BE =D0=BD=D0=B0=0ASOPHIE@CS.UCHICAGO.EDU =D0=BF=D0=BE=D1=82=D0=BE=D0=BC=
+=D1=83, =D1=87=D1=82=D0=BE: =0A =D0=92=D1=8B =D0=BF=D0=BE=D0=B4=D0=BF=D0=
+=B8=D1=81=D0=B0=D0=BD=D1=8B =D0=BD=D0=B0 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=
+=BB=D0=BA=D1=83 =D0=BD=D0=BE=D0=B2=D0=BE=D1=81=D1=82=D0=B5=D0=B9 =D0=BE=D1=
+=82=0AEESJ=0A=0A =D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D0=BD=D0=B5 =D1=85=
+=D0=BE=D1=82=D0=B8=D1=82=D0=B5 =D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B5 =D0=BF=
+=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C=0A=D0=BD=D0=B0=D1=88=D0=B8 =D0=
+=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BF=D1=80=D0=BE=D1=81=D1=82=D0=BE =
+=D0=BF=D0=B5=D1=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=0A=D1=
+=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B5 =D0=BE=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=
+=82=D1=8C=D1=81=D1=8F =D0=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=
+=BA=D0=B8 [8]=0A=0A2016 =C2=A9 Warsaw, Poland | EESJ=0A=0A =D0=A7=D1=82=D0=
+=BE=D0=B1=D1=8B =D0=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=82=D0=B8=D1=80=D0=BE=D0=
+=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D0=
+=B5 =D0=BF=D0=B8=D1=81=D0=B5=D0=BC=0A=D0=BE=D1=82 =D0=BD=D0=B0=D1=81 - =D0=
+=B4=D0=BE=D0=B1=D0=B0=D0=B2=D1=8C=D1=82=D0=B5 =D0=BD=D0=B0=D1=88 =D0=B0=D0=
+=B4=D1=80=D0=B5=D1=81 =D0=B2 =D0=B0=D0=B4=D1=80=D0=B5=D1=81=D0=BD=D1=83=D1=
+=8E=0A=D0=BA=D0=BD=D0=B8=D0=B3=D1=83.=0A=0A=0A=0ALinks:=0A------=0A[1] htt=
+p://eesj-science.com/ru/opublikovat-statyu-v-zhurnale/=0A[2]=0Ahttp://eesj=
+-science.com/wp-content/uploads/2016/02/inform_journal_27_02_16.pdf=0A[3] =
+http://eesj-science.com/ru/o-zhurnale/=0A[4] http://elibrary.ru/title_abou=
+t.asp?id=3D56375=0A[5]=0Ahttp://awd.in.ua/HTTP://ISINDEXING.COM/ISI/JOURNA=
+LDETAILS.PHP?ID=3D4219=0A[6]=0Ahttp://awd.in.ua/HTTP://JOURNALSEEKER.RESEA=
+RCHBIB.COM/VIEW/ISSN/2468-5380=0A[7] http://eesj-science.com/ru/opublikova=
+t-statyu-v-zhurnale/=0A[8]=0Ahttp://awd.in.ua/unsub.php?do=3Dunsubscribe&i=
+d=3D116&email=3Dsophie@cs.uchicago.edu=0A
+--_mult123
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<table cellpadding=3D"0" class=3D"preview" cellspacing=3D"0" width=3D"100%=
+" border=3D"0" bgcolor=3D"#a6bfc9" style=3D"min-width:600px;"><tr><td vali=
+gn=3D"top" align=3D"center"><table width=3D"560" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"campaign"><tr><td width=3D"560" height=
+=3D"10" class=3D"campaign"></td></tr><tr><td class=3D"campaign" width=3D"5=
+60" height=3D"10"></td></tr></table><table cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"560" border=3D"0" style=3D"border-width:0px;border-color:#=
+cccccc;border-style:solid;" class=3D"campaign"><tr  bgcolor=3D"#dee0e2"><t=
+d align=3D"center" width=3D"560"><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" width=3D"560"  style=3D"background-color:#424953"><tr><td a=
+lign=3D"center" width=3D"560" class=3D"headerimage"><img style=3D"display:=
+block; height: 126px; width: 560px;" height=3D"126" alt=3D" " src=3D"http:=
+//man-server.in.ua/upload/img/29-f3764238626f1244ea1275d303d06c20.jpg" wid=
+th=3D"560" border=3D"0" class=3D"" /></td></tr></table><table width=3D"560=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table"><tbody>=
+<tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"cell"></=
+td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td align=3D"left"=
+ valign=3D"top" class=3D"text1140" style=3D"color:#000000;font-family:Treb=
+uchet MS, Arial, Helvetica, sans-serif;font-size:13px;"><table align=3D"ri=
+ght" style=3D"margin-right:5px;"><tbody><tr><td style=3D"padding-bottom: 1=
+0px; padding-top: 5px; padding-right: 20px;"> <img style=3D"width: 172px; =
+height: 242px;" border=3D"0" height=3D"242" width=3D"172" alt=3D" " src=3D=
+"http://man-server.in.ua/upload/img/390-35ba76204e33531e86fb00e0586a7cc4.j=
+pg" class=3D"image1140"> </td></tr></tbody></table><p style=3D"text-align:=
+ center;">=0A=09<b>=D0=9F=D1=80=D0=B8=D0=B3=D0=BB=D0=B0=D1=88=D0=B0=D0=B5=
+=D0=BC =D0=92=D0=B0=D1=81 =D0=BA =D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=
+=B0=D1=86=D0=B8=D0=B8 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B2 =D0=BD=
+=D0=B0=D1=83=D1=87=D0=BD=D0=BE=D0=BC =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=
+=D0=B5 EESJ</b></p>=0A<p>=0A=09&nbsp;</p>=0A<p style=3D"text-align: center=
+;">=0A=09=D0=9F=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D1=83=D1=8E=D1=82=D1=81=D1=
+=8F =D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D0=B2=D1=81=D0=B5=D1=85 =D0=BD=
+=D0=B0=D1=83=D1=87=D0=BD=D1=8B=D1=85 =D0=BE=D0=B1=D0=BB=D0=B0=D1=81=D1=82=
+=D0=B5=D0=B9. =D0=96=D1=83=D1=80=D0=BD=D0=B0=D0=BB =D0=B8=D0=B7=D0=B4=D0=
+=B0=D0=B5=D1=82=D1=81=D1=8F =D0=BD=D0=B0 =D0=B0=D0=BD=D0=B3=D0=BB=D0=B8=D0=
+=B9=D1=81=D0=BA=D0=BE=D0=BC, =D0=BF=D0=BE=D0=BB=D1=8C=D1=81=D0=BA=D0=BE=D0=
+=BC, =D0=BD=D0=B5=D0=BC=D0=B5=D1=86=D0=BA=D0=BE=D0=BC =D0=B8 =D1=80=D1=83=
+=D1=81=D1=81=D0=BA=D0=BE=D0=BC, =D0=BA=D0=B0=D0=B7=D0=B0=D1=85=D1=81=D0=BA=
+=D0=BE=D0=BC =D0=B8 =D1=83=D0=BA=D1=80=D0=B0=D0=B8=D0=BD=D1=81=D0=BA=D0=BE=
+=D0=BC =D1=8F=D0=B7=D1=8B=D0=BA=D0=B0=D1=85.</p>=0A<p style=3D"text-align:=
+ center;">=0A=09<b>=D0=9C=D0=B0=D1=82=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D1=8B =
+=D0=B1=D1=83=D0=B4=D1=83=D1=82 =D0=B2=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=
+=D1=8B =D0=B2 =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=B9=
+ =D0=B8=D0=BD=D0=B4=D0=B5=D0=BA=D1=81 =D0=BD=D0=B0=D1=83=D1=87=D0=BD=D0=BE=
+=D0=B3=D0=BE =D1=86=D0=B8=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=
+=D1=8F (=D0=A0=D0=98=D0=9D=D0=A6) =D0=B8 =D1=80=D0=B0=D0=B7=D0=BC=D0=B5=D1=
+=89=D0=B5=D0=BD=D1=8B =D0=B2 =D0=9D=D0=B0=D1=83=D1=87=D0=BD=D0=BE=D0=B9 =
+=D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B1=
+=D0=B8=D0=B1=D0=BB=D0=B8=D0=BE=D1=82=D0=B5=D0=BA=D0=B5.</b></p>=0A<p style=
+=3D"text-align: center;">=0A=09<u><b>=D0=92 =D0=A0=D0=98=D0=9D=D0=A6 =D0=
+=BD=D0=B0 =D0=B2=D0=B0=D1=88=D0=B8=D1=85 =D0=BF=D0=B5=D1=80=D1=81=D0=BE=D0=
+=BD=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=
+=B8=D1=86=D0=B0=D1=85 =D0=BE=D1=82=D1=80=D0=B0=D0=B6=D0=B0=D1=8E=D1=82=D1=
+=81=D1=8F =D0=BA=D0=B0=D0=BA =D0=B7=D0=B0=D1=80=D1=83=D0=B1=D0=B5=D0=B6=D0=
+=BD=D1=8B=D0=B5 =D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=
+=B8.</b></u></p>=0A<p style=3D"text-align: center;">=0A=09&nbsp;</p>=0A<p =
+style=3D"text-align: center;">=0A=09<u><b>=D0=94=D0=BB=D1=8F =D0=BF=D1=83=
+=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=B8 =D0=B2 =D0=B6=D1=83=D1=80=
+=D0=BD=D0=B0=D0=BB=D0=B5</b></u></p>=0A<p style=3D"text-align: center;">=
+=0A=09<span style=3D"font-size:16px;line-height:normal;"><a class=3D"text_=
+link" css=3D"[text_link]" href=3D"http://eesj-science.com/ru/opublikovat-s=
+tatyu-v-zhurnale/"><u><b>=D0=97=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=82=
+=D0=B5 =D0=B0=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=
+=D0=B0</b></u></a></span></p>=0A</td><td width=3D"20"></td></tr></tbody></=
+table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" heigh=
+t=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody></=
+table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" class=3D"table" style=3D"padding:0;"><tbody><tr><td height=3D"7" class=
+=3D"heightspace"></td></tr><tr><td width=3D"1060" align=3D"center" class=
+=3D"cell"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D=
+"margin:3px 0;"><tbody><tr><td width=3D"20" height=3D"7" class=3D"row"></t=
+d><td><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground:#ed5d29;border-width:0px;border-color:#cccccc;border-style:solid; =
+border-radius: 10px 10px 10px 10px; box-shadow: 0 0 4px #666666; -moz-box-=
+shadow: 0 0 4px #666666; -webkit-box-shadow: 0 0 4px #666666; display:bloc=
+k;"><tbody><tr><td width=3D"13"></td><td valign=3D"middle" align=3D"center=
+" style=3D"padding:13px 0;font-weight:bold;color:#ffffff;font-family:Trebu=
+chet MS, Arial, Helvetica, sans-serif;font-size:16px;"><a href=3D"http://e=
+esj-science.com/wp-content/uploads/2016/02/inform_journal_27_02_16.pdf" st=
+yle=3D"text-decoration:none;color:#ffffff;font-family:Trebuchet MS, Arial,=
+ Helvetica, sans-serif;font-size:16px;">=D0=98=D0=BD=D1=84=D0=BE=D1=80=D0=
+=BC=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D0=BE=D0=B5 =D0=BF=D0=B8=D1=81=D1=
+=8C=D0=BC=D0=BE</a></td><td width=3D"13"></td></tr></tbody></table></td><t=
+d width=3D"20" class=3D"space"></td><td><table border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" style=3D"background:#ed5d29;border-width:0px;border-=
+color:#cccccc;border-style:solid; border-radius: 10px 10px 10px 10px; box-=
+shadow: 0 0 4px #666666; -moz-box-shadow: 0 0 4px #666666; -webkit-box-sha=
+dow: 0 0 4px #666666; display:block;"><tbody><tr><td width=3D"13"></td><td=
+ valign=3D"middle" align=3D"center" style=3D"padding:13px 0;font-weight:bo=
+ld;color:#ffffff;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;fo=
+nt-size:16px;"><a href=3D"http://eesj-science.com/ru/o-zhurnale/" style=3D=
+"text-decoration:none;color:#ffffff;font-family:Trebuchet MS, Arial, Helve=
+tica, sans-serif;font-size:16px;">=D0=A1=D0=B0=D0=B9=D1=82 =D0=B6=D1=83=D1=
+=80=D0=BD=D0=B0=D0=BB=D0=B0</a></td><td width=3D"13"></td></tr></tbody></t=
+able></td><td width=3D"20" height=3D"7" class=3D"row"></td></tr></tbody></=
+table></td></tr><tr><td height=3D"7" class=3D"heightspace"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"></td><td width=3D"20"></td></tr><tr><td width=
+=3D"20"></td><td align=3D"left" valign=3D"top" class=3D"text1142" style=3D=
+"color:#000000;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font=
+-size:13px;"><table align=3D"left" style=3D"margin-right:5px;"><tbody><tr>=
+<td style=3D"padding-bottom: 10px; padding-top: 5px; padding-right: 20px;"=
+> <img style=3D"width: 200px; height: 201px;" border=3D"0" height=3D"201" =
+width=3D"200" alt=3D" " src=3D"http://man-server.in.ua/upload/img/840-4afb=
+ddd16ff21caa423c570ccf766a5e.jpg" class=3D"image1142"> </td></tr></tbody><=
+/table><p style=3D"text-align: center;">=0A=09<b><u>=D0=A1=D1=82=D0=B0=D1=
+=82=D1=8C=D0=B8 =D0=B2 =D1=82=D0=B5=D0=BA=D1=83=D1=89=D0=B8=D0=B9 =D0=BD=
+=D0=BE=D0=BC=D0=B5=D1=80 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =D0=BF=
+=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=B4=D0=BE =
+29 =D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=BB=D1=8F</u></b><br />=0A=09=D0=9F=D0=
+=B5=D1=80=D0=B8=D0=BE=D0=B4=D0=B8=D1=87=D0=BD=D0=BE=D1=81=D1=82=D1=8C: <b>=
+12 =D0=BD=D0=BE=D0=BC=D0=B5=D1=80=D0=BE=D0=B2 =D0=B2 =D0=B3=D0=BE=D0=B4.</=
+b><br />=0A=09=D0=A4=D0=BE=D1=80=D0=BC=D0=B0=D1=82 <b>- A4, =D1=86=D0=B2=
+=D0=B5=D1=82=D0=BD=D0=B0=D1=8F =D0=BF=D0=B5=D1=87=D0=B0=D1=82</b>=D1=8C</p=
+>=0A<p style=3D"text-align: center;">=0A=09<br />=0A=09=D0=92=D1=81=D0=B5 =
+=D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D1=80=D0=B5=D1=86=D0=B5=D0=BD=D0=B7=
+=D0=B8=D1=80=D1=83=D1=8E=D1=82=D1=81=D1=8F</p>=0A<p style=3D"text-align: c=
+enter;">=0A=09=D0=9A=D0=B0=D0=B6=D0=B4=D1=8B=D0=B9 =D0=B0=D0=B2=D1=82=D0=
+=BE=D1=80 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D0=B5=D1=82 =D0=BE=D0=B4=D0=
+=BD=D1=83 =D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D1=83=D1=8E =D0=
+=BA=D0=BE=D0=BF=D0=B8=D1=8E =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0</p>=
+=0A<p style=3D"text-align: center;">=0A=09=D0=91=D0=B5=D1=81=D0=BF=D0=BB=
+=D0=B0=D1=82=D0=BD=D1=8B=D0=B9 =D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=BF =D0=BA=
+ =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B2=
+=D0=B5=D1=80=D1=81=D0=B8=D0=B8 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0<=
+/p>=0A<p style=3D"text-align: center;">=0A=09<br />=0A=09<b><u>=D0=91=D0=
+=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=B0=D1=8F =D0=BF=D1=83=D0=B1=D0=
+=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F =D0=B2 =D0=A0=D0=98=D0=9D=D0=A6 </=
+u></b>- <a class=3D"text_link" css=3D"[text_link]" href=3D"http://elibrary=
+.ru/title_about.asp?id=3D56375">=D0=BF=D1=80=D0=BE=D1=88=D0=BB=D1=8B=D0=
+=B5 =D0=B2=D1=8B=D0=BF=D1=83=D1=81=D0=BA=D0=B8 =D0=B7=D0=B4=D0=B5=D1=81=D1=
+=8C</a></p>=0A</td><td width=3D"20"></td></tr></tbody></table><table width=
+=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table">=
+<tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"c=
+ell"><hr></hr></td><td width=3D"20"></td></tr></tbody></table><table width=
+=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table" =
+style=3D""><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7"=
+ class=3D"spacer"></td><td width=3D"20"></td></tr><tr><td width=3D"20"></t=
+d><td width=3D"520" align=3D"left" valign=3D"top" style=3D"color:#000000;f=
+ont-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size:13px;" cla=
+ss=3D"cell"><p style=3D"text-align: center;">=0A=09<b>=D0=94=D0=BB=D1=8F =
+=D1=83=D1=87=D0=B0=D1=81=D1=82=D0=BD=D0=B8=D0=BA=D0=BE=D0=B2 =D0=B8=D0=B7 =
+=D1=81=D1=82=D1=80=D0=B0=D0=BD =D0=A1=D0=BE=D0=B4=D1=80=D1=83=D0=B6=D0=B5=
+=D1=81=D1=82=D0=B2=D0=B0 =D0=9D=D0=B5=D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=
+=D0=BC=D1=8B=D1=85 =D0=93=D0=BE=D1=81=D1=83=D0=B4=D0=B0=D1=80=D1=81=D1=82=
+=D0=B2(=D0=A1=D0=9D=D0=93) =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=
+=B0 =D0=B8=D0=BD=D0=B4=D0=B5=D0=BA=D1=81=D0=B0=D1=86=D0=B8=D1=8F =D0=A0=D0=
+=98=D0=9D=D0=A6,<a class=3D"text_link" style=3D"color:#ed5d29;" href=3D"ht=
+tp://isindexing.com/isi/journaldetails.php?id=3D4219"> ISI</a> (=D0=B8=D0=
+=BC=D0=BF=D0=B0=D0=BA=D1=82-=D1=84=D0=B0=D0=BA=D1=82=D0=BE=D1=80 0.572), =
+=D0=B0 =D1=82=D0=B0=D0=BA=D0=B6=D0=B5 <a class=3D"text_link" style=3D"colo=
+r:#ed5d29;" href=3D"http://journalseeker.researchbib.com/view/issn/2468-53=
+80">ResearchBib</a>.</b></p>=0A</td><td width=3D"20"></td></tr><tr><td wid=
+th=3D"20"></td><td width=3D"520" height=3D"7" class=3D"spacer"></td><td wi=
+dth=3D"20"></td></tr></tbody></table><table width=3D"560" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" class=3D"table"><tbody><tr><td width=3D"2=
+0"></td><td width=3D"520" height=3D"7" class=3D"cell"><hr></hr></td><td wi=
+dth=3D"20"></td></tr></tbody></table><table width=3D"560" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" class=3D"table" style=3D"padding:0;"><tbo=
+dy><tr><td height=3D"7" class=3D"heightspace"></td></tr><tr><td width=3D"1=
+060" align=3D"center" class=3D"cell"><table border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" style=3D"margin:3px 0;"><tbody><tr><td width=3D"20" hei=
+ght=3D"7" class=3D"row"></td><td><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"background:#ed5d29;border-width:0px;border-color:#=
+cccccc;border-style:solid; border-radius: 10px 10px 10px 10px; box-shadow:=
+ 0 0 4px #666666; -moz-box-shadow: 0 0 4px #666666; -webkit-box-shadow: 0 =
+0 4px #666666; display:block;"><tbody><tr><td width=3D"13"></td><td valign=
+=3D"middle" align=3D"center" style=3D"padding:13px 0;font-weight:bold;colo=
+r:#ffffff;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font-size=
+:16px;"><a href=3D"http://eesj-science.com/ru/opublikovat-statyu-v-zhurnal=
+e/" style=3D"text-decoration:none;color:#ffffff;font-family:Trebuchet MS, =
+Arial, Helvetica, sans-serif;font-size:16px;">=D0=97=D0=B0=D0=BF=D0=BE=D0=
+=BB=D0=BD=D0=B8=D1=82=D1=8C =D0=B0=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=
+=B2=D1=82=D0=BE=D1=80=D0=B0</a></td><td width=3D"13"></td></tr></tbody></t=
+able></td><td width=3D"20" height=3D"7" class=3D"row"></td></tr></tbody></=
+table></td></tr><tr><td height=3D"7" class=3D"heightspace"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbo=
+dy></table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" =
+height=3D"7" class=3D"cell"></td><td width=3D"20"></td></tr><tr><td width=
+=3D"20"></td><td align=3D"left" valign=3D"top" class=3D"text1153" style=3D=
+"color:#000000;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;font=
+-size:13px;"><table align=3D"left" style=3D"margin-right:5px;"><tbody><tr>=
+<td style=3D"padding-bottom: 10px; padding-top: 5px; padding-right: 20px;"=
+> <img style=3D"width: 199px; height: 199px;" border=3D"0" height=3D"199" =
+width=3D"199" alt=3D" " src=3D"http://man-server.in.ua/upload/img/264-e149=
+6d76704191c60c0dd7b52d602694.jpg" class=3D"image1153"> </td></tr></tbody><=
+/table><p style=3D"text-align: center;">=0A=09=D0=92=D1=80=D0=B5=D0=BC=D1=
+=8F =D1=80=D0=B0=D1=81=D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=
+=B5=D0=BD=D0=B8=D1=8F =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=
+=BD=D0=BE=D0=B3=D0=BE =D1=8D=D0=BA=D0=B7=D0=B5=D0=BC=D0=BF=D0=BB=D1=8F=D1=
+=80=D0=B0 =D0=B8=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D1=8F - <b>=D0=B4=D0=BE 20 =
+=D0=B4=D0=BD=D0=B5=D0=B9 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D0=B7=D0=B0=D0=B2=
+=D0=B5=D1=80=D1=88=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=B8=D0=B5=D0=BC=
+=D0=B0 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B4=D0=BB=D1=8F =D0=B4=D0=
+=B0=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE =D0=B2=D1=8B=D0=BF=D1=83=D1=81=D0=BA=D0=
+=B0</b>, =D1=80=D0=B0=D1=81=D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=
+=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=BD=D1=8B=D1=
+=85 =D0=BA=D0=BE=D0=BF=D0=B8=D0=B9 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=
+=B0 - <b>=D0=B4=D0=BE 15 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B8=D1=85 =D0=B4=
+=D0=BD=D0=B5=D0=B9 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=83=D1=82=D0=B2=D0=B5=
+=D1=80=D0=B6=D0=B4=D0=B5=D0=BD=D0=B8=D1=8F =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=
+=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE =D0=BC=D0=B0=D0=BA=D0=B5=D1=82=
+=D0=B0.</b><br />=0A=09&nbsp;</p>=0A<p style=3D"text-align: center;">=0A=
+=09<u><b>=D0=A5=D0=BE=D1=82=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=D0=B0=D1=82=D0=
+=B8=D1=82=D1=8C =D0=92=D0=B0=D1=88=D0=B5 =D0=B2=D0=BD=D0=B8=D0=BC=D0=B0=D0=
+=BD=D0=B8=D0=B5 =D0=BD=D0=B0 =D1=82=D0=BE, =D1=87=D1=82=D0=BE =D0=BD=D0=B0=
+=D1=83=D1=87=D0=BD=D1=8B=D0=B5 =D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8, =D0=
+=BE=D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=
+=8B=D0=B5 =D0=B2 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B5, =D1=83=D1=87=
+=D0=B8=D1=82=D1=8B=D0=B2=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=92=D1=8B=D1=81=
+=D1=88=D0=B5=D0=B9 =D0=B0=D1=82=D1=82=D0=B5=D1=81=D1=82=D0=B0=D1=86=D0=B8=
+=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BC=D0=B8=D1=81=D1=81=D0=B8=
+=D0=B5=D0=B9 =D0=BA=D0=B0=D0=BA =D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=BD=D1=8B=
+=D0=B9 =D1=82=D1=80=D1=83=D0=B4.</b></u></p>=0A</td><td width=3D"20"></td>=
+</tr></tbody></table></td></tr></table><table width=3D"560" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" class=3D"pfooter"><tr><td height=3D"15"=
+ width=3D"560" class=3D"pfooter"></td></tr><tr><td class=3D"pfooter" style=
+=3D"color:#565d67;font-family:Trebuchet MS, Arial, Helvetica, sans-serif;f=
+ont-size:11px;" width=3D"560" align=3D"center">=D0=AD=D1=82=D0=BE =D1=81=
+=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =
+=D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=BE =D0=BD=D0=B0 =
+ <b>sophie@cs.uchicago.edu</b> =D0=BF=D0=BE=D1=82=D0=BE=D0=BC=D1=83, =D1=
+=87=D1=82=D0=BE: <br /> <span id=3D"reason">=D0=92=D1=8B =D0=BF=D0=BE=D0=
+=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D1=8B =D0=BD=D0=B0 =D1=80=D0=B0=D1=81=D1=
+=81=D1=8B=D0=BB=D0=BA=D1=83 =D0=BD=D0=BE=D0=B2=D0=BE=D1=81=D1=82=D0=B5=D0=
+=B9 =D0=BE=D1=82 EESJ</span><br /><br /> =D0=95=D1=81=D0=BB=D0=B8 =D0=B2=
+=D1=8B =D0=BD=D0=B5 =D1=85=D0=BE=D1=82=D0=B8=D1=82=D0=B5 =D0=B1=D0=BE=D0=
+=BB=D1=8C=D1=88=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=
+=BD=D0=B0=D1=88=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BF=D1=80=
+=D0=BE=D1=81=D1=82=D0=BE =D0=BF=D0=B5=D1=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=
+=D0=B5 =D0=BF=D0=BE =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B5 <a href=3D"http:/=
+/awd.in.ua/unsub.php?do=3Dunsubscribe&id=3D116&email=3Dsophie@cs.uchicago.=
+edu">=D0=BE=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BE=
+=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a><br /><br /></t=
+d></tr><tr><td class=3D"pfooter" height=3D"3" width=3D"560"></td></tr><tr>=
+<td width=3D"560" align=3D"center" style=3D"color:#565d67;font-family:Treb=
+uchet MS, Arial, Helvetica, sans-serif;font-size:11px;" class=3D"pfooter">=
+2016 =C2=A9 Warsaw, Poland | EESJ</td></tr><tr><td height=3D"10" width=3D"=
+560" class=3D"pfooter"></td></tr><tr><td align=3D"center" width=3D"560" st=
+yle=3D"color:#565d67;font-family:Trebuchet MS, Arial, Helvetica, sans-seri=
+f;font-size:11px;" class=3D"pfooter"> =D0=A7=D1=82=D0=BE=D0=B1=D1=8B =D0=
+=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=
+=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D0=B8=D1=
+=81=D0=B5=D0=BC =D0=BE=D1=82 =D0=BD=D0=B0=D1=81 - =D0=B4=D0=BE=D0=B1=D0=B0=
+=D0=B2=D1=8C=D1=82=D0=B5 =D0=BD=D0=B0=D1=88 =D0=B0=D0=B4=D1=80=D0=B5=D1=81=
+ =D0=B2 =D0=B0=D0=B4=D1=80=D0=B5=D1=81=D0=BD=D1=83=D1=8E =D0=BA=D0=BD=D0=
+=B8=D0=B3=D1=83.</td></tr><tr><td height=3D"10" class=3D"pfooter" width=3D=
+"560"></td></tr></table></td></tr></table>
+--_mult123--

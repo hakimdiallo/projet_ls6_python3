@@ -1,0 +1,168 @@
+Return-Path: <service-clients@newsletter.saltm45.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id FlT4KXmRnlZI8wAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Tue, 19 Jan 2016 20:41:45 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7AC3C61F9A;
+	Tue, 19 Jan 2016 20:41:43 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 13.859
+X-Spam-Level: *************
+X-Spam-Status: Yes, score=13.859 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	MIME_HTML_ONLY=0.723, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_BL_SPAMCOP_NET=1.347, RCVD_IN_DNSWL_NONE=-0.0001,
+	URIBL_BLACK=1.7, URIBL_JP_SURBL=1.25] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=newsletter.saltm45.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id KV9fnUGUVnOb; Tue, 19 Jan 2016 20:41:40 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id C294861FB8
+	for <auliafa@liafa.univ-paris-diderot.fr>; Tue, 19 Jan 2016 20:41:39 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0JJfdmJ030744
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <auliafa@liafa.univ-paris-diderot.fr>; Tue, 19 Jan 2016 20:41:39 +0100
+Received: from chrome-onzese.cccampaigns.net (chrome-onzese.cccampaigns.net [81.92.121.107])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0JJf73u080745
+          for <auliafa@liafa.jussieu.fr>; Tue, 19 Jan 2016 20:41:26 +0100 (CET)
+X-Ids: 168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=emv; d=newsletter.saltm45.com;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:List-Id; i=service-clients@newsletter.saltm45.com;
+ bh=Ovykd+1dd3BtlJCO9Gj+PBUBhXc=;
+ b=tCxtGzm+XwFIujAH4TdDkGHk2W05gp+8vo35MyA14UXKj6XzNZrh9AcTqcoyKrdmnc290ujL9bW+
+   dV8NQK8DOo7bU5YFddzTy7rgTP9bcPk85LaSp1w5rUxIWgc2L5KeZn2292EA2WQZAeVjgOt+NLoR
+   VpOF0ikc5qQ2Eeix+Mw=
+Received: by chrome-onzese.cccampaigns.net id hjq8mc167587 for <auliafa@liafa.jussieu.fr>; Tue, 19 Jan 2016 20:41:06 +0100 (envelope-from <service-clients@newsletter.saltm45.com>)
+Date: Tue, 19 Jan 2016 20:41:06 +0100 (CET)
+From: La boutique du plaisir en soldes <service-clients@newsletter.saltm45.com>
+Reply-To: La boutique du plaisir en soldes <service-client@saltm45.com>
+To: <auliafa@liafa.jussieu.fr>
+Message-ID: <2.1.74.1101057521.1501137.6246837094@newsletter.saltm45.com>
+Subject: Jusqu'a moins 90 pour cent des maintenant
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+X-EMV-Platform: p9cce.campaigncommander.com$
+X-EMV-CampagneId: 1501137$
+X-EMV-MemberId: 6246837094$
+List-Unsubscribe: <http://newsletter.saltm45.com/HD?b=YRqxn4yqTnnnb0yy64pCIRdlKdFlAe698iw5Ap7PjdvjhEonKDJ1v3EKrRpiBioz&c=4kAtBYfeCAGYCCRRdUZNlg>, <mailto:unsubscribe@newsletter.saltm45.com?subject=unsubscribe-74-YRqxn4yqTnnnb0yy64pCIRdlKdFlAe698iw5Ap7PjdvjhEonKDJ1v3EKrRpiBioz/4kAtBYfeCAGYCCRRdUZNlg>
+X-CSA-Complaints: whitelist-complaints@eco.de
+List-Id: <1101057521.74.1.1.list-id.newsletter.saltm45.com>
+X-Miltered: at potemkin with ID 569E9173.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 569E9153.004 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 569E9173.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<service-clients@newsletter.saltm45.com>
+X-j-chkmail-Enveloppe: 569E9153.004 from chrome-onzese.cccampaigns.net/chrome-onzese.cccampaigns.net/81.92.121.107/chrome-onzese.cccampaigns.net/<service-clients@newsletter.saltm45.com>
+X-Scores-Stats: 569E9153.004 B=0.50000 L=0.92397 G=0.92397 Agree    
+X-j-chkmail-Score: MSGID : 569E9173.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 569E9153.004 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=. B=0.924 -> S=0.938
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 19 Jan 2016 20:41:39 +0100 (CET)
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>La boutique du plaisir en soldes -- Jusqu'a moins 90 pour cent des maintenant</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+</HEAD>
+<body text="#003366" link="#333366">
+<BR>
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+<TD width="200" align="center" bgcolor="#D7D4D4" style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px">&nbsp;&nbsp;&nbsp;<A style="font-family:Arial, Helvetica, sans-serif; color:#393636; font-size:13px" HREF="http://newsletter.saltm45.com/HP?b=58wbRWWRheIaWUL5PYa3l0KXCg6HBBO8YyYI0zU9OPMRLlS20NosaeBhgY4UelIb&c=4TLT16kKf7se7Fy_Ovy2mQ">Signaler comme ind&eacute;sirable</A>&nbsp;&nbsp;&nbsp;</TD>
+<TD height="18" align="center" bgcolor="#EFEFEF">&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<CENTER>
+<CENTER><FONT style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000">Si ce message ne s'affiche pas correctement, merci de suivre <A href='http://newsletter.saltm45.com/HM?b=Cc0pFZTK2ULTSIXQ0fw3tiNsv2iZMGkAAgFV__qMrBJnB8DUEvUgj0hCiJHtu2_j&c=-Fr2egFffrkeubWgSOllhA'>ce lien</A></FONT></CENTER>
+</CENTER>
+<DIV align="center">
+<TABLE width="750" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD width="750" valign="top">
+<TABLE width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border:0px;border-collapse:collapse;padding:0px;spacing:0px;">
+<TBODY>
+<TR>
+<TD colspan="2" valign="top"><A HREF="http://newsletter.saltm45.com/HP?b=pPSJ-cmT8RhYxhygQB4jeZU0jCsJfldcPbG3UBCyRp0uDLwgYOA_DiFupJRUhxcU&c=N73dk85MXda964B77NxIkg"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-a0.jpg" alt="a0" width="600" height="100" border="0"></A></TD>
+</TR>
+<TR>
+<TD colspan="2" style="font-family:Arial, Helvetica, sans-serif;color:#000000;font-size:13px; text-align:justify">
+<P>Bonjour,<BR>
+<BR>
+Soldes d'hiver &agrave; ne manquer sous aucun pr&eacute;texte ! Cette ann&eacute;e, pas question de passer &agrave; c&ocirc;t&eacute; des bons plans. Visitez votre boutique plaisir et profitez de prix d&eacute;lirants jusqu'&agrave; -80% sur la lingerie, les toys et les articles de bien-&ecirc;tre, <A HREF="http://newsletter.saltm45.com/HP?b=24VpYqQCIW0kNRCXbwqGyfGwhsMyCgfHFK3WdO767j57WRCqNHr-K0xu6Qb164iB&c=n8bnAuqwHZFLqS3doCK3OQ">vite !</A><BR></P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border:0px;border-collapse:collapse;padding:0px;spacing:0px;">
+<TBODY>
+<TR>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=JDt8cevgq30L-5sns18j97yI7EEbAY7UcjYBTWqubHSZi9ReKP6_oS-WY3n7-ite&c=j7pXnNXepWmXbL9yUWcKgw"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-a1.jpg" alt="a1" width="152" height="254" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=5NOMCklWBuPTJ58NdHrK-lKbJ0vkZkXwblQQeCDL77Fu-ioYe9EWohW1upavZ4Xu&c=SkyMaym8M5Y4ZJTvMN2kew"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-2b.jpg" alt="2b" width="149" height="254" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=vXQ7qDzoX88k3rHTBU2BXM2h5dJG6U8X-bHO4HiAk7AXg9CgXrsLU2gdEiQHTMnB&c=bEsig9mrCV_BRdNbrtmOIA"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-c3.jpg" alt="c3" width="162" height="254" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=hktWvpmiCmrK6mRxTV40wnSG6CM3nfwAHQp2wmfO_T9mT5nDzCuoDuJOLXRLbe9S&c=OVaYsWHDLMsg6w20qYHOpA"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-4d.jpg" alt="4d" width="137" height="254" border="0" style="display:block;"></A></TD>
+</TR>
+<TR>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=7eKqiaZESeCCDqsTlYWz7zKgbH90dPQQQjlOfxVH_Qj6LFcu7CtrbI4l-9M6QKIZ&c=Kfj4TJItQwjDIoK92Y5Mow"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-e5.jpg" alt="e5" width="152" height="424" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=DTV5OxL9gI8vdZ1GBsnSEPbBtttIrKxLKkne6nNfV7oDEqEvK4AiwD0AnUqRP7Yo&c=dHhqcL5cJfyb2wmhklNcmQ"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-6f.jpg" alt="6f" width="149" height="424" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=1dAR29pu67ooL5qZ02ihJAAeQY4EgrbmCt0CAwD6T-YOYOx6SDYG_MuzWBJXvgxB&c=cgdyFaP7zMNIGV-r0KYoAA"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-g7.jpg" alt="g7" width="162" height="424" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=pWx2iSs32yuNmmQ8Gsm4YqMV3EKv8X9YkTdww2NxwK_tAK5jZd2AK2CV4U77ZDkX&c=tvQHBQdqUPfk5h8R0nx4EQ"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-8h.jpg" alt="8h" width="137" height="424" border="0" style="display:block;"></A></TD>
+</TR>
+<TR>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=IjYycZxvjwFxg6_ZDX3chopZNBuDUKBia4zOCuOT2GGfSLX9K_2VmBvYzSHjcG-t&c=gRirJSGro08smBaIPSap-g"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-i9.jpg" alt="e5" width="152" height="429" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=wZ2YIISIv7jwsfJ4Pa4PsotgbQUl2w25eI87RJ178MAi3t50Xmhy2AUH9PhD18JC&c=5VLJOx6MZ4vU0CWzBvLO3w"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-10j.jpg" alt="10j" width="149" height="429" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=4xFUFoU0r4_9E2fmZS0jV3Gf9W23rCF5OlZezH9X-Prxd1lOgEED09cOL_eUChkD&c=4WTCFzILkPJe8pHZlXPRyw"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-k11.jpg" alt="k11" width="162" height="429" border="0" style="display:block;"></A></TD>
+<TD valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=kBxxT96yogwwuR8Lo4dJBjMj8Lpg7jut1XWN1FKEKvBuPfofoPJB8vgJPBu-zfhB&c=KjWHjAB_buzWLjzesXozJA"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-12l.jpg" alt="12l" width="137" height="429" border="0" style="display:block;"></A></TD>
+</TR>
+<TR>
+<TD colspan="4" valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=Wz84O7yb5qyxAH47WhogsxIyIAZzNF8mybZF11BnoiKH9_Aw7YYy3gDvLvX3eNUS&c=t4nfXGnkGgJKA6fQmaJr8g"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-m13.jpg" alt="m13" width="600" height="80" border="0" style="display:block;"></A></TD>
+</TR>
+<TR>
+<TD colspan="4" valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=e7-Qh077OEJ7v7rLhSdjnOG3P5ekZZ7LXKmCmBehf3uRmQAD0Wg_udkVxzJ8MNYN&c=XwN7KlIE3Wgl9jVBVLIcvg"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-14n.jpg" alt="14n" width="600" height="61" border="0" style="display:block;"></A></TD>
+</TR>
+<TR>
+<TD colspan="4" valign="bottom"><A HREF="http://newsletter.saltm45.com/HP?b=W8RwY0KIgqCwes1Q1MbAcJUyKUh84jpWdVsBr2Qkd1eLJqZ7UwfwU4iu0ak8WLNX&c=vNMrK7P9ASC-JUQ6604Cdw"><IMG src="http://stor.saltm45.com/1187/www/img/_IMG3/SEN-19320-o15.jpg" alt="o15" width="600" height="170" border="0" style="display:block;"></A></TD>
+</TR>
+</TBODY>
+</TABLE>
+<IMG src="http://www.capaffiliation.com/tracking/cpm.php?ids=1&idv=369&sid=" width="1" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan="3">
+<DIV align="center">
+<P class="formulairecomments"><FONT size="1" face="Arial, Helvetica, sans-serif"><BR>
+Conform&eacute;ment &agrave; l'article 34 de la loi Informatique et Libert&eacute;<BR>
+du 6 janvier 1978, vous disposez d'un droit d'acc&egrave;s, de modification, de rectification et de suppression<BR>
+des donn&eacute;es vous concernant.&nbsp;&nbsp;&nbsp; </FONT></P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<TABLE width="100%" border="0">
+<TR>
+<TD>
+<DIV align="center"><FONT size="1" face="Arial, Helvetica, sans-serif">Vous recevez cet e-mail car vous &ecirc;tes r&eacute;f&eacute;renc&eacute; sur la base de donn&eacute;es de notre partenaire.<BR>
+Si vous souhaitez vous desinscrire, merci d'utiliser <A href="http://newsletter.saltm45.com/HD?b=F3BOOoVTeb7tBR53zvQyu46kpNT8SOTED_Z6ldO0IrLFbgB-hCcvICM1VIN4JTJK&c=jEr1kUxqdPguT5Vew_V7Pg">le lien suivant.</A></FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<IMG src="http://adtrack.adleadevent.com/adtckrtg.php?ids=1240&email=auliafa@liafa.jussieu.fr" width="1" height="1" border="0">
+<img border="0" width="1" height="1" src="http://trcd.saltm45.com/trcd/trcdo.php?cid=78720&em=auliafa@liafa.jussieu.fr&do=saltm45.com&rout=emvi&ts=1453205167" />
+<img src="http://newsletter.saltm45.com/HO?qCfucqQuu3Rmc2PqRGPQFrpBPmIZP0wbNJUOpLq_UGoUrl8KxPE2ibIA8dfvu79C/Xo9s1i7Xrlt6akxpel2JBw.gif" border="0" alt="" width="1" height="1" /></body>
+</HTML>

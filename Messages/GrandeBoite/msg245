@@ -1,0 +1,158 @@
+Return-Path: <Emily@getcallcenter.link>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id ga7+DmarolZg5wAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:21:49 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 8AE3161FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:21:49 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 0.911
+X-Spam-Level: 
+X-Spam-Status: No, score=0.911 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, DCC_CHECK=1.1, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, T_FILL_THIS_FORM_SHORT=0.01,
+	URIBL_BLACK=1.7] autolearn=no autolearn_force=no
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id TTupn92Ab9Hq for <laplante@liafa.univ-paris-diderot.fr>;
+	Fri, 22 Jan 2016 23:21:47 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 561AB61F9D
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:21:47 +0100 (CET)
+Received: from mx1.u-psud.fr (mx1.u-psud.fr [129.175.212.64])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0MMLk20018620
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:21:47 +0100
+Received: from mx1.u-psud.fr (localhost [127.0.0.1])
+	by localhost (MTA) with SMTP id D87283029C5
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx1.u-psud.fr (MTA) with ESMTPS id 8A7C53024C8
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 6113340418
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HAlN0LJzYuKK for <laplante@liafa.univ-paris-diderot.fr>;
+	Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 4CB764014F
+	for <laplante@liafa.univ-paris-diderot.fr>; Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id 4A6AAE02DB; Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id 48BE5E02C4
+	for <laplante@lri.fr>; Fri, 22 Jan 2016 23:14:50 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id 0A21AE00CB
+	for <laplante@lri.fr>; Fri, 22 Jan 2016 23:14:51 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id CA62E63647
+	for <laplante@lri.fr>; Fri, 22 Jan 2016 16:14:48 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (mx.cs.uchicago.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id GhNTzOz6irS1 for <laplante@lri.fr>;
+	Fri, 22 Jan 2016 16:14:48 -0600 (CST)
+X-Greylist: Delayed for 00:06:56 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Fri, 22 Jan 2016 23:21:47 +0100 (CET)
+X-Greylist: delayed 11598 seconds by postgrey-1.34 at mx; Fri, 22 Jan 2016 16:14:47 CST
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id C801663629
+	for <laplante@cs.uchicago.edu>; Fri, 22 Jan 2016 16:14:47 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by m1000.localvisible.com (Postfix) with ESMTP id 90E531B36B9
+	for <laplante@cs.uchicago.edu>; Fri, 22 Jan 2016 09:13:40 -0800 (PST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by m2000.localvisible.com (Postfix) with ESMTP id 80FF02A0464
+	for <laplante@cs.uchicago.edu>; Fri, 22 Jan 2016 19:24:22 +0200 (IST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by m3000.localvisible.com (Postfix) with ESMTP id 74CF91412C6
+	for <laplante@cs.uchicago.edu>; Fri, 22 Jan 2016 19:12:56 +0200 (IST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mailerM1.localvisible.info (Postfix) with ESMTP id 1FCB714D
+	for <laplante@cs.uchicago.edu>; Fri, 22 Jan 2016 19:12:51 +0200 (IST)
+To: laplante@cs.uchicago.edu
+Subject: Call Center Quote for Laplante & Associ
+Message-ID: <3ad94b0be18fd73cf330e8cbc75167b9@list.localbizreport.net>
+Date: Fri, 22 Jan 2016 19:17:05 +0200
+From: "Emily Kirkland" <Emily@getcallcenter.link>
+Reply-To: Emily@getcallcenter.link
+MIME-Version: 1.0
+X-Mailer-LID: 37
+List-Unsubscribe: <http://list.localbizreport.net/unsubscribe.php?M=24836790&C=56be38f2776f4385cedfed0a635615e2&L=37&N=9641>
+X-Mailer-RecptId: 24836790
+X-Mailer-SID: 9641
+X-Mailer-Sent-By: 1
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_2cf701db6663ccbe0f8fcb82d8051de6"
+Content-Transfer-Encoding: 8bit
+X-Miltered: at potemkin with ID 56A2AB7A.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A2AB7A.000 from mx1.u-psud.fr/mx1.u-psud.fr/null/mx1.u-psud.fr/<Emily@getcallcenter.link>
+X-j-chkmail-Score: MSGID : 56A2AB7A.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--b1_2cf701db6663ccbe0f8fcb82d8051de6
+Content-Type: text/plain; format="flowed"; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SG93IG1hbnkgdGltZXMgaGF2ZSB5b3UgaGFkIHRvIGFwb2xvZ2l6ZSB0byBhIGN1c3RvbWVyIGZv
+ciBhIGRlbGF5IGluCmFuc3dlcmluZyBhbiBpbnF1aXJ5PwpIb3cgbWFueSB0aW1lcyBkb2VzIHRo
+aXMgbmVlZCB0byBoYXBwZW4gYmVmb3JlIHlvdSByZWFsaXplIHRoYXQgeW914oCZcmUKbG9zaW5n
+IG91dD8KCkdldENhbGxDZW50ZXIgaXMgYSBzZXJ2aWNlIHRoYXQgY29tcGFyZXMgcXVvdGVzIGZv
+ciBDYWxsIENlbnRlcnMKdGhhdCAgY2FuIHByb3ZpZGUgeW91ciBidXNpbmVzcyB3aXRoIFRlbGVt
+YXJrZXRpbmcsIEN1c3RvbWVyIFN1cHBvcnQsCkFwcG9pbnRtZW50IFNldHRpbmcgYW5kIG1vcmUu
+CgpUaGUgZm9sbG93aW5nIGluZm9ybWF0aW9uIHdpbGwgYmUgbmVlZGVkIHRvIGNvbXBvc2UgYSBR
+dW90ZToKCiogRnVsbCBOYW1lCiogQ29tcGFueSBOYW1lCiogUGhvbmUgbnVtYmVyCiogWmlwCgpC
+ZXN0IHJlZ2FyZHMsCgpFbWlseSBLaXJrbGFuZApDYWxsIENlbnRlciBTcGVjaWFsaXN0Cnd3dy5n
+ZXRjYWxsY2VudGVyLmxpbmsvY2EKCmh0dHA6Ly93d3cuZ2V0Y2FsbGNlbnRlci5saW5rL0NBL2Rl
+ZmF1bHQuYXNweD9jPSZwPSsxCjQ1MC02NTYtMjUyMyZmPSZsPSZ6PUo0WgozUDImZT1sYXBsYW50
+ZUBjcy51Y2hpY2Fnby5lZHUmdXRtX3NvdXJjZT1pcyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1w
+YWlnbj1DQTQ1CgoKQ2xpY2sgaGVyZSB0byB1bnN1YnNjcmliZQooaHR0cDovd3d3LmdldGNhbGxj
+ZW50ZXIubGluay9DQS91bnN1YnNjcmliZS5hc3B4P2U9bGFwbGFudGVAY3MudWNoaWNhZ28uZWR1
+KQo=
+
+--b1_2cf701db6663ccbe0f8fcb82d8051de6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html><head></head><body>
+<p><span>How many times have you had to apologize to a customer for a delay
+in answering an inquiry? <br />How many times does this need to happen
+before you realize that you&rsquo;re losing out?<o:p></o:p></span></p>
+<p><b><a href="http://www.getcallcenter.link/ca/default.aspx?c=&amp;p=+1
+450-656-2523&amp;f=&amp;l=&amp;z=J4Z
+3P2&amp;e=laplante@cs.uchicago.edu&amp;utm_source=is&amp;utm_medium=email&amp;utm_campaign=CA45">GetCallCenter</a>&nbsp;</b>is&nbsp;a
+service that compares quotes for Call Centers that can provide <br />your
+business with Telemarketing, Customer Support, Appointment Setting and
+more.</p>
+<p>The following information will be needed to compose a <b><a
+href="http://www.getcallcenter.link/ca/default.aspx?c=&amp;p=+1
+450-656-2523&amp;f=&amp;l=&amp;z=J4Z
+3P2&amp;e=laplante@cs.uchicago.edu&amp;utm_source=is&amp;utm_medium=email&amp;utm_campaign=CA45">Quote</a></b>:</p>
+<span style="font-size: x-small;"><span style="font-size:
+x-small;"></span></span>
+<ul>
+<li>Full Name</li>
+<li>Company Name</li>
+<li>Phone number</li>
+<li>Zip</li>
+</ul>
+<span style="font-size: 1.5em;"></span><span style="font-size:
+1.5em;"></span>
+<p><br />Best regards,</p>
+<p>Emily Kirkland<br />Call Center Specialist<br /><span style="font-size:
+large; font-family: impact, chicago;"><font size="3"><a
+href="http://www.getcallcenter.link/ca/default.aspx?c=&amp;p=+1
+450-656-2523&amp;f=&amp;l=&amp;z=J4Z
+3P2&amp;e=laplante@cs.uchicago.edu&amp;utm_source=is&amp;utm_medium=email&amp;utm_campaign=CA45">GetCall<span
+style="color: #3366ff;">Center</span><br /><br /></a></font></span><a
+href="http://www.getcallcenter.link/ca/unsubscribe.aspx?e=laplante@cs.uchicago.edu">Click
+here to unsubscribe</a></p>
+</body></html>
+
+--b1_2cf701db6663ccbe0f8fcb82d8051de6--
+

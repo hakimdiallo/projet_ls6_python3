@@ -1,0 +1,514 @@
+Return-Path: <bounce+sophie=cs.uchicago.edu@intro.in.ua>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id k2zuKMy7xVbUTgEAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:43:14 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id C813B61FA3
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:43:14 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: 1.902
+X-Spam-Level: *
+X-Spam-Status: No, score=1.902 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DCC_CHECK=1.1,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=intro.in.ua
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 8TiNkxXCdlYa for <laplante@liafa.univ-paris-diderot.fr>;
+	Thu, 18 Feb 2016 13:43:12 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 2CACD61FA1
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:43:12 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1IChC5X017014
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:43:12 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 5AE45302A6A
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:34:54 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id E652C302865
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:34:52 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id CB65B40464
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:34:52 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id jx64x2P0Upcc for <laplante@liafa.univ-paris-diderot.fr>;
+	Thu, 18 Feb 2016 13:34:42 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id AE88C403A0
+	for <laplante@liafa.univ-paris-diderot.fr>; Thu, 18 Feb 2016 13:34:42 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id AC66BDFEEA; Thu, 18 Feb 2016 13:34:42 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id AA738DFB34
+	for <laplante@lri.fr>; Thu, 18 Feb 2016 13:34:42 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id 5B70EE02B3
+	for <laplante@lri.fr>; Thu, 18 Feb 2016 13:34:43 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id 8474B61589
+	for <laplante@lri.fr>; Thu, 18 Feb 2016 06:34:41 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (mx.cs.uchicago.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id KZzQDep1vFJb for <laplante@lri.fr>;
+	Thu, 18 Feb 2016 06:34:39 -0600 (CST)
+X-Greylist: Delayed for 00:08:18 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Thu, 18 Feb 2016 13:43:12 +0100 (CET)
+X-Greylist: delayed 477 seconds by postgrey-1.34 at mx; Thu, 18 Feb 2016 06:34:37 CST
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx.cs.uchicago.edu (Postfix) with ESMTPS id 3F0836170D
+	for <sophie@cs.uchicago.edu>; Thu, 18 Feb 2016 06:34:37 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mail.intro.in.ua (Postfix) with SMTP id 9EAFC22FFE
+	for <sophie@cs.uchicago.edu>; Thu, 18 Feb 2016 14:25:56 +0200 (EET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=intro.in.ua;
+	s=default; t=1455798356;
+	bh=HFcGxcUEiCz+FVXK8WpPrNRf+sp/pc+kuWzJqkeZlI4=;
+	h=From:Reply-To:To:Subject:List-Unsubscribe:Date:List-id;
+	b=u7bZdc8R/VN7L5QUHPjV2vvRNdvglOLGhB44E83GyyG3caNWZtBaLCUAaf9UXI+2y
+	 97232jdRdIzENNvnVOq8IS3h/X1KFQcAD8pb1ukaFrSSbSDw/M8h/odkW/wMaIHZin
+	 9xXEWGFh3FnzwZ54YcjgON1pGtdJtq8WrQJXILTs=
+From: =?UTF-8?Q?=D0=95=D0=A1=D0=A3?= <info@euroasia-science.ru>
+Reply-To: =?UTF-8?Q?=D0=95=D0=A1=D0=A3?= <info@euroasia-science.ru>
+X-Priority: 3 (Normal)
+Message-ID: <20160218142539.101249781356c5b854a6e657.95584655@intro.in.ua>
+To: <sophie@cs.uchicago.edu>
+Subject: =?UTF-8?Q?=D0=9F=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D1=8F_=D0=BD=D0=B0=D1=83=D1=87=D0=BD=D1=8B=D1=85_=D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9_=D1=81_=D0=B8=D0=BD=D0=B4=D0=B5=D0=BA=D1=81=D0=B0=D1=86=D0=B8=D0=B5=D0=B9_=D0=B2_=D0=A0=D0=98=D0=9D=D0=A6,_26-27_=D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=BB=D1=8F_2016._=D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F,=D0=B3._=D0=9C=D0=BE=D1=81=D0=BA=D0=B2=D0=B0?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_mult123"
+Precedence: bulk
+List-Unsubscribe: <http://intro.in.ua/unsub.php?do=unsubscribe&id=118&email=sophie@cs.uchicago.edu>
+Sender: bounce+sophie=cs.uchicago.edu@intro.in.ua
+X-Complaints-To: abuse@intro.in.ua
+Date: Thu, 18 Feb 2016 14:25:39 +0200
+List-id: <118>
+X-Postmaster-Msgtype: 118
+X-Campaign-Id: 118
+X-Miltered: at potemkin with ID 56C5BC60.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56C5BC60.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<bounce+sophie=cs.uchicago.edu@intro.in.ua>
+X-j-chkmail-Score: MSGID : 56C5BC60.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--_mult123
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+=0A=0A =D0=A3=D0=B2=D0=B0=D0=B6=D0=B0=D0=B5=D0=BC=D1=8B=D0=B5 =D0=BA=D0=BE=
+=D0=BB=D0=BB=D0=B5=D0=B3=D0=B8!=0A =D0=A0=D0=B5=D0=B4=D0=B0=D0=BA=D1=86=D0=
+=B8=D1=8F =D0=95=D0=B2=D1=80=D0=B0=D0=B7=D0=B8=D0=B9=D1=81=D0=BA=D0=BE=D0=
+=B3=D0=BE =D0=A1=D0=BE=D1=8E=D0=B7=D0=B0 =D0=A3=D1=87=D0=B5=D0=BD=D1=8B=D1=
+=85 [1]=0A=0A=0A =D0=A1=D0=BE=D0=BE=D0=B1=D1=89=D0=B0=D0=B5=D0=BC =D0=92=
+=D0=B0=D0=BC, =D1=87=D1=82=D0=BE 27 =D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=BB=
+=D1=8F 2016 =D0=B3.=0A=D0=B7=D0=B0=D0=BA=D0=B0=D0=BD=D1=87=D0=B8=D0=B2=D0=
+=B0=D0=B5=D1=82=D1=81=D1=8F =D0=BF=D1=80=D0=B8=D0=B5=D0=BC =D0=BC=D0=B0=D1=
+=82=D0=B5=D1=80=D0=B8=D0=B0=D0=BB=D0=BE=D0=B2 =D0=BD=D0=B0=0A=D1=83=D1=87=
+=D0=B0=D1=81=D1=82=D0=B8=D0=B5 =D0=B2 =D0=B4=D0=B2=D0=B0=D0=B4=D1=86=D0=B0=
+=D1=82=D1=8C =D0=B2=D1=82=D0=BE=D1=80=D0=BE=D0=B9=0A=D0=BC=D0=B5=D0=B6=D0=
+=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=
+=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8: =0A=0A =D0=90=D0=BA=
+=D1=82=D1=83=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B5 =D0=BF=D1=80=D0=BE=D0=B1=
+=D0=BB=D0=B5=D0=BC=D1=8B =D0=B2 =D1=81=D0=BE=D0=B2=D1=80=D0=B5=D0=BC=D0=B5=
+=D0=BD=D0=BD=D0=BE=D0=B9=0A=D0=BD=D0=B0=D1=83=D0=BA=D0=B5 =D0=B8 =D0=BF=D1=
+=83=D1=82=D0=B8 =D0=B8=D1=85 =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D1=8F [2=
+] =0A=0A 26-27 =D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=BB=D1=8F 2016 =D0=B3. =0A=
+=0A =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F, =D0=B3. =D0=9C=D0=BE=D1=81=D0=BA=
+=D0=B2=D0=B0 =0A=0A-------------------------=0A=0A =D0=9F=D1=80=D0=B8=D0=
+=B5=D0=BC =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=BE=D1=81=D1=83=D1=89=D0=
+=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F: =D0=B4=D0=BE 26=
+.02.2016=0A=0A=0A =D0=9F=D1=80=D0=B8=D0=B5=D0=BC =D0=BA=D0=B2=D0=B8=D1=82=
+=D0=B0=D0=BD=D1=86=D0=B8=D0=B9 =D0=BE=D0=B1 =D0=BE=D0=BF=D0=BB=D0=B0=D1=82=
+=D0=B5: =D0=B4=D0=BE 27.02.2016 =0A=0A =D0=94=D0=B0=D1=82=D0=B0 =D0=BE=D1=
+=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BA=D0=B8 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=
+=BB=D0=B0 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B0=D0=BC: 25.03.2016 =0A=0A =
+=D0=94=D0=B0=D1=82=D0=B0 =D1=80=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=D0=B5=D0=BD=
+=D0=B8=D1=8F =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=
+=D0=B3=D0=BE=0A=D0=B2=D0=B0=D1=80=D0=B8=D0=B0=D0=BD=D1=82=D0=B0 =D0=B6=D1=
+=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =D0=BD=D0=B0 =D1=81=D0=B0=D0=B9=D1=82=D0=
+=B5: 25.03.2016 =0A=0A =D0=A4=D0=BE=D1=80=D0=BC=D0=B0 =D1=83=D1=87=D0=B0=
+=D1=81=D1=82=D0=B8=D1=8F =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=
+=D0=BD=D1=86=D0=B8=D0=B8 - =D0=B7=D0=B0=D0=BE=D1=87=D0=BD=D0=B0=D1=8F=0A(=
+=D0=B1=D0=B5=D0=B7 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=B8=D1=8F =D1=84=
+=D0=BE=D1=80=D0=BC=D1=8B =D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=
+=D0=B8=D1=8F=0A=D0=BC=D0=B5=D1=80=D0=BE=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=
+=B8=D1=8F). =0A=0A-------------------------=0A=0A=D0=97=D0=B0=D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=B8=D1=82=D1=8C =D0=B0=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=
+=D0=B2=D1=82=D0=BE=D1=80=D0=B0 [3]=0A=0A-------------------------=0A=0A =
+=D0=A1=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D1=80=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=
+=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=B2 =D0=A0=D0=98=D0=9D=D0=A6 =0A=0A-----=
+--------------------=0A=0A=D0=9F=D0=BE=D1=81=D0=B5=D1=82=D0=B8=D1=82=D1=8C=
+ =D1=81=D0=B0=D0=B9=D1=82 [4]=0A=0A=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=
+=B8=D1=82=D1=8C =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D0=
+=BE=D0=BD=D0=BD=D0=BE=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE [5]=0A=0A=
+-------------------------=0A=0A =D0=A0=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=D0=B5=
+=D0=BD=D0=B8=D0=B5 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B2 =D0=A0=D0=
+=98=D0=9D=D0=A6 (=D0=BD=D0=BE=D0=BC=D0=B5=D1=80=0A=D0=B4=D0=BE=D0=B3=D0=BE=
+=D0=B2=D0=BE=D1=80=D0=B0 551-08/2015) =0A=0A =D0=9C=D0=B5=D0=B6=D0=B4=D1=
+=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=D1=8B=D0=BC =D1=86=D0=B5=D0=BD=D1=
+=82=D1=80=D0=BE=D0=BC ISSN (=D0=9F=D0=B0=D1=80=D0=B8=D0=B6,=0A=D0=A4=D1=80=
+=D0=B0=D0=BD=D1=86=D0=B8=D1=8F) =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D1=83=
+ =D0=BF=D1=80=D0=B8=D1=81=D0=B2=D0=BE=D0=B5=D0=BD=0A=D0=BC=D0=B5=D0=B6=D0=
+=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=D1=8B=D0=B9 =D1=81=D1=82=D0=
+=B0=D0=BD=D0=B4=D0=B0=D1=80=D1=82=D0=BD=D1=8B=D0=B9 =D0=BD=D0=BE=D0=BC=D0=
+=B5=D1=80 =D0=B4=D0=BB=D1=8F=0A=D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=BD=D1=8B=
+=D1=85 =D0=B8=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D0=B9 (INTERNATIONAL STANDARD =
+SERIAL=0ANUMBER): ISSN 2411-6467 =D0=B8 =D0=B4=D0=BB=D1=8F =D1=8D=D0=BB=D0=
+=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D1=8B=D1=85=0A=D0=B8=D0=B7=D0=B4=
+=D0=B0=D0=BD=D0=B8=D0=B9 ISSN 2413-9335 =0A=0A =D0=98=D0=BD=D0=B4=D0=B5=D0=
+=BA=D1=81=D0=B0=D1=86=D0=B8=D1=8F =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=
+=B0: =D0=A0=D0=B8=D0=BD=D1=86, Research Bible, Global=0AImpact Factor,Cite=
+factor, International Scientific Indexing,=0AScientific Indexing Services,=
+ =D0=9A=D0=B8=D0=B1=D0=B5=D1=80=D0=9B=D0=B5=D0=BD=D0=B8=D0=BD=D0=BA=D0=B0,=
+ Google Scholar=0A=0A=0A =D0=A5=D0=BE=D1=82=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=
+=D0=B0=D1=82=D0=B8=D1=82=D1=8C =D0=B2=D0=B0=D1=88=D0=B5 =D0=B2=D0=BD=D0=B8=
+=D0=BC=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BD=D0=B0 =D1=82=D0=BE,=0A=D1=87=D1=82=
+=D0=BE =D0=BA=D0=B0=D0=B6=D0=B4=D0=BE=D0=BC=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=
+=D1=80=D1=83 =D0=BF=D0=BE =D0=BE=D0=BA=D0=BE=D0=BD=D1=87=D0=B0=D0=BD=D0=B8=
+=D0=B8=0A=D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=
+=B8, =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=
+=D0=BB=D0=B5=D0=BD =D0=BE=D0=B4=D0=B8=D0=BD=0A=D0=B1=D0=B5=D1=81=D0=BF=D0=
+=BB=D0=B0=D1=82=D0=BD=D1=8B=D0=B9 =D1=8D=D0=BA=D0=B7=D0=B5=D0=BC=D0=BF=D0=
+=BB=D1=8F=D1=80 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =D0=B8=0A=D1=81=
+=D0=B5=D1=80=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=82, =D0=BF=D0=BE=D0=B4=
+=D1=82=D0=B2=D0=B5=D1=80=D0=B6=D0=B4=D0=B0=D1=8E=D1=89=D0=B8=D0=B9 =D1=83=
+=D1=87=D0=B0=D1=81=D1=82=D0=B8=D0=B5 =0A=0A-------------------------=0A=0A=
+ [6]=0A=0A-------------------------=0A=0A =D0=A1=D0=B2=D1=8F=D0=B7=D0=B0=
+=D1=82=D1=8C=D1=81=D1=8F =D1=81 =D0=BD=D0=B0=D0=BC=D0=B8 =0A=0A =D0=90=D0=
+=B4=D1=80=D0=B5=D1=81 =D1=80=D0=B5=D0=B4=D0=B0=D0=BA=D1=86=D0=B8=D0=B8: =
+=D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F, =D0=B3.=D0=9C=D0=BE=D1=81=D0=BA=D0=
+=B2=D0=B0,=0A=D0=9B=D1=83=D0=B6=D0=BD=D0=B5=D1=86=D0=BA=D0=B0=D1=8F =D0=BD=
+=D0=B0=D0=B1=D0=B5=D1=80=D0=B5=D0=B6=D0=BD=D0=B0=D1=8F 2/4, =D0=BE=D1=84=
+=D0=B8=D1=81 =E2=84=9617 =0A=0A =D0=9F=D0=BE=D1=87=D1=82=D0=BE=D0=B2=D1=8B=
+=D0=B9 =D0=B8=D0=BD=D0=B4=D0=B5=D0=BA=D1=81: 119270 =0A=0A =D0=A1=D0=B0=D0=
+=B9=D1=82: euroasia-science.ru [7] =0A=0A =D0=95-MAIL: info@euroasia-scien=
+ce.ru [8] =0A=0A-------------------------=0A=0A=D0=AD=D1=82=D0=BE =D1=81=
+=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =
+=D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=BE =D0=BD=D0=B0=
+=0ASOPHIE@CS.UCHICAGO.EDU =D0=BF=D0=BE=D1=82=D0=BE=D0=BC=D1=83, =D1=87=D1=
+=82=D0=BE: =0A =D0=92=D1=8B =D0=BF=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=
+=BD=D1=8B =D0=BD=D0=B0 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=83 =
+=D0=BD=D0=BE=D0=B2=D0=BE=D1=81=D1=82=D0=B5=D0=B9 =D0=BE=D1=82=0A=D0=95=D0=
+=B2=D1=80=D0=B0=D0=B7=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=B9 =D0=A1=D0=BE=D1=
+=8E=D0=B7 =D0=A3=D1=87=D0=B5=D0=BD=D1=8B=D1=85 (=D0=95=D0=A1=D0=A3)=0A=0A =
+=D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D0=BD=D0=B5 =D1=85=D0=BE=D1=82=D0=
+=B8=D1=82=D0=B5 =D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B5 =D0=BF=D0=BE=D0=BB=D1=
+=83=D1=87=D0=B0=D1=82=D1=8C=0A=D0=BD=D0=B0=D1=88=D0=B8 =D0=BF=D0=B8=D1=81=
+=D1=8C=D0=BC=D0=B0, =D0=BF=D1=80=D0=BE=D1=81=D1=82=D0=BE =D0=BF=D0=B5=D1=
+=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=0A=D1=81=D1=81=D1=8B=
+=D0=BB=D0=BA=D0=B5 =D0=BE=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=
+=D1=8F =D0=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8 [9]=
+=0A=0A2016 =C2=A9 =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F, =D0=B3.=D0=9C=D0=
+=BE=D1=81=D0=BA=D0=B2=D0=B0, =D0=9B=D1=83=D0=B6=D0=BD=D0=B5=D1=86=D0=BA=D0=
+=B0=D1=8F=0A=D0=BD=D0=B0=D0=B1=D0=B5=D1=80=D0=B5=D0=B6=D0=BD=D0=B0=D1=8F 2=
+/4, =D0=BE=D1=84=D0=B8=D1=81 =E2=84=9617 | =D0=95=D0=B2=D1=80=D0=B0=D0=B7=
+=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=B9=0A=D0=A1=D0=BE=D1=8E=D0=B7 =D0=A3=D1=
+=87=D0=B5=D0=BD=D1=8B=D1=85 (=D0=95=D0=A1=D0=A3)=0A=0A =D0=A7=D1=82=D0=BE=
+=D0=B1=D1=8B =D0=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=82=D0=B8=D1=80=D0=BE=D0=B2=
+=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=BF=D0=B8=D1=81=D0=B5=D0=BC=0A=D0=BE=D1=82 =D0=BD=D0=B0=D1=81 - =D0=B4=
+=D0=BE=D0=B1=D0=B0=D0=B2=D1=8C=D1=82=D0=B5 =D0=BD=D0=B0=D1=88 =D0=B0=D0=B4=
+=D1=80=D0=B5=D1=81 =D0=B2 =D0=B0=D0=B4=D1=80=D0=B5=D1=81=D0=BD=D1=83=D1=8E=
+=0A=D0=BA=D0=BD=D0=B8=D0=B3=D1=83.=0A=0A=0A=0ALinks:=0A------=0A[1] http:/=
+/euroasia-science.ru=0A[2] http://euroasia-science.ru/ru/conference/=0A[3]=
+ http://euroasia-science.ru/ru/zapolnit-anketu-avtora/=0A[4] http://euroas=
+ia-science.ru/ru/pro-nas/=0A[5]=0Ahttp://euroasia-science.ru/wp-content/up=
+loads/Conference_euroasia_26-27.02.16.pdf=0A[6] http://euroasia-science.ru=
+/ru/zapolnit-anketu-avtora/=0A[7] http://euroasia-science.ru=0A[8] mailto:=
+info@euroasia-science.ru=0A[9]=0Ahttp://intro.in.ua/unsub.php?do=3Dunsubsc=
+ribe&id=3D118&email=3Dsophie@cs.uchicago.edu=0A
+--_mult123
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<table cellpadding=3D"0" class=3D"preview" cellspacing=3D"0" width=3D"100%=
+" border=3D"0" bgcolor=3D"#abb959" style=3D"min-width:600px;"><tr><td vali=
+gn=3D"top" align=3D"center"><table width=3D"560" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"campaign"><tr><td width=3D"560" height=
+=3D"10" class=3D"campaign"></td></tr><tr><td class=3D"campaign" width=3D"5=
+60" height=3D"10"></td></tr></table><table cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"560" border=3D"0" style=3D"border-width:5px;border-color:#=
+ffffff;border-style:solid;" class=3D"campaign"><tr  bgcolor=3D"#ffffff"><t=
+d align=3D"center" width=3D"560"><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" width=3D"560"  style=3D"background-color:#390921"><tr><td a=
+lign=3D"center" width=3D"560" class=3D"headerimage"><img style=3D"display:=
+block; height: 150px; width: 560px;" height=3D"150" alt=3D" " src=3D"http:=
+//man-server.in.ua/upload/img/929-2995b7df851b94d38ffc969d040b37f4.jpg" wi=
+dth=3D"560" border=3D"0" class=3D"" /></td></tr></table><table width=3D"56=
+0" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table"><tbody=
+><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"cell"><=
+/td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td align=3D"left=
+" valign=3D"top" class=3D"text1175" style=3D"color:#333333;font-family:Ari=
+al, Helvetica, sans-serif;font-size:12px;"><table align=3D"right" style=3D=
+"margin-right:5px;"><tbody><tr><td style=3D"padding-bottom: 10px; padding-=
+top: 5px; padding-right: 20px;"> <img style=3D"width: 200px; height: 200px=
+;" border=3D"0" height=3D"200" width=3D"200" alt=3D" " src=3D"http://man-s=
+erver.in.ua/upload/img/741-5b863bb03e3c3c250e736b20ccb0a7f1.jpg" class=3D"=
+image1175"> </td></tr></tbody></table><p style=3D"text-align: center;">=0A=
+=09=D0=A3=D0=B2=D0=B0=D0=B6=D0=B0=D0=B5=D0=BC=D1=8B=D0=B5 =D0=BA=D0=BE=D0=
+=BB=D0=BB=D0=B5=D0=B3=D0=B8!<br />=0A=09=D0=A0=D0=B5=D0=B4=D0=B0=D0=BA=D1=
+=86=D0=B8=D1=8F <a class=3D"text_link" css=3D"[text_link]" href=3D"http://=
+euroasia-science.ru">=D0=95=D0=B2=D1=80=D0=B0=D0=B7=D0=B8=D0=B9=D1=81=D0=
+=BA=D0=BE=D0=B3=D0=BE =D0=A1=D0=BE=D1=8E=D0=B7=D0=B0 =D0=A3=D1=87=D0=B5=D0=
+=BD=D1=8B=D1=85</a></p>=0A<p style=3D"text-align: center;">=0A=09=D0=A1=D0=
+=BE=D0=BE=D0=B1=D1=89=D0=B0=D0=B5=D0=BC =D0=92=D0=B0=D0=BC, =D1=87=D1=82=
+=D0=BE<b> 27 =D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=BB=D1=8F 2016 =D0=B3. =D0=
+=B7=D0=B0=D0=BA=D0=B0=D0=BD=D1=87=D0=B8=D0=B2=D0=B0=D0=B5=D1=82=D1=81=D1=
+=8F =D0=BF=D1=80=D0=B8=D0=B5=D0=BC =D0=BC=D0=B0=D1=82=D0=B5=D1=80=D0=B8=D0=
+=B0=D0=BB=D0=BE=D0=B2 </b>=D0=BD=D0=B0 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=
+=B8=D0=B5 =D0=B2 =D0=B4=D0=B2=D0=B0=D0=B4=D1=86=D0=B0=D1=82=D1=8C =D0=B2=
+=D1=82=D0=BE=D1=80=D0=BE=D0=B9 =D0=BC=D0=B5=D0=B6=D0=B4=D1=83=D0=BD=D0=B0=
+=D1=80=D0=BE=D0=B4=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=D1=84=D0=B5=D1=80=
+=D0=B5=D0=BD=D1=86=D0=B8=D0=B8:</p>=0A<p style=3D"text-align: center;">=0A=
+=09<a class=3D"text_link" css=3D"[text_link]" href=3D"http://euroasia-scie=
+nce.ru/ru/conference/"><b>&laquo;=D0=90=D0=BA=D1=82=D1=83=D0=B0=D0=BB=D1=
+=8C=D0=BD=D1=8B=D0=B5 =D0=BF=D1=80=D0=BE=D0=B1=D0=BB=D0=B5=D0=BC=D1=8B =D0=
+=B2 =D1=81=D0=BE=D0=B2=D1=80=D0=B5=D0=BC=D0=B5=D0=BD=D0=BD=D0=BE=D0=B9 =D0=
+=BD=D0=B0=D1=83=D0=BA=D0=B5 =D0=B8 =D0=BF=D1=83=D1=82=D0=B8 =D0=B8=D1=85 =
+=D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D1=8F&raquo;</b></a></p>=0A<p style=
+=3D"text-align: center;">=0A=09<b>26-27 =D1=84=D0=B5=D0=B2=D1=80=D0=B0=D0=
+=BB=D1=8F 2016 =D0=B3.</b></p>=0A<p style=3D"text-align: center;">=0A=09<b=
+>=D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F, =D0=B3. =D0=9C=D0=BE=D1=81=D0=BA=D0=
+=B2=D0=B0</b></p>=0A</td><td width=3D"20"></td></tr></tbody></table><table=
+ width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"t=
+able"><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" clas=
+s=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody></table><table=
+ width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"t=
+able" style=3D""><tbody><tr><td width=3D"20"></td><td width=3D"520" height=
+=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr><tr><td width=3D"2=
+0"></td><td width=3D"520" align=3D"left" valign=3D"top" style=3D"color:#33=
+3333;font-family:Arial, Helvetica, sans-serif;font-size:12px;" class=3D"ce=
+ll"><p>=0A=09=D0=9F=D1=80=D0=B8=D0=B5=D0=BC =D1=81=D1=82=D0=B0=D1=82=D0=B5=
+=D0=B9 =D0=BE=D1=81=D1=83=D1=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=
+=D1=82=D1=81=D1=8F: <b>=D0=B4=D0=BE 26.02.2016</b></p>=0A<p>=0A=09=D0=9F=
+=D1=80=D0=B8=D0=B5=D0=BC =D0=BA=D0=B2=D0=B8=D1=82=D0=B0=D0=BD=D1=86=D0=B8=
+=D0=B9 =D0=BE=D0=B1 =D0=BE=D0=BF=D0=BB=D0=B0=D1=82=D0=B5: <b>=D0=B4=D0=BE =
+27.02.2016</b></p>=0A<p>=0A=09=D0=94=D0=B0=D1=82=D0=B0 =D0=BE=D1=82=D0=BF=
+=D1=80=D0=B0=D0=B2=D0=BA=D0=B8 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =
+=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B0=D0=BC: <b>25.03.2016</b></p>=0A<p>=0A=
+=09<br />=0A=09=D0=94=D0=B0=D1=82=D0=B0 =D1=80=D0=B0=D0=B7=D0=BC=D0=B5=D1=
+=89=D0=B5=D0=BD=D0=B8=D1=8F =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=
+=BD=D0=BD=D0=BE=D0=B3=D0=BE =D0=B2=D0=B0=D1=80=D0=B8=D0=B0=D0=BD=D1=82=D0=
+=B0 =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=B0 =D0=BD=D0=B0 =D1=81=D0=B0=
+=D0=B9=D1=82=D0=B5:<b> 25.03.2016</b></p>=0A<p>=0A=09=D0=A4=D0=BE=D1=80=D0=
+=BC=D0=B0 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D1=8F =D0=B2 =D0=BA=D0=BE=
+=D0=BD=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8 &ndash; <b>=D0=B7=
+=D0=B0=D0=BE=D1=87=D0=BD=D0=B0=D1=8F (=D0=B1=D0=B5=D0=B7 =D1=83=D0=BA=D0=
+=B0=D0=B7=D0=B0=D0=BD=D0=B8=D1=8F =D1=84=D0=BE=D1=80=D0=BC=D1=8B =D0=BF=D1=
+=80=D0=BE=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=B8=D1=8F =D0=BC=D0=B5=D1=80=D0=
+=BE=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=B8=D1=8F).</b></p>=0A</td><td width=
+=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"520" height=3D"7"=
+ class=3D"spacer"></td><td width=3D"20"></td></tr></tbody></table><table w=
+idth=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"tab=
+le"><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=
+=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody></table><table =
+width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"ta=
+ble" style=3D"padding:0;"><tbody><tr><td height=3D"7" class=3D"heightspace=
+"></td></tr><tr><td width=3D"1060" align=3D"center" class=3D"cell"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:3px 0;"><=
+tbody><tr><td width=3D"20" height=3D"7" class=3D"row"></td><td><table bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"background:#993300;b=
+order-width:0px;border-color:#cccccc;border-style:solid; border-radius: 10=
+px 10px 10px 10px; box-shadow: 0 0 4px #666666; -moz-box-shadow: 0 0 4px #=
+666666; -webkit-box-shadow: 0 0 4px #666666; display:block;"><tbody><tr><t=
+d width=3D"13"></td><td valign=3D"middle" align=3D"center" style=3D"paddin=
+g:13px 0;font-weight:bold;color:#ffffff;font-family:Arial, Helvetica, sans=
+-serif;font-size:13px;"><a href=3D"http://euroasia-science.ru/ru/zapolnit-=
+anketu-avtora/" style=3D"text-decoration:none;color:#ffffff;font-family:Ar=
+ial, Helvetica, sans-serif;font-size:13px;">=D0=97=D0=B0=D0=BF=D0=BE=D0=BB=
+=D0=BD=D0=B8=D1=82=D1=8C =D0=B0=D0=BD=D0=BA=D0=B5=D1=82=D1=83 =D0=B0=D0=B2=
+=D1=82=D0=BE=D1=80=D0=B0</a></td><td width=3D"13"></td></tr></tbody></tabl=
+e></td><td width=3D"20" height=3D"7" class=3D"row"></td></tr></tbody></tab=
+le></td></tr><tr><td height=3D"7" class=3D"heightspace"></td></tr></tbody>=
+</table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=3D"520" hei=
+ght=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody>=
+</table><table width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" class=3D"table" style=3D""><tbody><tr><td width=3D"20"></td><td width=
+=3D"520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td></tr><tr=
+><td width=3D"20"></td><td width=3D"520" align=3D"left" valign=3D"top" sty=
+le=3D"color:#333333;font-family:Arial, Helvetica, sans-serif;font-size:12p=
+x;" class=3D"cell"><p style=3D"text-align: center;">=0A=09<b><span style=
+=3D"font-size:14px;line-height:normal;"><span style=3D"font-family:georgia=
+,serif;">=D0=A1=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D1=80=D0=B0=D0=B7=D0=BC=D0=
+=B5=D1=89=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=B2 =D0=A0=D0=98=D0=9D=D0=A6</s=
+pan></span></b></p>=0A</td><td width=3D"20"></td></tr><tr><td width=3D"20"=
+></td><td width=3D"520" height=3D"7" class=3D"spacer"></td><td width=3D"20=
+"></td></tr></tbody></table><table width=3D"560" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td>=
+<td width=3D"520" height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"2=
+0"></td></tr></tbody></table><table width=3D"560" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"table" style=3D"padding:0;"><tbody><tr><=
+td height=3D"7" class=3D"heightspace"></td></tr><tr><td width=3D"1060" ali=
+gn=3D"center" class=3D"cell"><table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" style=3D"margin:3px 0;"><tbody><tr><td width=3D"20" height=3D"7=
+" class=3D"row"></td><td><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"background:#993300;border-width:0px;border-color:#cccccc;b=
+order-style:solid; border-radius: 10px 10px 10px 10px; box-shadow: 0 0 4px=
+ #666666; -moz-box-shadow: 0 0 4px #666666; -webkit-box-shadow: 0 0 4px #6=
+66666; display:block;"><tbody><tr><td width=3D"13"></td><td valign=3D"midd=
+le" align=3D"center" style=3D"padding:13px 0;font-weight:bold;color:#fffff=
+f;font-family:Arial, Helvetica, sans-serif;font-size:13px;"><a href=3D"htt=
+p://euroasia-science.ru/ru/pro-nas/" style=3D"text-decoration:none;color:#=
+ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;">=D0=9F=D0=
+=BE=D1=81=D0=B5=D1=82=D0=B8=D1=82=D1=8C =D1=81=D0=B0=D0=B9=D1=82</a></td><=
+td width=3D"13"></td></tr></tbody></table></td><td width=3D"20" class=3D"s=
+pace"></td><td><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"background:#993300;border-width:0px;border-color:#cccccc;border-styl=
+e:solid; border-radius: 10px 10px 10px 10px; box-shadow: 0 0 4px #666666; =
+-moz-box-shadow: 0 0 4px #666666; -webkit-box-shadow: 0 0 4px #666666; dis=
+play:block;"><tbody><tr><td width=3D"13"></td><td valign=3D"middle" align=
+=3D"center" style=3D"padding:13px 0;font-weight:bold;color:#ffffff;font-fa=
+mily:Arial, Helvetica, sans-serif;font-size:13px;"><a href=3D"http://euroa=
+sia-science.ru/wp-content/uploads/Conference_euroasia_26-27.02.16.pdf" sty=
+le=3D"text-decoration:none;color:#ffffff;font-family:Arial, Helvetica, san=
+s-serif;font-size:13px;">=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=B8=D1=82=
+=D1=8C =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=
+=D0=BD=D0=BE=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE</a></td><td width=
+=3D"13"></td></tr></tbody></table></td><td width=3D"20" height=3D"7" class=
+=3D"row"></td></tr></tbody></table></td></tr><tr><td height=3D"7" class=3D=
+"heightspace"></td></tr></tbody></table><table width=3D"560" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" class=3D"table"><tbody><tr><td width=
+=3D"20"></td><td width=3D"520" height=3D"7" class=3D"cell"><hr></hr></td><=
+td width=3D"20"></td></tr></tbody></table><table width=3D"560" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" class=3D"table" style=3D""><tbody><t=
+r><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"spacer"></=
+td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"520" =
+align=3D"left" valign=3D"top" style=3D"color:#333333;font-family:Arial, He=
+lvetica, sans-serif;font-size:12px;" class=3D"cell"><p style=3D"text-align=
+: center;">=0A=09<b>=D0=A0=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=D0=B5=D0=BD=D0=B8=
+=D0=B5 =D1=81=D1=82=D0=B0=D1=82=D0=B5=D0=B9 =D0=B2 =D0=A0=D0=98=D0=9D=D0=
+=A6 (=D0=BD=D0=BE=D0=BC=D0=B5=D1=80 =D0=B4=D0=BE=D0=B3=D0=BE=D0=B2=D0=BE=
+=D1=80=D0=B0 551-08/2015)</b></p>=0A<p style=3D"text-align: center;">=0A=
+=09=D0=9C=D0=B5=D0=B6=D0=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=D1=
+=8B=D0=BC =D1=86=D0=B5=D0=BD=D1=82=D1=80=D0=BE=D0=BC ISSN (=D0=9F=D0=B0=D1=
+=80=D0=B8=D0=B6, =D0=A4=D1=80=D0=B0=D0=BD=D1=86=D0=B8=D1=8F) =D0=B6=D1=83=
+=D1=80=D0=BD=D0=B0=D0=BB=D1=83 =D0=BF=D1=80=D0=B8=D1=81=D0=B2=D0=BE=D0=B5=
+=D0=BD =D0=BC=D0=B5=D0=B6=D0=B4=D1=83=D0=BD=D0=B0=D1=80=D0=BE=D0=B4=D0=BD=
+=D1=8B=D0=B9 =D1=81=D1=82=D0=B0=D0=BD=D0=B4=D0=B0=D1=80=D1=82=D0=BD=D1=8B=
+=D0=B9 <b>=D0=BD=D0=BE=D0=BC=D0=B5=D1=80 =D0=B4=D0=BB=D1=8F =D0=BF=D0=B5=
+=D1=87=D0=B0=D1=82=D0=BD=D1=8B=D1=85 =D0=B8=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=
+=D0=B9 (International Standard Serial Number): ISSN 2411-6467 =D0=B8 =D0=
+=B4=D0=BB=D1=8F =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D1=
+=8B=D1=85 =D0=B8=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D0=B9 ISSN 2413-9335</b></p=
+>=0A<p style=3D"text-align: center;">=0A=09<b>=D0=98=D0=BD=D0=B4=D0=B5=D0=
+=BA=D1=81=D0=B0=D1=86=D0=B8=D1=8F =D0=B6=D1=83=D1=80=D0=BD=D0=B0=D0=BB=D0=
+=B0: </b><u>=D0=A0=D0=B8=D0=BD=D1=86, Research Bible, Global Impact Factor=
+,Citefactor, International Scientific Indexing, Scientific Indexing Servic=
+es, =D0=9A=D0=B8=D0=B1=D0=B5=D1=80=D0=9B=D0=B5=D0=BD=D0=B8=D0=BD=D0=BA=D0=
+=B0, Google Scholar</u></p>=0A<p style=3D"text-align: center;">=0A=09<i><b=
+>=D0=A5=D0=BE=D1=82=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=D0=B0=D1=82=D0=B8=D1=82=
+=D1=8C =D0=B2=D0=B0=D1=88=D0=B5 =D0=B2=D0=BD=D0=B8=D0=BC=D0=B0=D0=BD=D0=B8=
+=D0=B5 =D0=BD=D0=B0 =D1=82=D0=BE, =D1=87=D1=82=D0=BE =D0=BA=D0=B0=D0=B6=D0=
+=B4=D0=BE=D0=BC=D1=83 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=D1=83 =D0=BF=D0=BE =
+=D0=BE=D0=BA=D0=BE=D0=BD=D1=87=D0=B0=D0=BD=D0=B8=D0=B8 =D0=BA=D0=BE=D0=BD=
+=D1=84=D0=B5=D1=80=D0=B5=D0=BD=D1=86=D0=B8=D0=B8, =D0=B1=D1=83=D0=B4=D0=B5=
+=D1=82 =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD =D0=BE=D0=B4=
+=D0=B8=D0=BD =D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D1=8B=D0=B9 =
+=D1=8D=D0=BA=D0=B7=D0=B5=D0=BC=D0=BF=D0=BB=D1=8F=D1=80 =D0=B6=D1=83=D1=80=
+=D0=BD=D0=B0=D0=BB=D0=B0 =D0=B8 =D1=81=D0=B5=D1=80=D1=82=D0=B8=D1=84=D0=B8=
+=D0=BA=D0=B0=D1=82, =D0=BF=D0=BE=D0=B4=D1=82=D0=B2=D0=B5=D1=80=D0=B6=D0=B4=
+=D0=B0=D1=8E=D1=89=D0=B8=D0=B9 =D1=83=D1=87=D0=B0=D1=81=D1=82=D0=B8=D0=B5<=
+/b></i></p>=0A</td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><t=
+d width=3D"520" height=3D"7" class=3D"spacer"></td><td width=3D"20"></td><=
+/tr></tbody></table><table width=3D"560" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" class=3D"table"><tbody><tr><td width=3D"20"></td><td width=
+=3D"520" height=3D"7" class=3D"cell"><hr></hr></td><td width=3D"20"></td><=
+/tr></tbody></table><table width=3D"560" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" class=3D"table" style=3D"padding:0 20px;"><tbody><tr><td h=
+eight=3D"7" class=3D"heightspace"></td></tr><tr><td width=3D"520" align=3D=
+"center" class=3D"cell"><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"412" class=3D"table1186"><tbody><tr><td width=3D"521" clas=
+s=3D"image1186_1"><a href=3D"http://euroasia-science.ru/ru/zapolnit-anketu=
+-avtora/"><img class=3D"image1186_1" style=3D"display: block; height: 79px=
+; width: 521px; margin:0;" border=3D"0" alt=3D" " src=3D"http://man-server=
+.in.ua/upload/img/292-3a33640078c08832c5b068ecac851616.png" height=3D"79"=
+ width=3D"521"></a></td></tr></tbody></table></td></tr><tr><td height=3D"7=
+" class=3D"heightspace"></td></tr></tbody></table><table width=3D"560" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table"><tbody><tr><=
+td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"cell"><hr></h=
+r></td><td width=3D"20"></td></tr></tbody></table><table width=3D"560" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"table" style=3D""><=
+tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=3D"sp=
+acer"></td><td width=3D"20"></td></tr><tr><td width=3D"20"></td><td width=
+=3D"520" align=3D"left" valign=3D"top" style=3D"color:#333333;font-family:=
+Arial, Helvetica, sans-serif;font-size:12px;" class=3D"cell"><p>=0A=09<b>=
+=D0=A1=D0=B2=D1=8F=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D1=81 =D0=BD=D0=B0=
+=D0=BC=D0=B8</b></p>=0A<p>=0A=09<br />=0A=09<span style=3D"font-size:10px;=
+line-height:normal;">=D0=90=D0=B4=D1=80=D0=B5=D1=81 =D1=80=D0=B5=D0=B4=D0=
+=B0=D0=BA=D1=86=D0=B8=D0=B8: =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8F, =D0=B3.=
+=D0=9C=D0=BE=D1=81=D0=BA=D0=B2=D0=B0, =D0=9B=D1=83=D0=B6=D0=BD=D0=B5=D1=86=
+=D0=BA=D0=B0=D1=8F =D0=BD=D0=B0=D0=B1=D0=B5=D1=80=D0=B5=D0=B6=D0=BD=D0=B0=
+=D1=8F 2/4, =D0=BE=D1=84=D0=B8=D1=81 =E2=84=9617</span></p>=0A<p>=0A=09<sp=
+an style=3D"font-size:10px;line-height:normal;">=D0=9F=D0=BE=D1=87=D1=82=
+=D0=BE=D0=B2=D1=8B=D0=B9 =D0=B8=D0=BD=D0=B4=D0=B5=D0=BA=D1=81: 119270</spa=
+n></p>=0A<p>=0A=09<b style=3D"font-size: 10px;">=D0=A1=D0=B0=D0=B9=D1=82:<=
+/b><a class=3D"text_link" style=3D"color:#993300;" href=3D"http://euroasia=
+-science.ru" style=3D"font-size: 10px;"> euroasia-science.ru</a></p>=0A<p>=
+=0A=09<span style=3D"font-size:10px;line-height:normal;"><b>=D0=95-mail:</=
+b> <a class=3D"text_link" style=3D"color:#993300;" href=3D"mailto:info@eur=
+oasia-science.ru">info@euroasia-science.ru</a></span></p>=0A</td><td width=
+=3D"20"></td></tr><tr><td width=3D"20"></td><td width=3D"520" height=3D"7"=
+ class=3D"spacer"></td><td width=3D"20"></td></tr></tbody></table><table w=
+idth=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"tab=
+le"><tbody><tr><td width=3D"20"></td><td width=3D"520" height=3D"7" class=
+=3D"cell"><hr></hr></td><td width=3D"20"></td></tr></tbody></table><table =
+width=3D"560" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"ta=
+ble" style=3D"padding:0 20px;"><tbody><tr><td height=3D"7" class=3D"height=
+space"></td></tr><tr><td width=3D"520" align=3D"center" class=3D"cell"><ta=
+ble border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"412" class=
+=3D"table1188"><tbody><tr><td width=3D"520" class=3D"image1188_1"> <img cl=
+ass=3D"image1188_1" style=3D"display: block; height: 246px; width: 520px; =
+margin:0;" border=3D"0" alt=3D" " src=3D"http://man-server.in.ua/upload/im=
+g/91-5c4bcb2038a7d175b143689d54a2f597.jpg" height=3D"246" width=3D"520"> <=
+/td></tr></tbody></table></td></tr><tr><td height=3D"7" class=3D"heightspa=
+ce"></td></tr></tbody></table></td></tr></table><table width=3D"560" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"pfooter"><tr><td heig=
+ht=3D"15" width=3D"560" class=3D"pfooter"></td></tr><tr><td class=3D"pfoot=
+er" style=3D"color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-s=
+ize:11px;" width=3D"560" align=3D"center">=D0=AD=D1=82=D0=BE =D1=81=D0=BE=
+=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =D0=BE=
+=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=BE =D0=BD=D0=B0  <b>so=
+phie@cs.uchicago.edu</b> =D0=BF=D0=BE=D1=82=D0=BE=D0=BC=D1=83, =D1=87=D1=
+=82=D0=BE: <br /> <span id=3D"reason">=D0=92=D1=8B =D0=BF=D0=BE=D0=B4=D0=
+=BF=D0=B8=D1=81=D0=B0=D0=BD=D1=8B =D0=BD=D0=B0 =D1=80=D0=B0=D1=81=D1=81=D1=
+=8B=D0=BB=D0=BA=D1=83 =D0=BD=D0=BE=D0=B2=D0=BE=D1=81=D1=82=D0=B5=D0=B9 =D0=
+=BE=D1=82 =D0=95=D0=B2=D1=80=D0=B0=D0=B7=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=
+=B9 =D0=A1=D0=BE=D1=8E=D0=B7 =D0=A3=D1=87=D0=B5=D0=BD=D1=8B=D1=85 (=D0=95=
+=D0=A1=D0=A3)</span><br /><br /> =D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D0=
+=BD=D0=B5 =D1=85=D0=BE=D1=82=D0=B8=D1=82=D0=B5 =D0=B1=D0=BE=D0=BB=D1=8C=D1=
+=88=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=BD=D0=B0=D1=
+=88=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BF=D1=80=D0=BE=D1=81=
+=D1=82=D0=BE =D0=BF=D0=B5=D1=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=
+=D0=BE =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B5 <a href=3D"http://intro.in.ua/=
+unsub.php?do=3Dunsubscribe&id=3D118&email=3Dsophie@cs.uchicago.edu">=D0=BE=
+=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BE=D1=82 =D1=80=
+=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a><br /><br /></td></tr><tr><t=
+d class=3D"pfooter" height=3D"3" width=3D"560"></td></tr><tr><td width=3D"=
+560" align=3D"center" style=3D"color:#ffffff;font-family:Arial, Helvetica,=
+ sans-serif;font-size:11px;" class=3D"pfooter">2016 =C2=A9 =D0=A0=D0=BE=D1=
+=81=D1=81=D0=B8=D1=8F, =D0=B3.=D0=9C=D0=BE=D1=81=D0=BA=D0=B2=D0=B0, =D0=9B=
+=D1=83=D0=B6=D0=BD=D0=B5=D1=86=D0=BA=D0=B0=D1=8F =D0=BD=D0=B0=D0=B1=D0=B5=
+=D1=80=D0=B5=D0=B6=D0=BD=D0=B0=D1=8F 2/4, =D0=BE=D1=84=D0=B8=D1=81 =E2=84=
+=9617 | =D0=95=D0=B2=D1=80=D0=B0=D0=B7=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=B9=
+ =D0=A1=D0=BE=D1=8E=D0=B7 =D0=A3=D1=87=D0=B5=D0=BD=D1=8B=D1=85 (=D0=95=D0=
+=A1=D0=A3)</td></tr><tr><td height=3D"10" width=3D"560" class=3D"pfooter">=
+</td></tr><tr><td align=3D"center" width=3D"560" style=3D"color:#ffffff;fo=
+nt-family:Arial, Helvetica, sans-serif;font-size:11px;" class=3D"pfooter">=
+ =D0=A7=D1=82=D0=BE=D0=B1=D1=8B =D0=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=82=D0=B8=
+=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=
+=D0=BD=D0=B8=D0=B5 =D0=BF=D0=B8=D1=81=D0=B5=D0=BC =D0=BE=D1=82 =D0=BD=D0=
+=B0=D1=81 - =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D1=8C=D1=82=D0=B5 =D0=BD=D0=B0=
+=D1=88 =D0=B0=D0=B4=D1=80=D0=B5=D1=81 =D0=B2 =D0=B0=D0=B4=D1=80=D0=B5=D1=
+=81=D0=BD=D1=83=D1=8E =D0=BA=D0=BD=D0=B8=D0=B3=D1=83.</td></tr><tr><td hei=
+ght=3D"10" class=3D"pfooter" width=3D"560"></td></tr></table></td></tr></t=
+able>
+--_mult123--

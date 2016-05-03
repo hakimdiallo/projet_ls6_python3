@@ -1,0 +1,172 @@
+Return-Path: <bounce@newlifeherbs.com>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id DXhaNDEEnVarBwEAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:26:58 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 7ACE261F9A
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:26:57 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 6.808
+X-Spam-Level: ******
+X-Spam-Status: Yes, score=6.808 tagged_above=-10000 required=5
+	tests=[BAYES_50=0.8, DATE_IN_PAST_06_12=1.543, DCC_CHECK=1.1,
+	HTML_IMAGE_ONLY_28=1.404, HTML_MESSAGE=0.001,
+	HTML_OBFUSCATE_05_10=0.26, RCVD_IN_DNSWL_NONE=-0.0001,
+	URIBL_BLACK=1.7] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (2048-bit key) header.d=newlifeherbs.com;
+	domainkeys=fail (2048-bit key)
+	reason="fail (message has been altered)"
+	header.from=dovan@newlifeherbs.com header.d=newlifeherbs.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 9ie_jPrDvqU7 for <laplante@liafa.univ-paris-diderot.fr>;
+	Mon, 18 Jan 2016 16:26:55 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 6691A61FAD
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:26:55 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u0IFQup1005883
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:26:56 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id ACFAB300FC9
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:18:50 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id 2095B302989
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:18:50 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 145B8404D3
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:18:50 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id KcEKp-171EkV for <laplante@liafa.univ-paris-diderot.fr>;
+	Mon, 18 Jan 2016 16:18:30 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id EF6E840094
+	for <laplante@liafa.univ-paris-diderot.fr>; Mon, 18 Jan 2016 16:18:29 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id ED5CDDFE1E; Mon, 18 Jan 2016 16:18:29 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id EBAC0DFBC0
+	for <laplante@lri.fr>; Mon, 18 Jan 2016 16:18:29 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTP id 2B3D7E0035
+	for <laplante@lri.fr>; Mon, 18 Jan 2016 16:18:28 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=oneclicktours; d=newlifeherbs.com;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:List-Unsubscribe:Content-Type:Content-Transfer-Encoding; i=dovan@newlifeherbs.com;
+ bh=PlZc8zcexMNy00cJ83VClGqAg4U=;
+ b=YZGfWW7iD7O7tqv5LrTSnfK/vugl8mW7f3sqpu+5DhIvCS3ygKddcDHBBhq7k8/gt5U72gzsAG/5
+   NXagYnuthc4nEy9aGHsRN1MT9TOSlavuEbKP9ibohhyIn3kPiUZJibtIngVrifor2u3saUxD5pvi
+   z7muCISWykuRtt64pIJ5xWyD2AgXt4yPYA7xQzLVfiHWxesoxfEStPP0JWPE+k6yReNJFZol+w1w
+   28jrWfnp5eULUslqkqGaYG9T6Cd763an7rIQ9OWPYDm8DsCtTnfdpK67S09zMnLUCHQCw7syaT4z
+   gIq1qc29K9But2fGyE9nlxX97Z6mxbajJ2pk1Q==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=oneclicktours; d=newlifeherbs.com;
+ b=L+E1LamtCao4ot9aqtVV8HxTFM38ErTgtNmDHd9Gg9oJinLyDdFzj0cXjuFzv00BTMOCgUYjp7I1
+   ncTzZohpSYzvERbajA+/7nQqLulr3G32+4EduR/ieuj6Ow8BnaO/S4Pelc4EwmUcoTBf4HtaleYQ
+   3/ECXDO25zP19S+Q6qsTG5dqJL7ox+/tfCPcoZWZBpJuzlZVztzneOx250x0hBosffkHTo+OvVm2
+   YwPgLtKtRbMvufXCXyA8+0vNFFr/ykwSk5Bm/9v9Wgle1B+sZpy7ElFOeXjhfYDNzPEOoFWemkq4
+   l3JfagagmyhJqCz/g5uAl/IUZEhPStg4rkXmjA==;
+To: laplante@lri.fr
+Subject: =?UTF-8?B?TcOpdGhvZGUgZGUgQ29ycHMgTmV1Zg==?=
+Message-ID: <aa13db3b7ef61cfe0182cbf51a6f3ae2@www.newlifeherbs.com>
+Date: Mon, 18 Jan 2016 02:10:18 -0500
+From: "Steve & Becky Holman" <dovan@newlifeherbs.com>
+Reply-To: dovan@newlifeherbs.com
+MIME-Version: 1.0
+X-Mailer-LID: 25,21,12,1,2
+List-Unsubscribe: <http://www.newlifeherbs.com/iem3/unsubscribe.php?M=448755&C=be5a4a0b69773d0a42f3249d4993ba9d&L=2&N=95>
+X-Mailer-RecptId: 448755
+X-Mailer-SID: 95
+X-Mailer-Sent-By: 2
+Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_74748030e1a6ef0e2b2c8158f85e30fd"
+Content-Transfer-Encoding: 8bit
+X-Greylist: Delayed for 00:08:06 by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 18 Jan 2016 16:26:56 +0100 (CET)
+X-Miltered: at korolev with ID 569D0440.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 569D0440.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<bounce@newlifeherbs.com>
+X-j-chkmail-Score: MSGID : 569D0440.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+--b1_74748030e1a6ef0e2b2c8158f85e30fd
+Content-Type: text/plain; format="flowed"; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+Qm9uam91ciwKCuKAnFZpZWlsbGUgbcOpdGhvZGUgY29ycHMgbmV1ZuKAnCBlc3QgdW4gcHJvZ3Jh
+bW1lIGNyw6nDqSBwYXIgdW4gY291cGxlCmFtw6lyaWNhaW4gU3RldmUgSG9sbWFuIGV0IHNhIGZl
+bW1lIEJlY2t5IEhvbG1hbi4gQ2UgcHJvZ3JhbW1lIGVzdCBjb25kdWl0CmRlIG1haW4gZGUgbWHD
+rnRyZSBwYXIgU3RldmUgSG90bWFuLCAgZXhww6lyaW1lbnTDqSBlbiByZW1pc2UgZW4gZm9ybWUg
+ZXQKcsOpZGFjdGV1ciBlbiBjaGVmIGR1IE1hZ2F6aW5lIElyb24gTWFuLiBJbHMgc29udCBzZWNv
+bmTDqXMgZGFucyBsZXVycwp0cmF2YXV4IHBhciBKb2huIE0uIFJvd2xleS4gTGUgcHJvZ3JhbW1l
+IHPigJnDqW5vbmNlIGNvbW1lIGxlIHNldWwKcHJvZ3JhbW1lIHF1aSBmYXZvcmlzZSBsYSBwZXJ0
+ZSBkZSBwb2lkcyBldCBsYSByZW1pc2UgZW4gZm9ybWUgY2hleiBsZXMKcGVyc29ubmVzIGRlIDQw
+IGFucyBldCBwbHVzLiDigJxWaWVpbGxlIG3DqXRob2RlIGNvcnBzIG5ldWbigJwgcmVncm91cGUK
+cGx1c2lldXJzIHLDqWdpbWVzIGFsaW1lbnRhaXJlcyBldCBkZXMgc8OpYW5jZXMgZOKAmWVudHJh
+w65uZW1lbnQgZGUKY291cnRlcyBkdXLDqWVzIHBvdXIgZGVzIHLDqXN1bHRhdHMgcmFwaWRlcyBl
+dCBlZmZpY2FjZXMgOiBj4oCZZXN0IGNlIHF1ZQpsZXMgYXV0ZXVycyBhcHBlbGxlbnQgbGEgbcOp
+dGhvZGUgRjRYIHF1aSByZXBvc2Ugc3VyIDMgZGlmZsOpcmVudAoKClBIQVNFIDEgOiBGNFggTUlO
+Q0VVUkUKUEhBU0UgMiA6IEY0WCBTSUxPVUhFVFRFClBIQVNFIDMgOiBGNFggU0UgQsOCVAoKIETD
+qWNvdXZyZXogbOKAmWhpc3RvaXJlIGR1IGNvdXBsZSBTdGV2ZSAmIEJlY2t5IEhvbG1hbgoKCgoK
+Q2xpY2sgVW5zdWJzY3JpYmUgfCBSZXBvcnQgU3BhbQoKCgoK
+
+--b1_74748030e1a6ef0e2b2c8158f85e30fd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+</head>
+<body>
+<span style="font-family: 'andale mono', times; font-size:
+medium;">Bonjour,</span><br /><br />
+<p><span style="font-family: 'andale mono', times; font-size:
+medium;">&ldquo;<a
+href="http://www.newlifeherbs.com/iem3/link.php?M=448755&N=95&L=37&F=H"
+target="_blank">Vieille m&eacute;thode corps neuf</a>&ldquo; est un
+programme cr&eacute;&eacute; par un couple am&eacute;ricain Steve Holman et
+sa femme Becky Holman. Ce programme est conduit de main de ma&icirc;tre par
+Steve Hotman, &nbsp;exp&eacute;riment&eacute; en remise en forme et
+r&eacute;dacteur en chef du Magazine Iron Man. Ils sont second&eacute;s
+dans leurs travaux par John M. Rowley. Le programme s&rsquo;&eacute;nonce
+comme le seul programme qui favorise la perte de poids et la remise en
+forme chez les personnes de 40 ans et plus. &ldquo;<a
+href="http://www.newlifeherbs.com/iem3/link.php?M=448755&N=95&L=37&F=H"
+target="_blank">Vieille m&eacute;thode corps neuf</a>&ldquo; regroupe
+plusieurs r&eacute;gimes alimentaires et des s&eacute;ances
+d&rsquo;entra&icirc;nement de courtes dur&eacute;es pour des
+r&eacute;sultats rapides et efficaces : c&rsquo;est ce que les auteurs
+appellent la m&eacute;thode F4X qui repose sur 3 diff&eacute;rent</span><br
+/><br /></p>
+<p></p>
+<ol>
+<li><span style="font-family: 'andale mono', times; font-size:
+medium;">PHASE 1 : F4X MINCEURE</span></li>
+<li><span style="font-family: 'andale mono', times; font-size:
+medium;">PHASE 2 : F4X SILOUHETTE</span></li>
+<li><span style="font-family: 'andale mono', times; font-size:
+medium;">PHASE 3 : F4X SE B&Acirc;T</span></li>
+</ol>
+<p></p>
+<p><strong><span style="font-family: 'andale mono', times; font-size:
+medium;"><a
+href="http://www.newlifeherbs.com/iem3/link.php?M=448755&N=95&L=37&F=H"
+target="_blank"><br />&nbsp;D&eacute;couvrez l&rsquo;histoire du couple
+Steve &amp; Becky Holman<br /><br /><br /></a></span><br />&nbsp;<br
+/><em><a
+href="http://www.newlifeherbs.com/iem3/link.php?M=448755&N=95&L=11&F=H"http://www.newlifeherbs.com/iem3/unsubscribe.php?M=448755&C=be5a4a0b69773d0a42f3249d4993ba9d&L=2&N=95">http://www.newlifeherbs.com/iem3/unsubscribe.php?M=448755&C=be5a4a0b69773d0a42f3249d4993ba9d&L=2&N=95</a>"
+target="_blank">Click Unsubscribe</a>&nbsp;|&nbsp;<a
+href="http://www.newlifeherbs.com/iem3/link.php?M=448755&N=95&L=10&F=H"
+target="_blank">Report Spam</a></em><a
+href="http://www.newlifeherbs.com/iem3/link.php?M=448755&N=95&L=37&F=H"
+target="_blank"></a></strong></p>
+<img
+src="http://www.newlifeherbs.com/iem3/open.php?M=448755&L=2&N=95&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+
+--b1_74748030e1a6ef0e2b2c8158f85e30fd--
+

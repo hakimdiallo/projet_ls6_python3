@@ -1,0 +1,63 @@
+Return-Path: <bounce+tum-4urwH-OMPe@mix.zebigdeals.com>
+Delivered-To: amicheli+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id Y0dKKLShp1ZfAwEAKHrkRA
+	for <amicheli+spam@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 17:41:42 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id DD0C161FEC
+	for <amicheli+spam@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 17:41:42 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 8.272
+X-Spam-Level: ********
+X-Spam-Status: Yes, score=8.272 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_04=0.556, HTML_MESSAGE=0.001,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (body has been altered)"
+	header.d=mix.zebigdeals.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id j47sUlCAHwCn for <amicheli@liafa.univ-paris-diderot.fr>;
+	Tue, 26 Jan 2016 17:41:39 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 2AD6361FEA
+	for <anne.micheli@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 17:41:39 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0QGfdJA005655
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <anne.micheli@liafa.univ-paris-diderot.fr>; Tue, 26 Jan 2016 17:41:39 +0100
+Received: from smtp137.mix.zebigdeals.com (smtp137.mix.zebigdeals.com [82.196.26.137])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0QGeTEw044171
+          for <anne.micheli@liafa.jussieu.fr>; Tue, 26 Jan 2016 17:40:50 +0100 (CET)
+X-Ids:168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=s2c; d=mix.zebigdeals.com;
+ h=Date:To:From:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type; i=news@mix.zebigdeals.com;
+ bh=K9rBPj2XcDtX/nqv9rPWOcFQWMo=;
+ b=zLd3w/szd8tCCS/fwi4obe+W51Maacx81bbbD4EjMOK9FTaGb44KUxM3/FdaNBF6i/9jAkANM/6E
+   J8VJ1EtCovYSvkb0iZ3phMEBMJmQgHFJqIOUPW4MituRqvvmbSPeDx/dZXP91GGQVm35PrAFFHXp
+   x9hXaOYHtNbZuEsCAEg=
+Received: by smtp137.mix.zebigdeals.com id hkugp61vjtgk for <anne.micheli@liafa.jussieu.fr>; Tue, 26 Jan 2016 17:39:12 +0100 (envelope-from <bounce+tum-4urwH-OMPe@mix.zebigdeals.com>)
+Date: Tue, 26 Jan 2016 17:39:12 +0100
+To: anne.micheli@liafa.jussieu.fr
+From: Comparateurs Obseques <news@mix.zebigdeals.com>
+Subject: =?UTF-8?Q?Votre_assurance_obs=C3=A8ques_=C3=A0_partir_de_4,32_euros_par_m?=
+ =?UTF-8?Q?ois?=
+Message-ID: <bounce+tum-4urwH-OMPe@mix.zebigdeals.com>
+List-Unsubscribe: <mailto:bounce+tum-4urwH-OMPe@mix.zebigdeals.com?subject=unsubscribe-tum-4urwH>,<http://trk.mix.zebigdeals.com/usb/tum-4urwH.php>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_d7cd6fa5890007ca93f0453313aeb05c"
+X-Miltered: at potemkin with ID 56A7A1C3.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56A7A17D.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A7A1C3.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounce+tum-4urwH-OMPe@mix.zebigdeals.com>
+X-j-chkmail-Enveloppe: 56A7A17D.002 from smtp137.mix.zebigdeals.com/smtp137.mix.zebigdeals.com/82.196.26.137/smtp137.mix.zebigdeals.com/<bounce+tum-4urwH-OMPe@mix.zebigdeals.com>
+X-Scores-Stats: 56A7A17D.002 B=0.50000 L=0.84370 G=0.84370 Agree    
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 56A7A1C3.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56A7A17D.002 on shiva.jussieu.fr : j-chkmail score : XXXXXXXXXXXXXXX+ : R=. U=########## O=# B=0.844 -> S=2.182
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Tue, 26 Jan 2016 17:41:39 +0100 (CET)

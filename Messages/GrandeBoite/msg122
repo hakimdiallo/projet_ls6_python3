@@ -1,0 +1,157 @@
+Return-Path: <algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 3WQ5GbyqwVYNDAAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:52 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 5245361FA2;
+	Mon, 15 Feb 2016 11:38:52 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 18.31
+X-Spam-Level: ******************
+X-Spam-Status: Yes, score=18.31 tagged_above=-10000 required=5
+	tests=[AC_BR_BONANZA=0.001, BAYES_99=3.5, BAYES_999=0.2,
+	DCC_CHECK=1.1, DIGEST_MULTIPLE=0.293,
+	FREEMAIL_FORGED_FROMDOMAIN=0.001, FREEMAIL_FROM=0.001,
+	FSL_HELO_FAKE=3.89, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	HTML_MESSAGE=0.001, LOTS_OF_MONEY=0.001, MIME_HTML_ONLY=0.723,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_SBL=0.141,
+	RCVD_IN_SBL_CSS=3.335, URIBL_BLACK=1.7, URIBL_DBL_SPAM=2.5]
+	autolearn=unavailable autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=securedsurf.org
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id BNSMItXzqgqa; Mon, 15 Feb 2016 11:38:50 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id A746461FA6;
+	Mon, 15 Feb 2016 11:38:50 +0100 (CET)
+Received: from courrier.univ-paris-diderot.fr (courrier.dsi.univ-paris-diderot.fr [81.194.22.206])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1FAcoIG016136;
+	Mon, 15 Feb 2016 11:38:50 +0100
+Received: by courrier.univ-paris-diderot.fr (Postfix, from userid 500)
+	id 88C06D40AD; Mon, 15 Feb 2016 11:38:50 +0100 (CET)
+X-Original-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Delivered-To: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+Received: from amavis1.dsi.univ-paris-diderot.fr (amavis1.dsi.univ-paris-diderot.fr [172.18.14.76])
+	by courrier.univ-paris-diderot.fr (Postfix) with ESMTP id 214E0D4039
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:49 +0100 (CET)
+Received: from localhost (localhost [127.0.0.1])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id 1E5DD9F7D1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:49 +0100 (CET)
+X-Virus-Scanned: amavisd-new at dsi.univ-paris-diderot.fr
+Authentication-Results: amavis1.dsi.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=securedsurf.org
+Received: from amavis1.dsi.univ-paris-diderot.fr ([127.0.0.1])
+	by localhost (amavis1.dsi.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id 6APm1DCRgJod
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 15 Feb 2016 11:38:48 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [IPv6:2001:660:3301:8000::1:2])
+	by amavis1.dsi.univ-paris-diderot.fr (Postfix) with ESMTP id B2D7FA19F1
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:48 +0100 (CET)
+Received: from mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [81.194.30.253])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u1FAcmL6016119
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:48 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 99C9E61FA5
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:48 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id h6ClVdv26P6k
+	for <algocomp-permanents@listes.sc.univ-paris-diderot.fr>;
+	Mon, 15 Feb 2016 11:38:46 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id D72BB61FA3
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:46 +0100 (CET)
+Received: from securedsurf.org (mmss42.securedsurf.org [68.171.102.68])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u1FAckYc008591
+	for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 15 Feb 2016 11:38:46 +0100
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=securedsurf.org;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding; i=postmaster@securedsurf.org;
+ bh=FrCmeKDQIU/rWNC5eG2mRR/V+vI=;
+ b=ObLbVLRze/VmBfxRdwNyoMfT1K+dr2Da73sAhjIB4SnQHM3fQxxdpvUhV23cU9hhwBm4FhwwRokO
+   EmVl/wwYsYAu+HzHTkxNtx732khmWQuX7Rjuj5ZqNCevF75r/SPxcsl0FSvD7+9hm0xhb9fAMfUY
+   mTq0zNT3PytNGCcMjzY=
+Received: from gmail.com (109.202.107.132) by securedsurf.org id ho525c0001gm for <algocomp-apply@liafa.univ-paris-diderot.fr>; Mon, 15 Feb 2016 05:17:53 +0300 (envelope-from <algocomp-apply@gmail.com>)
+From: algocomp-apply@gmail.com
+To: algocomp-apply@liafa.univ-paris-diderot.fr
+Date: 15 Feb 2016 01:33:16 -0800
+Message-ID: <20160215013316.11E9C3E5E989C67E@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 15 Feb 2016 11:38:50 +0100 (CET)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Mon, 15 Feb 2016 11:38:48 +0100 (CET)
+X-Greylist: Delayed for 01:00:24 by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Mon, 15 Feb 2016 11:38:46 +0100 (CET)
+X-Miltered: at korolev with ID 56C1AABA.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at korolev with ID 56C1AAB8.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at potemkin with ID 56C1AAB6.005 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56C1AABA.000 from courrier.dsi.univ-paris-diderot.fr/courrier.dsi.univ-paris-diderot.fr/null/courrier.univ-paris-diderot.fr/<algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr>
+X-j-chkmail-Enveloppe: 56C1AAB8.002 from mailhub.math.univ-paris-diderot.fr/mailhub.math.univ-paris-diderot.fr/null/mailhub.math.univ-paris-diderot.fr/<algocomp-apply@gmail.com>
+X-j-chkmail-Enveloppe: 56C1AAB6.005 from mmss42.securedsurf.org/mmss42.securedsurf.org/null/securedsurf.org/<algocomp-apply@gmail.com>
+X-j-chkmail-Score: MSGID : 56C1AABA.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C1AAB8.002 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56C1AAB6.005 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Ham
+Subject: [algocomp-permanents] algocomp-apply, Your $2,843.22 Commission
+ Payment Due
+X-Loop: algocomp-permanents@listes.sc.univ-paris-diderot.fr
+X-Sequence: 1443
+Errors-to: algocomp-permanents-owner@listes.sc.univ-paris-diderot.fr
+Precedence: list
+Precedence: bulk
+X-no-archive: yes
+List-Id: <algocomp-permanents.listes.sc.univ-paris-diderot.fr>
+List-Help: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=help>
+List-Subscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=subscribe%20algocomp-permanents>
+List-Unsubscribe: <mailto:sympa@listes.sc.univ-paris-diderot.fr?subject=unsubscribe%20algocomp-permanents>
+List-Post: <mailto:algocomp-permanents@listes.sc.univ-paris-diderot.fr>
+List-Owner: <mailto:algocomp-permanents-request@listes.sc.univ-paris-diderot.fr>
+List-Archive: <http://listes.sc.univ-paris-diderot.fr/sympa/arc/algocomp-permanents>
+
+<HTML><HEAD><TITLE></TITLE>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.18163"></HEAD>
+<body bottommargin=3D"5" leftmargin=3D"5" rightmargin=3D"5" topmargin=3D"5"=
+ bgcolor=3D"#ffffff"><FONT color=3D#000000 size=3D2 face=3DArial>
+<DIV>Hey, </DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Do you still want your $2,843.22 in commissions? </DIV>
+<DIV>&nbsp;</DIV>
+<DIV>We haven't heard from you and your commissions are due today. If so, w=
+e do need your PayPal ID to pay you the commissions due. </DIV>
+<DIV>&nbsp;</DIV>
+<DIV><A href=3D"http://trustedclick.org/?clickid=3Dalgocomp-apply"><FONT co=
+lor=3D#0000ff><U>Insert Paypal ID Here!</U></FONT></A></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Again, your commissions are due today and we can't pay you without a p=
+roper payment method. When you signed up you selected PayPal. Please provid=
+e your PayPal ID as soon as possible. </DIV>
+<DIV>&nbsp;</DIV>
+<DIV><A href=3D"http://trustedclick.org/?clickid=3Dalgocomp-apply"><FONT co=
+lor=3D#0000ff><U>Access Your Account HERE!</U></FONT></A></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Thank me later,</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><B>Beverly R. Washington</B></DIV>
+<DIV>237 Marion Street</DIV>
+<DIV>Brattleboro, VT 05301</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Ps. If l<FONT color=3D#000000>ink above are not clickable please copy =
+and paste below:</FONT></DIV>
+<DIV><FONT color=3D#000000>&gt;&gt; </FONT><A href=3D"http://trustedclick.o=
+rg/?clickid=3Dalgocomp-apply"><FONT color=3D#0000ff><U>http://trustedclick.=
+org/?clickid=3Dalgocomp-apply</U></FONT></A></DIV>
+<DIV><FONT color=3D#000000></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#000000><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>=
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR=
+><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>If you want to unsubsc=
+ribe please </FONT><A href=3D"http://trustedclick.org/unsubscribe.php"><FON=
+T color=3D#0000ff><U>click here</U></FONT></A><FONT color=3D#000000>.</FONT=
+></DIV></FONT></BODY></HTML>

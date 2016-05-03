@@ -1,0 +1,170 @@
+Return-Path: <systers-bounces@systers.org>
+Delivered-To: laplante@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id e5WBAVZJsVZYywAAKHrkRA
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 03 Feb 2016 01:27:32 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id E0BE461FFF
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 01:27:32 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: NO
+X-Spam-Score: -1.648
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.648 tagged_above=-10000 required=5
+	tests=[BAYES_00=-1.9, FREEMAIL_FORGED_FROMDOMAIN=0.25,
+	FREEMAIL_FROM=0.001, HEADER_FROM_DIFFERENT_DOMAINS=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=fail (2048-bit key) reason="fail (message has been altered)"
+	header.d=gmail.com
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id i8exqaBTFxy6 for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed,  3 Feb 2016 01:27:31 +0100 (CET)
+Received: from korolev.univ-paris7.fr (korolev.univ-paris7.fr [194.254.61.138])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 0626462014
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 01:27:31 +0100 (CET)
+Received: from mx2.u-psud.fr (mx2.u-psud.fr [129.175.212.65])
+	by korolev.univ-paris7.fr (8.14.4/8.14.4/relay1/56228) with ESMTP id u130RUBT031081
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed, 3 Feb 2016 01:27:30 +0100
+Received: from mx2.u-psud.fr (mx2 [127.0.0.1])
+	by localhost (MTA) with SMTP id 17F323024F8
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 01:27:30 +0100 (CET)
+Received: from ext.lri.fr (ext.lri.fr [129.175.15.4])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mx2.u-psud.fr (MTA) with ESMTPS id 3ACB4302511
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 01:27:29 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 209CE4018F
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 01:27:29 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (ext.lri.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 3NU6s7tliA0r for <laplante@liafa.univ-paris-diderot.fr>;
+	Wed,  3 Feb 2016 01:27:19 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by ext.lri.fr (Postfix) with ESMTP id 01AD040134
+	for <laplante@liafa.univ-paris-diderot.fr>; Wed,  3 Feb 2016 01:27:18 +0100 (CET)
+Received: by smtp-old.lri.f (Postfix)
+	id ED864E0ED7; Wed,  3 Feb 2016 01:27:18 +0100 (CET)
+Delivered-To: laplante@lri.fr
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by smtp-old.lri.f (Postfix) with ESMTP id EA840E02DA
+	for <laplante@lri.fr>; Wed,  3 Feb 2016 01:27:18 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by lri.lri.fr (Postfix) with ESMTPS id A743CE00BE
+	for <laplante@lri.fr>; Wed,  3 Feb 2016 01:27:19 +0100 (CET)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id BA8F763D2E
+	for <laplante@lri.fr>; Tue,  2 Feb 2016 18:27:17 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (mx.cs.uchicago.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id rfMz8_RtGYbn; Tue,  2 Feb 2016 18:27:16 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by mx.cs.uchicago.edu (Postfix) with ESMTP id 2069363D20;
+	Tue,  2 Feb 2016 18:27:16 -0600 (CST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by fraxinus.osuosl.org (Postfix) with ESMTP id 599AAA5DE9;
+	Wed,  3 Feb 2016 00:27:15 +0000 (UTC)
+X-Virus-Scanned: amavisd-new at osuosl.org
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id XX9ZIrPoML6v; Wed,  3 Feb 2016 00:27:14 +0000 (UTC)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by fraxinus.osuosl.org (Postfix) with ESMTP id E1B0BA5DEF;
+	Wed,  3 Feb 2016 00:27:13 +0000 (UTC)
+X-Original-To: systers+new@systers.org
+Delivered-To: systers+new@systers.org
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by systers-prod.osuosl.org (Postfix) with ESMTP id 8085420E0E
+	for <systers+new@systers.org>; Wed,  3 Feb 2016 00:27:10 +0000 (UTC)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by whitealder.osuosl.org (Postfix) with ESMTP id 7291F921FA
+	for <systers+new@systers.org>; Wed,  3 Feb 2016 00:27:10 +0000 (UTC)
+X-Virus-Scanned: amavisd-new at osuosl.org
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	by localhost (.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id kWL8YjNiDVb5 for <systers+new@systers.org>;
+	Wed,  3 Feb 2016 00:27:10 +0000 (UTC)
+X-Greylist: IP, sender and recipient auto-whitelisted, not delayed by milter-greylist-4.2.7 (korolev.univ-paris7.fr [194.254.61.138]); Wed, 03 Feb 2016 01:27:30 +0100 (CET)
+X-Greylist: domain auto-whitelisted by SQLgrey-1.7.6
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	[209.85.223.181])
+	by whitealder.osuosl.org (Postfix) with ESMTPS id E612E8C658
+	for <systers+new@systers.org>; Wed,  3 Feb 2016 00:27:09 +0000 (UTC)
+Received: by mail-io0-f181.google.com with SMTP id d63so37543658ioj.2
+	for <systers+new@systers.org>; Tue, 02 Feb 2016 16:27:09 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=from:content-type:content-transfer-encoding:mime-version:subject
+	:message-id:date:to;
+	bh=7Ls7G3mhHLtGtoFrgsUP6767LQIxfkypFplNJRRGHSQ=;
+	b=aX9TKzYVFNU0RTb5KBKhkx20WOHmV69Nhs3kmG0XAiK3WG2eHYaepljcrynt+SvygS
+	zozm9htHy/c90L5YGv1jgE9m6nLEihnNUA0ZYo6fYXuopi4lDHqR3qasuBh89+H11Fj5
+	4U58rsQu1tfbuQjPzPjRsa3nYUzngtKfHbsTOulhXbLi0bJR5W5J5UUAWXi4Q9cRKWrm
+	O4dYKImwILHMvfjb5GKQg9j95b4vcaWzDi21Qcd1dnyE3CGY2baiJs4ciPP5dmL8X4/z
+	S8waOhqVYbeQyWh0uDXlXUm+Mp3J3QUI8SC8110n6SEzUQ9CjpCoNmyj+vhQdplh/KXM
+	PuNg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=1e100.net; s=20130820;
+	h=x-gm-message-state:from:content-type:content-transfer-encoding
+	:mime-version:subject:message-id:date:to;
+	bh=7Ls7G3mhHLtGtoFrgsUP6767LQIxfkypFplNJRRGHSQ=;
+	b=Jwel+rI6Rq6nurAGm4H9zQL75HZ9yYnc2Yb6NO+NCMxHETZSbvrvb91NBQCrPmgOdt
+	yGtBIutlX+heraw9lHYiaw+0z6f8wW5yQwHsFvVZiqxquk6ERxLbDW5NQbj1swyoewpa
+	kGxUxxKYRw7gZ54jI7ktcHXVFH87itxCEUwjqYXFVzm4mjB7gATOPqR+3nFmmR40uURb
+	JIKZTGRUiuLZ/Oz2crz6gkpxSCxvpfgp8N/7mxlWbi2klV91JLFzy8JGlrtz4diFjcNO
+	IEJPUlSleQAcjCjsnvM3GGc5fsUk5/C9o/QPS28I0qRZ0ZTxeGU2Q60Q7QDaR/ugRcHW
+	lqOA==
+X-Gm-Message-State: AG10YOQmpunTUDnqNtICQbjqdkS/G3tyWW8mnungM50gqCkk2ZOH63YYvP97H//QrnheKA==
+X-Received: by 10.107.37.147 with SMTP id l141mr533673iol.138.1454459229423;
+	Tue, 02 Feb 2016 16:27:09 -0800 (PST)
+Received: from [129.175.15.4] (ext.lri.fr [129.175.15.4])
+	[96.42.47.88])
+	by smtp.gmail.com with ESMTPSA id n3sm2047130iga.9.2016.02.02.16.27.08
+	for <systers+new@systers.org> (version=TLSv1/SSLv3 cipher=OTHER);
+	Tue, 02 Feb 2016 16:27:08 -0800 (PST)
+From: Kathryn Sweet <kathryn.z.sweet@gmail.com>
+Mime-Version: 1.0 (1.0)
+Message-Id: <650AB937-BB38-4AA8-B90F-90F426FD9105@gmail.com>
+Date: Tue, 2 Feb 2016 18:27:08 -0600
+X-Mailer: iPhone Mail (13D15)
+To: systers+community18@systers.org
+Subject: [Systers] New Systers Community College List - Call for Mods
+X-BeenThere: systers@systers.org
+X-Mailman-Version: 2.1.12
+Precedence: list
+List-Id: Systers Email List <systers.systers.org>
+List-Unsubscribe: <http://systers.org/mailman/options/systers>,
+	<mailto:systers-request@systers.org?subject=unsubscribe>
+List-Archive: <http://systers.org/mailman/private/systers>
+List-Help: <mailto:systers-request@systers.org?subject=help>
+List-Subscribe: <http://systers.org/mailman/listinfo/systers>,
+	<mailto:systers-request@systers.org?subject=subscribe>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Sender: systers-bounces@systers.org
+Errors-To: systers-bounces@systers.org
+X-Miltered: at korolev with ID 56B14972.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56B14972.000 from mx2.u-psud.fr/mx2.u-psud.fr/null/mx2.u-psud.fr/<systers-bounces@systers.org>
+X-j-chkmail-Score: MSGID : 56B14972.000 on korolev.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Status: Ham
+
+Hi Systers,
+
+Last week a new Systers subgroup launched, Systers-CommColl, for community college women & nonbinary people in tech! I'm hoping this will become a good networking resource for community college students, alumnae, faculty, and staff. If you fall into one of these categories, the list is now open for subscribers!
+
+Also, Systers-CommColl will need a few moderators, so if you are interested in serving as a moderator, or know someone who might be, please let me know. 
+
+Many thanks to Rose and Julia for their help in getting the new list off the ground. Hope to see some of you over there!
+
+In systerhood,
+
+Kat Sweet
+(Madison Area Technical College '17)
+
+
+To unsubscribe from this conversation, send email to <systers+community18+unsubscribe@systers.org> or visit <http://systers.org/mailman/options/systers?override=7708&preference=0>
+To contribute to this conversation, use your mailer's reply-all or reply-group command or send your message to systers+community18@systers.org
+To start a new conversation, send email to <systers+new@systers.org>
+To unsubscribe entirely from systers, send email to <systers-request@systers.org> with subject unsubscribe.

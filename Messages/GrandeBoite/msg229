@@ -1,0 +1,333 @@
+Return-Path: <bounces@email-wizz.ovh>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id coz1KWcdqVaI/AAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Wed, 27 Jan 2016 20:42:18 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id 0C6BB61FAA;
+	Wed, 27 Jan 2016 20:42:15 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 6.938
+X-Spam-Level: ******
+X-Spam-Status: Yes, score=6.938 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7]
+	autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=email-wizz.ovh header.b=zksKSID6;
+	domainkeys=neutral (1024-bit key) reason="invalid (bad identity)"
+	header.from=contact@email-wizz.ovh header.d=email-wizz.ovh;
+	dkim=neutral reason="invalid (public key: not available)"
+	header.d=email-wizz.ovh header.b=TPNM32Hv
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id O72m1EKU8Ke7; Wed, 27 Jan 2016 20:42:10 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id 2E18D61FA3
+	for <auliafa@liafa.univ-paris-diderot.fr>; Wed, 27 Jan 2016 20:42:09 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0RJg9mE031106
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <auliafa@liafa.univ-paris-diderot.fr>; Wed, 27 Jan 2016 20:42:09 +0100
+Received: from mail1fr15.email-wizz.ovh (mail1fr15.email-wizz.ovh [51.255.55.52])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0RJf8CP090727
+          for <auliafa@liafa.jussieu.fr>; Wed, 27 Jan 2016 20:41:31 +0100 (CET)
+X-Ids: 165
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=email-wizz.ovh;
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id; i=contact@email-wizz.ovh;
+ bh=4eqJOll/WIRzUNOgghENz6U8Xcw=;
+ b=zksKSID6466NJqHBbM4hSVkgTCKntMYUszmkwqqSO3+XblmyCMExiaLQb/5MDYJerx+Ss7xl0/kd
+   rqBXaCUt0dRYpqiC1lApP73QeBEi6fWxvMbqEGL9zr4Qoj4geaMUioZ8xXdNnNhI/kQlRpR6ORkp
+   JxJRRvBfxuBqMgbN9CA=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=email-wizz.ovh;
+ b=dMdjPv337kt8lEySoxpiPKgjLb5Lu637pqZjP9yz80B05OUP5uQKujLVdwrZVQYq44w/QUdcG2kV
+   Si8uXd3r500FfD41AVDFjepX/a2GRA5EfrPHjPKzpz19Iw9I6K/Se2i6mOVSgYF9CJj50743LOpD
+   c17IX7DAryiLymZGc04=;
+DKIM-Signature: v=1; a=rsa-sha1; bh=tyaIUEI3ZlWcN4bQcrWzCWIu/sc=;
+ d=email-wizz.ovh; h=Message-ID: Date: Subject: From: Reply-To: To:
+ MIME-Version: Content-Type: X-Mw-Customer-Uid: X-Receiver: X-Mw-Tracking-Did:
+ X-Mw-Campaign-Uid: List-Unsubscribe: X-Mw-Customer-Gid: List-Id:
+ X-Mw-Subscriber-Uid: X-Report-Abuse: X-Sender: Feedback-ID: X-Mw-Mailer:
+ X-Mw-Delivery-Sid; i=@email-wizz.ovh; s=mailer; t=1453923668;
+ b=TPNM32HvFvy6picPsPlKKeqIcbT3wukogDOBBChEna4vzFRPxFMr8yZ/ZI9nj9vcwt8OEcjHm
+ LwJhn6C4gHGRBFAvW8CIPWO/g7rWE+2gPuIrUyLCD+JhDom0bla3Lfgjwja/ws7boBVSrkk3o
+ BzNKlCA/5v5/Wz+2Pk4/e9pKE=
+Message-ID: <5f6318b0c56287dbc75e9129315b6e87@email-wizz.ovh>
+Date: Wed, 27 Jan 2016 19:41:08 +0000
+Subject: Vente flash Saint Valentin, jusqu'a -80 pourcent
+From: =?utf-8?Q?Pr=C3=A9parez?= votre 14 =?utf-8?Q?f=C3=A9vrier?=
+ <contact@email-wizz.ovh>
+Reply-To: =?utf-8?Q?Pr=C3=A9parez?= votre 14 =?utf-8?Q?f=C3=A9vrier?=
+ <contact@email-wizz.ovh>
+To: "auliafa@liafa.jussieu.fr" <auliafa@liafa.jussieu.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1453923668_9e370bfbb42b26cce0e891e0f7fc88d7_=_"
+X-Mw-Campaign-Uid: gb811oj6k140a
+List-Unsubscribe: <http://track.email-wizz.ovh/index.php/lists/xs242ana461c4/unsubscribe/vx372d97ggc76/gb811oj6k140a>,
+ <mailto:contact@wizzema-3020642.ovh?subject=Unsubscribe&body=Please
+ unsubscribe me from Newlisd list.>
+X-Mw-Customer-Gid: 17
+List-Id: xs242ana461c4 <Newlisd>
+X-Receiver: auliafa@liafa.jussieu.fr
+X-Report-Abuse: Please report abuse for this campaign here:
+ http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/report-abuse/xs242ana461c4/vx372d97ggc76
+X-Mw-Subscriber-Uid: vx372d97ggc76
+Feedback-ID: gb811oj6k140a:vx372d97ggc76:xs242ana461c4:ac787abydnb09
+X-Sender: bounces@email-wizz.ovh
+X-Mw-Customer-Uid: ac787abydnb09
+X-Mw-Mailer: SwiftMailer
+X-Mw-Delivery-Sid: 95
+X-Mw-Tracking-Did: 4
+X-Miltered: at potemkin with ID 56A91D91.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56A91D54.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56A91D91.000 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounces@email-wizz.ovh>
+X-j-chkmail-Enveloppe: 56A91D54.001 from mail1fr15.email-wizz.ovh/mail1fr15.email-wizz.ovh/51.255.55.52/mail1fr15.email-wizz.ovh/<bounces@email-wizz.ovh>
+X-Scores-Stats: 56A91D54.001 B=0.50000 L=0.87771 G=0.87771 Agree    
+X-j-chkmail-Score: MSGID : 56A91D91.000 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56A91D54.001 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.878 -> S=0.901
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Wed, 27 Jan 2016 20:42:09 +0100 (CET)
+
+
+--_=_swift_v4_1453923668_9e370bfbb42b26cce0e891e0f7fc88d7_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ METTRE CET EMAIL EN IND=C3=89SIRABLE
+http://track.email-wizz.ovh/index.p=
+hp/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/674f0454e0fce8472ae2df71=
+48980a1497f87357
+
+
+Si ce message ne s'affiche pas correctement, consu=
+ltez la version en
+ligne
+http://track.email-wizz.ovh/index.php/campaign=
+s/gb811oj6k140a/track-url/vx372d97ggc76/184be97b9ddf4a4f59206cfcaf87288409f=
+30fbf
+
+
+=09=09
+http://track.email-wizz.ovh/index.php/campaigns/gb81=
+1oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d=
+
+
+Bonjour,
+
+ Vente Flash de folie dans votre boutique pr=C3=A9f=
+=C3=A9r=C3=A9e ! Pendant
+quelques jours seulement, d=C3=A9couvrez une s=
+=C3=A9lection de nos best
+sellers sp=C3=A9cial Saint-Valentin =C3=A0 prix=
+ d=C3=A9jant=C3=A9s ! Lingerie, toys,
+articles fantaisie et de bien-=
+=C3=AAtre ... Vous n'aurez que l'embarras du
+choix pour pr=C3=A9parez une=
+ Saint-Valentin survolt=C3=A9e ! Visitez la
+boutique maintenant pour prof=
+iter de nos bons plans, vite !
+http://track.email-wizz.ovh/index.php/camp=
+aigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d47=
+8c04d2e4d
+
+
+=09=09
+http://track.email-wizz.ovh/index.php/campaigns/=
+gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2=
+e4d
+ =09=09
+http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k14=
+0a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d
+ =09=
+=09
+http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-u=
+rl/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d
+ =09=09
+http:=
+//track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97=
+ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d
+
+=09=09
+http://track.e=
+mail-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/498=
+0edf115b3ca8c0f528e80a930b882bcd4da96
+ =09=09
+http://track.email-wizz.o=
+vh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/0b3a7f6bd26cf0=
+aad3dc9bb51b43952990a850da
+ =09=09
+http://track.email-wizz.ovh/index.ph=
+p/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/8331944a3e51af0739d3cda5f=
+fa6da88e776e15c
+ =09=09
+http://track.email-wizz.ovh/index.php/campaigns=
+/gb811oj6k140a/track-url/vx372d97ggc76/4b2447a3140f46892da6dbe12d431261cebe=
+9f52
+
+=09=09
+http://track.email-wizz.ovh/index.php/campaigns/gb811oj6=
+k140a/track-url/vx372d97ggc76/35832785a8eab0c1e0c70bff506fbe7a78e35a98
+ =
+=09=09
+http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/trac=
+k-url/vx372d97ggc76/f1a097354220972a0b3f67294a6b079b252aa0d4
+ =09=09
+ht=
+tp://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372=
+d97ggc76/ba82380da68e95c97821fcd631103c2e06d5a1b8
+ =09=09
+http://track.=
+email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/ba=
+fd7d3f8c4cd52c2d710b89d48b6f5730ed66d3
+
+=09=09
+http://track.email-wiz=
+z.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cb=
+ff460a58ee289a019d478c04d2e4d
+
+=09=09
+http://track.email-wizz.ovh/ind=
+ex.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58e=
+e289a019d478c04d2e4d
+
+ POUR NE PLUS RECEVOIR CE GENRE DE MESSAGE DE NOT=
+RE PART D=C3=89SABONNEZ
+VOUS.
+http://track.email-wizz.ovh/index.php/cam=
+paigns/gb811oj6k140a/track-url/vx372d97ggc76/858704162973fc48df5a0008549e3e=
+03a1c93801
+
+
+--_=_swift_v4_1453923668_9e370bfbb42b26cce0e891e0f7fc88d7_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html><head><meta name="charset" 
+content="utf-8"><title>Boutique</title></head><body>
+
+            <center><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/674f0454e0fce8472ae2df7148980a1497f87357" 
+style="font-family:Arial;font-size:12px;color:#000;text-decoration:none;" 
+target="_blank"><b>Mettre cet email en ind&eacute;sirable</b></a></center>
+
+<center>&nbsp;
+<center>
+<p style="font-family:Arial;font-size:12px;">Si ce message ne s'affiche pas 
+correctement, <a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/184be97b9ddf4a4f59206cfcaf87288409f30fbf" 
+style="font-family:Arial;font-size:12px;color:#666;text-decoration:none;" 
+target="_blank"> consultez la version en ligne</a></p>
+</center>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" 
+style="border:0px;border-collapse:collapse;padding:0px;" 
+width="600"><tbody><tr><td colspan="2" valign="top"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="a0" border="0" height="100" 
+src="http://img.super-frost.fr/images/img19/a0.jpg" width="600"></a></td>
+		</tr><tr><td colspan="2" style="font-family:Arial, Helvetica, 
+sans-serif;color:#000000;font-size:13px;text-align:justify;">
+			<p>Bonjour,<br><br>
+			Vente Flash de folie dans votre boutique pr&eacute;f&eacute;r&eacute;e ! 
+Pendant quelques jours seulement, d&eacute;couvrez une s&eacute;lection de 
+nos best sellers sp&eacute;cial Saint-Valentin &agrave; prix 
+d&eacute;jant&eacute;s ! Lingerie, toys, articles fantaisie et de 
+bien-&ecirc;tre ... Vous n'aurez que l'embarras du choix pour pr&eacute;parez 
+une Saint-Valentin survolt&eacute;e ! <a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d">Visitez 
+la boutique maintenant pour profiter de nos bons plans, vite !</a></p>
+			</td>
+		</tr></tbody></table><table align="center" border="0" cellpadding="0" 
+cellspacing="0" style="border:0px;border-collapse:collapse;padding:0px;" 
+width="600"><tbody><tr><td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="a1" border="0" height="254" 
+src="http://img.super-frost.fr/images/img19/a1.jpg" style="display:block;" 
+width="152"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="2b" border="0" height="254" 
+src="http://img.super-frost.fr/images/img19/2b.jpg" style="display:block;" 
+width="149"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="c3" border="0" height="254" 
+src="http://img.super-frost.fr/images/img19/c3.jpg" style="display:block;" 
+width="162"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="4d" border="0" height="254" 
+src="http://img.super-frost.fr/images/img19/4d.jpg" style="display:block;" 
+width="137"></a></td>
+		</tr><tr><td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/4980edf115b3ca8c0f528e80a930b882bcd4da96"><img 
+alt="e5" border="0" height="424" 
+src="http://img.super-frost.fr/images/img19/e5.jpg" style="display:block;" 
+width="152"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/0b3a7f6bd26cf0aad3dc9bb51b43952990a850da"><img 
+alt="6f" border="0" height="424" 
+src="http://img.super-frost.fr/images/img19/6f.jpg" style="display:block;" 
+width="149"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/8331944a3e51af0739d3cda5ffa6da88e776e15c"><img 
+alt="g7" border="0" height="424" 
+src="http://img.super-frost.fr/images/img19/g7.jpg" style="display:block;" 
+width="162"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/4b2447a3140f46892da6dbe12d431261cebe9f52"><img 
+alt="8h" border="0" height="424" 
+src="http://img.super-frost.fr/images/img19/8h.jpg" style="display:block;" 
+width="137"></a></td>
+		</tr><tr><td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/35832785a8eab0c1e0c70bff506fbe7a78e35a98"><img 
+alt="e5" border="0" height="429" 
+src="http://img.super-frost.fr/images/img19/i9.jpg" style="display:block;" 
+width="152"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/f1a097354220972a0b3f67294a6b079b252aa0d4"><img 
+alt="10j" border="0" height="429" 
+src="http://img.super-frost.fr/images/img19/10j.jpg" style="display:block;" 
+width="149"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/ba82380da68e95c97821fcd631103c2e06d5a1b8"><img 
+alt="k11" border="0" height="429" 
+src="http://img.super-frost.fr/images/img19/k11.jpg" style="display:block;" 
+width="162"></a></td>
+			<td valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/bafd7d3f8c4cd52c2d710b89d48b6f5730ed66d3"><img 
+alt="12l" border="0" height="429" 
+src="http://img.super-frost.fr/images/img19/12l.jpg" style="display:block;" 
+width="137"></a></td>
+		</tr><tr><td colspan="4" valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="m13" border="0" height="80" 
+src="http://img.super-frost.fr/images/img19/m13.jpg" style="display:block;" 
+width="600"></a></td>
+		</tr><tr><td colspan="4" valign="bottom"><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/475b06a92cbff460a58ee289a019d478c04d2e4d"><img 
+alt="14n" border="0" height="138" 
+src="http://img.super-frost.fr/images/img19/14n.jpg" style="display:block;" 
+width="600"></a></td>
+		</tr></tbody></table>
+&nbsp;
+
+<center><a 
+href="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-url/vx372d97ggc76/858704162973fc48df5a0008549e3e03a1c93801" 
+style="font-family:Arial;font-size:12px;color:#000;text-decoration:none;" 
+target="_blank"><b>Pour ne plus recevoir ce genre de message de notre part 
+d&eacute;sabonnez vous.</b></a></center>
+<img alt="" height="1" 
+src="http://ext.adleadevent.com/adtckrtg.php?ids=1437&amp;hash=%25%25md5%25%25" 
+width="1"></center><img width="1" height="1" 
+src="http://track.email-wizz.ovh/index.php/campaigns/gb811oj6k140a/track-opening/vx372d97ggc76" 
+alt="" />
+</body></html>
+
+
+--_=_swift_v4_1453923668_9e370bfbb42b26cce0e891e0f7fc88d7_=_--

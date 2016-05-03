@@ -1,0 +1,419 @@
+Return-Path: <bounces@vligma.ovh>
+Delivered-To: laplante+spam@liafa.univ-paris-diderot.fr
+Received: from mailhub.math.univ-paris-diderot.fr ([81.194.30.253])
+	by mailhost.liafa.univ-paris-diderot.fr (Dovecot) with LMTP id 0wRdHDDUrVY39gAAKHrkRA
+	for <laplante+spam@liafa.univ-paris-diderot.fr>; Sun, 31 Jan 2016 10:30:24 +0100
+Received: from mailhub.math.univ-paris-diderot.fr (localhost [127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTP id D47F561FA5;
+	Sun, 31 Jan 2016 10:30:21 +0100 (CET)
+X-Virus-Scanned: amavisd-new at math.univ-paris-diderot.fr
+X-Spam-Flag: YES
+X-Spam-Score: 11.789
+X-Spam-Level: ***********
+X-Spam-Status: Yes, score=11.789 tagged_above=-10000 required=5
+	tests=[BAYES_99=3.5, BAYES_999=0.2, DCC_CHECK=1.1,
+	DIGEST_MULTIPLE=0.293, HTML_IMAGE_RATIO_02=0.437, HTML_MESSAGE=0.001,
+	RAZOR2_CF_RANGE_51_100=0.5, RAZOR2_CF_RANGE_E8_51_100=1.886,
+	RAZOR2_CHECK=0.922, RCVD_IN_DNSWL_NONE=-0.0001, URIBL_BLACK=1.7,
+	URIBL_JP_SURBL=1.25] autolearn=no autolearn_force=no
+Authentication-Results: mailhub.math.univ-paris-diderot.fr (amavisd-new);
+	dkim=pass (1024-bit key) header.d=vligma.ovh header.b=PiNPOSte;
+	domainkeys=fail (1024-bit key)
+	reason="fail (message has been altered)"
+	header.from=contact@vligma.ovh header.d=vligma.ovh; dkim=neutral
+	reason="invalid (public key: not available)" header.d=vligma.ovh
+	header.b=t1KpwYCk
+Received: from mailhub.math.univ-paris-diderot.fr ([127.0.0.1])
+	by mailhub.math.univ-paris-diderot.fr (mailhub.math.univ-paris-diderot.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id dK8_bnv_Xjfs; Sun, 31 Jan 2016 10:30:18 +0100 (CET)
+Received: from potemkin.univ-paris7.fr (potemkin.univ-paris7.fr [194.254.61.141])
+	by mailhub.math.univ-paris-diderot.fr (Postfix) with ESMTPS id B703A61FA1
+	for <auliafa@liafa.univ-paris-diderot.fr>; Sun, 31 Jan 2016 10:30:17 +0100 (CET)
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by potemkin.univ-paris7.fr (8.14.4/8.14.4/relay2/56228) with ESMTP id u0V9UH3b005050
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <auliafa@liafa.univ-paris-diderot.fr>; Sun, 31 Jan 2016 10:30:17 +0100
+Received: from mail1fr6.vligma.ovh (mail1fr6.vligma.ovh [151.80.121.110])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id u0V9SKvC019043
+          for <auliafa@liafa.jussieu.fr>; Sun, 31 Jan 2016 10:28:38 +0100 (CET)
+X-Ids: 168
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=vligma.ovh;
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id; i=contact@vligma.ovh;
+ bh=XregA8jNaJ1eGH9YBASnRVTDdNo=;
+ b=PiNPOSte92PeOlPesR7pC1OQL/nVn+l2T8DEALoGuIlM6gnE0AAzuMFon1vZO0IhNY9NgBRYb+SK
+   hQ92F6r/YhmtKYuDASy2KLk9mbAUNFNgWWDj7XvzBx4jNQiElBwHBNx3Cxfxc5qQKG3mo3sMQAho
+   3E7VoXwYNZflpPrqqpw=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=vligma.ovh;
+ b=crt7kDDGET7kfnpNf4C/xNG1YtAnTwxJ1C8cmjWEqamSdBbHMKIB90HU8SvOrdBTDNTXuLhtuOF+
+   7ZqgslFYmAJIROnONKiJ/9dtb5uIxFkANtj+5NuBVIjDrVnbSOa/O/k6sFeIItOzqTKcDRIZ7Jn7
+   Qf1noKCbuZ+LVRCC0mE=;
+DKIM-Signature: v=1; a=rsa-sha1; bh=g2s2NB/9HrBh1X4DYwmB5OuQ98E=;
+ d=vligma.ovh; h=Message-ID: Date: Subject: From: Reply-To: To: MIME-Version:
+ Content-Type: X-Mw-Customer-Uid: X-Receiver: X-Mw-Tracking-Did:
+ X-Mw-Campaign-Uid: List-Unsubscribe: X-Mw-Customer-Gid: List-Id:
+ X-Mw-Subscriber-Uid: X-Report-Abuse: X-Sender: Feedback-ID: X-Mw-Mailer:
+ X-Mw-Delivery-Sid; i=@vligma.ovh; s=mailer; t=1454232498;
+ b=t1KpwYCkrUxw93rP//DIY/FZDbKXyiX9Vn7X9wjCJJiOzpk03mAMA/qu3NQevXNiN82TiMz0q
+ Ojd614oaGZzvB3gYQnHeXANs9wQiUQBzNLbsT1BK/uwNC70UGBygae5qieALWqXnWpOZ2LOVD
+ i5OgQPvDc1SVbetZ3Rx+CRBEE=
+Message-ID: <cf18214e676ca53d1e5cb1bb179d6c2c@vligma.ovh>
+Date: Sun, 31 Jan 2016 09:28:18 +0000
+Subject: =?utf-8?Q?Jusqu=27=C3=A0?= 70 pourcent sur des bagages de grandes
+ marques !
+From: Bagages - Soldes <contact@vligma.ovh>
+Reply-To: Bagages - Soldes <contact@vligma.ovh>
+To: "auliafa@liafa.jussieu.fr" <auliafa@liafa.jussieu.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1454232498_d434b43885795434d55825b8237cbeef_=_"
+X-Mw-Campaign-Uid: yy2464p7t62ce
+List-Unsubscribe: <http://vligma.ovh/index.php/lists/xa1695ect4836/unsubscribe/yw786lk8f27c2/yy2464p7t62ce>,
+ <mailto:contact@vligma.ovh?subject=Unsubscribe&body=Please unsubscribe me
+ from Vl Plans list.>
+X-Mw-Customer-Gid: 20
+List-Id: xa1695ect4836 <Vl Plans>
+X-Receiver: auliafa@liafa.jussieu.fr
+X-Report-Abuse: Please report abuse for this campaign here:
+ http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/report-abuse/xa1695ect4836/yw786lk8f27c2
+X-Mw-Subscriber-Uid: yw786lk8f27c2
+Feedback-ID: yy2464p7t62ce:yw786lk8f27c2:xa1695ect4836:hn383oknam1e8
+X-Sender: bounces@vligma.ovh
+X-Mw-Customer-Uid: hn383oknam1e8
+X-Mw-Mailer: SwiftMailer
+X-Mw-Delivery-Sid: 6
+X-Mw-Tracking-Did: 1
+X-Miltered: at potemkin with ID 56ADD429.003 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 56ADD3B4.000 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 56ADD429.003 from shiva.jussieu.fr/shiva.jussieu.fr/null/shiva.jussieu.fr/<bounces@vligma.ovh>
+X-j-chkmail-Enveloppe: 56ADD3B4.000 from mail1fr6.vligma.ovh/mail1fr6.vligma.ovh/151.80.121.110/mail1fr6.vligma.ovh/<bounces@vligma.ovh>
+X-Scores-Stats: 56ADD3B4.000 B=0.50000 L=0.85331 G=0.85331 Agree    
+X-j-chkmail-Score: MSGID : 56ADD429.003 on potemkin.univ-paris7.fr : j-chkmail score : . : R=. U=. O=. B=0.000 -> S=0.000
+X-j-chkmail-Score: MSGID : 56ADD3B4.000 on shiva.jussieu.fr : j-chkmail score : XXXXXX : R=. U=. O=# B=0.853 -> S=0.881
+X-j-chkmail-Status: Ham
+X-j-chkmail-Status: Spam HI
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-4.2.7 (potemkin.univ-paris7.fr [194.254.61.141]); Sun, 31 Jan 2016 10:30:17 +0100 (CET)
+
+
+--_=_swift_v4_1454232498_d434b43885795434d55825b8237cbeef_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=20
+
+Mettre ce message en indesirable
+http://vligma.ovh/index.php/campa=
+igns/yy2464p7t62ce/track-url/yw786lk8f27c2/6f935f8aa734b165625719bcdaac015a=
+7c6ad093
+
+
+Si ce message ne s'affiche pas correctement, consultez la =
+version en
+ligne
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/tr=
+ack-url/yw786lk8f27c2/6c532dd71174e64cca4ec22fa3794406dd983dea
+
+
+=09=
+=09SOLDES D=E2=80=99HIVER SUR TOUS LES BAGAGES, IL EST TEMPS DE PR=C3=89PAR=
+ER VOS
+PROCHAINES VACANCES
+http://vligma.ovh/index.php/campaigns/yy2464=
+p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd
+=
+
+
+=09=09LIVRAISON GRATUITE sur votre lieu de travail !
+http://vligma.=
+ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b=
+2874471406bf850895f5a74e7cd
+
+=09=09
+http://vligma.ovh/index.php/campa=
+igns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f=
+5a74e7cd
+
+=09=09
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/=
+track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd
+
+=09=
+=09
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk=
+8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd
+
+=09=09
+http://vligma=
+.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136=
+b2874471406bf850895f5a74e7cd
+
+=09=09
+http://vligma.ovh/index.php/camp=
+aigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895=
+f5a74e7cd
+
+=09=09
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce=
+/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd
+
+=09=
+=09
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk=
+8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd
+
+=09=09
+http://vligma=
+.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136=
+b2874471406bf850895f5a74e7cd
+
+=09=09* Livraison offerte sur votre lieu =
+de travail, ou d=C3=A8s 60EUR en
+relais colis.
+http://vligma.ovh/index.=
+php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406=
+bf850895f5a74e7cd
+
+=09=09NOS MARQUES
+http://vligma.ovh/index.php/camp=
+aigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895=
+f5a74e7cd
+
+=09=09
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce=
+/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd
+
+=
+=C3=80 propos :
+
+Qui sommes-nous ?
+ Mentions l=C3=A9gales
+ Suivez v=
+otre commande
+ au 01 73 600 888 Pourquoi acheter chez nous ?
+
+Assuran=
+ce voyage
+ La livraison gratuite
+ Les meilleurs prix d'internet
+ Un s=
+ervice client performant
+ R=C3=A9cup=C3=A9rez vos bagages =C3=A0 l'a=
+=C3=A9roport Vos questions :
+
+Contacter le Service Clients
+ Nos CGV=
+
+ Tarifs de livraison=20
+
+C=E2=80=99EST PARTI POUR DES SOLDES DE FOLIE =
+SUR TOUS NOS BAGAGES ET
+ACCESSOIRES !
+
+ * Le n=C2=B01 de la vente de =
+bagages sur internet !
+ * Des bagages styl=C3=A9s et la qualit=C3=A9 des =
+plus grandes marques, aux
+meilleurs prix du net.
+ * Partez serein en va=
+cances ou en voyage d'affaires avec plus de 1000
+r=C3=A9f=C3=A9rences =
+=C3=A0 petits prix.
+ * Valises, sacs de voyage, accessoires indispensable=
+s, il y en a pour
+tous les go=C3=BBts et tous les budgets.
+ * Nouveau :=
+ profitez du paiement en 3x sans frais, =C3=A0 partir de
+100EUR.
+ * De =
+nombreux avantages : exp=C3=A9dition sous 24h, livraison offerte sur
+votr=
+e lieu de travail, garantie 1 an offerte et promos toute l'ann=C3=A9e
+! =
+
+
+POUR NE PLUS RECEVOIR CE GENRE DE MESSAGE DE NOTRE PART D=C3=89SABONN=
+EZ-
+VOUS.
+http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url=
+/yw786lk8f27c2/cca81da317bd11fdaa641e9a39546367077e1e5c
+http://vligma.ovh=
+/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/bbdad028c6ab862f=
+7a78a43bddf4bc18bec4206f
+
+
+--_=_swift_v4_1454232498_d434b43885795434d55825b8237cbeef_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html><head><meta name="charset" content="utf-8"><title>Soldes 
+d&Atilde;&cent;&acirc;&#130;&not;&acirc;&#132;&cent;hiver sur tous les 
+bagages, il est temps de pr&Atilde;&#131;&Acirc;&copy;parer vos prochaines 
+vacances</title></head><body style="background:#ffffff;">
+
+            <center>
+<p style="font-family:Arial;font-size:12px;"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/6f935f8aa734b165625719bcdaac015a7c6ad093" 
+style="font-family:Arial;font-size:12px;color:#666;text-decoration:none;" 
+target="_blank">Mettre ce message en indesirable</a></p>
+</center>
+
+<center>
+<p style="font-family:Arial;font-size:12px;">Si ce message ne s'affiche pas 
+correctement, <a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/6c532dd71174e64cca4ec22fa3794406dd983dea" 
+style="font-family:Arial;font-size:12px;color:#666;text-decoration:none;" 
+target="_blank"> consultez la version en ligne</a></p>
+</center>
+<img alt="openNaoshoot.php?i=4832&amp;c=3124&amp;email=[EM" height="1" 
+src="http://pclesinfos.fr/openNaoshoot.php?i=4832&amp;c=3124&amp;email=auliafa@liafa.jussieu.fr&amp;e=0&amp;sm=0&amp;ip=" 
+style="display:none;" width="1"><img 
+alt="axciom.php?email=auliafa@liafa.jussieu.fr" border="0" height="1" 
+hspace="0" 
+src="http://pclesinfos.fr/axciom.php?email=auliafa@liafa.jussieu.fr" 
+style="display:none;" vspace="0" width="1"><table align="center" 
+bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="4" 
+style="width:600px;"><tbody><tr><td align="center"><font face="arial" 
+size="2" style="color:#2b2b2b;"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="text-decoration:none;color:#2b2b2b;" title="Accueil"><strong>Soldes 
+d&rsquo;hiver sur tous les bagages, il est temps de pr&eacute;parer vos 
+prochaines vacances</strong></a> </font></td>
+		</tr></tbody></table><table align="center" border="0" cellpadding="0" 
+cellspacing="0" style="margin:0px auto;width:600px;"><tbody><tr 
+style="height:46px;"><td height="46" 
+style="background-color:#2b2b2b;text-align:center;" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:46px;text-decoration:none;font-family:arial;font-size:18px;color:#ffffff;" 
+title="livraison gratuite">LIVRAISON GRATUITE sur votre lieu de travail 
+!</a></td>
+		</tr><tr style="height:162px;"><td height="162" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:162px;" title="du 6 janvier au 16 f&eacute;vrier"><img alt="du 
+6 janvier au 16 f&eacute;vrier" height="162" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/sol.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:161px;"><td height="161" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:161px;" title="soldes"><img alt="soldes" height="161" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/dat.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:162px;"><td height="162" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:162px;" title="bagages &agrave; moins 70 pour cent"><img 
+alt="bagages &agrave; moins 70 pour cent" height="162" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/pou.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:162px;"><td height="162" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:162px;" title="valises et sacs de voyage"><img alt="valises et 
+sacs de voyage" height="162" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/val.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:161px;"><td height="161" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:161px;" title="voir sur le site"><img alt="voir sur le site" 
+height="161" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/van.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:162px;"><td height="162" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:162px;" title="bagages de qualit&eacute;"><img alt="bagages de 
+qualit&eacute;" height="162" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/cta.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:94px;"><td height="94" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:94px;" title="vos avantages"><img alt="vos avantages" 
+height="94" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/bon.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:93px;"><td height="93" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:93px;" title="nos garanties"><img alt="nos garanties" 
+height="93" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/rai.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:30px;"><td height="30" 
+style="padding-right:5px;text-align:right;" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:30px;text-decoration:none;font-family:arial;font-size:12px;color:#111111;" 
+title="livraison">* Livraison offerte sur votre lieu de travail, ou 
+d&egrave;s 60&euro; en relais colis.</a></td>
+		</tr><tr style="height:40px;"><td height="40" 
+style="padding-left:15px;text-align:left;" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:40px;text-decoration:none;font-family:arial;font-weight:bold;font-size:16px;color:#2b2b2b;" 
+title="nos marques">NOS MARQUES</a></td>
+		</tr><tr style="height:121px;"><td height="121" width="600"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/25c0f29d2136b2874471406bf850895f5a74e7cd" 
+style="height:121px;" title="nos marques"><img alt="nos marques" height="121" 
+src="http://img.sp-medias.com/newsletter/2016-01.04/images/mar.jpg" 
+style="display:block;border:0;" width="600"></a></td>
+		</tr><tr style="height:15px;"><td height="15" width="600">&nbsp;</td>
+		</tr></tbody></table><table align="center" border="0" cellpadding="0" 
+cellspacing="0" style="margin:0px 
+auto;text-align:left;width:600px;"><tbody><tr><td height="120" 
+style="padding-left:10px;vertical-align:top;" width="180"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/ba0a2405d67b2172bc7a982775ac4eff5ac8d038" 
+style="height:119px;text-decoration:none;font-family:arial;font-size:13px;font-weight:bold;color:#575543;" 
+title="mentions l&eacute;gales">&Agrave; propos :<br><br><font 
+style="font-size:12px;font-weight:normal;color:#575543;">Qui sommes-nous ?<br>
+			Mentions l&eacute;gales<br>
+			Suivez votre commande<br>
+			au 01 73 600 888</font></a></td>
+			<td height="120" style="vertical-align:top;" width="240"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/44c6735ab863743b5d5d71b31464907259ff18b8" 
+style="height:119px;text-decoration:none;font-family:arial;font-size:13px;font-weight:bold;color:#575543;" 
+title="avantages">Pourquoi acheter chez nous ?<br><br><font 
+style="font-size:12px;font-weight:normal;color:#575543;">Assurance voyage<br>
+			La livraison gratuite<br>
+			Les meilleurs prix d'internet<br>
+			Un service client performant<br>
+			R&eacute;cup&eacute;rez vos bagages &agrave; 
+l'a&eacute;roport</font></a></td>
+			<td height="120" style="vertical-align:top;" width="180"><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/7541cd3b2620e650f679670b4a9917f3c9f34a50" 
+style="height:119px;text-decoration:none;font-family:arial;font-size:13px;font-weight:bold;color:#575543;" 
+title="vos questions">Vos questions :<br><br><font 
+style="font-size:12px;font-weight:normal;color:#575543;">Contacter le Service 
+Clients<br>
+			Nos CGV<br>
+			Tarifs de livraison</font></a></td>
+		</tr></tbody></table><table align="center" border="0" cellpadding="0" 
+cellspacing="0" style="margin:0px auto;width:602px;"><tbody><tr><td 
+style="padding-left:10px;padding-right:10px;" valign="top" width="600">
+			<p 
+style="text-align:left;color:#575543;font-family:arial;font-size:12px;"><b><font 
+style="color:#2b2b2b;font-size:13px;">C&rsquo;est parti pour des Soldes de 
+folie sur tous nos bagages et accessoires !</font></b><br><br>
+			&bull; Le n&deg;1 de la vente de bagages sur internet !<br>
+			&bull; Des bagages styl&eacute;s et la qualit&eacute; des plus grandes 
+marques, aux meilleurs prix du net.<br>
+			&bull; Partez serein en vacances ou en voyage d'affaires avec plus de 1000 
+r&eacute;f&eacute;rences &agrave; petits prix.<br>
+			&bull; Valises, sacs de voyage, accessoires indispensables, il y en a pour 
+tous les go&ucirc;ts et tous les budgets.<br>
+			&bull; Nouveau : profitez du paiement en 3x sans frais, &agrave; partir de 
+100&euro;.<br>
+			&bull; De nombreux avantages : exp&eacute;dition sous 24h, livraison 
+offerte sur votre lieu de travail, garantie 1 an offerte et promos toute 
+l&rsquo;ann&eacute;e !</p>
+			</td>
+		</tr></tbody></table><img alt="" border="0" height="0" 
+src="http://t.iwdt-01.com/view/0095f03562141975bac02ec1a0aa0b1e" 
+style="display:block;" width="0"><center><a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/cca81da317bd11fdaa641e9a39546367077e1e5c" 
+style="font-family:Arial;font-size:12px;color:#000;text-decoration:none;" 
+target="_blank"><b>Pour ne plus recevoir ce genre de message de notre part 
+d&eacute;sabonnez- vous.</b></a></center>
+<a 
+href="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-url/yw786lk8f27c2/bbdad028c6ab862f7a78a43bddf4bc18bec4206f"><img 
+alt="imagePix.jpg" height="1" src="http://pclesinfos.fr/img/imagePix.jpg" 
+style="display:none;width:1px;height:1px;" width="1"></a><img width="1" 
+height="1" 
+src="http://vligma.ovh/index.php/campaigns/yy2464p7t62ce/track-opening/yw786lk8f27c2" 
+alt="" />
+</body></html>
+
+
+--_=_swift_v4_1454232498_d434b43885795434d55825b8237cbeef_=_--
